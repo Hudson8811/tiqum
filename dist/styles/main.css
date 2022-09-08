@@ -1,0 +1,1613 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  src: url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot");
+  src: local("EuclidSquare_Medium"), local("../fonts/EuclidSquare_Medium/EuclidSquare_Medium"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.woff") format("woff"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy_Medium/Gilroy_Medium.eot");
+  src: local("Gilroy_Medium"), local("../fonts/Gilroy_Medium/Gilroy_Medium"), url("../fonts/Gilroy_Medium/Gilroy_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy_Medium/Gilroy_Medium.woff") format("woff"), url("../fonts/Gilroy_Medium/Gilroy_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot");
+  src: local("Gilroy_SemiBold"), local("../fonts/Gilroy_SemiBold/Gilroy_SemiBold"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.woff") format("woff"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/Suisse_Intl/Suisse_Intl.eot");
+  src: local("Suisse_Intl"), local("../fonts/Suisse_Intl/Suisse_Intl"), url("../fonts/Suisse_Intl/Suisse_Intl.eot?#iefix") format("embedded-opentype"), url("../fonts/Suisse_Intl/Suisse_Intl.woff") format("woff"), url("../fonts/Suisse_Intl/Suisse_Intl.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot");
+  src: local("Suisse_Intl_Book"), local("../fonts/Suisse_Intl_Book/Suisse_Intl_Book"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.woff") format("woff"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.ttf") format("truetype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .page {
+  flex: 1 1 auto;
+}
+
+.container {
+  width: 1920px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.general-title {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 80px;
+  line-height: 100.8%;
+  letter-spacing: -0.03em;
+  color: #000000;
+}
+
+.general-title span {
+  color: #0047FF;
+}
+
+.items-projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px -7.5px 0;
+}
+
+.items-projects .item-projects {
+  padding: 0 10px;
+  flex: 0 1 50%;
+}
+
+.items-projects .item-projects__content {
+  margin-top: 15px;
+  display: block;
+  position: relative;
+  min-height: 900px;
+  padding: 20px;
+}
+
+.items-projects .item-projects__content .item-projects-bronze {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 128px;
+  height: 128px;
+}
+
+.items-projects .item-projects__content .item-projects-bronze img {
+  width: 100%;
+  height: 100%;
+}
+
+.items-projects .item-projects__header {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.items-projects .item-projects__title {
+  max-width: 430px;
+  font-weight: 450;
+  font-size: 48px;
+  line-height: 108.8%;
+  letter-spacing: -0.03em;
+  color: #2A2A2A;
+}
+
+.items-projects .item-projects__btns {
+  display: flex;
+  align-items: center;
+}
+
+.items-projects .item-projects__btn {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+.items-projects .item-projects__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.5;
+  flex: 1 1 100%;
+  margin-top: 8px;
+}
+
+.items-projects .item-projects__img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 0);
+}
+
+.items-projects .item-projects__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.items-projects .item-projects-content-grey {
+  background-color: #F4EAEA;
+}
+
+.items-projects .item-projects-content-grey-dark {
+  background-color: #E4E4E4;
+}
+
+.items-projects .item-projects-content-blue {
+  background-color: #E3F0FE;
+}
+
+.items-projects .item-projects-big {
+  flex: 1 1 100%;
+}
+
+.items-projects .item-projects-big .item-projects__img {
+  height: 100%;
+}
+
+.items-projects .item-projects-big .item-projects__img img {
+  object-fit: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+a:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  flex: 1 1 auto;
+}
+
+.header__logo svg path {
+  fill: black;
+}
+
+.header__right {
+  flex: 0 1 1225px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+}
+
+.header__connection {
+  display: flex;
+  align-items: center;
+}
+
+.header__connection a {
+  margin-left: 50px;
+}
+
+.header.js-header-white .header__logo svg path {
+  fill: white;
+}
+
+.header.js-header-white .header__right {
+  color: white;
+}
+
+.menu-header__list {
+  display: flex;
+  align-items: center;
+  margin-left: -45px;
+}
+
+.menu-header__item {
+  margin-left: 45px;
+}
+
+.footer {
+  background-color: #2A2A2A;
+  padding: 30px 0;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: flex-end;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 117%;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+}
+
+.footer__left {
+  flex: 1 1 auto;
+}
+
+.footer__right {
+  flex: 0 1 1225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer__right-soc {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  margin-left: -70px;
+  row-gap: 18px;
+}
+
+.footer__right-soc a {
+  margin-left: 70px;
+}
+
+.footer__right-lang a {
+  display: block;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.footer__right-lang a.active-lang {
+  opacity: 0.2;
+}
+
+.wewillfind-footer {
+  display: flex;
+  align-items: center;
+}
+
+.wewillfind-footer__left {
+  flex: 1 1 auto;
+}
+
+.wewillfind-footer__connection a {
+  display: block;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 126.8%;
+  color: #FFFFFF;
+}
+
+.wewillfind-footer__location {
+  margin-top: 40px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 126.8%;
+  color: #ffffff;
+}
+
+.wewillfind-footer__location span {
+  color: rgba(255, 255, 255, 0.22);
+  display: block;
+}
+
+.wewillfind-footer__right {
+  flex: 0 1 1225px;
+  padding-bottom: 195px;
+}
+
+.wewillfind-footer__title {
+  color: #F5F5F5;
+  max-width: 750px;
+}
+
+.wewillfind-footer__title span {
+  opacity: 0.2;
+  color: #F5F5F5;
+}
+
+.form-wewillfind-footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  margin-top: 180px;
+}
+
+.form-wewillfind-footer > * {
+  padding: 0 20px;
+}
+
+.form-wewillfind-footer__item {
+  flex: 0 1 50%;
+  opacity: 0.2;
+  transition: all 0.5s ease 0s;
+}
+
+.form-wewillfind-footer__item:not(:first-child) {
+  margin-top: 60px;
+}
+
+.form-wewillfind-footer__item input,
+.form-wewillfind-footer__item textarea {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  transition: all 0.5s;
+  padding-bottom: 20px;
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.form-wewillfind-footer__item input::placeholder,
+.form-wewillfind-footer__item textarea::placeholder {
+  color: white;
+}
+
+.form-wewillfind-footer__item-description {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.form-wewillfind-footer__item-description input[type=file] {
+  display: none;
+}
+
+.form-wewillfind-footer__item-description input[type=file] + label {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.form-wewillfind-footer__item-description input[type=file] + label.active-file {
+  opacity: 1;
+}
+
+.form-wewillfind-footer__item-description textarea {
+  resize: none;
+  height: auto;
+  padding-bottom: 0;
+  padding-right: 30px;
+}
+
+.form-wewillfind-footer__item.js-active-area {
+  opacity: 1;
+}
+
+.form-wewillfind-footer__item--big {
+  flex: 0 1 100%;
+}
+
+.form-wewillfind-footer__bottom {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.form-wewillfind-footer__btn {
+  cursor: pointer;
+  background-color: #0047FF;
+  width: 420px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease 0s;
+}
+
+.form-wewillfind-footer__btn:hover {
+  background-color: #0B3EC4;
+}
+
+.form-wewillfind-footer__btn span {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.form-wewillfind-footer__text {
+  margin-left: 40px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #F5F5F5;
+  opacity: 0.2;
+}
+
+.hero {
+  background: url("../img/hero/hero.jpg") center/cover no-repeat;
+  padding: 130px 0 30px;
+  height: 100vh;
+}
+
+.hero__container {
+  height: 100%;
+}
+
+.hero__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero__top {
+  padding: 30px 0;
+  display: flex;
+  border-top: 1px solid #FFFFFF;
+}
+
+.hero__bottom {
+  display: flex;
+  border-top: 1px solid #FFFFFF;
+}
+
+.hero__left {
+  flex: 1 1 auto;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.hero__left-download-link {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__left-download-link span {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.hero__right {
+  flex: 0 1 1225px;
+}
+
+.hero__title {
+  color: #F5F5F5;
+}
+
+.hero__title span {
+  opacity: 0.2;
+  color: #F5F5F5;
+}
+
+.hero__items {
+  display: flex;
+}
+
+.hero__item {
+  flex: 0 1 316px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px 0;
+  border-left: 1px solid #FFFFFF;
+}
+
+.hero__item-top {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.hero__item-bottom {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.services {
+  padding: 45px 0 170px;
+}
+
+.services__item {
+  cursor: default;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.services__item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.services__item *:not(:first-child) {
+  margin-top: 38px;
+}
+
+.services__item-left {
+  flex: 1 1 auto;
+}
+
+.services__item-left > span {
+  display: block;
+  max-width: 250px;
+  margin-left: -20px;
+}
+
+.services__item-left > span span {
+  margin-left: 20px;
+}
+
+.services__item-left span {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.4;
+}
+
+.services__item-right {
+  flex: 0 1 1225px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 48px;
+  line-height: 108.8%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services__item-right span {
+  opacity: 0.2;
+  transition: all 0.5s ease 0s;
+}
+
+.services__item:hover .services__item-right span {
+  opacity: 1;
+}
+
+.services__item-new {
+  background: #0047FF;
+  border-radius: 30px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 6px 15px;
+}
+
+.realization {
+  background-color: #F5F5F5;
+  padding: 30px 0 0;
+}
+
+.realization__title {
+  flex: 0 1 1225px;
+}
+
+.realization__title-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.realization__title a {
+  color: #0047FF;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+  position: relative;
+}
+
+.realization__title a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: #0047FF;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.realization__title a:hover::before {
+  opacity: 1;
+}
+
+.realization__swiper {
+  margin: 215px -30px 0;
+}
+
+.realization__swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.realization__slide {
+  display: inline-block;
+}
+
+.realization__circle {
+  cursor: pointer;
+  width: 360px;
+  height: 360px;
+  opacity: 0.2;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease 0.1s;
+}
+
+.realization__circle:hover {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+.realization__items {
+  margin-top: 30px;
+}
+
+.weright {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #F5F5F5;
+}
+
+.weright__header {
+  display: flex;
+}
+
+.weright__left {
+  flex: 1 1 auto;
+}
+
+.weright__telegram {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 0.5s ease 0.1s;
+}
+
+.weright__telegram:hover {
+  transition: background-color 0.5s ease;
+  border: 1px solid white;
+  background-color: #ffffff;
+}
+
+.weright__right {
+  flex: 0 1 1225px;
+}
+
+.weright__items {
+  display: flex;
+  margin: 30px -7.5px 0;
+}
+
+.weright__item {
+  padding: 0 7.5px;
+  flex: 0 1 25%;
+}
+
+.weright__item--big {
+  flex: 0 1 50%;
+}
+
+.weright__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weright__text {
+  margin-top: 20px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 126.8%;
+  color: #2A2A2A;
+}
+
+.wehelp {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.wehelp__title {
+  flex: 0 1 1225px;
+}
+
+.wehelp__title-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wehelp__swiper {
+  margin: 0 -30px;
+  margin-top: 230px;
+}
+
+.wehelp__swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.wehelp__item {
+  width: 555px;
+}
+
+.wehelp__img {
+  display: block;
+  width: 555px;
+  height: 555px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wehelp__img figure > img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+
+.wehelp__img:hover figure > img {
+  opacity: 1;
+}
+
+.wehelp__img-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 555px;
+  height: 555px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.wehelp__img-icon img {
+  width: 300px;
+  height: 170px;
+}
+
+.wehelp__bottom {
+  transition: all 0.5s ease 0s;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  opacity: 0;
+  cursor: default;
+}
+
+.wehelp__bottom-left {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 126.8%;
+  color: #000000;
+}
+
+.wehelp__bottom-right {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.wehelp .wehelp__img:hover + .wehelp__bottom {
+  opacity: 1;
+}
+
+.confirm {
+  background-color: #F5F5F5;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.confirm__title {
+  flex: 0 1 1225px;
+}
+
+.confirm__title span {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.confirm__title-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm__items {
+  padding-top: 230px;
+  position: relative;
+}
+
+.confirm__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  color: #2A2A2A;
+}
+
+.confirm__item.js-opacity-item {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.confirm__item.js-active-item {
+  border-top: 1px solid black;
+  color: #000000;
+}
+
+.confirm__item-left {
+  font-size: 32px;
+  line-height: 126.8%;
+}
+
+.confirm__item-right {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.confirm__item-right span {
+  display: inline-block;
+}
+
+.confirm__item-right span:nth-child(2) {
+  margin-left: 170px;
+}
+
+.confirm__img-big {
+  pointer-events: none;
+  position: absolute;
+  top: 130px;
+  right: 535px;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.confirm__img-big img {
+  width: 100%;
+  height: 100%;
+}
+
+.confirm .confirm__item:hover .confirm__img-big {
+  top: 30px;
+  opacity: 1;
+}
+
+.projects {
+  padding-top: 130px;
+}
+
+.projects__header {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
+  padding-bottom: 220px;
+}
+
+.projects__left {
+  flex: 1 1 auto;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.projects__right {
+  flex: 0 1 1225px;
+}
+
+.projects__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__title span {
+  color: #000000;
+}
+
+.projects__title span:nth-child(2) {
+  opacity: 0.2;
+}
+
+.projects__text {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 48px;
+  line-height: 108.8%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  flex: 0 1 1225px;
+  margin-top: 30px;
+}
+
+.projects__text span {
+  color: #0047FF;
+}
+
+.projects__text-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.archive-projects {
+  margin-top: 220px;
+}
+
+.archive-projects__header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.archive-projects__title {
+  flex: 0 1 1225px;
+}
+
+.archive-projects__items {
+  margin-top: 30px;
+}
+
+.archive-projects__item {
+  padding: 30px 0;
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.archive-projects__item.js-opacity-item {
+  border-top: 1px solid black;
+  opacity: 0.2;
+}
+
+.archive-projects__item.js-active-item {
+  color: #000000;
+  opacity: 1;
+}
+
+.archive-projects__left {
+  flex: 1 1 auto;
+}
+
+.archive-projects__btns {
+  display: flex;
+  align-items: center;
+}
+
+.archive-projects__btn {
+  padding: 11px 16px;
+  background: #F5F5F5;
+  border-radius: 25px;
+  margin-right: 15px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #000000;
+}
+
+.archive-projects__right {
+  flex: 0 1 1225px;
+  display: flex;
+  align-items: center;
+}
+
+.archive-projects__right-title {
+  flex: 1 1 auto;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 126.8%;
+  color: #2A2A2A;
+}
+
+.archive-projects__right-circle {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+}
+
+.archive-projects__right-circle-gold {
+  background-color: #B9AF79;
+}
+
+.archive-projects__right-circle-grey {
+  background-color: #E4E4E4;
+}
+
+.archive-projects__right-year {
+  margin-left: 120px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #2A2A2A;
+}
+/*# sourceMappingURL=maps/main.css.map */

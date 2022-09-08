@@ -1,0 +1,208 @@
+.footer {
+	background-color: #2A2A2A;
+	padding: 30px 0;
+
+	&__bottom {
+		display: flex;
+		align-items: flex-end;
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 117%;
+		display: flex;
+		align-items: flex-end;
+		color: #FFFFFF;
+	}
+	
+	&__left {
+		flex: 1 1 auto;
+	}
+	
+	&__right {
+		flex: 0 1 1225px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	
+	&__right-soc {
+		display: grid;
+		grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+		margin-left: -70px;
+		row-gap: 18px;
+		a {
+			margin-left: 70px;
+		}
+	}
+	
+	&__right-lang {
+		a {
+			display: block;
+			text-align: right;
+			margin-top: 8px;
+			&.active-lang {
+				opacity: 0.2;
+			}
+		}
+	}
+
+
+	&__wewillfind {}
+}
+
+.wewillfind-footer {
+	display: flex;
+	align-items: center;
+	&__left {
+		flex: 1 1 auto;
+	}
+	
+		&__connection {
+			a {
+				display: block;
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 32px;
+				line-height: 126.8%;
+				color: #FFFFFF;
+			}
+		}
+		
+		&__location {
+			margin-top: 40px;
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 126.8%;
+			color: #ffffff;
+			span {
+				color: rgba(255, 255, 255, 0.22);
+				display: block;
+			}
+		}
+	
+	&__right {
+		flex: 0 1 1225px;
+		padding-bottom: 195px;
+	}
+	
+		&__title {
+			color: #F5F5F5;
+			max-width: 750px;
+			span {
+				opacity: 0.2;
+				color: #F5F5F5;
+			}
+		}
+	
+		&__form {
+		}
+}
+
+.form-wewillfind-footer {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -20px;
+	margin-top: 180px;
+	>* {
+		padding: 0 20px;
+	}
+	&__item {
+		flex: 0 1 50%;
+		opacity: 0.2;
+		transition: all 0.5s ease 0s;
+		&:not(:first-child) {
+			margin-top: 60px;
+		}
+		input, textarea {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: rgba($color: #ffffff, $alpha: 1.0);
+			transition: all .5s;
+			padding-bottom: 20px;
+			background-color: transparent;
+			width: 100%;
+			border-bottom: 1px solid #FFFFFF;
+		}
+		input::placeholder, textarea::placeholder {
+			color: rgba($color: #ffffff, $alpha: 1.0);
+		}
+		&-description {
+			flex: 1 1 100%;
+			position: relative;
+			input[type="file"] {
+				display: none;
+			}
+			input[type="file"]+label {
+				position: absolute;
+				top: 0;
+				right: 20px;
+				cursor: pointer;
+				transition: all 0.5s ease 0s;
+				&.active-file {
+					opacity: 1;
+				}
+			}
+			textarea {
+				resize: none;
+				height: auto;
+				padding-bottom: 0;
+				padding-right: 30px;
+			}
+			textarea:focus+input[type="file"] {
+			}
+		}
+		&.js-active-area {
+			opacity: 1;
+		}
+		&--big {
+			flex: 0 1 100%;
+		}
+	}
+	
+		&__bottom {
+			margin-top: 60px;
+			display: flex;
+			align-items: center;
+		}
+	
+		&__btn {
+			cursor: pointer;
+			background-color: #0047FF;
+			width: 420px;
+			height: 88px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.5s ease 0s;
+			&:hover{
+				background-color: #0B3EC4;
+			}
+			span {
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				text-transform: uppercase;
+				color: #FFFFFF;
+			}
+		}
+	
+		&__text {
+			margin-left: 40px;
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: #F5F5F5;
+			opacity: 0.2;
+		}
+}
