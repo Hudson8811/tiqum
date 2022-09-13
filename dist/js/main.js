@@ -68,9 +68,20 @@ $(document).ready(function () {
 var swiper = new Swiper(".realization__swiper", {
   loop: true,
   speed: 3000,
-  slidesPerView: "5.5",
+  slidesPerView: "2.75",
   autoplay: {
     delay: 0
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: "3"
+    },
+    1024: {
+      slidesPerView: "4"
+    },
+    1440: {
+      slidesPerView: "5.7"
+    }
   }
 });
 
@@ -85,9 +96,17 @@ var swiper = new Swiper(".realization__swiper", {
 var swiper = new Swiper(".wehelp__swiper", {
   loop: true,
   speed: 3000,
-  slidesPerView: "3.8",
+  slidesPerView: "1.9",
   autoplay: {
     delay: 0
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: "3"
+    },
+    1024: {
+      slidesPerView: "3.8"
+    }
   }
 });
 

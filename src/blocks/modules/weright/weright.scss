@@ -2,6 +2,16 @@
 	padding-top: 30px;
 	padding-bottom: 50px;
 	background-color: #F5F5F5;
+	@media (max-width: 1919px){
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 1439px){
+		padding: 30px 0;
+	}
+	@media (max-width: 767px){
+		padding: 15px 0;
+	}
 	&__header {
 		display: flex;
 	}
@@ -19,6 +29,13 @@
 				border: 1px solid rgba($color: #000000, $alpha: 0.2);
 				border-radius: 50%;
 				transition: all 0.5s ease 0.1s;
+				@media (max-width: 1919px){
+					width: 320px;
+					height: 320px;
+				}
+				@media (max-width: 1439px){
+					display: none;
+				}
 				&:hover{
 					transition: background-color 0.5s ease;
 					border: 1px solid rgba($color: #ffffff, $alpha: 1);
@@ -28,6 +45,15 @@
 	
 		&__right {
 			flex: 0 1 1225px;
+			@media (max-width: 1919px){
+				flex: 0 1 900px;
+			}
+			@media (max-width: 1439px){
+				flex: 0 1 640px;
+			}
+			@media (max-width: 1023px){
+				flex: 1 1 100%;
+			}
 		}
 	
 			&__title {}
@@ -35,17 +61,54 @@
 	&__items {
 		display: flex;
 		margin: 30px -7.5px 0;
+		@media (max-width: 1919px){
+			margin: 20px -5px 0;
+		}
+		@media (max-width: 1439px){
+			margin: 130px -7.5px 0;
+		}
+		@media (max-width: 1023px){
+			margin-top: 110px;
+		}
+		@media (max-width: 767px){
+			flex-wrap: wrap;
+			margin-top: 50px;
+		}
 	}
 	
 		&__item {
 			padding: 0 7.5px;
 			flex: 0 1 25%;
+			@media (max-width: 1919px){
+				padding: 0 5px;
+			}
+			@media (max-width: 1439px){
+				padding: 0 7.5px;
+				flex: 0 1 33.333%;
+				&:last-child{
+					display: none;
+				}
+			}
+			@media (max-width: 767px){
+				&:not(:first-child) {
+					margin-top: 30px;
+				}
+			}
 			&--big {
 				flex: 0 1 50%;
+				@media (max-width: 1439px){
+					flex: 0 1 77.777%;
+				}
+			}
+			@media (max-width: 767px){
+				flex: 1 1 100%;
 			}
 		}
 	
 			&__img {
+				@media (max-width: 767px){
+					height: 280px;
+				}
 				img {
 					width: 100%;
 					height: 100%;
@@ -61,5 +124,21 @@
 				font-size: 32px;
 				line-height: 126.8%;
 				color: #2A2A2A;
+				@media (max-width: 1919px){
+					margin-top: 15px;
+					font-size: 24.0167px;
+					line-height: 126.8%;
+				}
+				@media (max-width: 1439px){
+					margin-top: 25px;
+					font-size: 24px;
+					line-height: 126.8%;
+				}
+				@media (max-width: 1023px){
+					margin-top: 15px;
+				}
+				@media (max-width: 767px){
+					font-size: 18px;
+				}
 			}
 }

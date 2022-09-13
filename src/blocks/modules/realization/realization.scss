@@ -1,8 +1,32 @@
 .realization {
 	background-color: #F5F5F5;
 	padding: 30px 0 0;
+	@media (max-width: 1919px){
+		padding: 20px 0 0;
+	}
+	@media (max-width: 1439px){
+		padding: 30px 0 0 0;
+	}
+	@media (max-width: 767px){
+		padding: 15px 0 0 0;
+	}
 	&__title {
 		flex: 0 1 1225px;
+		@media (max-width: 1919px){
+			flex: 0 1 900px;
+		}
+		@media (max-width: 1439px){
+			flex: 0 1 640px;
+		}
+		@media (max-width: 1023px){
+			flex: 1 1 100%;
+			br {
+				display: none;
+			}
+			a {
+				display: inline;
+			}
+		}
 		&-wrapper {
 			display: flex;
 			justify-content: flex-end;
@@ -23,6 +47,12 @@
 				background-color: #0047FF;
 				opacity: 0;
 				transition: all 0.5s ease 0s;
+				@media (max-width: 1919px){
+					height: 4px;
+				}
+				@media (max-width: 1439px){
+					height: 2px;
+				}
 			}
 			
 			&:hover {
@@ -35,6 +65,15 @@
 	
 		&__swiper {
 			margin: 215px -30px 0;
+			@media (max-width: 1919px){
+				margin: 160px -20px 0;
+			}
+			@media (max-width: 1439px){
+				margin: 110px -30px 0;
+			}
+			@media (max-width: 767px){
+				margin: 50px -20px 0;
+			}
 			.swiper-wrapper {
 				transition-timing-function: linear;
 			}
@@ -48,13 +87,31 @@
 			cursor: pointer;
 			width: 360px;
 			height: 360px;
-			opacity: 0.2;
-			border: 1px solid #000000;
+			border: 1px solid rgba($color: #000000, $alpha: 0.2);
 			border-radius: 50%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			transition: all 0.5s ease 0.1s;
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			text-align: center;
+			color: #000000;
+			@media (max-width: 1919px){
+				width: 270px;
+				height: 270px;
+				font-size: 14px;
+				line-height: 16px;
+			}
+			@media (max-width: 767px){
+				width: 128px;
+				height: 128px;
+				font-size: 12px;
+				line-height: 14px;
+			}
 			&:hover{
 				opacity: 1;
 				background-color: #ffffff;
@@ -68,5 +125,14 @@
 
 	&__items {
 		margin-top: 30px;
+		@media (max-width: 1919px){
+			margin-top: 20px;
+		}
+		@media (max-width: 1439px){
+			margin-top: 25px;
+		}
+		@media (max-width: 1023px){
+			margin-top: 15px;
+		}
 	}
 }

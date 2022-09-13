@@ -12,6 +12,15 @@
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 30px;
+	@media (max-width: 1919px){
+		padding: 0 20px;
+	}
+	@media (max-width: 1439px){
+		padding: 0 30px;
+	}
+	@media (max-width: 767px){
+		padding: 0 20px;
+	}
 }
 
 .general-title {
@@ -22,9 +31,56 @@
 	line-height: 100.8%;
 	letter-spacing: -0.03em;
 	color: #000000;
-
+	@media (max-width: 1919px){
+		font-size: 60px;
+		line-height: 90.8%;
+	}
+	@media (max-width: 1439px){
+		font-size: 40px;
+		line-height: 102.8%;
+	}
+	@media (max-width: 1023px){
+		font-size: 54px;
+		line-height: 95.8%;
+	}
+	@media (max-width: 767px){
+		font-size: 24px;
+	}
 	span {
 		color: #0047FF;
+	}
+}
+
+.general-text {
+	font-family: 'Suisse Intl';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000000;
+	opacity: 0.5;
+}
+
+.flex-lr {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 1023px){
+		flex-wrap: wrap;
+	}
+	.flex-lr__left {
+		flex: 0 1 auto;
+	}
+	.flex-lr__right {
+		flex: 0 1 1225px;
+		@media (max-width: 1919px) {
+			flex: 0 1 900px;
+		}
+		@media (max-width: 1439px) {
+			flex: 0 1 640px;
+		}
+		@media (max-width: 1023px){
+			flex: 1 1 auto;
+		}
 	}
 }
 
@@ -33,21 +89,63 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: -20px -7.5px 0;
+	@media (max-width: 1919px){
+		margin: -10px -5px 0;
+	}
+	@media (max-width: 1439px){
+		margin: -15px -7.5px 0;
+	}
 	.item-projects {
 		padding: 0 10px;
 		flex: 0 1 50%;
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		@media (max-width: 1919px){
+			padding: 0 5px;
+		}
+		@media (max-width: 1439px){
+			padding: 0 7.5px;
+		}
+		@media (max-width: 1023px){
+			flex: 1 1 100%;
+		}
 		&__content {
-			margin-top: 15px;
+			margin-top: 20px;
 			display: block;
 			position: relative;
 			min-height: 900px;
 			padding: 20px;
+			overflow: hidden;
+			@media (max-width: 1919px){
+				margin-top: 10px;
+				min-height: 670px;
+			}
+			@media (max-width: 1439px){
+				min-height: 480px;
+				margin-top: 15px;
+			}
+			@media (max-width: 1023px){
+				min-height: 720px;
+			}
+			@media (max-width: 767px){
+				min-height: 364px;
+				padding: 10px;
+			}
 			.item-projects-bronze {
 				position: absolute;
 				left: 30px;
 				bottom: 30px;
 				width: 128px;
 				height: 128px;
+				@media (max-width: 1919px){
+					width: 96px;
+					height: 96px;
+					left: 15px;
+					bottom: 15px;
+				}
+				@media (max-width: 1439px){
+					display: none;
+				}
 				img {
 					width: 100%;
 					height: 100%;
@@ -55,27 +153,44 @@
 			}
 		}
 		&__header {
-			font-family: 'Suisse Intl';
-			font-style: normal;
 			position: relative;
 			z-index: 2;
 			display: flex;
-			flex-wrap: wrap;
+			flex-direction: column;
 			justify-content: space-between;
 			align-items: flex-start;
 		}
 			&__title {
-				max-width: 430px;
+				max-width: 50%;
 				font-weight: 450;
 				font-size: 48px;
 				line-height: 108.8%;
 				letter-spacing: -0.03em;
 				color: #2A2A2A;
+				@media (max-width: 1919px){
+					max-width: 50%;
+					font-size: 36.025px;
+				}
+				@media (max-width: 1439px){
+					font-size: 28px;
+					line-height: 32px;
+				}
+				@media (max-width: 767px){
+					font-size: 20px;
+					line-height: 108.8%;
+				}
 			}
 			
 			&__btns {
 				display: flex;
 				align-items: center;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				@media (max-width: 767px){
+					flex-direction: column;
+					align-items: flex-end;
+				}
 			}
 				&__btn {
 					font-weight: 400;
@@ -90,9 +205,28 @@
 					align-items: center;
 					padding: 10px 15px;
 					margin-right: 10px;
+					@media (max-width: 1919px){
+						font-size: 13.5094px;
+						line-height: 16px;
+						border-radius: 18.763px;
+						padding: 8px 12px;
+					}
+					@media (max-width: 1439px){
+						border-radius: 25px;
+						padding: 6px 10px;
+					}
+					@media (max-width: 767px){
+						margin-right: 0;
+						&:not(:first-child) {
+							margin-top: 5px;
+						}
+					}
 				}
 			
 			&__text {
+				max-width: 50%;
+				position: relative;
+				z-index: 2;
 				font-weight: 400;
 				font-size: 18px;
 				line-height: 21px;
@@ -100,6 +234,18 @@
 				opacity: 0.5;
 				flex: 1 1 100%;
 				margin-top: 8px;
+				br {
+					display: none;
+				}
+				@media (max-width: 1919px){
+					font-size: 13.5094px;
+					line-height: 16px;
+					margin-top: 12px;
+				}
+				@media (max-width: 767px){
+					font-size: 12px;
+					line-height: 14px;
+				}
 			}
 		
 		&__img {
@@ -108,9 +254,11 @@
 			left: 50%;
 			width: 100%;
 			transform: translate(-50%, 0);
+			display: flex;
+			justify-content: center;
 			img {
-				width: 100%;
-				height: 100%;
+				max-width: 100%;
+				max-height: 100%;
 				object-fit: contain;
 			}
 		}
@@ -133,6 +281,7 @@
 		.item-projects__img {
 			height: 100%;
 			img {
+				width: 100%;
 				object-fit: cover;
 			}
 		}

@@ -1,7 +1,15 @@
 .footer {
 	background-color: #2A2A2A;
 	padding: 30px 0;
-
+	@media (max-width: 1919px){
+		padding: 20px 0;
+	}
+	@media (max-width: 1439px){
+		padding: 30px 0;
+	}
+	@media (max-width: 767px){
+		padding: 15px 0;
+	}
 	&__bottom {
 		display: flex;
 		align-items: flex-end;
@@ -13,6 +21,19 @@
 		display: flex;
 		align-items: flex-end;
 		color: #FFFFFF;
+		@media (max-width: 1919px){
+			font-size: 13.5094px;
+			line-height: 16px;
+		}
+		@media (max-width: 1023px){
+			margin-top: 150px;
+			.footer__left {
+				flex: 0 0 245px;
+			}
+		}
+		@media (max-width: 767px){
+			display: none;
+		}
 	}
 	
 	&__left {
@@ -24,15 +45,37 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		@media (max-width: 1919px){
+			flex: 0 1 900px;
+		}
+		@media (max-width: 1439px){
+			flex: 0 1 640px;
+		}
+		@media (max-width: 1023px){
+			flex: 1 1 auto;
+		}
 	}
 	
 	&__right-soc {
 		display: grid;
 		grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 		margin-left: -70px;
-		row-gap: 18px;
+		row-gap: 20px;
+		@media (max-width: 1439px){
+			margin-left: -50px;
+		}
+		@media (max-width: 1023px){
+			grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+			margin-left: -40px;
+		}
 		a {
 			margin-left: 70px;
+			@media (max-width: 1439px){
+				margin-left: 50px;
+			}
+			@media (max-width: 1023px){
+				margin-left: 40px;
+			}
 		}
 	}
 	
@@ -40,7 +83,7 @@
 		a {
 			display: block;
 			text-align: right;
-			margin-top: 8px;
+			margin-top: 10px;
 			&.active-lang {
 				opacity: 0.2;
 			}
@@ -54,11 +97,28 @@
 .wewillfind-footer {
 	display: flex;
 	align-items: center;
+	@media (max-width: 1023px){
+		flex-wrap: wrap;
+	}
 	&__left {
 		flex: 1 1 auto;
+		@media (max-width: 1023px){
+			margin-top: 30px;
+			display: flex;
+		}
+		@media (max-width: 767px){
+			flex-wrap: wrap;
+			margin-top: 24px;
+		}
 	}
 	
 		&__connection {
+			@media (max-width: 1023px){
+				flex: 0 0 245px;
+			}
+			@media (max-width: 767px){
+				flex: 1 1 100%;
+			}
 			a {
 				display: block;
 				font-family: 'Suisse Intl';
@@ -67,6 +127,13 @@
 				font-size: 32px;
 				line-height: 126.8%;
 				color: #FFFFFF;
+				@media (max-width: 1919px){
+					font-size: 24.0167px;
+					line-height: 126.8%;
+				}
+				@media (max-width: 767px){
+					font-size: 18px;
+				}
 			}
 		}
 		
@@ -78,6 +145,17 @@
 			font-size: 32px;
 			line-height: 126.8%;
 			color: #ffffff;
+			@media (max-width: 1919px) {
+				font-size: 24.0167px;
+				line-height: 126.8%;
+			}
+			@media (max-width: 1023px){
+				margin-top: 0;
+			}
+			@media (max-width: 767px){
+				font-size: 18px;
+				margin-top: 10px;
+			}
 			span {
 				color: rgba(255, 255, 255, 0.22);
 				display: block;
@@ -87,14 +165,42 @@
 	&__right {
 		flex: 0 1 1225px;
 		padding-bottom: 195px;
+		@media (max-width: 1919px){
+			flex: 0 1 900px;
+			padding-bottom: 130px;
+		}
+		@media (max-width: 1439px){
+			flex: 0 1 640px;
+			padding-bottom: 100px;
+		}
+		@media (max-width: 1023px){
+			flex: 1 1 auto;
+			order: -1;
+			padding-bottom: 0;
+		}
 	}
 	
 		&__title {
 			color: #F5F5F5;
 			max-width: 750px;
+			@media (max-width: 1919px){
+				max-width: 570px;
+			}
+			@media (max-width: 1439px){
+				max-width: 340px;
+			}
+			@media (max-width: 1023px){
+				max-width: 500px;
+			}
+			@media (max-width: 767px){
+				max-width: 270px;
+			}
 			span {
 				opacity: 0.2;
 				color: #F5F5F5;
+				@media (max-width: 767px){
+					opacity: 1;
+				}
 			}
 		}
 	
@@ -107,15 +213,40 @@
 	flex-wrap: wrap;
 	margin: 0 -20px;
 	margin-top: 180px;
+	@media (max-width: 1919px){
+		margin: 0 -15px;
+		margin-top: 140px;
+	}
+	@media (max-width: 1439px){
+		margin-top: 110px;
+	}
+	@media (max-width: 767px){
+		margin-top: 50px;
+	}
 	>* {
 		padding: 0 20px;
+		@media (max-width: 1919px){
+			padding: 0 15px;
+		}
 	}
 	&__item {
 		flex: 0 1 50%;
 		opacity: 0.2;
 		transition: all 0.5s ease 0s;
+		@media (max-width: 767px){
+			flex: 0 1 100%;
+		}
 		&:not(:first-child) {
 			margin-top: 60px;
+			@media (max-width: 1919px){
+				margin-top: 45px;
+			}
+			@media (max-width: 1439px){
+				margin-top: 40px;
+			}
+			@media (max-width: 767px){
+				margin-top: 20px;
+			}
 		}
 		input, textarea {
 			font-family: 'Suisse Intl';
@@ -129,6 +260,16 @@
 			background-color: transparent;
 			width: 100%;
 			border-bottom: 1px solid #FFFFFF;
+			@media (max-width: 1919px){
+				font-size: 13.5094px;
+				line-height: 16px;
+				padding-bottom: 15px;
+			}
+			@media (max-width: 767px){
+				font-size: 12px;
+				line-height: 14px;
+				padding-bottom: 10px;
+			}
 		}
 		input::placeholder, textarea::placeholder {
 			color: rgba($color: #ffffff, $alpha: 1.0);
@@ -145,6 +286,12 @@
 				right: 20px;
 				cursor: pointer;
 				transition: all 0.5s ease 0s;
+				@media (max-width: 1919px){
+					right: 15px;
+				}
+				@media (max-width: 1439px){
+					display: none;
+				}
 				&.active-file {
 					opacity: 1;
 				}
@@ -152,7 +299,7 @@
 			textarea {
 				resize: none;
 				height: auto;
-				padding-bottom: 0;
+				padding-bottom: 0!important;
 				padding-right: 30px;
 			}
 			textarea:focus+input[type="file"] {
@@ -170,6 +317,17 @@
 			margin-top: 60px;
 			display: flex;
 			align-items: center;
+			@media (max-width: 1919px){
+				margin-top: 45px;
+			}
+			@media (max-width: 1439px){
+				margin-top: 40px;
+			}
+			@media (max-width: 767px){
+				margin-top: 20px;
+				flex-wrap: wrap;
+				flex: 1 1 100%;
+			}
 		}
 	
 		&__btn {
@@ -181,6 +339,20 @@
 			justify-content: center;
 			align-items: center;
 			transition: all 0.5s ease 0s;
+			@media (max-width: 1919px){
+				width: 315px;
+				height: 65px;
+			}
+			@media (max-width: 1439px){
+				width: 300px;
+			}
+			@media (max-width: 1023px){
+				width: 335px;
+			}
+			@media (max-width: 767px){
+				width: 100%;
+				flex: 1 1 100%;
+			}
 			&:hover{
 				background-color: #0B3EC4;
 			}
@@ -192,6 +364,14 @@
 				line-height: 21px;
 				text-transform: uppercase;
 				color: #FFFFFF;
+				@media (max-width: 1919px){
+					font-size: 13.5094px;
+					line-height: 16px;
+				}
+				@media (max-width: 767px){
+					font-size: 12px;
+					line-height: 14px;
+				}
 			}
 		}
 	
@@ -204,5 +384,16 @@
 			line-height: 21px;
 			color: #F5F5F5;
 			opacity: 0.2;
+			@media (max-width: 1919px){
+				margin-left: 30px;
+				font-size: 13.5094px;
+				line-height: 16px;
+			}
+			@media (max-width: 767px){
+				margin-top: 14px;
+				margin-left: 0;
+				font-size: 12px;
+				line-height: 14px;
+			}
 		}
 }
