@@ -94,7 +94,7 @@
 			}
 			
 			&-right {
-				flex: 0 1 1225px;
+				flex: 0 1 65%;
 				font-family: 'Suisse Intl';
 				font-style: normal;
 				font-weight: 450;
@@ -106,12 +106,12 @@
 				justify-content: space-between;
 				align-items: flex-end;
 				@media (max-width: 1919px){
-					flex: 0 1 900px;
+					flex: 0 1 64%;
 					font-size: 36px;
 					line-height: 108.8%;
 				}
 				@media (max-width: 1439px){
-					flex: 0 1 640px;
+					flex: 0 1 66%;
 					font-size: 28px;
 					line-height: 32px;
 				}

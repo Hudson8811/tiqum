@@ -476,7 +476,7 @@ template {
 }
 
 .flex-lr .flex-lr__right {
-  flex: 0 0 1225px;
+  flex: 0 0 65%;
 }
 
 .items-projects {
@@ -496,7 +496,7 @@ template {
   margin-top: 20px;
   display: block;
   position: relative;
-  min-height: 900px;
+  min-height: 920px;
   padding: 20px;
   overflow: hidden;
 }
@@ -745,7 +745,8 @@ h6 {
 }
 
 .header__right {
-  flex: 0 1 1225px;
+  transition: all 0.5s ease 0s;
+  flex: 0 1 65%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -796,8 +797,8 @@ h6 {
   margin: 20px 30px 0;
 }
 
-.header.js-header-fixed .header__inner .menu-header {
-  margin-left: 30px;
+.header.js-header-fixed .header__inner .header__right {
+  flex: 0 1 65.2%;
 }
 
 .menu-header {
@@ -838,7 +839,7 @@ h6 {
 }
 
 .footer__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -900,7 +901,7 @@ h6 {
 }
 
 .wewillfind-footer__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
   padding-bottom: 195px;
 }
 
@@ -1088,7 +1089,7 @@ h6 {
 }
 
 .hero__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .hero__title {
@@ -1105,7 +1106,7 @@ h6 {
 }
 
 .hero__item {
-  flex: 0 1 316px;
+  flex: 0 1 33.333%;
   min-height: 320px;
   display: flex;
   flex-direction: column;
@@ -1177,7 +1178,7 @@ h6 {
 }
 
 .services__item-right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
   font-family: "Suisse Intl";
   font-style: normal;
   font-weight: 450;
@@ -1219,7 +1220,7 @@ h6 {
 }
 
 .realization__title {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .realization__title-wrapper {
@@ -1326,7 +1327,7 @@ h6 {
 }
 
 .weright__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .weright__items {
@@ -1365,7 +1366,7 @@ h6 {
 }
 
 .wehelp__title {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .wehelp__title-wrapper {
@@ -1468,7 +1469,7 @@ h6 {
 }
 
 .confirm__title {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .confirm__title span {
@@ -1574,7 +1575,7 @@ h6 {
 }
 
 .projects__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .projects__title {
@@ -1599,7 +1600,7 @@ h6 {
   line-height: 108.8%;
   letter-spacing: -0.03em;
   color: #000000;
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
   margin-top: 30px;
 }
 
@@ -1626,7 +1627,7 @@ h6 {
 }
 
 .archive-projects__title {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
 }
 
 .archive-projects__items {
@@ -1685,7 +1686,7 @@ h6 {
 }
 
 .archive-projects__right {
-  flex: 0 1 1225px;
+  flex: 0 1 65%;
   display: flex;
   align-items: center;
 }
@@ -1755,6 +1756,7 @@ h6 {
 
 .hero-trading-area__right {
   display: flex;
+  justify-content: space-between;
 }
 
 .hero-trading-area__labels {
@@ -1894,6 +1896,22 @@ h6 {
   margin-top: 220px;
 }
 
+@media (min-width: 2000px) {
+  .hero__title br {
+    display: none;
+  }
+
+  .project-trading-area__item-title {
+    max-width: 100%;
+    margin-right: 50px;
+  }
+
+  .project-trading-area__bottom-title {
+    max-width: 100%;
+    margin-right: 50px;
+  }
+}
+
 @media (max-width: 14393px) {
   .wehelp__bottom {
     margin-top: 40px;
@@ -1917,7 +1935,7 @@ h6 {
   }
 
   .flex-lr .flex-lr__right {
-    flex: 0 0 900px;
+    flex: 0 0 64%;
   }
 
   .items-projects {
@@ -2010,7 +2028,7 @@ h6 {
   }
 
   .header__right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
     font-size: 13.5094px;
     line-height: 16px;
   }
@@ -2027,8 +2045,8 @@ h6 {
     margin: 20px 20px 0;
   }
 
-  .header.js-header-fixed .header__inner .menu-header {
-    margin-left: 20px;
+  .header.js-header-fixed .header__inner .header__right {
+    flex: 0 1 64.2%;
   }
 
   .menu-header__list {
@@ -2049,7 +2067,7 @@ h6 {
   }
 
   .footer__right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .wewillfind-footer__connection a {
@@ -2063,7 +2081,7 @@ h6 {
   }
 
   .wewillfind-footer__right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
     padding-bottom: 130px;
   }
 
@@ -2137,12 +2155,11 @@ h6 {
   }
 
   .hero__right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .hero__item {
     padding: 15px 25px 0;
-    flex: 0 1 240px;
     min-height: 240px;
   }
 
@@ -2183,7 +2200,7 @@ h6 {
   }
 
   .services__item-right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
     font-size: 36px;
     line-height: 108.8%;
   }
@@ -2199,7 +2216,7 @@ h6 {
   }
 
   .realization__title {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .realization__title a::before {
@@ -2232,7 +2249,7 @@ h6 {
   }
 
   .weright__right {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .weright__items {
@@ -2255,7 +2272,7 @@ h6 {
   }
 
   .wehelp__title {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .wehelp__title img {
@@ -2307,7 +2324,7 @@ h6 {
   }
 
   .confirm__title {
-    flex: 0 1 900px;
+    flex: 0 1 64%;
   }
 
   .confirm__items {
@@ -2480,7 +2497,7 @@ h6 {
   }
 
   .flex-lr .flex-lr__right {
-    flex: 0 0 640px;
+    flex: 0 0 66%;
   }
 
   .items-projects {
@@ -2528,7 +2545,7 @@ h6 {
   }
 
   .header__right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
     font-size: 14px;
     line-height: 16px;
     margin-left: -35px;
@@ -2538,8 +2555,8 @@ h6 {
     margin: 20px 30px 0;
   }
 
-  .header.js-header-fixed .header__inner .menu-header {
-    margin-left: 30px;
+  .header.js-header-fixed .header__inner .header__right {
+    flex: 0 1 67%;
   }
 
   .menu-header__item-hide {
@@ -2551,7 +2568,7 @@ h6 {
   }
 
   .footer__right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .footer__right-soc {
@@ -2563,7 +2580,7 @@ h6 {
   }
 
   .wewillfind-footer__right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
     padding-bottom: 100px;
   }
 
@@ -2613,12 +2630,11 @@ h6 {
   }
 
   .hero__right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .hero__item {
     padding: 15px 15px 0;
-    flex: 0 1 210px;
     min-height: 245px;
   }
 
@@ -2650,7 +2666,7 @@ h6 {
   }
 
   .services__item-right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
     font-size: 28px;
     line-height: 32px;
   }
@@ -2664,7 +2680,7 @@ h6 {
   }
 
   .realization__title {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .realization__title a::before {
@@ -2688,7 +2704,7 @@ h6 {
   }
 
   .weright__right {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .weright__items {
@@ -2720,7 +2736,7 @@ h6 {
   }
 
   .wehelp__title {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .wehelp__title img {
@@ -2757,7 +2773,7 @@ h6 {
   }
 
   .confirm__title {
-    flex: 0 1 640px;
+    flex: 0 1 66%;
   }
 
   .confirm__items {
@@ -2989,10 +3005,6 @@ h6 {
     flex: 1 1 100%;
   }
 
-  .hero__item {
-    flex: 0 1 33.333%;
-  }
-
   .services__item-left {
     flex: 0 0 245px;
   }
@@ -3221,10 +3233,6 @@ h6 {
 
   .header.js-header-fixed .header__inner {
     margin: 20px 20px 0;
-  }
-
-  .header.js-header-fixed .header__inner .menu-header {
-    margin-left: 20px;
   }
 
   .footer {
