@@ -9,10 +9,10 @@ block content
 		.page 
 			.projects
 				.projects__container.container 
-					.projects__header 
-						.projects__left 
+					.projects__header.flex-lr 
+						.projects__left.flex-lr__left 
 							a(href="#") Бесплатная консультация  →
-						.projects__right 
+						.projects__right.flex-lr__right 
 							.projects__title.general-title 
 								span Проекты
 								span (+350)
@@ -97,54 +97,56 @@ block content
 												|Девелопмент
 										.item-projects__img 
 											img(src="img/item-projects/romeks.png", alt="alt")
-					.projects__text-wrapper
-						.projects__text 
-							|С 2007 года мы запустили более 
-							br
-							|350 проектов. Наболее интересные 
-							br
-							|из них мы описали, об остальных 
-							br
-							|расскажем 
-							span на встрече.
+					.projects__subtitle-wrapper.flex-lr
+						.flex-lr__left
+						.projects__subtitle.flex-lr__right 
+							.projects__subtitle-inner
+								|С 2007 года мы запустили более 350 проектов. Наболее интересные из них мы описали, об остальных расскажем 
+								span на встрече.
 
 					.projects__archive.archive-projects
-						.archive-projects__header 
-							.archive-projects__title.general-title Архив
+						.archive-projects__header.flex-lr
+							.flex-lr__left 
+							.archive-projects__title.general-title.flex-lr__right Архив
 						.archive-projects__items 
-							.archive-projects__item 
-								.archive-projects__left 
+							.archive-projects__item.flex-lr
+								.archive-projects__left.flex-lr__left 
 									.archive-projects__btns 
 										.archive-projects__btn Backend
 										.archive-projects__btn Web
-										.archive-projects__btn Mobile
-								.archive-projects__right 
+										.archive-projects__btn.archive-projects__btn-hide Mobile
+										.archive-projects__btn.archive-projects__btn-show-more +5
+								.archive-projects__right.flex-lr__right
 									.archive-projects__right-title Сайт Белебеевского молочного комбината
 									.archive-projects__right-circle.archive-projects__right-circle-gold 
 									.archive-projects__right-year 2018
-							.archive-projects__item 
-								.archive-projects__left 
+							.archive-projects__item.flex-lr
+								.archive-projects__left.flex-lr__left 
 									.archive-projects__btns 
 										.archive-projects__btn Backend
 										.archive-projects__btn Web
-										.archive-projects__btn Mobile
-								.archive-projects__right 
+										.archive-projects__btn.archive-projects__btn-hide Mobile
+										.archive-projects__btn.archive-projects__btn-show-more +5
+								.archive-projects__right.flex-lr__right
 									.archive-projects__right-title Сайт Национального молодежного театра РБ
 									.archive-projects__right-circle.archive-projects__right-circle-grey 
 									.archive-projects__right-year 2018
-							.archive-projects__item 
-								.archive-projects__left 
+							.archive-projects__item.flex-lr
+								.archive-projects__left.flex-lr__left 
 									.archive-projects__btns 
 										.archive-projects__btn Backend
 										.archive-projects__btn Web
-								.archive-projects__right 
+										.archive-projects__btn.archive-projects__btn-show-more +5
+								.archive-projects__right.flex-lr__right
 									.archive-projects__right-title Портал занятости населения Минтруда РБ
 									.archive-projects__right-year 2018
-							.archive-projects__item 
-								.archive-projects__left 
+							.archive-projects__item.flex-lr
+								.archive-projects__left.flex-lr__left 
 									.archive-projects__btns 
 										.archive-projects__btn Backend
-								.archive-projects__right 
+										.archive-projects__btn.archive-projects__btn-show Web
+										.archive-projects__btn.archive-projects__btn-show-more +5
+								.archive-projects__right.flex-lr__right
 									.archive-projects__right-title Сайт Союза предпринимателей
 									.archive-projects__right-year 2018
 
