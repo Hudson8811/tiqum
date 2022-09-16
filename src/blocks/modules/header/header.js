@@ -11,3 +11,11 @@ $(document).scroll(function() {
 		$('.header').removeClass("js-header-fixed");
 	}
 })
+
+$(document).scroll(function() {
+	if ($(document).scrollTop() > $(".hero").outerHeight() - 50) {
+		$(".header.js-header-white").addClass("js-header-white-dark")
+	} else if ($(document).scrollTop() < $(".hero").outerHeight() - 50) {
+		$(".header.js-header-white").removeClass("js-header-white-dark")
+	}
+})

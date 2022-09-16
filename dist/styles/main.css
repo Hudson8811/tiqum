@@ -427,6 +427,7 @@ template {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .wrapper .page {
@@ -714,6 +715,7 @@ h6 {
 
 .header {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -737,6 +739,7 @@ h6 {
 }
 
 .header__logo svg path {
+  transition: all 0.5s ease 0s;
   fill: black;
 }
 
@@ -745,7 +748,7 @@ h6 {
 }
 
 .header__right {
-  transition: all 0.5s ease 0s;
+  transition: all 0s ease 0s;
   flex: 0 1 65%;
   display: flex;
   align-items: center;
@@ -761,6 +764,7 @@ h6 {
 .header__connection {
   display: flex;
   align-items: center;
+  transition: all 0.5s ease 0s;
 }
 
 .header__connection a {
@@ -785,9 +789,26 @@ h6 {
   color: white;
 }
 
+.header.js-header-white-dark .header__logo svg path {
+  fill: #777777;
+}
+
+.header.js-header-white-dark .header__burger {
+  color: #777777;
+}
+
+.header.js-header-white-dark .header__burger span:first-child::before,
+.header.js-header-white-dark .header__burger span:first-child::after {
+  content: "";
+  background-color: #777777;
+}
+
+.header.js-header-white-dark .header__right {
+  color: #777777;
+}
+
 .header.js-header-fixed {
   position: fixed;
-  z-index: 99;
   width: 100%;
 }
 
@@ -1035,18 +1056,42 @@ h6 {
 }
 
 .hero {
-  background: url("../img/hero/hero.jpg") center/cover no-repeat;
   height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 130px 0 30px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .hero__container {
   flex: 1 1 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__content {
@@ -1996,6 +2041,7 @@ h6 {
     color: #000000;
     position: relative;
     display: block;
+    transition: all 0.5s ease 0s;
   }
 
   .header__burger span {
@@ -2017,6 +2063,7 @@ h6 {
     width: 100%;
     height: 2px;
     left: 0;
+    transition: all 0.5s ease 0s;
   }
 
   .header__burger span:first-child::before {
