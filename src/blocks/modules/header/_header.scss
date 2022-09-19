@@ -182,24 +182,24 @@
 				.header__logo {
 					svg {
 						path {
-							fill: #777777;
+							fill: #2A2A2A;
 						}
 					}
 				}
 				.header__burger {
-					color: #777777;
+					color: #2A2A2A;
 					span {
 						&:first-child {
 							&::before,
 							&::after {
 								content: '';
-								background-color: #777777;
+								background-color: #2A2A2A;
 							}
 						}
 					}
 				}
 				.header__right {
-					color: #777777;
+					color: #2A2A2A;
 				}
 			}
 		}

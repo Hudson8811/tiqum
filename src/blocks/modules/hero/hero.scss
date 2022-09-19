@@ -51,7 +51,7 @@
 	&__top {
 		padding: 30px 0;
 		display: flex;
-		border-top: 1px solid #FFFFFF;
+		border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 		.hero__title {
 		}
 		@media (max-width: 1919px){
@@ -76,13 +76,13 @@
 	
 	&__bottom {
 		display: flex;
-		border-top: 1px solid #FFFFFF;
+		border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 		@media (max-width: 1023px){
 			flex-wrap: wrap;
 			border: none;
 			.hero__right {
 				margin-top: 20px;
-				border-top: 1px solid #FFFFFF;
+				border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 				flex: 1 1 auto;
 				@media (max-width: 767px){
 					margin-top: 12px;
@@ -185,7 +185,7 @@
 				flex-direction: column;
 				justify-content: space-between;
 				padding: 20px 30px 0;
-				border-left: 1px solid #FFFFFF;
+				border-left: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 				@media (max-width: 1919px){
 					padding: 15px 25px 0;
 					min-height: 240px;
@@ -194,6 +194,11 @@
 					padding: 15px 15px 0;
 					min-height: 245px;
 				}
+				@media (max-width: 1023px){
+					&:first-child {
+						border-left: none;
+					}
+				}
 				@media (max-width: 767px){
 					flex: 1 1 100%;
 					display: flex;
@@ -201,7 +206,7 @@
 					align-items: center;
 					flex-direction: row;
 					border: none;
-					border-top: 1px solid #FFFFFF;
+					border-top: 1px solid rgba($color: #ffffff, $alpha: 1.0);
 					min-height: auto;
 					padding: 0;
 					padding-top: 5px;

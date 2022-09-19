@@ -14,3 +14,7 @@ var swiper = new Swiper(".wehelp__swiper", {
 		},
 	}
 });
+
+$('.form-wewillfind-footer__item input').focus(function() {
+	$(this).parent().addClass("js-active-area")
+});
