@@ -1,3 +1,4 @@
+//projects
 $(document).ready(function(){
 	$('.archive-projects__item').mouseover(function(){
 		$('.archive-projects__item').addClass("js-opacity-item");
@@ -9,5 +10,21 @@ $(document).ready(function(){
 	});
 });
 
-
-
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray(".projects__header").forEach((panel, i) => {
+	ScrollTrigger.create({
+		trigger: panel,
+		start: 'top top', 
+		pin: true, 
+		pinSpacing: false 
+	});
+});
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray(".trend__hero").forEach((panel, i) => {
+	ScrollTrigger.create({
+		trigger: panel,
+		start: 'top top', 
+		pin: true, 
+		pinSpacing: false 
+	});
+});

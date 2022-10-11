@@ -1,3 +1,6 @@
+body.body-overflow {
+	overflow: hidden;
+}
 .wrapper {
 	min-height: 100%;
 	display: flex;
@@ -85,7 +88,7 @@
 		flex-wrap: wrap;
 	}
 	.flex-lr__left {
-		flex: 0 1 auto;
+		flex: 1 1 auto;
 	}
 	.flex-lr__right {
 		flex: 0 0 65%;

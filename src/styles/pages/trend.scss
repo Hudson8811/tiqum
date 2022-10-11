@@ -1,0 +1,334 @@
+.trend {
+	background: #F5F5F5;
+}
+
+.hero-trend {
+		background: url('../img/pages/trend/trend-hero.jpg') center / cover no-repeat;
+			padding-top: 130px;
+			padding-bottom: 600px;
+		
+			@media (max-width: 1919px) {
+				padding: 100px 0 500px;
+			}
+		
+			@media (max-width: 1439px) {
+				padding: 70px 0 400px;
+			}
+		
+			@media (max-width: 767px) {
+				padding: 45px 0 300px;
+			}
+	
+	&__flex-lr {
+		border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+	}
+	
+	&__title {
+		padding-top: 30px;
+		color: #F5F5F5;
+		span {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: #FFFFFF;
+			display: block;
+			margin-top: 30px;
+		}
+	}
+}
+
+.content-trend {
+	padding-top: 30px;
+	padding-bottom: 220px;
+	@media (max-width: 1919px) {
+		padding-bottom: 165px;
+	}
+
+	@media (max-width: 1439px) {
+		padding-bottom: 110px;
+	}
+
+	@media (max-width: 767px) {
+		padding-bottom: 50px;
+	}
+	&__wrapper {
+		position: relative;
+		background: #F5F5F5;
+	}
+
+	&__left {}
+}
+
+.left-content-trend {
+	&__nav {}
+	
+		&__item {
+			margin-top: 16px;
+			&:first-child{
+				margin: 0;
+			}
+		}
+	
+		&__link {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: #2A2A2A;
+			opacity: 0.2;
+			transition: all 0.5s ease 0s;
+			&-active {
+				opacity: 1;
+			}
+		}
+}
+
+.right-content-trend {
+	@media (max-width: 1023px){
+		margin-top: 30px;
+	}
+	&__text {
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 142.8%;
+		color: #000000;
+		opacity: 0.5;
+		margin-top: 48px;
+		@media (max-width: 1023px){
+			  font-size: 18px;
+		}
+		@media (max-width: 767px){
+			margin-top: 20px;
+			font-size: 14px;
+		}
+		p {
+			margin-top: 25px;
+			@media (max-width: 767px){
+				margin-top: 15px;
+			}
+			&:first-child{
+				margin: 0;
+			}
+		}
+	}
+	&__start {
+		margin: 0;
+	}
+	
+	&__item {
+		margin-top: 105px;
+		@media (max-width: 1023px){
+			margin-top: 60px;
+		}
+	}
+	
+		&__title {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 450;
+			font-size: 48px;
+			line-height: 108.8%;
+			letter-spacing: -0.03em;
+			color: #2A2A2A;
+			@media (max-width: 1919px){
+				font-size: 36.0028px;
+				line-height: 108.8%;
+			}
+			@media (max-width: 1439px){
+				font-size: 28px;
+				line-height: 32px;
+			}
+			@media (max-width: 767px){
+				font-size: 20px;
+				line-height: 23px;
+			}
+		}
+	
+		&__img {
+			margin-top: 105px;
+			position: relative;
+			padding-top: 60%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	
+		&__coment {
+			display: flex;
+			margin-top: 107px;
+			padding-top: 30px;
+			padding-bottom: 107px;
+			border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+			border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+			@media (max-width: 1023px){
+				margin-top: 60px;
+				padding-bottom: 30px;
+			}
+			&::before{
+				content:'';
+				opacity: 0.2;
+				min-width: 80px;
+				min-height: 55px;
+				background: url('../img/pages/trend/content-trend-svg.svg') 0 0 / 100% 100% no-repeat;
+				@media (max-width: 1023px){
+					min-width: 60px;
+					min-height: 35px;
+				}
+				@media (max-width: 767px){
+					min-width: 30px;
+					min-height: 15px;
+				}
+			}
+			span {
+				display: block;
+				margin-left: 235px;
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 142.8%;
+				color: #000000;
+				@media (max-width: 1023px){
+					margin-left: 100px;
+					font-size: 20px;
+				}
+				@media (max-width: 767px){
+					font-size: 18px;
+					margin-left: 30px;
+				}
+			}
+		}
+
+		&__end {
+			margin-top: 105px;
+			@media (max-width: 1023px){
+				margin-top: 60px;
+			}
+			@media (max-width: 767px){
+				margin-top: 30px;
+			}
+		}
+}
+
+
+
+.other-trend {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #ffffff;
+	&__container {}
+		&__items-inner {
+			margin-top: 220px;
+			@media (max-width: 1919px) {
+				margin-top: 165px;
+			}
+		
+			@media (max-width: 1439px) {
+				margin-top: 110px;
+			}
+		
+			@media (max-width: 767px) {
+				margin-top: 50px;
+			}
+		}
+	
+		&__item-inner {
+
+		}
+	
+		&__item-small {
+			@media (max-width: 1023px) {
+				flex: 1 1 100%;
+				margin-top: 40px;
+			}
+		
+			.other-trend__item-img {
+				padding-top: 90%;
+				position: relative;
+		
+				@media (max-width: 1023px) {
+					height: auto;
+					padding-top: 50%;
+				}
+		
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	
+		&__item-img {
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	
+		&__item-text {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 126.8%;
+			color: #2A2A2A;
+			margin-top: 60px;
+			
+			@media (max-width: 1919px) {
+				font-size: 24.0018px;
+				max-width: 330px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 18px;
+				margin-top: 15px;
+			}
+		}
+	
+		&__item-big {
+			margin-left: 40px;
+			
+			@media (max-width: 1023px) {
+				margin: 0;
+				margin-top: 40px;
+			}
+			
+			.other-trend__item-img {
+				padding-top: 61%;
+				position: relative;
+			
+				@media (max-width: 1023px) {
+					height: auto;
+					padding-top: 50%;
+				}
+			
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+}

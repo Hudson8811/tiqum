@@ -1,0 +1,120 @@
+.blog {
+	padding-top: 130px;
+
+	@media (max-width: 1919px) {
+		padding: 100px 0 0;
+	}
+
+	@media (max-width: 1439px) {
+		padding: 70px 0 0;
+	}
+
+	@media (max-width: 767px) {
+		padding: 45px 0 0;
+	}
+}
+
+
+.header-blog {
+	border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+	padding-top: 30px;
+	padding-bottom: 220px;
+
+	@media (max-width: 1919px) {
+		padding-bottom: 165px;
+	}
+
+	@media (max-width: 1439px) {
+		padding-bottom: 110px;
+	}
+
+	@media (max-width: 767px) {
+		padding-bottom: 50px;
+	}
+}
+
+
+.blog__items-outer {
+	margin-top: -60px;
+	margin-bottom: 60px;
+	@media (max-width: 1023px){
+		margin-top: -40px;
+	}
+	.blog__item-outer {
+		margin-top: 60px;
+		@media (max-width: 1023px){
+			margin: 0;
+		}
+		.blog__item-small {
+			@media (max-width: 1023px){
+				flex: 1 1 100%;
+				margin-top: 40px;
+			}
+			.blog__item-img {
+				height: 535px;
+				position: relative;
+				@media (max-width: 1023px) {
+					height: auto;
+					padding-top: 50%;
+				}
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		
+		.blog__items-inner {}
+		
+		.blog__item-inner {
+
+		}
+		
+		.blog__item-big {
+			margin-left: 40px;
+			@media (max-width: 1023px){
+				margin: 0;
+				margin-top: 40px;
+			}
+			.blog__item-img {
+				height: 752px;
+				position: relative;
+				@media (max-width: 1023px){
+					height: auto;
+					padding-top: 50%;
+				}
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		.blog__item-text {
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 126.8%;
+			color: #2A2A2A;
+			margin-top: 60px;
+			@media (max-width: 1919px) {
+				font-size: 24.0018px;
+				max-width: 330px;
+			}
+			@media (max-width: 767px) {
+				font-size: 18px;
+				margin-top: 15px;
+			}
+			
+		}
+	}
+}
+
