@@ -4,20 +4,17 @@
 
 .hero-trend {
 		background: url('../img/pages/trend/trend-hero.jpg') center / cover no-repeat;
-			padding-top: 130px;
-			padding-bottom: 600px;
-		
-			@media (max-width: 1919px) {
-				padding: 100px 0 500px;
-			}
-		
-			@media (max-width: 1439px) {
-				padding: 70px 0 400px;
-			}
-		
-			@media (max-width: 767px) {
-				padding: 45px 0 300px;
-			}
+		padding-top: 130px;
+		padding-bottom: 600px;
+		@media (max-width: 1919px) {
+			padding: 100px 0 500px;
+		}
+		@media (max-width: 1439px) {
+			padding: 70px 0 400px;
+		}
+		@media (max-width: 767px) {
+			padding: 45px 0 300px;
+		}
 	
 	&__flex-lr {
 		border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
@@ -62,35 +59,34 @@
 }
 
 .left-content-trend {
-	&__nav {}
-	
-		&__item {
+	ul {
+		li {
 			margin-top: 16px;
 			&:first-child{
 				margin: 0;
 			}
-		}
-	
-		&__link {
-			font-family: 'Suisse Intl';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 21px;
-			color: #2A2A2A;
-			opacity: 0.2;
-			transition: all 0.5s ease 0s;
-			&-active {
-				opacity: 1;
+			a {
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				color: #2A2A2A;
+				opacity: 0.2;
+				transition: all 0.5s ease 0s;
+				&.left-content-trend__link-active {
+					opacity: 1;
+				}
 			}
 		}
+	}
 }
 
 .right-content-trend {
 	@media (max-width: 1023px){
 		margin-top: 30px;
 	}
-	&__text {
+	p {
 		font-family: 'Suisse Intl';
 		font-style: normal;
 		font-weight: 400;
@@ -100,34 +96,30 @@
 		opacity: 0.5;
 		margin-top: 48px;
 		@media (max-width: 1023px){
-			  font-size: 18px;
+			font-size: 18px;
 		}
 		@media (max-width: 767px){
 			margin-top: 20px;
 			font-size: 14px;
 		}
-		p {
-			margin-top: 25px;
-			@media (max-width: 767px){
-				margin-top: 15px;
-			}
-			&:first-child{
-				margin: 0;
-			}
+		margin-top: 25px;
+		@media (max-width: 767px){
+			margin-top: 15px;
+		}
+		&:first-child{
+			margin: 0;
 		}
 	}
 	&__start {
 		margin: 0;
 	}
 	
-	&__item {
-		margin-top: 105px;
-		@media (max-width: 1023px){
-			margin-top: 60px;
-		}
-	}
 	
-		&__title {
+	h2 {
+			margin-top: 105px;
+			@media (max-width: 1023px){
+				margin-top: 60px;
+			}
 			font-family: 'Suisse Intl';
 			font-style: normal;
 			font-weight: 450;

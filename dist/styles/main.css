@@ -2254,15 +2254,15 @@ h6 {
   background: #F5F5F5;
 }
 
-.left-content-trend__item {
+.left-content-trend ul li {
   margin-top: 16px;
 }
 
-.left-content-trend__item:first-child {
+.left-content-trend ul li:first-child {
   margin: 0;
 }
 
-.left-content-trend__link {
+.left-content-trend ul li a {
   font-family: "Suisse Intl";
   font-style: normal;
   font-weight: 400;
@@ -2273,11 +2273,11 @@ h6 {
   transition: all 0.5s ease 0s;
 }
 
-.left-content-trend__link-active {
+.left-content-trend ul li a.left-content-trend__link-active {
   opacity: 1;
 }
 
-.right-content-trend__text {
+.right-content-trend p {
   font-family: "Suisse Intl";
   font-style: normal;
   font-weight: 400;
@@ -2286,13 +2286,10 @@ h6 {
   color: #000000;
   opacity: 0.5;
   margin-top: 48px;
-}
-
-.right-content-trend__text p {
   margin-top: 25px;
 }
 
-.right-content-trend__text p:first-child {
+.right-content-trend p:first-child {
   margin: 0;
 }
 
@@ -2300,11 +2297,8 @@ h6 {
   margin: 0;
 }
 
-.right-content-trend__item {
+.right-content-trend h2 {
   margin-top: 105px;
-}
-
-.right-content-trend__title {
   font-family: "Suisse Intl";
   font-style: normal;
   font-weight: 450;
@@ -3046,7 +3040,7 @@ h6 {
     padding-bottom: 165px;
   }
 
-  .right-content-trend__title {
+  .right-content-trend h2 {
     font-size: 36.0028px;
     line-height: 108.8%;
   }
@@ -3496,7 +3490,7 @@ h6 {
     padding-bottom: 110px;
   }
 
-  .right-content-trend__title {
+  .right-content-trend h2 {
     font-size: 28px;
     line-height: 32px;
   }
@@ -3819,11 +3813,11 @@ h6 {
     margin-top: 30px;
   }
 
-  .right-content-trend__text {
+  .right-content-trend p {
     font-size: 18px;
   }
 
-  .right-content-trend__item {
+  .right-content-trend h2 {
     margin-top: 60px;
   }
 
@@ -4436,16 +4430,16 @@ h6 {
     padding-bottom: 50px;
   }
 
-  .right-content-trend__text {
+  .right-content-trend p {
     margin-top: 20px;
     font-size: 14px;
   }
 
-  .right-content-trend__text p {
+  .right-content-trend p {
     margin-top: 15px;
   }
 
-  .right-content-trend__title {
+  .right-content-trend h2 {
     font-size: 20px;
     line-height: 23px;
   }
