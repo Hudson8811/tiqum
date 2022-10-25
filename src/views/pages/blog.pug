@@ -7,37 +7,40 @@ block content
 	.wrapper 
 		include ../../blocks/modules/header/header 
 		.page 
-			.blog 
-				.blog__container.container 
-					.blog__header.header-blog 
-						.header-blog__flex-lr.flex-lr 
-							.header-blog__left.flex-lr__left 
-
-							.header-blog__right.flex-lr__right 
-								h1.header-blog__title.general-title Наш блог 
+			.container 
+				.page-header 
+					.flex-lr 
+						.flex-lr__left 
+						.flex-lr__right 
+							h1.general-title Наш блог 
+				.blog 
 					.blog__items-outer 
 						.blog__item-outer 
 							.blog__items-inner 
 								.blog__item-inner.flex-lr  
-									.blog__item-small.flex-lr__left  
-										.blog__item-img 
-											img(src="img/pages/blog/11.jpg", alt="alt") 
-										.blog__item-text Miro vs. FigJam: Выбираем a Workshopping,
-									.blog__item-big.flex-lr__right  
-										.blog__item-img 
-											img(src="img/pages/blog/12.jpg", alt="alt") 
-										.blog__item-text Miro vs. FigJam: Выбираем a Workshopping, Whiteboard and Collaboration Web App
+									a(href="").blog__item-small.flex-lr__left  
+										figure
+											.blog__item-img 
+												img(src="img/pages/blog/11.jpg", alt="alt") 
+											.blog__item-text Miro vs. FigJam: Выбираем a Workshopping,
+									a(href="").blog__item-big.flex-lr__right  
+										figure
+											.blog__item-img 
+												img(src="img/pages/blog/12.jpg", alt="alt") 
+											.blog__item-text Miro vs. FigJam: Выбираем a Workshopping, Whiteboard and Collaboration Web App
 						.blog__item-outer 
 							.blog__items-inner 
 								.blog__item-inner.flex-lr  
-									.blog__item-small.flex-lr__left  
-										.blog__item-img 
-											img(src="img/pages/blog/21.jpg", alt="alt") 
-										.blog__item-text Miro vs. FigJam: Выбираем a Workshopping,
-									.blog__item-big.flex-lr__right  
-										.blog__item-img 
-											img(src="img/pages/blog/22.jpg", alt="alt") 
-										.blog__item-text Miro vs. FigJam: Выбираем a Workshopping, Whiteboard and Collaboration Web App
+									a(href="").blog__item-small.flex-lr__left  
+										figure
+											.blog__item-img 
+												img(src="img/pages/blog/21.jpg", alt="alt") 
+											.blog__item-text Miro vs. FigJam: Выбираем a Workshopping,
+									a(href="").blog__item-big.flex-lr__right  
+										figure
+											.blog__item-img 
+												img(src="img/pages/blog/22.jpg", alt="alt") 
+											.blog__item-text Miro vs. FigJam: Выбираем a Workshopping, Whiteboard and Collaboration Web App
 
 
 		include ../../blocks/modules/footer/footer 

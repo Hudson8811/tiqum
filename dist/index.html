@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="page">
+      <div class="page page-main">
         <section class="hero">
           <video class="hero__video" src="video/hero.mp4" autoplay="" loop="" muted="muted"></video>
           <div class="hero__container container"> 
@@ -85,7 +85,12 @@
                 </div>
               </div>
               <div class="hero__bottom"> 
-                <div class="hero__left"> <a class="hero__left-download-link" href="#" download> <img src="img/svg/download.svg" alt="alt"><span>Презентация</span></a></div>
+                <div class="hero__left"> <a class="hero__left-download-link" href="#" download>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 10L12 15L17 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Презентация</span></a></div>
                 <div class="hero__right"> 
                   <div class="hero__items"> 
                     <div class="hero__item"> 
@@ -108,32 +113,43 @@
         </section>
         <section class="services white-block">
           <div class="services__container container"> 
-            <div class="services__items"> 
-              <div class="services__item">
-                <div class="services__item-left"> <span><span>less money     </span><span>more money     </span><span>new </span><span>money</span></span></div>
-                <div class="services__item-right"> <span>Консалтинг по цифровой трансформации</span></div>
-              </div>
-              <div class="services__item">
-                <div class="services__item-left"> <span><span>web     </span><span>mobile     </span><span>ml</span></span></div>
-                <div class="services__item-right"> <span>Продуктовая веб- и мобильная разработка</span></div>
-              </div>
-              <div class="services__item">
-                <div class="services__item-left"> <span><span>ui     </span><span>ux     </span><span>cx</span></span></div>
-                <div class="services__item-right"> <span>Дизайн и проектирование интерфейсов</span></div>
-              </div>
-              <div class="services__item">
-                <div class="services__item-left"> <span> <span>sla</span></span></div>
-                <div class="services__item-right"> <span>Развитие и поддержка IT-проектов</span></div>
-              </div>
-              <div class="services__item">
-                <div class="services__item-left"> <span> <span>startup</span></span></div>
-                <div class="services__item-right"> <span>MVP за 3 месяца</span></div>
-              </div>
-              <div class="services__item">
-                <div class="services__item-left"> <span><span>express branding     </span><span>logo </span><span>website     </span></span></div>
-                <div class="services__item-right"> <span>Метод IQ</span><a class="services__item-new" href="#">Hовое</a></div>
-              </div>
-            </div>
+            <div class="services__items"> <a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span><span>less money     </span><span>more money     </span><span>new </span><span>money</span></span></div>
+                    <div class="services__item-right"> <span>Консалтинг по цифровой трансформации</span></div>
+                  </div>
+                </figure></a><a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span><span>web     </span><span>mobile     </span><span>ml</span></span></div>
+                    <div class="services__item-right"> <span>Продуктовая веб- и мобильная разработка</span></div>
+                  </div>
+                </figure></a><a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span><span>ui     </span><span>ux     </span><span>cx</span></span></div>
+                    <div class="services__item-right"> <span>Дизайн и проектирование интерфейсов</span></div>
+                  </div>
+                </figure></a><a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span> <span>sla</span></span></div>
+                    <div class="services__item-right"> <span>Развитие и поддержка IT-проектов</span></div>
+                  </div>
+                </figure></a><a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span> <span>startup</span></span></div>
+                    <div class="services__item-right"> <span>MVP за 3 месяца</span></div>
+                  </div>
+                </figure></a><a class="services__item-wrapper" href="#">
+                <figure> 
+                  <div class="services__item">
+                    <div class="services__item-left"> <span><span>express branding     </span><span>logo </span><span>website     </span></span></div>
+                    <div class="services__item-right"> <span>Метод IQ</span></div>
+                  </div>
+                </figure><a class="services__item-new" href="#">Hовое</a></a></div>
           </div>
         </section>
         <section class="realization white-block">
@@ -211,7 +227,7 @@
                       <div class="item-projects__img"> <img src="img/item-projects/mark.png" alt="alt"></div>
                       <div class="item-projects-bronze">	<img src="img/svg/bronze.svg" alt="alt"></div>
                     </figure></a></div>
-                <div class="item-projects"><a class="item-projects__content item-projects-content-blue" href="#">
+                <div class="item-projects item-projects-dark"><a class="item-projects__content item-projects-content-blue" href="#">
                     <figure>
                       <div class="item-projects__header">
                         <div class="item-projects__title">ATM и терминалы оплаты банка </div>
@@ -248,32 +264,31 @@
             <div class="weright__header"> 
               <div class="weright__left"> <a class="weright__telegram" href="#"><img src="img/svg/telegram.svg" alt="alt"></a></div>
               <div class="weright__right"> 
-                <div class="weright__title general-title"> <span>Пишем </span>про IT и цифровую <br>трансформацию </div>
+                <div class="weright__title general-title"> <a href="">Пишем </a>про IT и цифровую <br>трансформацию </div>
               </div>
             </div>
-            <div class="weright__items"> 
-              <div class="weright__item weright__item--big"> 
-                <div class="weright__img"> <img src="img/weright/1.jpg" alt="alt"></div>
-                <div class="weright__text">
-                   Miro vs. FigJam: Выбираем a <br>Workshopping, Whiteboard and <br>Collaboration Web App</div>
-              </div>
-              <div class="weright__item"> 
-                <div class="weright__img"> <img src="img/weright/2.jpg" alt="alt"></div>
-                <div class="weright__text">
-                   Miro vs. FigJam: Выбираем <br>a Workshopping,</div>
-              </div>
-              <div class="weright__item"> 
-                <div class="weright__img"> <img src="img/weright/3.jpg" alt="alt"></div>
-                <div class="weright__text">
-                   Miro vs. FigJam: Выбираем a <br>Workshopping, Whiteboard <br>and Collaboration Web App</div>
-              </div>
-            </div>
+            <div class="weright__items"> <a class="weright__item weright__item--big" href=""> 
+                <figure>
+                  <div class="weright__img"> <img src="img/weright/1.jpg" alt="alt"></div>
+                  <div class="weright__text">
+                     Miro vs. FigJam: Выбираем a <br>Workshopping, Whiteboard and <br>Collaboration Web App</div>
+                </figure></a><a class="weright__item" href=""> 
+                <figure>
+                  <div class="weright__img"> <img src="img/weright/2.jpg" alt="alt"></div>
+                  <div class="weright__text">
+                     Miro vs. FigJam: Выбираем <br>a Workshopping,</div>
+                </figure></a><a class="weright__item" href=""> 
+                <figure>
+                  <div class="weright__img"> <img src="img/weright/3.jpg" alt="alt"></div>
+                  <div class="weright__text">
+                     Miro vs. FigJam: Выбираем a <br>Workshopping, Whiteboard <br>and Collaboration Web App</div>
+                </figure></a></div>
           </div>
         </section>
         <section class="wehelp white-block">
           <div class="wehelp__container container"> 
             <div class="wehelp__title-wrapper"> 
-              <div class="wehelp__title general-title"> <span>Помогаем клиентам </span><br>достигать бизнес-целей и <br>пополнять топ-рейтинг <img src="img/svg/rbc-500.svg" alt="alt"></div>
+              <div class="wehelp__title general-title"> <a href="">Помогаем клиентам </a><br>достигать бизнес-целей и <br>пополнять топ-рейтинг <img src="img/svg/rbc-500.svg" alt="alt"></div>
             </div>
             <div class="wehelp__swiper swiper"> 
               <div class="swiper-wrapper"> 
@@ -398,7 +413,7 @@
                   </label>
                 </div>
                 <div class="form-wewillfind-footer__bottom"> 
-                  <button class="form-wewillfind-footer__btn" type="submit"> <span>Отправить</span></button>
+                  <button class="form-wewillfind-footer__btn blue-btn" type="submit"> <span>Отправить</span></button>
                   <div class="form-wewillfind-footer__text">
                      Нажимая кнопку вы соглашаетесь на <br>обработку персональных данных и <br>улучшение вашего бизнеса</div>
                 </div>

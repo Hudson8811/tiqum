@@ -1,0 +1,477 @@
+.portfolio {
+
+	.page-header {
+		&__flex-lr {
+			position: relative;
+			.flex-lr__left {
+				@media (max-width: 767px){
+					order: -1;
+					margin-top: 0;
+					font-size: 3.200vw;
+					line-height: 3.733vw;
+				}
+			}
+			.flex-lr__right {
+				@media (max-width: 1023px){
+					margin-top: 30px;
+				}
+				@media (max-width: 767px){
+					margin-top: 12vw;
+				}
+				.general-title {
+					@media (max-width: 1023px){
+						max-width: 70vw;
+					}
+					@media (max-width: 767px){
+						max-width: 98vw;
+					}
+				}
+			}
+		}
+			&__left {
+				@media (max-width: 1023px){
+					flex: 1 1 100%!important;
+				}
+			}
+		
+			&__btns {
+				display: flex;
+				row-gap: 10px;
+				@media (max-width: 1023px){
+					max-width: 60%;
+					flex-wrap: wrap;
+				}
+				@media (max-width: 767px){
+					row-gap: 2.667vw;
+				}
+			}
+		
+			&__btn {
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				text-align: right;
+				color: #000000;
+				padding: 11px 16px;
+				background: #F5F5F5;
+				border-radius: 25px;
+				margin-right: 15px;
+				@media (max-width: 1919px) {
+					font-size: 14px;
+					line-height: 16px;
+					padding: 8px 12px;
+					margin-right: 10px;
+				}
+				@media (max-width: 1439px) {
+					color: #2A2A2A;
+					padding: 6px 10px;
+				}
+				@media (max-width: 767px) {
+					font-size: 3.200vw;
+					line-height: 3.733vw;
+					padding: 1.067vw 1.600vw;
+					border-radius: 6.667vw;
+				}
+			}
+		
+			&__right {
+				display: flex;
+				justify-content: space-between;
+				@media (max-width: 1023px){
+					flex-wrap: wrap;
+				}
+			}
+
+			&__title {
+				@media (max-width: 1023px){
+					margin-top: 100px;
+					flex: 1 1 100%;
+				}
+				@media (max-width: 767px){
+					margin-top: 13.333vw;
+				}
+			}
+
+			&__labels {
+				display: flex;
+				@media (max-width: 1023px){
+					flex: 1 1 100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+			&__label {
+				width: 75px;
+				height: 75px;
+				margin-left: 20px;
+				@media (max-width: 1919px){
+					width: 55px;
+					height: 55px;
+					margin-left: 15px;
+				}
+				@media (max-width: 767px){
+					width: 12vw;
+					height: 12vw;
+					margin-left: 2.667vw;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		
+			&-grey {}
+
+			&-gold {}
+
+		}
+		.portfolio__img {
+			position: relative;
+			padding-top: 44%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+
+		.project-portfolio {
+		padding-top: 30px;
+		padding-bottom: 220px;
+		background-color: #E5E5E5;
+		@media (max-width: 1919px){
+			padding-top: 20px;
+			padding-bottom: 170px;
+		}
+		@media (max-width: 1439px){
+			padding-bottom: 110px;
+		}
+		@media (max-width: 1023px){
+			padding-bottom: 30px;
+		}
+		@media (max-width: 767px){
+			padding-top: 2.667vw;
+			padding-bottom: 0px;
+		}
+		&__container {}
+
+		&__top {
+			padding-bottom: 170px;
+				@media (max-width: 1919px){
+					padding-bottom: 110px;
+				}
+				@media (max-width: 1023px){
+					flex-wrap: nowrap;
+				}
+				@media (max-width: 767px){
+					padding-bottom: 2.667vw;
+					flex-wrap: wrap;
+				}
+				.flex-lr__left {
+					@media (max-width: 1023px){
+						display: flex;
+						justify-content: flex-end;
+					}
+				}
+				.flex-lr__right {
+					@media (max-width: 1023px){
+						flex: 1 1 auto!important;
+						order: -1;
+					}
+					@media (max-width: 767px){
+						flex: 1 1 100%!important;
+						order: 2;
+						margin-top: 13.333vw;
+					}
+					.project-portfolio__title {
+						@media (max-width: 1023px){
+							max-width: 385px;
+						}
+						@media (max-width: 767px){
+							max-width: 100%;
+						}
+					}
+				}
+			}
+
+			&__left {}
+		
+			&__link {
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				color: #000000;
+				@media (max-width: 1919px){
+					font-size: 14px;
+					line-height: 16px;
+				}
+				@media (max-width: 767px){
+					font-size: 3.200vw;
+					line-height: 3.733vw;
+					margin-bottom: 3.333vw;
+					display: block;
+				}
+			}
+
+			&__right {}
+
+			&__title {
+				max-width: 750px;
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 450;
+				font-size: 48px;
+				line-height: 108.8%;
+				letter-spacing: -0.03em;
+				color: #2A2A2A;
+				@media (max-width: 1919px) {
+					font-size: 36px;
+				}
+
+				@media (max-width: 1439px) {
+					font-size: 28px;
+					line-height: 32px;
+					color: #2A2A2A;
+				}
+
+				@media (max-width: 1023px) {
+					flex: 1 1 100%;
+				}
+
+				@media (max-width: 767px) {
+					font-size: 5.333vw;
+					line-height: 6.133vw;
+					max-width: 100%;
+				}
+			}
+
+			&__items {}
+
+			&__item {
+				padding-top: 30px;
+				border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+				&:not(:first-child) {
+					margin-top: 100px;
+					@media (max-width: 1919px){
+						margin-top: 55px;
+					}
+					@media (max-width: 767px){
+						margin-top: 14.667vw;
+					}
+				}
+
+				@media (max-width: 1919px){
+					padding-top: 20px;
+				}
+				@media (max-width: 1439px){
+					padding-top: 30px;
+				}
+				@media (max-width: 767px){
+					border-top: 0.267vw solid rgba($color: #000000, $alpha: 0.2);
+					padding-top: 4vw;
+				}
+				&-left {
+				}
+
+				&-right {
+					.general-text {
+						&:not(:first-child) {
+							margin-top: 30px;
+							@media (max-width: 1919px){
+								margin-top: 20px;
+							}
+							@media (max-width: 1439px){
+								margin-top: 30px;
+							}
+							@media (max-width: 767px){
+								margin-top: 4vw;
+							}
+						}
+					}
+				}
+
+
+				&-img {
+					margin-top: 100px;
+					border-radius: 22px;
+					overflow: hidden;
+					@media (max-width: 1919px){
+						border-radius: 16.5013px;
+						margin-top: 80px;
+					}
+					@media (max-width: 1439px){
+						margin-top: 60px;
+					}
+					@media (max-width: 767px){
+						border-radius: 1.600vw;
+						margin-top: 8vw;
+					}
+					img {
+						width: 100%;
+						height: 100%;
+					}
+
+					&-wrapper {
+						display: flex;
+						column-gap: 15px;
+						@media (max-width: 767px){
+							flex-wrap: wrap;
+							column-gap: 4vw;
+						}
+						.project-portfolio__item-img {
+							flex: 0 1 50%;
+							@media (max-width: 767px){
+								flex: 1 1 100%;
+								&:not(:first-child) {
+									margin-top: 4vw;
+								}
+							}
+						}
+					}
+				}
+
+				&-title {
+					max-width: 360px;
+					font-family: 'Suisse Intl';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 32px;
+					line-height: 126.8%;
+					color: #2A2A2A;
+
+					@media (max-width: 1919px){
+						font-size: 24.0018px;
+					}
+					@media (max-width: 1023px) {
+						margin-bottom: 60px;
+					}
+					@media (max-width: 767px){
+						font-size: 4.800vw;
+						margin-bottom: 8vw;
+						max-width: 100%;
+					}
+					@media (min-width: 2000px) {
+						max-width: 100%;
+						margin-right: 50px;
+					}
+				}
+			}
+
+			&__bottom {
+				margin-top: 150px;
+				border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+				@media (max-width: 1919px){
+					margin-top: 130px;
+				}
+				@media (max-width: 1439px){
+					margin-top: 60px;
+				}
+				@media (max-width: 767px){
+					margin-top: 8vw;
+					border-top: 0.267vw solid rgba($color: #000000, $alpha: 0.2);
+				}
+				&-item {
+					padding: 30px 0;
+					border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+					font-family: 'Suisse Intl';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 32px;
+					line-height: 126.8%;
+					color: #2A2A2A;
+					@media (max-width: 1919px){
+						font-size: 24.0018px;
+					}
+					@media (max-width: 1023px){
+						&:first-child{
+							border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+							margin-top: 30px;
+						}
+					}
+					@media (max-width: 767px){
+						border-bottom: 0.267vw solid rgba($color: #000000, $alpha: 0.2);
+						font-size: 4.800vw;
+						padding: 8vw 0;
+						&:first-child{
+							margin-top: 4vw;
+						}
+						&:last-child{
+							border-bottom: 0px solid rgba($color: #000000, $alpha: 0);
+						}
+					}
+				}
+
+				&-title {
+					max-width: 437px;
+					font-family: 'Suisse Intl';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 32px;
+					line-height: 126.8%;
+					color: #2A2A2A;
+					padding-top: 30px;
+					@media (max-width: 1919px){
+						font-size: 24.0018px;
+						max-width: 330px;
+					}
+					@media (max-width: 1439px){
+						max-width: 290px;
+					}
+					@media (max-width: 1023px){
+						max-width: 440px;
+					}
+					@media (max-width: 767px){
+						font-size: 4.800vw;
+						padding-top: 4vw;
+						max-width: 100%;
+					}
+					@media (min-width: 2000px){
+						max-width: 100%;
+						margin-right: 50px;
+					}
+				}
+			}
+	}
+}
+
+
+
+.next-cases-portfolio {
+	padding: 30px 0 15px;
+	@media (max-width: 767px){
+		padding: 8vw 0 4vw;
+	}
+	&__flex-title {
+		@media (max-width: 1439px){
+			br {
+				display: none;
+			}
+		}
+		@media (max-width: 767px){
+			br {
+				display: block;
+			}
+		}
+	}
+	&__projects {
+		margin-top: 220px;
+		@media (max-width: 1919px){
+			margin-top: 170px;
+		}
+		@media (max-width: 1439px){
+			margin-top: 110px;
+		}
+		@media (max-width: 767px){
+			margin-top: 13.333vw;
+		}
+	}
+}

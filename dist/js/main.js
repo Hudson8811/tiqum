@@ -192,6 +192,29 @@ $('.form-wewillfind-footer__item input').focus(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/weright/weright.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/modules/weright/weright.js ***!
+  \***********************************************/
+/***/ (function() {
+
+var windowInnerWidth = window.innerWidth;
+console.log(windowInnerWidth);
+
+if (windowInnerWidth > 1022) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".weright__items").forEach(function (panel, i) {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: 'top top',
+      pin: true,
+      pinSpacing: false
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -212,6 +235,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_confirm_confirm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_confirm_confirm__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/services/services */ "./src/blocks/modules/services/services.js");
 /* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_services_services__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/weright/weright */ "./src/blocks/modules/weright/weright.js");
+/* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 

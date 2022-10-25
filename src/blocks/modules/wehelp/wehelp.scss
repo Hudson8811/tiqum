@@ -1,4 +1,6 @@
 .wehelp {
+	position: relative;
+	background-color: #ffffff;
 	padding-top: 30px;
 	padding-bottom: 60px;
 	@media (max-width: 1919px){
@@ -13,7 +15,7 @@
 		padding: 30px 0;
 	}
 	@media (max-width: 767px){
-		padding: 15px 0 30px;
+		padding: 4vw 0 8vw;
 	}
 	&__title {
 		flex: 0 1 65%;
@@ -25,6 +27,11 @@
 		}
 		@media (max-width: 1023px){
 			flex: 1 1 100%;
+		}
+		@media (max-width: 767px){
+			br {
+				display: none;
+			}
 		}
 		&-wrapper {
 			display: flex;
@@ -57,8 +64,8 @@
 			margin-top: 110px;
 		}
 		@media (max-width: 767px){
-			margin: 0 -20px;
-			margin-top: 50px;
+			margin: 0 -5.333vw;
+			margin-top: 13.333vw;
 		}
 		.swiper-wrapper {
 			transition-timing-function: linear;
@@ -106,6 +113,9 @@
 			border: 1px solid rgba($color: #000000, $alpha: 0.2);
 			border-radius: 50%;
 			padding: 5%;
+			@media (max-width: 767px){
+				border: 0.267vw solid rgba($color: #000000, $alpha: 0.2);
+			}
 			img {
 				width: 100%;
 				position: relative;
@@ -145,6 +155,9 @@
 			@media (max-width: 1919px){
 				font-size: 24.0167px;
 			}
+			@media (max-width: 767px){
+				font-size: 6.400vw;
+			}
 		}
 	
 		&-right {
@@ -158,6 +171,10 @@
 			@media (max-width: 1919px){
 				font-size: 13.5094px;
 				line-height: 16px;
+			}
+			@media (max-width: 767px) {
+				font-size: 3.733vw;
+				line-height: 4.267vw;
 			}
 		}
 	}

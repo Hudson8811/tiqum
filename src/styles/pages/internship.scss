@@ -1,35 +1,10 @@
-.hero-internship {
-	padding-top: 130px;
-	padding-bottom: 220px;
-	@media (max-width: 1919px) {
-		padding-top: 100px;
-		padding-bottom: 165px;
-	}
-	@media (max-width: 1439px) {
-		padding-top: 70px;
-		padding-bottom: 110px;
-	}
-	@media (max-width: 767px) {
-		padding-top: 45px;
-		padding-bottom: 50px;
-	}
-	&__flex-lr {
-		border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
-	}
-	&__title {
-		padding-top: 30px;
-	}
-}
 .right-content-trend__btn {
 	font-family: 'Suisse Intl';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 21px;
-		/* identical to box height */
-	
 		text-transform: uppercase;
-	
 		color: #FFFFFF;
 		background: #0047FF;
 		width: 595px;
@@ -46,8 +21,9 @@
 		}
 		@media (max-width: 767px){
 			width: 100%;
-			font-size: 12px;
-			line-height: 14px;
-			margin-top: 20px;
+			font-size: 3.200vw;
+			line-height: 3.733vw;
+			margin-top: 5.333vw;
+				height: 17.333vw;
 		}
 }
