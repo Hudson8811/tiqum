@@ -6,9 +6,6 @@
 		line-height: 21px;
 		text-transform: uppercase;
 		color: #FFFFFF;
-		background: #0047FF;
-		width: 595px;
-		height: 88px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -16,7 +13,6 @@
 		@media (max-width: 1919px){
 			font-size: 13.5094px;
 			line-height: 16px;
-			height: 65px;
 			margin-top: 45px;
 		}
 		@media (max-width: 767px){
@@ -24,6 +20,5 @@
 			font-size: 3.200vw;
 			line-height: 3.733vw;
 			margin-top: 5.333vw;
-				height: 17.333vw;
 		}
 }

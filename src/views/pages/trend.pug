@@ -71,15 +71,25 @@ block content
 							.other-trend__right.flex-lr__right 
 								h1.other-trend__title.general-title Другие посты 
 						.other-trend__items-inner 
-							.other-trend__item-inner.flex-lr 
-								.other-trend__item-small.flex-lr__left 
-									.other-trend__item-img 
-										img(src="img/pages/blog/11.jpg", alt="alt") 
-									.other-trend__item-text Miro vs. FigJam: Выбираем a Workshopping,
-								.other-trend__item-big.flex-lr__right  
-									.other-trend__item-img 
-										img(src="img/pages/blog/12.jpg", alt="alt") 
-									.other-trend__item-text Miro vs. FigJam: Выбираем a Workshopping, Whiteboard and Collaboration Web App
+							.blog-items.flex-lr 
+								a(href='').blog-items__item.flex-lr__left  
+									figure
+										.blog-items__img 
+											img(src="img/pages/blog/11.jpg", alt="alt")
+										.blog-items__text 
+											|Miro vs. FigJam: Выбираем 
+											br
+											|a Workshopping,
+								a(href='').blog-items__item.blog-items__item--big.flex-lr__right  
+									figure
+										.blog-items__img 
+											img(src="img/pages/blog/12.jpg", alt="alt")
+										.blog-items__text 
+											|Miro vs. FigJam: Выбираем a 
+											br
+											|Workshopping, Whiteboard and 
+											br
+											|Collaboration Web App
 		include ../../blocks/modules/footer/footer 
 
 block scripts

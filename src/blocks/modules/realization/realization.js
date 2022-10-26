@@ -7,9 +7,6 @@ var swiper = new Swiper(".realization__swiper", {
 	},
 	breakpoints: {
 		768: {
-			slidesPerView: "3",
-		},
-		1024: {
 			slidesPerView: "4",
 		},
 		1440: {

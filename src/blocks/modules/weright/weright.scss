@@ -9,9 +9,13 @@
 	@media (max-width: 1439px){
 		padding: 30px 0;
 	}
+	@media (max-width: 1024px){
+		padding: 2.930vw 0;
+	}
 	@media (max-width: 767px){
 		padding: 4vw 0;
 	}
+
 	&__header {
 		display: flex;
 	}
@@ -51,101 +55,14 @@
 			@media (max-width: 1439px){
 				flex: 0 1 66%;
 			}
-			@media (max-width: 1023px){
+			@media (max-width: 1024px){
 				flex: 1 1 100%;
 			}
 		}
 	
 			&__title {}
 	
-	&__items {
-		display: flex;
-		margin: 30px 0 0;
-		@media (max-width: 1919px){
-			margin: 20px 0 0;
 		}
-		@media (max-width: 1439px){
-			margin: 130px 0 0;
-		}
-		@media (max-width: 1023px){
-			margin-top: 110px;
-		}
-		@media (max-width: 767px){
-			flex-wrap: wrap;
-			margin-top: 13.333vw;
-		}
-	}
-	
-		&__item {
-			padding-left: 15px;
-			flex: 0 1 25%;
-			@media (max-width: 1919px){
-				padding-left: 10px;
-			}
-			@media (max-width: 1439px){
-				padding-left: 15px;
-				flex: 0 1 33.333%;
-				&:last-child{
-					display: none;
-				}
-			}
-			@media (max-width: 767px){
-				padding: 0;
-				&:not(:first-child) {
-					margin-top: 8vw;
-				}
-			}
-			&:first-child{
-				padding: 0;
-			}
-			&:hover{
-				.weright__text {
-					color: #0047FF;
-				}
-			}
-			&--big {
-				flex: 0 1 50%;
-				@media (max-width: 1439px){
-					flex: 0 1 77.777%;
-				}
-			}
-			@media (max-width: 767px){
-				flex: 1 1 100%;
-			}
-		}
-	
-			&__img {
-				@media (max-width: 767px){
-					height: 74.667vw;
-				}
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-	
-			&__text {
-				margin-top: 20px;
-				font-family: 'Suisse Intl';
-				font-style: normal;
-				font-weight: 400;
-				font-size: 32px;
-				line-height: 126.8%;
-				color: #2A2A2A;
-				transition: all 0.5s ease 0s;
-				@media (max-width: 1919px){
-					margin-top: 15px;
-					font-size: 24.0167px;
-					line-height: 126.8%;
-				}
-				@media (max-width: 1439px){
-					font-size: 24px;
-					line-height: 126.8%;
-				}
-				@media (max-width: 767px){
-					margin-top: 4vw;
-					font-size: 4.800vw;
-				}
-			}
-}
+		
+
+		
