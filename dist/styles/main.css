@@ -2204,126 +2204,6 @@ h6 {
   margin-top: 220px;
 }
 
-/* .blog__items-outer {
-	margin-top: -60px;
-	margin-bottom: 60px;
-	@media (max-width: 1024px){
-		margin-top: -3.906vw;
-		margin-bottom: 5.859vw;
-
-	}
-	@media (max-width: 767px){
-		margin-top: -10.667vw;
-		margin-bottom: 16vw;
-	}
-	a {
-		&:hover{
-			.blog__item-text {
-				color: #0047FF;
-			}
-		}
-	}
-	.blog__item-outer {
-		margin-top: 60px;
-		@media (max-width: 1024px){
-			margin: 0;
-		}
-		.blog__item-small {
-			@media (max-width: 1024px){
-				margin-top: 3.906vw;
-			}
-			@media (max-width: 767px){
-				flex: 1 1 100%;
-				margin-top: 10.667vw;
-			}
-			.blog__item-img {
-				height: 535px;
-				position: relative;
-				@media (max-width: 1024px){
-					height: 52.246vw;
-				}
-				@media (max-width: 767px) {
-					height: auto;
-					padding-top: 50%;
-				}
-				img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
-
-		.blog__items-inner {}
-
-		.blog__item-inner {
-
-		}
-
-		.blog__item-big {
-			margin-left: 40px;
-			@media (max-width: 1024px){
-				margin-left: 3.906vw;
-			}
-			@media (max-width: 767px){
-				margin: 0;
-				margin-top: 40px;
-			}
-			@media (max-width: 767px){
-				margin-top: 10.667vw;
-			}
-			.blog__item-img {
-				height: 752px;
-				position: relative;
-				@media (max-width: 1024px){
-					height: 73.438vw;
-				}
-				@media (max-width: 767px){
-					height: auto;
-					padding-top: 50%;
-				}
-				img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
-		.blog__item-text {
-			font-family: 'Suisse Intl';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 32px;
-			line-height: 126.8%;
-			color: #2A2A2A;
-			margin-top: 60px;
-			@media (max-width: 1919px) {
-				font-size: 24.0018px;
-				max-width: 330px;
-			}
-			@media (max-width: 1024px) {
-				font-size: 2.344vw;
-				max-width: 32.227vw;
-				margin-top: 5.859vw;
-			}
-			@media (max-width: 767px) {
-				font-size: 4.800vw;
-				margin-top: 4vw;
-				max-width: 88vw;
-			}
-
-		}
-	}
-}
-
- */
-
 .blog-items {
   display: flex;
   margin: 30px 0 0;
@@ -2417,6 +2297,10 @@ h6 {
 .content-trend__wrapper {
   position: relative;
   background: #F5F5F5;
+}
+
+.left-content-trend {
+  margin-right: 30px;
 }
 
 .left-content-trend ul li {
@@ -4271,6 +4155,10 @@ h6 {
     padding-bottom: 10.742vw;
   }
 
+  .left-content-trend {
+    margin-right: 1vw;
+  }
+
   .left-content-trend ul li {
     margin-top: 1.563vw;
   }
@@ -5182,6 +5070,10 @@ line-height: 3.733vw; */
   .content-trend {
     padding-top: 8vw;
     padding-bottom: 13.333vw;
+  }
+
+  .left-content-trend {
+    margin-right: 0;
   }
 
   .left-content-trend ul li {

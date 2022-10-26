@@ -90,6 +90,13 @@
 }
 
 .left-content-trend {
+	margin-right: 30px;
+	@media (max-width: 1024px){
+		margin-right: 1vw;
+	}
+	@media (max-width: 767px){
+		margin-right: 0;
+	}
 	ul {
 		li {
 			margin-top: 16px;

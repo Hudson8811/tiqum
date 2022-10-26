@@ -279,6 +279,25 @@ gsap.utils.toArray(".trend__hero").forEach(function (panel, i) {
     pinSpacing: false
   });
 });
+$(document).ready(function () {
+  var h2_id = 1;
+  $('.content h2').each(function () {
+    $(this).attr("id", "b" + h2_id);
+    h2_cont = $(".content h2#b" + h2_id).text();
+    $('<li><a href="#b' + h2_id + '" class="click">' + h2_cont + '</a></a></li>').appendTo('.content ul');
+    h2_id++;
+  });
+  $('.click').on('click', function () {
+    var href = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(href).offset().top - 100
+    }, {
+      duration: 700,
+      easing: "linear"
+    });
+    return false;
+  });
+});
 
 /***/ }),
 
