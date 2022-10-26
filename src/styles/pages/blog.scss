@@ -102,6 +102,13 @@
 	
 }
 .blog__items-outer {
+	padding-bottom: 30px;
+	@media (max-width: 1024px){
+		padding-bottom: 2.93vw;
+	}
+	@media (max-width: 767px){
+		padding-bottom: 8vw;
+	}
 	.blog__item-outer {
 		margin-top: 60px;
 		@media (max-width: 1024px){

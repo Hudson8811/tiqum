@@ -2247,6 +2247,10 @@ h6 {
   transition: all 0.5s ease 0s;
 }
 
+.blog__items-outer {
+  padding-bottom: 30px;
+}
+
 .blog__items-outer .blog__item-outer {
   margin-top: 60px;
 }
@@ -4143,6 +4147,10 @@ h6 {
     margin-top: 1.465vw;
   }
 
+  .blog__items-outer {
+    padding-bottom: 2.93vw;
+  }
+
   .blog__items-outer .blog__item-outer {
     margin-top: 5.859vw;
   }
@@ -5061,6 +5069,10 @@ line-height: 3.733vw; */
   .blog-items__text {
     margin-top: 4vw;
     font-size: 4.8vw;
+  }
+
+  .blog__items-outer {
+    padding-bottom: 8vw;
   }
 
   .blog__items-outer .blog__item-outer {
