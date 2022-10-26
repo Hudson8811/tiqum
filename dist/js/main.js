@@ -291,7 +291,7 @@ $(document).ready(function () {
     var href = $(this).attr('href');
     var header = $('header').outerHeight();
     $('html, body').animate({
-      scrollTop: $(href).offset().top - 100
+      scrollTop: $(href).offset().top - header
     }, {
       duration: 700,
       easing: "linear"

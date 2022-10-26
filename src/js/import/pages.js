@@ -45,7 +45,7 @@ $(document).ready(function(){
 		var header = $('header').outerHeight();
 
 		$('html, body').animate({
-			scrollTop: $(href).offset().top - 100
+			scrollTop: $(href).offset().top - header
 		}, {
 			duration: 700,
 			easing: "linear"
@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 
 
-	
+
 /* 	$(document).on('scroll', function() {
 		var wh = $(window).height();
 		var wt = $(window).scrollTop();
