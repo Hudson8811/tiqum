@@ -63,6 +63,7 @@
 }
 
 .content-trend {
+	position: relative;
 	padding-top: 30px;
 	padding-bottom: 220px;
 	@media (max-width: 1919px) {
@@ -98,6 +99,20 @@
 		margin-right: 0;
 	}
 	ul {
+		position: sticky;
+		top: 160px;
+		@media (max-width: 1919px){
+			top: 135px;
+		}
+		@media (max-width: 1439px){
+			top: 105px;
+		}
+		@media (max-width: 1024px){
+			top: 10vw;
+		}
+		@media (max-width: 767px){
+			position: static;
+		}
 		li {
 			margin-top: 16px;
 			@media (max-width: 1024px){
@@ -116,7 +131,7 @@
 				font-size: 18px;
 				line-height: 21px;
 				color: #2A2A2A;
-				opacity: 0.2;
+				opacity: 0.4;
 				transition: all 0.5s ease 0s;
 				@media (max-width: 1024px){
 					font-size: 1.758vw;
@@ -127,6 +142,9 @@
 					line-height: 5.600vw;
 				}
 				&.left-content-trend__link-active {
+				}
+				transition: all 0.3s ease 0s;
+				&:hover{
 					opacity: 1;
 				}
 			}

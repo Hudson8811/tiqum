@@ -284,11 +284,12 @@ $(document).ready(function () {
   $('.content h2').each(function () {
     $(this).attr("id", "b" + h2_id);
     h2_cont = $(".content h2#b" + h2_id).text();
-    $('<li><a href="#b' + h2_id + '" class="click">' + h2_cont + '</a></a></li>').appendTo('.content ul');
+    $('<li><a href="#b' + h2_id + '" class="click link' + h2_id + '">' + h2_cont + '</a></a></li>').appendTo('.content ul');
     h2_id++;
   });
   $('.click').on('click', function () {
     var href = $(this).attr('href');
+    var header = $('header').outerHeight();
     $('html, body').animate({
       scrollTop: $(href).offset().top - 100
     }, {
@@ -297,6 +298,48 @@ $(document).ready(function () {
     });
     return false;
   });
+  /* 	$(document).on('scroll', function() {
+  		var wh = $(window).height();
+  		var wt = $(window).scrollTop();
+  		var wb = (wh + wt);
+  		
+  		var eh1 = $('#b1').outerHeight();
+  		var et1 = $('#b1').offset().top;
+  		var eb1 = (eh1 + et1);
+  
+  		if ((eb1 >= wt) && (et1 <= wb)){
+  			$('.link1').addClass("link1-active");
+  		} else {
+  			$('.link1').removeClass("link1-active");
+  		}
+  	}); */
+
+  /* 	var $animation_elements = $('.link1');
+  	var $window = $(window);
+  
+  	function check_if_in_view() {
+  		var window_height = $window.height();
+  		var window_top_position = $window.scrollTop();
+  		var window_bottom_position = (window_top_position + window_height);
+  		
+  		$.each($animation_elements, function() {
+  			var $element = $(this);
+  			var element_height = $element.outerHeight();
+  			var element_top_position = $element.offset().top;
+  			var element_bottom_position = (element_top_position + element_height);
+  		
+  			//check to see if this current container is within viewport
+  			if ((element_bottom_position >= window_top_position) &&
+  				(element_top_position <= window_bottom_position)) {
+  				$element.addClass('is-visible');
+  			} else {
+  				$element.removeClass('is-visible');
+  			}
+  		});
+  	}
+  
+  	$window.on('scroll resize', check_if_in_view);
+  	$window.trigger('scroll'); */
 });
 
 /***/ }),

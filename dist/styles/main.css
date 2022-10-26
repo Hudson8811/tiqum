@@ -2290,6 +2290,7 @@ h6 {
 }
 
 .content-trend {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 220px;
 }
@@ -2301,6 +2302,11 @@ h6 {
 
 .left-content-trend {
   margin-right: 30px;
+}
+
+.left-content-trend ul {
+  position: sticky;
+  top: 160px;
 }
 
 .left-content-trend ul li {
@@ -2318,11 +2324,12 @@ h6 {
   font-size: 18px;
   line-height: 21px;
   color: #2A2A2A;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: all 0.5s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.left-content-trend ul li a.left-content-trend__link-active {
+.left-content-trend ul li a:hover {
   opacity: 1;
 }
 
@@ -3010,6 +3017,10 @@ h6 {
     padding-bottom: 165px;
   }
 
+  .left-content-trend ul {
+    top: 135px;
+  }
+
   .right-content-trend h2 {
     font-size: 36.0028px;
     line-height: 108.8%;
@@ -3493,6 +3504,10 @@ h6 {
 
   .content-trend {
     padding-bottom: 110px;
+  }
+
+  .left-content-trend ul {
+    top: 105px;
   }
 
   .right-content-trend h2 {
@@ -4157,6 +4172,10 @@ h6 {
 
   .left-content-trend {
     margin-right: 1vw;
+  }
+
+  .left-content-trend ul {
+    top: 10vw;
   }
 
   .left-content-trend ul li {
@@ -5074,6 +5093,10 @@ line-height: 3.733vw; */
 
   .left-content-trend {
     margin-right: 0;
+  }
+
+  .left-content-trend ul {
+    position: static;
   }
 
   .left-content-trend ul li {
