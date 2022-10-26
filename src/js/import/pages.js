@@ -39,10 +39,11 @@ $(document).ready(function(){
 
 		h2_id++;
 	})
+	var Hheader = document.getElementByClass('.header').offsetHeight;
 	$('.click').on('click', function() {
 		let href = $(this).attr('href');
 		$('html, body').animate({
-			scrollTop: $(href).offset().top - 100
+			scrollTop: $(href).offset().top - Hheader
 		}, {
 			duration: 700,
 			easing: "linear"
