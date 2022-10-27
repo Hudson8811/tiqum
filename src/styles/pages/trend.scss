@@ -141,7 +141,11 @@
 					font-size: 4.800vw;
 					line-height: 5.600vw;
 				}
-				&.left-content-trend__link-active {
+				&.link {
+					transition: all 0.3s ease 0s;
+					&.link-active {
+						opacity: 1;
+					}
 				}
 				transition: all 0.3s ease 0s;
 				&:hover{

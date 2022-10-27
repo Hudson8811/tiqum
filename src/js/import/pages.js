@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 		h2_cont = $(".content h2#b" + h2_id).text();
 
-		$('<li><a href="#b'+ h2_id +'" class="click link'+ h2_id +'">'+ h2_cont +'</a></a></li>').appendTo('.content ul');
+		$('<li><a href="#b'+ h2_id +'" class="click link link'+ h2_id +'">'+ h2_cont +'</a></a></li>').appendTo('.content ul');
 		h2_id++;
 	})
 	
@@ -64,21 +64,25 @@ $(document).ready(function(){
 
 
 
-/* 	$(document).on('scroll', function() {
-		var wh = $(window).height();
-		var wt = $(window).scrollTop();
-		var wb = (wh + wt);
+	$(document).on('scroll', function() {
 		
-		var eh1 = $('#b1').outerHeight();
-		var et1 = $('#b1').offset().top;
-		var eb1 = (eh1 + et1);
+		var num = 1;
+		$('.link').each(function(){
+			var wh = $(window).height();
+			var wt = $(window).scrollTop();
+			var wb = (wh + wt);
 
-		if ((eb1 >= wt) && (et1 <= wb)){
-			$('.link1').addClass("link1-active");
-		} else {
-			$('.link1').removeClass("link1-active");
-		}
-	}); */
+			var eh = $('#b'+num+'').outerHeight();
+			var et = $('#b'+num+'').offset().top;
+			var eb = (eh + et);
+			if ((eb >= wt) && (et <= wb)){
+				$('.link'+num+'').addClass("link-active");
+			} else {
+				$('.link'+num+'').removeClass("link-active");
+			}
+			num++;
+		})
+	});
 
 
 

@@ -2333,6 +2333,14 @@ h6 {
   transition: all 0.3s ease 0s;
 }
 
+.left-content-trend ul li a.link {
+  transition: all 0.3s ease 0s;
+}
+
+.left-content-trend ul li a.link.link-active {
+  opacity: 1;
+}
+
 .left-content-trend ul li a:hover {
   opacity: 1;
 }
