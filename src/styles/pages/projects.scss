@@ -8,12 +8,10 @@
 			font-size: 18px;
 			line-height: 21px;
 			color: #000000;
-			@media (max-width: 1919px){
+			@media (max-width: 1440px){
 				font-size: 14px;
 				line-height: 16px;
-			}
-			@media (max-width: 1439px){
-				color: #2A2A2A;
+				
 			}
 			@media (max-width: 1024px){
 				font-size: 1.367vw;
@@ -60,10 +58,10 @@
 			font-size: 36px;
 			margin-top: 20px;
 		}
-		@media (max-width: 1439px){
+		@media (max-width: 1440px){
 			font-size: 28px;
 			line-height: 32px;
-			color: #2A2A2A;
+			
 			margin-top: 30px;
 			br {
 				display: none;
@@ -92,7 +90,7 @@
 			@media (max-width: 1919px){
 				max-width: 610px;
 			}
-			@media (max-width: 1439px){
+			@media (max-width: 1440px){
 				max-width: 530px;
 			}
 			@media (max-width: 1024px){
@@ -112,7 +110,7 @@
 	@media (max-width: 1919px){
 		margin-top: 165px;
 	}
-	@media (max-width: 1439px){
+	@media (max-width: 1440px){
 		margin-top: 130px;
 	}
 	@media (max-width: 1024px){
@@ -212,12 +210,12 @@
 						text-align: right;
 						color: #000000;
 						@media (max-width: 1919px){
-							font-size: 14px;
-							line-height: 16px;
 							padding: 8px 12px;
 						}
-						@media (max-width: 1439px){
-							color: #2A2A2A;
+						@media (max-width: 1440px){
+							font-size: 14px;
+							line-height: 16px;
+							
 							padding: 6px 10px;
 						}
 						@media (max-width: 1024px){
@@ -235,19 +233,19 @@
 							margin-left: 1.600vw;
 						}
 						&-hide {
-							@media (max-width: 1439px){
+							@media (max-width: 1440px){
 								display: none;
 							}
 						}
 						&-show {
 							display: none;
-							@media (max-width: 1439px){
+							@media (max-width: 1440px){
 								display: block;
 							}
 						}
 						&-show-more {
 							display: none;
-							@media (max-width: 1439px){
+							@media (max-width: 1440px){
 								display: block;
 							}
 						}
@@ -274,8 +272,8 @@
 					font-weight: 400;
 					font-size: 32px;
 					line-height: 126.8%;
-					color: #2A2A2A;
-					@media (max-width: 1919px){
+					
+					@media (max-width: 1440px){
 						font-size: 24px;
 					}
 					@media (max-width: 1024px){
@@ -295,7 +293,7 @@
 						width: 21px;
 						height: 21px;
 					}
-					@media (max-width: 1439px){
+					@media (max-width: 1440px){
 						display: none;
 					}
 					&-gold {
@@ -313,12 +311,12 @@
 					font-weight: 400;
 					font-size: 18px;
 					line-height: 21px;
-					color: #2A2A2A;
-					@media (max-width: 1919px){
+					
+					@media (max-width: 1440px){
 						font-size: 14px;
 						line-height: 16px;
 					}
-					@media (max-width: 1919px){
+					@media (max-width: 1024px){
 						font-size: 1.367vw;
 						line-height: 1.563vw;
 						margin-left: 11.719vw;

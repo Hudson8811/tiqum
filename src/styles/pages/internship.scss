@@ -11,9 +11,12 @@
 		align-items: center;
 		margin-top: 60px;
 		@media (max-width: 1919px){
+			margin-top: 45px;
+		}
+		@media (max-width: 1440px){
 			font-size: 14px;
 			line-height: 16px;
-			margin-top: 45px;
+			  
 		}
 		@media (max-width: 767px){
 			width: 100%;
