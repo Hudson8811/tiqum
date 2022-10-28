@@ -184,7 +184,7 @@ body.body-overflow {
     color: #ffffff;
 
     @media (max-width: 1919px) {
-      font-size: 13.5094px;
+      font-size: 14px;
       line-height: 16px;
     }
     @media (max-width: 1024px) {
@@ -202,12 +202,11 @@ body.body-overflow {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 20px;
   color: #000000;
   opacity: 0.5;
-  @media (max-width: 1919px) {
+  @media (max-width: 1439px) {
     font-size: 14px;
-    line-height: 19px;
   }
   @media (max-width: 1024px) {
     font-size: 1.367vw;
@@ -397,7 +396,7 @@ body.body-overflow {
       padding: 10px 15px;
       margin-right: 10px;
       @media (max-width: 1919px) {
-        font-size: 13.5094px;
+        font-size: 14px;
         line-height: 16px;
         border-radius: 18.763px;
         padding: 8px 12px;
@@ -440,11 +439,11 @@ body.body-overflow {
         display: none;
       }
       @media (max-width: 1919px) {
-        font-size: 13.5094px;
+        font-size: 14px;
         line-height: 16px;
         margin-top: 12px;
       }
-      @media (max-width: 1919px) {
+      @media (max-width: 1024px) {
         font-size: 1.367vw;
         line-height: 1.563vw;
         margin-top: 1.172vw;

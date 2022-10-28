@@ -534,7 +534,7 @@ body.body-overflow {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 20px;
   color: #000000;
   opacity: 0.5;
 }
@@ -1534,7 +1534,7 @@ h6 {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .services__item-right {
@@ -2548,13 +2548,8 @@ h6 {
   }
 
   .blue-btn span {
-    font-size: 13.5094px;
-    line-height: 16px;
-  }
-
-  .general-text {
     font-size: 14px;
-    line-height: 19px;
+    line-height: 16px;
   }
 
   .flex-lr .flex-lr__right {
@@ -2587,22 +2582,16 @@ h6 {
   }
 
   .items-projects .item-projects__btn {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     border-radius: 18.763px;
     padding: 8px 12px;
   }
 
   .items-projects .item-projects__text {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     margin-top: 12px;
-  }
-
-  .items-projects .item-projects__text {
-    font-size: 1.367vw;
-    line-height: 1.563vw;
-    margin-top: 1.172vw;
   }
 
   .header__inner {
@@ -2616,7 +2605,7 @@ h6 {
 
   .header__right {
     flex: 0 1 64%;
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2657,7 +2646,7 @@ h6 {
   }
 
   .footer__bottom {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     padding-bottom: 20px;
   }
@@ -2700,7 +2689,7 @@ h6 {
 
   .form-wewillfind-footer__item input,
   .form-wewillfind-footer__item textarea {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     padding-bottom: 15px;
   }
@@ -2715,7 +2704,7 @@ h6 {
 
   .form-wewillfind-footer__text {
     margin-left: 30px;
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2728,7 +2717,7 @@ h6 {
   }
 
   .hero__left {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2755,7 +2744,7 @@ h6 {
   }
 
   .hero__item-bottom {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2890,7 +2879,7 @@ h6 {
   }
 
   .confirm__item-right {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2932,7 +2921,7 @@ h6 {
   }
 
   .archive-projects__right-year {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -3038,7 +3027,7 @@ h6 {
   }
 
   .right-content-trend h2 {
-    font-size: 36.0028px;
+    font-size: 36;
     line-height: 108.8%;
   }
 
@@ -3047,12 +3036,12 @@ h6 {
   }
 
   .other-trend__item-text {
-    font-size: 24.0018px;
+    font-size: 24px;
     max-width: 330px;
   }
 
   .right-content-trend__btn {
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     margin-top: 45px;
   }
@@ -3078,6 +3067,10 @@ h6 {
 
   .blue-btn {
     width: 446px;
+  }
+
+  .general-text {
+    font-size: 14px;
   }
 
   .flex-lr .flex-lr__right {
@@ -3126,7 +3119,7 @@ h6 {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 400;
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
     color: #000000;
     position: relative;
@@ -3608,6 +3601,12 @@ h6 {
     margin-right: 0.977vw;
   }
 
+  .items-projects .item-projects__text {
+    font-size: 1.367vw;
+    line-height: 1.563vw;
+    margin-top: 1.172vw;
+  }
+
   .header__inner {
     padding: 2.441vw 0;
   }
@@ -3699,7 +3698,7 @@ h6 {
 
   .footer__bottom {
     padding-bottom: 1.953vw;
-    font-size: 13.5094px;
+    font-size: 14px;
     line-height: 16px;
   }
 
