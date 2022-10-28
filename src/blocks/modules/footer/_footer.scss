@@ -1,14 +1,14 @@
 .footer {
 	background-color: #2A2A2A;
-	padding: 30px 0;
+	padding: 30px 0 0;
 	@media (max-width: 1919px){
-		padding: 20px 0;
+		padding: 20px 0 0;
 	}
 	@media (max-width: 1024px){
-		padding: 1.953vw 0;
+		padding: 1.953vw 0 0;
 	}
 	@media (max-width: 767px){
-		padding: 4vw 0;
+		padding: 4vw 0 0;
 	}
 	&__bottom {
 		display: flex;
@@ -21,21 +21,55 @@
 		display: flex;
 		align-items: flex-end;
 		color: #FFFFFF;
+		padding-bottom: 30px;
 		@media (max-width: 1919px){
 			font-size: 13.5094px;
 			line-height: 16px;
+			padding-bottom: 20px;
 		}
 		@media (max-width: 1024px){
+			padding-bottom: 1.953vw;
+			font-size: 13.5094px;
+			line-height: 16px;
 			.footer__left {
 			}
 		}
 		@media (max-width: 767px){
-			display: none;
+			padding-bottom: 4vw;
+			font-size: 3.733vw;
+			line-height: 4.267vw;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.footer__right-soc  {
+				flex: 1 1 100%;
+				order: -1;
+
+			}
+			.footer__right  {
+				display: flex;
+				justify-content: flex-end;
+				@media (max-width: 767px){
+					justify-content: flex-start;
+				}
+			}
 		}
 	}
-	
+	.footer__right-soc-desk {
+		@media (max-width: 767px){
+			display: none!important;
+		}
+	}
+	.footer__right-soc-mob {
+		display: none!important;
+		@media (max-width: 767px){
+			display: grid!important;
+		}
+	}
 	&__left {
 		flex: 1 1 auto;
+		@media (max-width: 767px){
+			flex: 0 0 auto;
+		}
 	}
 	
 	&__right {
@@ -50,7 +84,7 @@
 			flex: 0 1 66%;
 		}
 		@media (max-width: 767px){
-			flex: 1 1 auto;
+			flex: 0 0 30vw;
 		}
 		a {
 			transition: all 0.5s ease 0s;
@@ -75,8 +109,12 @@
 			row-gap: 1.953vw;
 		}
 		@media (max-width: 767px){
-			margin-left: 10.667vw;
-			row-gap: 5.333vw;
+			margin-left: 0;
+			row-gap: 2.667vw;
+			margin-top: 8vw;
+			margin-bottom: 18.667vw;
+			grid-template: repeat(3, 1fr) / repeat(2, 30vw);
+			justify-content: space-between;
 		}
 		a {
 			margin-left: 70px;
@@ -87,12 +125,15 @@
 				margin-left: 3.906vw;
 			}
 			@media (max-width: 767px){
-				margin-left: 10.667vw;
+				margin-left: 0;
 			}
 		}
 	}
 	
 	&__right-lang {
+		@media (max-width: 767px){
+			  
+		}
 		a {
 			display: block;
 			text-align: right;
@@ -102,6 +143,7 @@
 			}
 			@media (max-width: 767px){
 				margin-top: 2.667vw;
+				text-align: left;
 			}
 			&.active-lang {
 				opacity: 0.2;

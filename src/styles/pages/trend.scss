@@ -2,7 +2,7 @@
 	background: #F5F5F5;
 }
 
-.hero-trend {
+.page-header-big {
 		background: url('../img/pages/trend/trend-hero.jpg') center / cover no-repeat;
 		padding-top: 130px;
 		padding-bottom: 600px;
@@ -19,7 +19,7 @@
 			padding: 12vw 0 50vw!important;
 		}
 	
-	&__flex-lr {
+	.flex-lr  {
 		border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
 		@media (max-width: 1024px){
 			border-top: 0.098vw solid rgba($color: #ffffff, $alpha: 0.2);
@@ -30,7 +30,7 @@
 		}
 	}
 
-	&__title {
+	.page-header__title {
 		padding-top: 30px;
 		color: #F5F5F5;
 		@media (max-width: 1024px){

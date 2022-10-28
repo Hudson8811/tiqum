@@ -1,7 +1,6 @@
-.projects {
 	.page-header {
 		display: flex;
-		&__left {
+		.page-header__left {
 			flex: 1 1 auto;
 			font-family: 'Suisse Intl';
 			font-style: normal;
@@ -26,8 +25,7 @@
 				line-height: 3.733vw;
 			}
 		} 
-		&__right {
-			flex: 0 1 65%;
+		.page-header__spans {
 			@media (max-width: 767px){
 				flex: 1 1 100%;
 				order: -1;
@@ -39,7 +37,7 @@
 				width: 100%;
 				span {
 					color: #000000;
-
+	
 					&:nth-child(2) {
 						opacity: 0.2;
 					}
@@ -47,6 +45,7 @@
 			}
 		}
 	}
+.projects {
 	&__subtitle {
 		font-family: 'Suisse Intl';
 		font-style: normal;

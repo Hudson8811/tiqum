@@ -1,146 +1,134 @@
-.portfolio {
-  .page-header {
-    &__flex-lr {
-      position: relative;
-      .flex-lr__left {
-        @media (max-width: 767px) {
-          order: -1;
-          margin-top: 0; /* 
-					font-size: 3.200vw;
-					line-height: 3.733vw; */
-        }
-      }
-      .flex-lr__right {
-        @media (max-width: 1024px) {
-          margin-top: 0;
-        }
-        @media (max-width: 767px) {
-          margin-top: 12vw;
-        }
-        .general-title {
-          @media (max-width: 1024px) {
-            max-width: 50vw;
-          }
-          @media (max-width: 767px) {
-            max-width: 98vw;
-          }
-        }
-      }
-    }
-    &__left {
-      @media (max-width: 1024px) {
-        flex: 1 1 100% !important;
-      }
-    }
-
-    &__btns {
-      display: flex;
-      row-gap: 10px;
-      @media (max-width: 1024px) {
-        max-width: 60%;
-        flex-wrap: wrap;
-        row-gap: 0.977vw;
-      }
-      @media (max-width: 767px) {
-        row-gap: 2.667vw;
-      }
-    }
-
-    &__btn {
-      font-family: "Suisse Intl";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 21px;
-      text-align: right;
-      color: #000000;
-      padding: 11px 16px;
-      background: #f5f5f5;
-      border-radius: 25px;
-      margin-right: 15px;
-      @media (max-width: 1919px) {
-        font-size: 14px;
-        line-height: 16px;
-        padding: 8px 12px;
-        margin-right: 10px;
-      }
-      @media (max-width: 1439px) {
-        color: #2a2a2a;
-        padding: 6px 10px;
-      }
-      @media (max-width: 1024px) {
-        font-size: 1.367vw;
-        line-height: 1.563vw;
-        padding: 0.781vw 1.172vw;
-        margin-right: 0.977vw;
-        margin-right: 1.465vw;
-      }
-      @media (max-width: 767px) {
-        font-size: 3.2vw;
-        line-height: 3.733vw;
-        padding: 1.067vw 1.6vw;
-        border-radius: 6.667vw;
-      }
-    }
-
-    &__right {
-      display: flex;
-      justify-content: space-between;
-      @media (max-width: 1024px) {
-        flex-wrap: wrap;
-      }
-    }
-
-    &__title {
-      @media (max-width: 1024px) {
-        margin-top: 100px;
-        flex: 1 1 100%;
-      }
-      @media (max-width: 767px) {
-        margin-top: 13.333vw;
-      }
-    }
-
-    &__labels {
-      display: flex;
-      @media (max-width: 1024px) {
-        flex: 1 1 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-    }
-    &__label {
-      width: 75px;
-      height: 75px;
-      margin-left: 20px;
-      @media (max-width: 1919px) {
-        width: 55px;
-        height: 55px;
-        margin-left: 15px;
-      }
-      @media (max-width: 1024px) {
-        width: 5.371vw;
-        height: 5.371vw;
-        margin-left: 1.465vw;
-      }
-      @media (max-width: 767px) {
-        width: 12vw;
-        height: 12vw;
-        margin-left: 2.667vw;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    &-grey {
-    }
-
-    &-gold {
-    }
+.page-header {
+  .page-header__flex-lr {
+	 position: relative;
+	 .flex-lr__left {
+		@media (max-width: 767px) {
+		  order: -1;
+		  margin-top: 0; 
+		}
+	 }
+	 .flex-lr__right {
+		@media (max-width: 1024px) {
+		  margin-top: 0;
+		}
+		@media (max-width: 767px) {
+		  margin-top: 12vw;
+		}
+		.general-title {
+		  @media (max-width: 1024px) {
+			 max-width: 50vw;
+		  }
+		  @media (max-width: 767px) {
+			 max-width: 98vw;
+		  }
+		}
+	 }
   }
+  .page-header__left {
+	 @media (max-width: 1024px) {
+		flex: 1 1 100% !important;
+	 }
+  }
+
+  .page-header__btns {
+	 display: flex;
+	 row-gap: 10px;
+	 @media (max-width: 1024px) {
+		max-width: 60%;
+		flex-wrap: wrap;
+		row-gap: 0.977vw;
+	 }
+	 @media (max-width: 767px) {
+		row-gap: 2.667vw;
+	 }
+  }
+
+  .page-header__btn {
+	 font-family: "Suisse Intl";
+	 font-style: normal;
+	 font-weight: 400;
+	 font-size: 18px;
+	 line-height: 21px;
+	 text-align: right;
+	 color: #000000;
+	 padding: 11px 16px;
+	 background: #f5f5f5;
+	 border-radius: 25px;
+	 margin-right: 15px;
+	 @media (max-width: 1919px) {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 8px 12px;
+		margin-right: 10px;
+	 }
+	 @media (max-width: 1439px) {
+		color: #2a2a2a;
+		padding: 6px 10px;
+	 }
+	 @media (max-width: 1024px) {
+		font-size: 1.367vw;
+		line-height: 1.563vw;
+		padding: 0.781vw 1.172vw;
+		margin-right: 0.977vw;
+		margin-right: 1.465vw;
+	 }
+	 @media (max-width: 767px) {
+		font-size: 3.2vw;
+		line-height: 3.733vw;
+		padding: 1.067vw 1.6vw;
+		border-radius: 6.667vw;
+	 }
+  }
+
+  .page-header__medals {
+	 display: flex;
+	 justify-content: space-between;
+	 @media (max-width: 1024px) {
+		flex-wrap: wrap;
+	 }
+  }
+
+  .page-header__title {
+	 @media (max-width: 1024px) {
+		flex: 1 1 100%;
+	 }
+  }
+
+  .page-header__labels {
+	 display: flex;
+	 @media (max-width: 1024px) {
+		flex: 1 1 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	 }
+  }
+  .page-header__label {
+	 width: 75px;
+	 height: 75px;
+	 margin-left: 20px;
+	 @media (max-width: 1919px) {
+		width: 55px;
+		height: 55px;
+		margin-left: 15px;
+	 }
+	 @media (max-width: 1024px) {
+		width: 5.371vw;
+		height: 5.371vw;
+		margin-left: 1.465vw;
+	 }
+	 @media (max-width: 767px) {
+		width: 12vw;
+		height: 12vw;
+		margin-left: 2.667vw;
+	 }
+	 img {
+		width: 100%;
+		height: 100%;
+	 }
+  }
+}
+.portfolio {
   .portfolio__img {
     position: relative;
     padding-top: 44%;

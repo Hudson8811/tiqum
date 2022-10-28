@@ -271,7 +271,7 @@ gsap.utils.toArray(".projects__header").forEach(function (panel, i) {
   });
 });
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray(".trend__hero").forEach(function (panel, i) {
+gsap.utils.toArray(".page-header-big").forEach(function (panel, i) {
   ScrollTrigger.create({
     trigger: panel,
     start: 'top top',

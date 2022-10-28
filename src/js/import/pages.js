@@ -20,7 +20,7 @@ gsap.utils.toArray(".projects__header").forEach((panel, i) => {
 	});
 });
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray(".trend__hero").forEach((panel, i) => {
+gsap.utils.toArray(".page-header-big").forEach((panel, i) => {
 	ScrollTrigger.create({
 		trigger: panel,
 		start: 'top top', 
@@ -53,19 +53,7 @@ $(document).ready(function(){
 
 		return false;
 	});
-
-
-
-
-
-
-
-
-
-
-
 	$(document).on('scroll', function() {
-		
 		var num = 1;
 		$('.link').each(function(){
 			var wh = $(window).height();
