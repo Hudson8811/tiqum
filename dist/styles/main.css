@@ -469,12 +469,12 @@ body.body-overflow {
 }
 
 .general-title span {
-  color: #0047FF;
+  color: #0047ff;
   font-weight: 500;
 }
 
 .general-title a {
-  color: #0047FF;
+  color: #0047ff;
   font-weight: 500;
   transition: all 0.5s ease 0s;
   position: relative;
@@ -487,7 +487,7 @@ body.body-overflow {
   left: 0;
   right: 0;
   height: 6px;
-  background-color: #0047FF;
+  background-color: #0047ff;
   opacity: 0;
   transition: all 0.5s ease 0s;
 }
@@ -501,14 +501,14 @@ body.body-overflow {
 }
 
 .link-hv:hover {
-  color: #0047FF;
+  color: #0047ff;
 }
 
 .blue-btn {
   width: 595px;
   height: 65px;
   cursor: pointer;
-  background-color: #0047FF;
+  background-color: #0047ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -516,7 +516,7 @@ body.body-overflow {
 }
 
 .blue-btn:hover {
-  background-color: #0B3EC4;
+  background-color: #0b3ec4;
 }
 
 .blue-btn span {
@@ -526,7 +526,7 @@ body.body-overflow {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .general-text {
@@ -612,7 +612,7 @@ body.body-overflow {
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
-  color: #2A2A2A;
+  color: #2a2a2a;
   transition: all 0.5s ease 0s;
 }
 
@@ -630,7 +630,7 @@ body.body-overflow {
   line-height: 21px;
   text-align: right;
   color: #000000;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -672,7 +672,7 @@ body.body-overflow {
 }
 
 .items-projects .item-projects:hover .item-projects__title {
-  color: #0047FF;
+  color: #0047ff;
 }
 
 .items-projects .item-projects:hover .item-projects__img img {
@@ -680,15 +680,15 @@ body.body-overflow {
 }
 
 .items-projects .item-projects-content-grey {
-  background-color: #F4EAEA;
+  background-color: #f4eaea;
 }
 
 .items-projects .item-projects-content-grey-dark {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
 }
 
 .items-projects .item-projects-content-blue {
-  background-color: #E3F0FE;
+  background-color: #e3f0fe;
 }
 
 .items-projects .item-projects-big {
@@ -2553,7 +2553,7 @@ h6 {
   }
 
   .general-text {
-    font-size: 13.501px;
+    font-size: 14px;
     line-height: 19px;
   }
 
@@ -3078,11 +3078,6 @@ h6 {
 
   .blue-btn {
     width: 446px;
-  }
-
-  .general-text {
-    font-size: 14px;
-    line-height: 20px;
   }
 
   .flex-lr .flex-lr__right {
