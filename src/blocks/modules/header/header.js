@@ -2,7 +2,7 @@ $(document).ready(function(){
 	if ($(".wrapper").hasClass("main-page")) {
 		$('.header').addClass("js-header-white");
 	}
-	if ($(".trend__header").hasClass("header-trend")) {
+	if ($(".blog__header").hasClass("header-blog")) {
 		$('.header').addClass("js-header-white");
 	}
 });
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	if ($('.blog__header').hasClass('header-blog')) {
 		$(".menu-mobile__link-blog").addClass("menu-mobile__link-active")
 	}
-	if ($(".trend__hero").hasClass("hero-trend")) {
+	if ($(".blog__hero").hasClass("hero-blog")) {
 		$('.menu-mobile__link-blog').addClass("menu-mobile__link-active-white");
 	}
 });

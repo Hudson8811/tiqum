@@ -78,10 +78,10 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		@media (max-width: 1919px){
-			flex: 0 1 64%;
+			flex: 0 1 65%;
 		}
 		@media (max-width: 1440px){
-			flex: 0 1 66%;
+			flex: 0 1 65%;
 		}
 		@media (max-width: 767px){
 			flex: 0 0 30vw;
@@ -232,11 +232,11 @@
 		flex: 0 1 65%;
 		padding-bottom: 195px;
 		@media (max-width: 1919px){
-			flex: 0 1 64%;
+			flex: 0 1 65%;
 			padding-bottom: 130px;
 		}
 		@media (max-width: 1440px){
-			flex: 0 1 66%;
+			flex: 0 1 65%;
 			padding-bottom: 100px;
 		}
 		@media (max-width: 1024px){
@@ -357,6 +357,7 @@
 		}
 		input::placeholder, textarea::placeholder {
 			color: rgba($color: #ffffff, $alpha: 1.0);
+			transition: all 0.3s ease 0.3s;
 		}
 		&-description {
 			flex: 1 1 100%;
@@ -391,6 +392,10 @@
 		}
 		&.js-active-area {
 			opacity: 1;
+			input::placeholder, textarea::placeholder {
+				transition: all 0.3s ease 0s;
+				color: rgba($color: #ffffff, $alpha: 0.1);
+			}
 		}
 		&--big {
 			flex: 0 1 100%;
