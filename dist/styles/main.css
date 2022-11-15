@@ -2098,6 +2098,20 @@ h6 {
   height: 100%;
 }
 
+.portfolio p {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.portfolio p:not(:first-child) {
+  margin-top: 30px;
+}
+
 .portfolio .portfolio__img {
   position: relative;
   padding-top: 44%;
@@ -2149,10 +2163,6 @@ h6 {
 
 .portfolio .project-portfolio__item:not(:first-child) {
   margin-top: 100px;
-}
-
-.portfolio .project-portfolio__item-right .general-text:not(:first-child) {
-  margin-top: 30px;
 }
 
 .portfolio .project-portfolio__item-img {
@@ -2966,6 +2976,10 @@ h6 {
     margin-left: 15px;
   }
 
+  .portfolio p:not(:first-child) {
+    margin-top: 20px;
+  }
+
   .portfolio .project-portfolio {
     padding-top: 20px;
     padding-bottom: 170px;
@@ -2985,10 +2999,6 @@ h6 {
 
   .portfolio .project-portfolio__item {
     padding-top: 20px;
-  }
-
-  .portfolio .project-portfolio__item-right .general-text:not(:first-child) {
-    margin-top: 20px;
   }
 
   .portfolio .project-portfolio__item-img {
@@ -3396,6 +3406,10 @@ h6 {
     padding: 6px 10px;
   }
 
+  .portfolio p:not(:first-child) {
+    margin-top: 30px;
+  }
+
   .portfolio .project-portfolio {
     padding-bottom: 110px;
   }
@@ -3414,10 +3428,6 @@ h6 {
   .portfolio .project-portfolio__item {
     padding-top: 2.93vw;
     border-top: 0.098vw solid rgba(0, 0, 0, 0.2);
-  }
-
-  .portfolio .project-portfolio__item-right .general-text:not(:first-child) {
-    margin-top: 30px;
   }
 
   .portfolio .project-portfolio__item-img {
@@ -3580,6 +3590,10 @@ h6 {
 
   .header.js-header-fixed .header__inner .menu-header__list {
     margin-left: -20px;
+  }
+
+  .portfolio p {
+    font-size: 14px;
   }
 }
 
@@ -4117,6 +4131,15 @@ h6 {
     margin-left: 1.465vw;
   }
 
+  .portfolio p {
+    font-size: 1.367vw;
+    line-height: 1.563vw;
+  }
+
+  .portfolio p:not(:first-child) {
+    margin-top: 2.93vw;
+  }
+
   .portfolio .project-portfolio {
     padding-top: 1.953vw;
     padding-bottom: 2.93vw;
@@ -4153,10 +4176,6 @@ h6 {
 
   .portfolio .project-portfolio__title {
     flex: 1 1 100%;
-  }
-
-  .portfolio .project-portfolio__item-right .general-text:not(:first-child) {
-    margin-top: 2.93vw;
   }
 
   .portfolio .project-portfolio__item-img {
@@ -5031,6 +5050,15 @@ h6 {
     margin-left: 2.667vw;
   }
 
+  .portfolio p {
+    font-size: 3.2vw;
+    line-height: 4.533vw;
+  }
+
+  .portfolio p:not(:first-child) {
+    margin-top: 4vw;
+  }
+
   .portfolio .project-portfolio {
     padding-top: 2.667vw;
     padding-bottom: 0px;
@@ -5075,10 +5103,6 @@ h6 {
   .portfolio .project-portfolio__item {
     border-top: 0.267vw solid rgba(0, 0, 0, 0.2);
     padding-top: 4vw;
-  }
-
-  .portfolio .project-portfolio__item-right .general-text:not(:first-child) {
-    margin-top: 4vw;
   }
 
   .portfolio .project-portfolio__item-img {

@@ -129,6 +129,41 @@
   }
 }
 .portfolio {
+	p {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.5;
+  @media (max-width: 1439px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 1.367vw;
+    line-height: 1.563vw;
+  }
+  @media (max-width: 767px) {
+    font-size: 3.2vw;
+    line-height: 4.533vw;
+  }
+		&:not(:first-child) {
+		margin-top: 30px;
+		@media (max-width: 1919px) {
+			margin-top: 20px;
+		}
+		@media (max-width: 1440px) {
+			margin-top: 30px;
+		}
+		@media (max-width: 1024px) {
+			margin-top: 2.93vw;
+		}
+		@media (max-width: 767px) {
+			margin-top: 4vw;
+		}
+		}
+}
   .portfolio__img {
     position: relative;
     padding-top: 44%;
@@ -302,21 +337,7 @@
 
       &-right {
         .general-text {
-          &:not(:first-child) {
-            margin-top: 30px;
-            @media (max-width: 1919px) {
-              margin-top: 20px;
-            }
-            @media (max-width: 1440px) {
-              margin-top: 30px;
-            }
-            @media (max-width: 1024px) {
-              margin-top: 2.93vw;
-            }
-            @media (max-width: 767px) {
-              margin-top: 4vw;
-            }
-          }
+
         }
       }
 
