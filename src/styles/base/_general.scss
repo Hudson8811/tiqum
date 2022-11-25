@@ -474,22 +474,25 @@ body.body-overflow {
     }
   }
 
-  .item-projects-content-grey {
-    background-color: #f4eaea;
-    &-dark {
-      background-color: #e4e4e4;
-    }
-  }
-
-  .item-projects-content-blue {
-    background-color: #e3f0fe;
-  }
-
   .item-projects-big {
     flex: 1 1 100%;
     .item-projects__img {
     }
   }
+
+  .item-projects-content-grey {
+    background-color: #f4eaea;
+  }
+  .item-projects-content-grey-dark{
+    background-color: #e4e4e4;
+  }
+  .item-projects-content-blue {
+    background-color: #e3f0fe;
+  }
+  .item-projects-content-gold {
+    background-color: #B9AF79;
+  }
+
 }
 
 .color-black {
