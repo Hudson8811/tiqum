@@ -1,5 +1,5 @@
 //projects
-$(document).ready(function(){
+/* $(document).ready(function(){
 	$('.archive-projects__item').mouseover(function(){
 		$('.archive-projects__item').addClass("js-opacity-item");
 		$(this).addClass("js-active-item");
@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$('.archive-projects__item').removeClass("js-opacity-item");
 		$(this).removeClass("js-active-item");
 	});
-});
+}); */
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray(".projects__header").forEach((panel, i) => {
@@ -104,4 +104,6 @@ $(document).ready(function(){
 
 
 
+	​
 });
+
