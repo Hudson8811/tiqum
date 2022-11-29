@@ -83,8 +83,9 @@
   .page-header__medals {
 	 display: flex;
 	 justify-content: space-between;
-	 @media (max-width: 1024px) {
+	 @media (max-width: 767px) {
 		flex-wrap: wrap;
+		margin-top: 15vw;
 	 }
   }
 
@@ -96,10 +97,10 @@
 
   .page-header__labels {
 	 display: flex;
-	 @media (max-width: 1024px) {
+	 @media (max-width: 767px) {
 		flex: 1 1 100%;
 		position: absolute;
-		top: 0;
+		top: 8vw;
 		right: 0;
 	 }
   }
@@ -360,15 +361,15 @@
           margin-top: 8vw;
         }
         img {
-          width: 49%;
+          /* width: 49%;
           @media (max-width: 767px) {
             width: 100%;
           }
           &:first-child:last-child{
             width:100%
-          }
+          } */
           &+img{
-            margin-left: 1%;
+            margin-left: 2%;
             @media (max-width: 767px) {
               margin-left: auto;
             }

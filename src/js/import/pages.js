@@ -1,5 +1,5 @@
 //projects
-/* $(document).ready(function(){
+$(document).ready(function(){
 	$('.archive-projects__item').mouseover(function(){
 		$('.archive-projects__item').addClass("js-opacity-item");
 		$(this).addClass("js-active-item");
@@ -8,7 +8,7 @@
 		$('.archive-projects__item').removeClass("js-opacity-item");
 		$(this).removeClass("js-active-item");
 	});
-}); */
+});
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray(".projects__header").forEach((panel, i) => {
@@ -74,36 +74,47 @@ $(document).ready(function(){
 
 
 
-/* 	var $animation_elements = $('.link1');
-	var $window = $(window);
+	var portfolio__item_img1 = $('.portfolio__item-img1').children('img').length;
+	var portfolio__item_img2 = $('.portfolio__item-img2').children('img').length;
+	var portfolio__item_img3 = $('.portfolio__item-img3').children('img').length;
 
-	function check_if_in_view() {
-		var window_height = $window.height();
-		var window_top_position = $window.scrollTop();
-		var window_bottom_position = (window_top_position + window_height);
-		
-		$.each($animation_elements, function() {
-			var $element = $(this);
-			var element_height = $element.outerHeight();
-			var element_top_position = $element.offset().top;
-			var element_bottom_position = (element_top_position + element_height);
-		
-			//check to see if this current container is within viewport
-			if ((element_bottom_position >= window_top_position) &&
-				(element_top_position <= window_bottom_position)) {
-				$element.addClass('is-visible');
-			} else {
-				$element.removeClass('is-visible');
-			}
-		});
+
+	if (portfolio__item_img1 == 1) {
+		$('.portfolio__item-img1').addClass('styles1');
+	} else if (portfolio__item_img1 == 2) {
+		$('.portfolio__item-img1').addClass('styles2');
+	} else if (portfolio__item_img1 == 3) {
+		$('.portfolio__item-img1').addClass('styles3');
+	} else if (portfolio__item_img1 == 4) {
+		$('.portfolio__item-img1').addClass('styles4');
+	} else if (portfolio__item_img1 == 5) {
+		$('.portfolio__item-img1').addClass('styles5');
 	}
 
-	$window.on('scroll resize', check_if_in_view);
-	$window.trigger('scroll'); */
+	if (portfolio__item_img2 == 1) {
+		$('.portfolio__item-img2').addClass('styles1');
+	} else if (portfolio__item_img2 == 2) {
+		$('.portfolio__item-img2').addClass('styles2');
+	} else if (portfolio__item_img2 == 3) {
+		$('.portfolio__item-img2').addClass('styles3');
+	} else if (portfolio__item_img2 == 4) {
+		$('.portfolio__item-img2').addClass('styles4');
+	} else if (portfolio__item_img2 == 5) {
+		$('.portfolio__item-img2').addClass('styles5');
+	}
 
+	if (portfolio__item_img3 == 1) {
+		$('.portfolio__item-img3').addClass('styles1');
+	} else if (portfolio__item_img3 == 2) {
+		$('.portfolio__item-img3').addClass('styles2');
+	} else if (portfolio__item_img3 == 3) {
+		$('.portfolio__item-img3').addClass('styles3');
+	} else if (portfolio__item_img3 == 4) {
+		$('.portfolio__item-img3').addClass('styles4');
+	} else if (portfolio__item_img3 == 5) {
+		$('.portfolio__item-img3').addClass('styles5');
+	}
 
-
-
-	​
+	
 });
 
