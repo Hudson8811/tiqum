@@ -321,15 +321,15 @@ $(document).ready(function () {
     var portfolio__item_img = $(this).find("img");
 
     if (portfolio__item_img.length == 1) {
-      $(this).addClass('styles1');
+      $(this).find("img").css("width", "100%");
     } else if (portfolio__item_img.length == 2) {
-      $(this).addClass('styles2');
+      $(this).find("img").css("width", "49%");
     } else if (portfolio__item_img.length == 3) {
-      $(this).addClass('styles3');
+      $(this).find("img").css("width", "32%");
     } else if (portfolio__item_img.length == 4) {
-      $(this).addClass('styles4');
+      $(this).find("img").css("width", "23.5%");
     } else if (portfolio__item_img.length == 5) {
-      $(this).addClass('styles5');
+      $(this).find("img").css("width", "18.4%");
     }
   });
 });

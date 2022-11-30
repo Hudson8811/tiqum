@@ -368,10 +368,15 @@
           &:first-child:last-child{
             width:100%
           } */
+			 @media (max-width: 767px){
+				width: 100%!important;
+			 }
           &+img{
             margin-left: 2%;
-            @media (max-width: 767px) {
+           
+				@media (max-width: 767px) {
               margin-left: auto;
+				  margin-top: 4%;
             }
           }
         }
