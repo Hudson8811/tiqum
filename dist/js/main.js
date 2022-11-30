@@ -317,45 +317,21 @@ $(document).ready(function () {
       num++;
     });
   });
-  var portfolio__item_img1 = $('.portfolio__item-img1').children('img').length;
-  var portfolio__item_img2 = $('.portfolio__item-img2').children('img').length;
-  var portfolio__item_img3 = $('.portfolio__item-img3').children('img').length;
+  $(".project-portfolio__item-img").each(function () {
+    var portfolio__item_img = $(this).find("img");
 
-  if (portfolio__item_img1 == 1) {
-    $('.portfolio__item-img1').addClass('styles1');
-  } else if (portfolio__item_img1 == 2) {
-    $('.portfolio__item-img1').addClass('styles2');
-  } else if (portfolio__item_img1 == 3) {
-    $('.portfolio__item-img1').addClass('styles3');
-  } else if (portfolio__item_img1 == 4) {
-    $('.portfolio__item-img1').addClass('styles4');
-  } else if (portfolio__item_img1 == 5) {
-    $('.portfolio__item-img1').addClass('styles5');
-  }
-
-  if (portfolio__item_img2 == 1) {
-    $('.portfolio__item-img2').addClass('styles1');
-  } else if (portfolio__item_img2 == 2) {
-    $('.portfolio__item-img2').addClass('styles2');
-  } else if (portfolio__item_img2 == 3) {
-    $('.portfolio__item-img2').addClass('styles3');
-  } else if (portfolio__item_img2 == 4) {
-    $('.portfolio__item-img2').addClass('styles4');
-  } else if (portfolio__item_img2 == 5) {
-    $('.portfolio__item-img2').addClass('styles5');
-  }
-
-  if (portfolio__item_img3 == 1) {
-    $('.portfolio__item-img3').addClass('styles1');
-  } else if (portfolio__item_img3 == 2) {
-    $('.portfolio__item-img3').addClass('styles2');
-  } else if (portfolio__item_img3 == 3) {
-    $('.portfolio__item-img3').addClass('styles3');
-  } else if (portfolio__item_img3 == 4) {
-    $('.portfolio__item-img3').addClass('styles4');
-  } else if (portfolio__item_img3 == 5) {
-    $('.portfolio__item-img3').addClass('styles5');
-  }
+    if (portfolio__item_img.length == 1) {
+      $(this).addClass('styles1');
+    } else if (portfolio__item_img.length == 2) {
+      $(this).addClass('styles2');
+    } else if (portfolio__item_img.length == 3) {
+      $(this).addClass('styles3');
+    } else if (portfolio__item_img.length == 4) {
+      $(this).addClass('styles4');
+    } else if (portfolio__item_img.length == 5) {
+      $(this).addClass('styles5');
+    }
+  });
 });
 
 /***/ }),
