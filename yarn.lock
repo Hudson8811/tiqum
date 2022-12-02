@@ -2340,14 +2340,16 @@
   "version" "1.0.1"
 
 "bem-tools-core@bem-tools/bem-tools-core":
-  "resolved" "git+ssh://git@github.com/bem-tools/bem-tools-core.git#9a5c91b198a7ce1f2a6b6e64c505aefead27fc8f"
+  "integrity" "sha512-MdmlsVWz1KbAvx1MvAZetwhQmNOEYcAmODi/UVrg2GXFgruNgPV8Z+6E17IlW8+uQetxnwot6ImGXom5nyRtFA=="
+  "resolved" "git+ssh://git@github.com/bem-tools/bem-tools-core.git"
   "version" "0.0.3"
   dependencies:
     "coa" "^1.0.1"
     "global-modules" "^0.2.0"
 
 "bem-tools-create@bem-tools/bem-tools-create":
-  "resolved" "git+ssh://git@github.com/bem-tools/bem-tools-create.git#bee9b839b6c89b956464be0cf8057d40f332f832"
+  "integrity" "sha512-Q00xJAtgCGFtpmgbvOTLZ8mFZW2UzNwT17CAy2BnYrcROfqacX0zUfIjK/pCS0QQjHplFFlGMu0ZATimaZa0lw=="
+  "resolved" "git+ssh://git@github.com/bem-tools/bem-tools-create.git"
   "version" "2.3.0"
   dependencies:
     "@bem/cell" "^0.2.5"

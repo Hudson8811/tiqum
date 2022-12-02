@@ -317,21 +317,25 @@ $(document).ready(function () {
       num++;
     });
   });
-  $(".project-portfolio__item-img").each(function () {
-    var portfolio__item_img = $(this).find("img");
-
-    if (portfolio__item_img.length == 1) {
-      $(this).find("img").css("width", "100%");
-    } else if (portfolio__item_img.length == 2) {
-      $(this).find("img").css("width", "49%");
-    } else if (portfolio__item_img.length == 3) {
-      $(this).find("img").css("width", "32%");
-    } else if (portfolio__item_img.length == 4) {
-      $(this).find("img").css("width", "23.5%");
-    } else if (portfolio__item_img.length == 5) {
-      $(this).find("img").css("width", "18.4%");
-    }
-  });
+  /*
+  	$(".project-portfolio__item-img").each(function() {
+  		const portfolio__item_img = $(this).find("img")
+  		if (portfolio__item_img.length == 1) {
+  			$(this).find("img").css("width", "100%");
+  		} else
+  		if (portfolio__item_img.length == 2) {
+  			$(this).find("img").css("width", "49%");
+  		} else
+  		if (portfolio__item_img.length == 3) {
+  			$(this).find("img").css("width", "32%");
+  		} else
+  		if (portfolio__item_img.length == 4) {
+  			$(this).find("img").css("width", "23.5%");
+  		} else
+  		if (portfolio__item_img.length == 5) {
+  			$(this).find("img").css("width", "18.4%");
+  		}
+  	})*/
 });
 
 /***/ }),

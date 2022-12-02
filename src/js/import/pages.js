@@ -14,18 +14,18 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray(".projects__header").forEach((panel, i) => {
 	ScrollTrigger.create({
 		trigger: panel,
-		start: 'top top', 
-		pin: true, 
-		pinSpacing: false 
+		start: 'top top',
+		pin: true,
+		pinSpacing: false
 	});
 });
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray(".page-header-big").forEach((panel, i) => {
 	ScrollTrigger.create({
 		trigger: panel,
-		start: 'top top', 
-		pin: true, 
-		pinSpacing: false 
+		start: 'top top',
+		pin: true,
+		pinSpacing: false
 	});
 });
 
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		$('<li><a href="#b'+ h2_id +'" class="click link link'+ h2_id +'">'+ h2_cont +'</a></a></li>').appendTo('.content ul');
 		h2_id++;
 	})
-	
+
 	$('.click').on('click', function() {
 		let href = $(this).attr('href');
 		var header = $('header').outerHeight();
@@ -72,23 +72,23 @@ $(document).ready(function(){
 		})
 	});
 
-
+/*
 	$(".project-portfolio__item-img").each(function() {
 		const portfolio__item_img = $(this).find("img")
 		if (portfolio__item_img.length == 1) {
 			$(this).find("img").css("width", "100%");
-		} else 
+		} else
 		if (portfolio__item_img.length == 2) {
 			$(this).find("img").css("width", "49%");
-		} else 
+		} else
 		if (portfolio__item_img.length == 3) {
 			$(this).find("img").css("width", "32%");
-		} else 
+		} else
 		if (portfolio__item_img.length == 4) {
 			$(this).find("img").css("width", "23.5%");
-		} else 
+		} else
 		if (portfolio__item_img.length == 5) {
 			$(this).find("img").css("width", "18.4%");
 		}
-	})
+	})*/
 });
