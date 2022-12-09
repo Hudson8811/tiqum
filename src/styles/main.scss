@@ -11,6 +11,9 @@
 @import "base/general";
 @import "base/reset";
 
+// Основное
+@import "modules/pager";
+
 // БЭМ-блоки
 @import "../blocks/modules/modules";
 

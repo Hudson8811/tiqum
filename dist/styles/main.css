@@ -427,6 +427,10 @@ body.body-overflow {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -441,6 +445,14 @@ body.body-overflow {
 
 .wrapper .page-main,
 .wrapper .page-blog {
+  padding: 0 !important;
+}
+
+.wrapper.main-page {
+  padding: 0 !important;
+}
+
+.wrapper.main-page > .page {
   padding: 0 !important;
 }
 
@@ -707,6 +719,10 @@ body.body-overflow {
   color: #000000 !important;
 }
 
+.page .region {
+  margin-bottom: 20px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -805,6 +821,16 @@ h6 {
   font-size: inherit;
   font-weight: 400;
   margin: 0;
+}
+
+.pager {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 142.8%;
 }
 
 .header {

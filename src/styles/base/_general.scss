@@ -1,6 +1,9 @@
 body.body-overflow {
   overflow: hidden;
 }
+.hidden {
+  display: none;
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -25,6 +28,13 @@ body.body-overflow {
     }
     &-main,
     &-blog {
+      padding: 0 !important;
+    }
+  }
+  &.main-page {
+    padding: 0 !important;
+
+    > .page {
       padding: 0 !important;
     }
   }
@@ -500,4 +510,8 @@ body.body-overflow {
 	* {
 		color: #000000!important;
 	}
+}
+
+.page .region {
+  margin-bottom: 20px;
 }
