@@ -684,7 +684,7 @@ body.body-overflow {
 }
 
 .items-projects .item-projects:hover .item-projects__title {
-  color: #0047ff;
+  /*color: #0047ff;*/
 }
 
 .items-projects .item-projects:hover .item-projects__img img {
