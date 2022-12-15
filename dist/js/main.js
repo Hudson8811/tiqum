@@ -328,16 +328,19 @@ __webpack_require__.r(__webpack_exports__);
     });
     /* 	var $animation_elements = $('.link1');
     	var $window = $(window);
-    		function check_if_in_view() {
+    
+    	function check_if_in_view() {
     		var window_height = $window.height();
     		var window_top_position = $window.scrollTop();
     		var window_bottom_position = (window_top_position + window_height);
-    			$.each($animation_elements, function() {
+    
+    		$.each($animation_elements, function() {
     			var $element = $(this);
     			var element_height = $element.outerHeight();
     			var element_top_position = $element.offset().top;
     			var element_bottom_position = (element_top_position + element_height);
-    				//check to see if this current container is within viewport
+    
+    			//check to see if this current container is within viewport
     			if ((element_bottom_position >= window_top_position) &&
     				(element_top_position <= window_bottom_position)) {
     				$element.addClass('is-visible');
@@ -346,10 +349,28 @@ __webpack_require__.r(__webpack_exports__);
     			}
     		});
     	}
-    		$window.on('scroll resize', check_if_in_view);
+    
+    	$window.on('scroll resize', check_if_in_view);
     	$window.trigger('scroll'); */
   });
 })(jQuery);
+
+var page__image = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".new-page__image img",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
+gsap.utils.toArray(".new-page__image").forEach(function (layer) {
+  var depth = layer.dataset.depth;
+  var movement = -(layer.offsetHeight * depth);
+  page__image.to(layer, {
+    y: movement,
+    ease: "none"
+  }, 0);
+});
 
 /***/ }),
 
@@ -1946,7 +1967,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 /*!
- * GSAP 3.11.3
+ * GSAP 3.11.4
  * https://greensock.com
  * 
  * @license Copyright 2022, GreenSock. All rights reserved.
@@ -3315,7 +3336,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           overwrite: !1,
           parent: D,
           immediateRender: !0,
-          lazy: w(T),
+          lazy: !S && w(T),
           startAt: null,
           delay: 0,
           onUpdate: b,
@@ -3326,7 +3347,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       } else if (M && A && !S) if (e && (y = !1), a = qa({
         overwrite: !1,
         data: "isFromStart",
-        lazy: y && w(T),
+        lazy: y && !S && w(T),
         immediateRender: y,
         stagger: 0,
         parent: D
@@ -4168,7 +4189,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }
     }
   }, Jc("roundProps", fb), Jc("modifiers"), Jc("snap", gb)) || Pe;
-  Gt.version = Ut.version = Ce.version = "3.11.3", o = 1, x() && zt();
+  Gt.version = Ut.version = Ce.version = "3.11.4", o = 1, x() && zt();
 
   function td(t, e) {
     return e.set(e.t, e.p, Math.round(1e4 * (e.s + e.c * t)) / 1e4 + e.u, e);
@@ -4748,7 +4769,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       for (c in De || Qd(), this.styles = this.styles || Kd(t), b = this.styles.props, this.tween = i, e) {
         if ("autoRound" !== c && (o = e[c], !pt[c] || !_b(c, e, i, n, t, a))) if (l = _typeof(o), f = vr[c], "function" === l && (l = _typeof(o = o.call(i, n, t, a))), "string" === l && ~o.indexOf("random(") && (o = ob(o)), f) f(this, t, c, o, i) && (T = 1);else if ("--" === c.substr(0, 2)) s = (getComputedStyle(t).getPropertyValue(c) + "").trim(), o += "", Rt.lastIndex = 0, Rt.test(s) || (d = Ya(s), p = Ya(o)), p ? d !== p && (s = Zd(t, c, s, p) + p) : d && (o += d), this.add(x, "setProperty", s, o, n, a, 0, 0, c), w.push(c), b.push(c, 0, x[c]);else if ("undefined" !== l) {
           if (k && c in k ? (s = "function" == typeof k[c] ? k[c].call(i, n, t, a) : k[c], r(s) && ~s.indexOf("random(") && (s = ob(s)), Ya(s + "") || (s += j.units[c] || Ya(mr(t, c)) || ""), "=" === (s + "").charAt(1) && (s = mr(t, c))) : s = mr(t, c), h = parseFloat(s), (_ = "string" === l && "=" === o.charAt(1) && o.substr(0, 2)) && (o = o.substr(2)), u = parseFloat(o), c in hr && ("autoAlpha" === c && (1 === h && "hidden" === mr(t, "visibility") && u && (h = 0), b.push("visibility", 0, x.visibility), Wd(this, x, "visibility", h ? "inherit" : "hidden", u ? "inherit" : "hidden", !u)), "scale" !== c && "transform" !== c && ~(c = hr[c]).indexOf(",") && (c = c.split(",")[0])), m = c in rr) {
-            if (this.styles.save(c), g || ((v = t._gsap).renderTransform && !e.parseTransform || br(t, e.parseTransform), y = !1 !== e.smoothOrigin && v.smooth, (g = this._pt = new pe(this._pt, x, lr, 0, 1, v.renderTransform, v, 0, -1)).dep = 1), "scale" === c) this._pt = new pe(this._pt, v, "scaleY", h, (_ ? ka(h, _ + u) : u) - h || 0, td), this._pt.u = 0, w.push("scaleY", c), c += "X";else {
+            if (this.styles.save(c), g || ((v = t._gsap).renderTransform && !e.parseTransform || br(t, e.parseTransform), y = !1 !== e.smoothOrigin && v.smooth, (g = this._pt = new pe(this._pt, x, lr, 0, 1, v.renderTransform, v, 0, -1)).dep = 1), "scale" === c) this._pt = new pe(this._pt, v, "scaleY", v.scaleY, (_ ? ka(v.scaleY, _ + u) : u) - v.scaleY || 0, td), this._pt.u = 0, w.push("scaleY", c), c += "X";else {
               if ("transformOrigin" === c) {
                 b.push(fr, 0, x[fr]), o = be(o), v.svg ? je(t, o, 0, y, 0, this) : ((p = parseFloat(o.split(" ")[2]) || 0) !== v.zOrigin && Wd(this, v, "zOrigin", v.zOrigin, p), Wd(this, x, c, wr(s), wr(o)));
                 continue;
