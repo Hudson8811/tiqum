@@ -51,14 +51,22 @@
 					padding-top: 4vw;
 				}
 				li {
+					opacity: 0.4;
+					font-family: 'Suisse Intl';
+					font-style: normal;
 					max-width: 200px;
 					margin-bottom: 20px;
+					transition: all 0.3s ease 0s;
 					@media (max-width: 1024px){
 						margin-bottom: 2vw;
 						max-width: 100%;
+						opacity: 1;
 					}
 					@media (max-width: 767px){
 						margin-bottom: 6vw;
+					}
+					&:hover{
+						opacity: 1;
 					}
 				}
 			}
@@ -116,17 +124,16 @@
 							margin-bottom: 8vw;
 						}
 						p {
-							max-width: 410px;
 							font-family: 'Suisse Intl';
 							font-style: normal;
 							font-weight: 400;
-							font-size: 48px;
-							line-height: 56px;
 							letter-spacing: -0.02em;
 							color: #FFFFFF;
+							font-size: 32px;
+							line-height: 126.8%;
 							@media (max-width: 1919px){
-								font-size: 36px;
-								line-height: 42px;
+								font-size: 24.0167px;
+								line-height: 126.8%;
 							}
 							@media (max-width: 1440px){
 								font-size: 28px;
@@ -137,13 +144,37 @@
 								line-height: 3.125vw;
 							}
 							@media (max-width: 767px){
-								font-size: 5.333vw;
-								line-height: 6.133vw;
+								font-size: 4.800vw;
+								line-height: 100%;
+								br {
+									display: none;
+								}
 							}
 						}
 					}
 				}
 			}
+		}
+	}
+
+	.new-page1-archive-projects {
+		margin: 0;
+		.archive-projects__item {
+			border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+			@media (max-width: 1024px){
+				border-top: 0.098vw solid rgba($color: #ffffff, $alpha: 0.2);
+			}
+			@media (max-width: 767px){
+				border-top: 0.267vw solid rgba($color: #ffffff, $alpha: 0.2);
+			}
+		}
+		.archive-projects__btns {
+			.archive-projects__btn {
+				color: #000000!important;
+			}
+		}
+		.archive-projects__right {
+			align-items: flex-start;
 		}
 	}
 }

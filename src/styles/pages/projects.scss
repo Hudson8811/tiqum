@@ -254,7 +254,6 @@
 			&__right {
 				flex: 0 1 65%;
 				display: flex;
-				align-items: center;
 				@media (max-width: 1024px) {
 					flex: 0 1 65%;
 				}
@@ -288,10 +287,14 @@
 				&-circle {
 					width: 29px;
 					height: 29px;
+					min-width: 29px;
+					min-height: 29px;
 					border-radius: 50%;
 					@media (max-width: 1919px){
 						width: 21px;
 						height: 21px;
+						min-width: 21px;
+						min-height: 21px;
 					}
 					@media (max-width: 1440px){
 						display: none;
