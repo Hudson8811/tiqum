@@ -25,26 +25,3 @@
 			margin-top: 5.333vw;
 		}
 }
-
-.paragraph--type--photos {
-	img {
-		width: 49%;
-		height: auto;
-		margin-top: 5px;
-		margin-bottom: 15px;
-		@media (max-width: 767px) {
-			width: 100%;
-		}
-
-		&:first-child:last-child {
-			width: 100%
-		}
-
-		& + img {
-			margin-left: 1%;
-			@media (max-width: 767px) {
-				margin-left: auto;
-			}
-		}
-	}
-}

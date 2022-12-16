@@ -219,35 +219,6 @@
 	}
 	
 	
-	h2 {
-			margin-top: 105px;
-			font-family: 'Suisse Intl';
-			font-style: normal;
-			font-weight: 450;
-			font-size: 48px;
-			line-height: 108.8%;
-			letter-spacing: -0.03em;
-			color: #2A2A2A;
-			@media (max-width: 1919px){
-				font-size: 36px;
-				line-height: 108.8%;
-			}
-			@media (max-width: 1440px){
-				font-size: 28px;
-				line-height: 32px;
-			}
-			@media (max-width: 1024px){
-				font-size: 2.734vw;
-				line-height: 3.125vw;
-				margin-top: 5.859vw;
-			}
-			@media (max-width: 767px){
-				font-size: 5.333vw;
-				line-height: 6.133vw;
-				margin-top: 12vw;
-			}
-		}
-	
 		&__img {
 			margin-top: 105px;
 			position: relative;
