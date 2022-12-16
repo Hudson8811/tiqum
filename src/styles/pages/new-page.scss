@@ -89,6 +89,7 @@
 	}
 	&__item {
 		margin-bottom: 200px;
+		display: block;
 		@media (max-width: 1024px){
 			margin-bottom: 15vw;
 		}

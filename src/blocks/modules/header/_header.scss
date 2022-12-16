@@ -4,6 +4,11 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+
+	.toolbar-horizontal & {
+		left: 67px;
+		width: calc(100% - 66px) !important;
+	}
 	a {
 		transition: all 0.5s ease 0s;
 		&:hover{
@@ -408,6 +413,10 @@
 	}
 	
 	&__item {
+
+		a.is-active {
+			color: #0047FF;
+		}
 		margin-left: 45px;
 		@media (max-width: 1919px){
 			margin-left: 35px;

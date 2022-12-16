@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -833,12 +835,382 @@ h6 {
   line-height: 142.8%;
 }
 
+.pager__items {
+  clear: both;
+  text-align: center;
+}
+
+.pager__item {
+  display: inline;
+  padding: 0.5em;
+}
+
+.pager__item.is-active {
+  font-weight: bold;
+}
+
+div.tabs {
+  margin: 1em 0;
+}
+
+ul.tabs {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs > li {
+  display: inline-block;
+  margin-right: 0.3em;
+  /* LTR */
+}
+
+[dir=rtl] .tabs > li {
+  margin-right: 0;
+  margin-left: 0.3em;
+}
+
+.tabs a {
+  display: block;
+  padding: 0.2em 1em;
+  text-decoration: none;
+}
+
+.tabs a.is-active {
+  background-color: #eee;
+}
+
+.tabs a:focus,
+.tabs a:hover {
+  background-color: #f5f5f5;
+}
+
+/**
+ * @file
+ * Styles for system messages.
+ */
+
+.messages {
+  padding: 15px 20px 15px 35px;
+  /* LTR */
+  word-wrap: break-word;
+  border: 1px solid;
+  border-width: 1px 1px 1px 0;
+  /* LTR */
+  border-radius: 2px;
+  background: no-repeat 10px 17px;
+  /* LTR */
+  overflow-wrap: break-word;
+}
+
+[dir=rtl] .messages {
+  padding-right: 35px;
+  padding-left: 20px;
+  text-align: right;
+  border-width: 1px 0 1px 1px;
+  background-position: right 10px top 17px;
+}
+
+.messages + .messages {
+  margin-top: 1.538em;
+}
+
+.messages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.messages__item + .messages__item {
+  margin-top: 0.769em;
+}
+
+/* See .color-success in Seven's colors.css */
+
+.messages--status {
+  color: #325e1c;
+  border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
+  /* LTR */
+  background-color: #f3faef;
+  background-image: url(../../../../misc/icons/73b355/check.svg);
+  box-shadow: -8px 0 0 #77b259;
+  /* LTR */
+}
+
+[dir=rtl] .messages--status {
+  margin-left: 0;
+  border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
+  box-shadow: 8px 0 0 #77b259;
+}
+
+/* See .color-warning in Seven's colors.css */
+
+.messages--warning {
+  color: #734c00;
+  border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
+  /* LTR */
+  background-color: #fdf8ed;
+  background-image: url(../../../../misc/icons/e29700/warning.svg);
+  box-shadow: -8px 0 0 #e09600;
+  /* LTR */
+}
+
+[dir=rtl] .messages--warning {
+  border-color: #f4daa6 transparent #f4daa6 #f4daa6;
+  box-shadow: 8px 0 0 #e09600;
+}
+
+/* See .color-error in Seven's colors.css */
+
+.messages--error {
+  color: #a51b00;
+  border-color: #f9c9bf #f9c9bf #f9c9bf transparent;
+  /* LTR */
+  background-color: #fcf4f2;
+  background-image: url(../../../../misc/icons/e32700/error.svg);
+  box-shadow: -8px 0 0 #e62600;
+  /* LTR */
+}
+
+[dir=rtl] .messages--error {
+  border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
+  box-shadow: 8px 0 0 #e62600;
+}
+
+.messages--error p.error {
+  color: #a51b00;
+}
+
+/**
+ * @file
+ * Styles for breadcrumbs.
+ */
+
+.breadcrumb {
+  padding-bottom: 0.5em;
+}
+
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+
+[dir=rtl] .breadcrumb ol {
+  /* This is required to win over specificity of [dir="rtl"] ol */
+  margin-right: 0;
+}
+
+.breadcrumb li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* IE8 does not support :not() and :last-child. */
+
+.breadcrumb li:before {
+  content: " »";
+}
+
+.breadcrumb li:first-child:before {
+  content: none;
+}
+
+/**
+ * @file
+ * Collapsible details.
+ *
+ * @see collapse.js
+ * @see http://nicolasgallagher.com/css-background-image-hacks/
+ */
+
+details {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+}
+
+details > .details-wrapper {
+  padding: 0.5em 1.5em;
+}
+
+/* @todo Regression: The summary of uncollapsible details are no longer
+     vertically aligned with the .details-wrapper in browsers without native
+     details support. */
+
+summary {
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+/**
+ * @file
+ * Default style for file module.
+ */
+
+/* File icons. */
+
+.file {
+  display: inline-block;
+  min-height: 16px;
+  padding-left: 20px;
+  /* LTR */
+  background-repeat: no-repeat;
+  background-position: left center;
+  /* LTR */
+}
+
+[dir=rtl] .file {
+  padding-right: 20px;
+  padding-left: inherit;
+  background-position: right center;
+}
+
+.file--general,
+.file--application-octet-stream {
+  background-image: url(../../images/icons/application-octet-stream.png);
+}
+
+.file--package-x-generic {
+  background-image: url(../../images/icons/package-x-generic.png);
+}
+
+.file--x-office-spreadsheet {
+  background-image: url(../../images/icons/x-office-spreadsheet.png);
+}
+
+.file--x-office-document {
+  background-image: url(../../images/icons/x-office-document.png);
+}
+
+.file--x-office-presentation {
+  background-image: url(../../images/icons/x-office-presentation.png);
+}
+
+.file--text-x-script {
+  background-image: url(../../images/icons/text-x-script.png);
+}
+
+.file--text-html {
+  background-image: url(../../images/icons/text-html.png);
+}
+
+.file--text-plain {
+  background-image: url(../../images/icons/text-plain.png);
+}
+
+.file--application-pdf {
+  background-image: url(../../images/icons/application-pdf.png);
+}
+
+.file--application-x-executable {
+  background-image: url(../../images/icons/application-x-executable.png);
+}
+
+.file--audio {
+  background-image: url(../../images/icons/audio-x-generic.png);
+}
+
+.file--video {
+  background-image: url(../../images/icons/video-x-generic.png);
+}
+
+.file--text {
+  background-image: url(../../images/icons/text-x-generic.png);
+}
+
+.file--image {
+  background-image: url(../../images/icons/image-x-generic.png);
+}
+
+/**
+ * @file
+ * Visual styles for progress bar.
+ *
+ * @see progress.js
+ */
+
+.progress__track {
+  border-color: #b3b3b3;
+  border-radius: 10em;
+  background-color: #f2f1eb;
+  background-image: -webkit-linear-gradient(#e7e7df, #f0f0f0);
+  background-image: linear-gradient(#e7e7df, #f0f0f0);
+  box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.16);
+}
+
+.progress__bar {
+  height: 16px;
+  margin-top: -1px;
+  margin-left: -1px;
+  /* LTR */
+  padding: 0 1px;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  border: 1px #07629a solid;
+  border-radius: 10em;
+  background: #057ec9;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), -webkit-linear-gradient(left top, #0094f0 0%, #0094f0 25%, #007ecc 25%, #007ecc 50%, #0094f0 50%, #0094f0 75%, #0094f0 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), linear-gradient(to right bottom, #0094f0 0%, #0094f0 25%, #007ecc 25%, #007ecc 50%, #0094f0 50%, #0094f0 75%, #0094f0 100%);
+  background-size: 40px 40px;
+}
+
+[dir=rtl] .progress__bar {
+  margin-right: -1px;
+  margin-left: 0;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+/**
+ * Progress bar animations.
+ */
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}
+
+@-ms-keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, -80px 0;
+  }
+}
+
 .header {
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.toolbar-horizontal .header {
+  left: 67px;
+  width: calc(100% - 66px) !important;
 }
 
 .header a {
@@ -1044,6 +1416,10 @@ h6 {
 
 .menu-header__item {
   margin-left: 45px;
+}
+
+.menu-header__item a.is-active {
+  color: #0047FF;
 }
 
 .menu-mobile::-webkit-scrollbar {
@@ -1567,10 +1943,7 @@ h6 {
   display: block;
   max-width: 250px;
   margin-left: -20px;
-}
-
-.services__item-left > span span {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .services__item-left span {
@@ -1581,6 +1954,7 @@ h6 {
   line-height: 21px;
   color: #000000;
   opacity: 0.6;
+  word-spacing: 10px;
 }
 
 .services__item-right {
@@ -2223,10 +2597,10 @@ h6 {
   min-width: calc(16.66% - 34px);
   /* width: 49%;
   @media (max-width: 767px) {
-  	width: 100%;
+      width: 100%;
   }
   &:first-child:last-child{
-  	width:100%
+      width:100%
   } */
 }
 
@@ -2234,8 +2608,8 @@ h6 {
   /*margin-left: 2%;
 
   @media (max-width: 767px) {
-  	margin-left: auto;
-  	margin-top: 4%;
+      margin-left: auto;
+      margin-top: 4%;
   }*/
 }
 
@@ -2623,6 +2997,21 @@ h6 {
   margin-top: 60px;
 }
 
+.paragraph--type--photos img {
+  width: 49%;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.paragraph--type--photos img:first-child:last-child {
+  width: 100%;
+}
+
+.paragraph--type--photos img + img {
+  margin-left: 1%;
+}
+
 .new-page {
   position: relative;
 }
@@ -2673,6 +3062,7 @@ h6 {
 
 .new-page__item {
   margin-bottom: 200px;
+  display: block;
 }
 
 .new-page__item-title span {
@@ -2948,8 +3338,8 @@ h6 {
     max-width: 240px;
   }
 
-  .services__item-left > span span {
-    margin-left: 15px;
+  .services__item-left > span {
+    padding-left: 15px;
   }
 
   .services__item-left span {
@@ -3404,12 +3794,8 @@ h6 {
     max-width: 220px;
   }
 
-  .services__item-left > span span {
-    margin-left: 10px;
-  }
-
-  .services__item-left > span span {
-    margin-left: 0.977vw;
+  .services__item-left > span {
+    padding-left: 0.977vw;
   }
 
   .services__item-right {
@@ -4985,8 +5371,8 @@ h6 {
     max-width: 58.667vw;
   }
 
-  .services__item-left > span span {
-    margin-left: 2.667vw;
+  .services__item-left > span {
+    padding-left: 2.667vw;
   }
 
   .services__item-left span {
@@ -5425,7 +5811,7 @@ h6 {
   }
 
   .page-header-big .page-header__title {
-    padding-top: 8vw;
+    padding-top: 0.267vw;
     padding-bottom: 50vw;
   }
 
@@ -5527,6 +5913,14 @@ h6 {
     margin-top: 5.333vw;
   }
 
+  .paragraph--type--photos img {
+    width: 100%;
+  }
+
+  .paragraph--type--photos img + img {
+    margin-left: auto;
+  }
+
   .new-page .flex-lr {
     border-top: 0.267vw solid rgba(255, 255, 255, 0.2);
     padding-top: 8vw;
@@ -5573,6 +5967,15 @@ h6 {
 @media (max-width: 550px) {
   .confirm__title {
     max-width: 100%;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .progress__bar {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-animation: none;
+    -moz-animation: none;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

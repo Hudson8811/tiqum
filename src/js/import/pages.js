@@ -102,19 +102,20 @@
 		$window.trigger('scroll'); */
 
 	});
+
+    const page__image = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".new-page__image img",
+            start: "top top",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    gsap.utils.toArray(".new-page__image").forEach(layer => {
+        const depth = layer.dataset.depth;
+        const movement = -(layer.offsetHeight * depth)
+        page__image.to(layer, {y: movement, ease: "none"}, 0)
+    });
 })(jQuery);
 
-const page__image = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".new-page__image img",
-		start: "top top",
-		end: "bottom top",
-		scrub: true
-	}
-});
-
-gsap.utils.toArray(".new-page__image").forEach(layer => {
-	const depth = layer.dataset.depth;
-	const movement = -(layer.offsetHeight * depth)
-	page__image.to(layer, {y: movement, ease: "none"}, 0)
-});

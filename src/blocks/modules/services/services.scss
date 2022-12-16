@@ -91,20 +91,15 @@
 						margin-left: -2.667vw;
 						max-width: 58.667vw;
 					}
-					span {
-						margin-left: 20px;
-						@media (max-width: 1919px){
-							margin-left: 15px;
-						}
-						@media (max-width: 1440px){
-							margin-left: 10px;
-						}
-						@media (max-width: 1440px) {
-							margin-left: 0.977vw;
-						}
-						@media (max-width: 767px){
-							margin-left: 2.667vw;
-						}
+					padding-left: 20px;
+					@media (max-width: 1919px){
+						padding-left: 15px;
+					}
+					@media (max-width: 1440px) {
+						padding-left: 0.977vw;
+					}
+					@media (max-width: 767px){
+						padding-left: 2.667vw;
 					}
 				}
 				span {
@@ -115,6 +110,7 @@
 					line-height: 21px;
 					color: #000000;
 					opacity: 0.6;
+					word-spacing: 10px;
 					@media (max-width: 1919px){
 						font-size: 14px;
 						line-height: 16px;

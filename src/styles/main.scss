@@ -13,6 +13,17 @@
 
 // Основное
 @import "modules/pager";
+@import "modules/tabs";
+@import "modules/messages";
+@import "modules/breadcrumb";
+@import "modules/details";
+@import "modules/file";
+@import "modules/progress";
+//@import "modules/exposed-filters";
+//@import "modules/tabledrag";
+//@import "modules/tableselect";
+//@import "modules/tablesort";
+//@import "modules/ui-dialog";
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
