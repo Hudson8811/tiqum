@@ -14,7 +14,7 @@
 		}
 	}
 	.new-page1__serveces-title  {
-		opacity: 0.3;
+		opacity: 0.4;
 		margin-bottom: 30px;
 		@media (max-width: 1024px){
 			margin-bottom: 2.930vw;
@@ -54,9 +54,10 @@
 					opacity: 0.4;
 					font-family: 'Suisse Intl';
 					font-style: normal;
-					max-width: 200px;
+					max-width: 260px;
 					margin-bottom: 20px;
 					transition: all 0.3s ease 0s;
+					font-weight: 400;
 					@media (max-width: 1024px){
 						margin-bottom: 2vw;
 						max-width: 100%;
