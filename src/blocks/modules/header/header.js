@@ -58,6 +58,9 @@
     if ($(".blog__hero").hasClass("hero-blog")) {
       $('.menu-mobile__link-blog').addClass("menu-mobile__link-active-white");
     }
+    $(".menu-mobile .menu-mobile__btn.form-contact").click(function () {
+      $('.header__burger').click();
+    });
   });
 
 })(jQuery);

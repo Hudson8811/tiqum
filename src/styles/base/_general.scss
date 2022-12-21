@@ -1,3 +1,27 @@
+.mb {
+  &-5 {
+    margin-bottom: 5px;
+  }
+  &-10 {
+    margin-bottom: 10px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+}
+
+.mt {
+  &-5 {
+    margin-top: 5px;
+  }
+  &-10 {
+    margin-top: 10px;
+  }
+  &-20 {
+    margin-top: 20px;
+  }
+}
+
 body.body-overflow {
   overflow: hidden;
 }
@@ -156,6 +180,8 @@ body.body-overflow {
 .blue-btn {
   width: 595px;
   height: 65px;
+  text-transform: uppercase;
+  color: white;
 
   @media (max-width: 1919px) {
     width: 595px;
@@ -293,15 +319,15 @@ body.body-overflow {
       margin-top: 20px;
       display: block;
       position: relative;
-      min-height: 920px;
+      min-height: 45vw;
       padding: 20px;
       overflow: hidden;
       @media (max-width: 1919px) {
         margin-top: 10px;
-        min-height: 670px;
+        min-height: 45vw;
       }
       @media (max-width: 1439px) {
-        min-height: 480px;
+        min-height: 45vw;
         margin-top: 15px;
       }
       @media (max-width: 1024px) {
@@ -561,11 +587,21 @@ body.body-overflow {
       margin-top: 12vw;
     }
   }
+
+  &, > div:first-child, > div:first-child > div:first-child {
+    > {
+      h1, h2, h3, h4 {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 .paragraph--type--photos {
   margin-top: 100px;
-  border-radius: 22px;
+
   overflow: hidden;
   margin-left: -34px;
   margin-bottom: -34px;
@@ -573,7 +609,7 @@ body.body-overflow {
   flex-wrap: wrap;
 
   @media (max-width: 1919px) {
-    border-radius: 16.5013px;
+
     margin-top: 80px;
 
   }
@@ -591,7 +627,7 @@ body.body-overflow {
   }
 
   @media (max-width: 767px) {
-    border-radius: 1.6vw;
+
     margin-top: 8vw;
     margin-left: 0;
     margin-bottom: -2.47vw;
@@ -640,10 +676,10 @@ body.body-overflow {
           margin-top: 4%;
       }*/
     }
-	 img {
-		width: 100%;
-		height: auto;
-	 }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &-wrapper {
@@ -673,6 +709,7 @@ body.body-overflow {
   }
 }
 
+
 .fancybox__container {
-	z-index: 99999;
+  z-index: 99999;
 }

@@ -331,10 +331,11 @@
         font-size: 36px;
       }
 
-      @media (max-width: 1440px) {
+      @media (max-width: 1439px) {
         font-size: 28px;
         line-height: 32px;
         color: #2a2a2a;
+        max-width: 560px;
       }
 
       @media (max-width: 1024px) {
@@ -394,11 +395,14 @@
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
-          line-height: 20px;
+          line-height: 26px;
           color: #000000;
           opacity: 0.5;
+          max-width: 750px;
           @media (max-width: 1439px) {
             font-size: 14px;
+            line-height: 20px;
+            max-width: 560px;
           }
           @media (max-width: 1024px) {
             font-size: 1.367vw;
@@ -415,7 +419,7 @@
           @media (max-width: 1919px) {
             margin-top: 20px;
           }
-          @media (max-width: 1440px) {
+          @media (max-width: 1439px) {
             margin-top: 30px;
           }
           @media (max-width: 1024px) {
@@ -426,8 +430,10 @@
           }
         }
 
-        div:first-child p:first-child {
-          margin-top: 0;
+        &, > div:first-child, > div:first-child > div:first-child {
+          > p:first-child {
+            margin-top: 0;
+          }
         }
       }
 

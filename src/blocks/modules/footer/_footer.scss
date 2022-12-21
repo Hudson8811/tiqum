@@ -307,6 +307,10 @@
 			padding: 0 4vw;
 		}
 	}
+	&__result {
+		color: white;
+		flex: 0 1 100%;
+	}
 	&__item {
 		flex: 0 1 50%;
 		opacity: 0.2;
@@ -332,6 +336,7 @@
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 21px;
+			max-height: 45px;
 			color: rgba($color: #ffffff, $alpha: 1.0);
 			transition: all .5s;
 			padding-bottom: 20px;

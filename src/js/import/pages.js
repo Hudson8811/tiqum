@@ -117,8 +117,5 @@
         const movement = -(layer.offsetHeight * depth)
         page__image.to(layer, {y: movement, ease: "none"}, 0)
     });
-
-
-
 })(jQuery);
 
