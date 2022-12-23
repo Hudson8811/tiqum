@@ -392,6 +392,7 @@ body.body-overflow {
       @media (max-width: 767px) {
         font-size: 5.333vw;
         line-height: 108.8%;
+        max-width: 72%;
       }
     }
 
@@ -482,6 +483,7 @@ body.body-overflow {
         font-size: 3.2vw;
         line-height: 3.733vw;
         margin-top: 3.2vw;
+        display: none;
       }
     }
 
