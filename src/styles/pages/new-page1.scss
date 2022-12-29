@@ -51,7 +51,6 @@
 					padding-top: 4vw;
 				}
 				li {
-					opacity: 0.4;
 					font-family: 'Suisse Intl';
 					font-style: normal;
 					max-width: 260px;
@@ -66,8 +65,12 @@
 					@media (max-width: 767px){
 						margin-bottom: 6vw;
 					}
-					&:hover{
-						opacity: 1;
+
+					a {
+						opacity: 0.4;
+						&:hover, &.is-active {
+							opacity: 1;
+						}
 					}
 				}
 			}

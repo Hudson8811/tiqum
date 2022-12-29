@@ -38,7 +38,7 @@
 
 			h2_cont = $(".content h2#b" + h2_id).text();
 
-			$('<li><a href="#b'+ h2_id +'" class="click link link'+ h2_id +'">'+ h2_cont +'</a></a></li>').appendTo('.content ul');
+			$('<li><a href="#b'+ h2_id +'" class="click link link'+ h2_id +'">'+ h2_cont +'</a></a></li>').appendTo('.content .flex-lr__left ul');
 			h2_id++;
 		})
 

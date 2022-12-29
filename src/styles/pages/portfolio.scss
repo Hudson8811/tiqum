@@ -275,6 +275,8 @@
         }
 
         .project-portfolio__title {
+          margin-top: 0;
+
           @media (max-width: 1024px) {
             max-width: 45vw;
           }

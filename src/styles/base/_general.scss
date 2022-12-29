@@ -344,11 +344,23 @@ body.body-overflow {
         position: absolute;
         left: 30px;
         bottom: 30px;
-        width: 128px;
-        height: 128px;
+
+        .page-header__labels {
+          display: flex;
+
+          .page-header__label {
+            width: 128px;
+            height: 128px;
+            margin-right: 15px;
+
+            @media (max-width: 1919px) {
+              width: 96px;
+              height: 96px;
+            }
+          }
+        }
+
         @media (max-width: 1919px) {
-          width: 96px;
-          height: 96px;
           left: 15px;
           bottom: 15px;
         }
