@@ -100,6 +100,10 @@
       flex-wrap: wrap;
       margin-top: 15vw;
     }
+
+	  .general-title{
+		  max-width: 1110px;
+	  }
   }
 
   .page-header__title {
@@ -156,8 +160,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
-    color: #000000;
-    opacity: 0.5;
+    color: #2A2A2A;
 
     @media (max-width: 1439px) {
       font-size: 14px;
@@ -210,26 +213,21 @@
 
   .project-portfolio {
     padding-top: 30px;
-    padding-bottom: 220px;
-    background-color: #e5e5e5;
+    background-color: #FFFFFF;
 
     @media (max-width: 1919px) {
       padding-top: 20px;
-      padding-bottom: 170px;
     }
 
     @media (max-width: 1440px) {
-      padding-bottom: 110px;
     }
 
     @media (max-width: 1024px) {
       padding-top: 1.953vw;
-      padding-bottom: 2.93vw;
     }
 
     @media (max-width: 767px) {
       padding-top: 2.667vw;
-      padding-bottom: 0px;
     }
 
     &__container {}
@@ -398,8 +396,7 @@
           font-weight: 400;
           font-size: 18px;
           line-height: 26px;
-          color: #000000;
-          opacity: 0.5;
+          color: #2A2A2A;
           max-width: 750px;
           @media (max-width: 1439px) {
             font-size: 14px;
@@ -432,11 +429,64 @@
           }
         }
 
+		  &--quote{
+			  position: relative;
+			  &::before{
+				  content: "";
+				  display: block;
+				  width: 39px;
+				  height: 39px;
+				  position: absolute;
+				  top: 2px;
+				  left: -59px;
+				  background: url(../img/svg/quote.svg) center center no-repeat;
+				  background-size: cover;
+				  pointer-events: none;
+				  @media (max-width: 1439px) {
+					  width: 30px;
+					  height: 30px;
+					  left: -40px;
+					  top: 0;
+				  }
+				  @media (max-width: 1024px) {
+					  width: 2.5vw;
+					  height: 2.5vw;
+					  left: -3.5vw;
+				  }
+				  @media (max-width: 767px) {
+					  width: 5vw;
+					  height: 5vw;
+					  left: -4vw;
+					  top: -5vw;
+				  }
+			  }
+			  p {
+				  font-size: 32px;
+				  line-height: 126.8%;
+				  margin-top: 65px;
+				  @media (max-width: 1919px) {
+					  margin-top: 60px;
+				  }
+				  @media (max-width: 1439px) {
+					  margin-top: 40px;
+					  font-size: 24px;
+				  }
+				  @media (max-width: 1024px) {
+					  margin-top: 4vw;
+					  font-size: 1.9vw;
+				  }
+				  @media (max-width: 767px) {
+					  margin-top: 6vw;
+					  font-size: 4.2vw;
+				  }
+			  }
+		  }
         &, > div:first-child, > div:first-child > div:first-child {
           > p:first-child {
             margin-top: 0;
           }
         }
+
       }
 
       &-img {
@@ -573,6 +623,14 @@
         }
       }
     }
+
+	  &__fullwidth{
+		  width: 100%;
+		  padding-top: 49px;
+		  img{
+			  width: 100%;
+		  }
+	  }
   }
 }
 

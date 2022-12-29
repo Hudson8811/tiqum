@@ -117,5 +117,34 @@
         const movement = -(layer.offsetHeight * depth)
         page__image.to(layer, {y: movement, ease: "none"}, 0)
     });
+
+    $(document).ready(function (){
+       $(document).on('click','.js-to-form',function (){
+           $('body').removeClass('body-overflow');
+           $('.menu-mobile').removeClass("menu-mobile_active");
+           $('.header').removeClass('header-mobile_active');
+           $('.header__burger').removeClass('header__burger-active')
+           let offsetTop = $('#footer-form').position().top;
+           $('html, body').animate({
+               scrollTop: $('#footer-form').offset().top - offsetTop
+           }, 1000);
+       });
+
+        $(window).on('scroll', function(){
+            let scrollTop = $(window).scrollTop();
+            let windowH = $(window).height();
+            if (scrollTop > windowH) {
+                $('.mobile-fixed-bottom').addClass('active');
+            } else {
+                $('.mobile-fixed-bottom').removeClass('active');
+            }
+            let formTop = $('#footer-form').offset().top;
+            if (scrollTop + windowH > formTop) {
+                $('.mobile-fixed-bottom').addClass('hide');
+            } else {
+                $('.mobile-fixed-bottom').removeClass('hide');
+            }
+        });
+    });
 })(jQuery);
 

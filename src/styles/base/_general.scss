@@ -88,6 +88,9 @@ body.body-overflow {
   padding-top: 30px;
   padding-bottom: 30px;
   min-height: 325px;
+	&--long{
+		min-height: 396px;
+	}
   @media (max-width: 1919px) {
     min-height: 245px;
   }
@@ -566,14 +569,17 @@ body.body-overflow {
       font-family: "Suisse Intl";
       font-size: 22px;
       line-height: 168.8%;
-      opacity: 0.5;
     }
   }
   ol {
     margin-left: 25px;
   }
+	p + ul,
+	p + ol{
+		margin-top: 0;
+	}
 
-  h1, h2, h3, h4 {
+  h1, h2, h3 {
     margin-top: 105px;
     font-family: 'Suisse Intl';
     font-style: normal;
@@ -600,6 +606,33 @@ body.body-overflow {
       line-height: 6.133vw;
       margin-top: 12vw;
     }
+  }
+
+  h4 {
+    margin-top: 32px;
+    font-family: 'Suisse Intl';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 108.8%;
+    letter-spacing: -0.03em;
+    color: #2A2A2A;
+	  @media (max-width: 1919px){
+		  margin-top: 32px;
+		  font-size: 22px;
+	  }
+	  @media (max-width: 1440px){
+		  margin-top: 32px;
+		  font-size: 20px;
+	  }
+	  @media (max-width: 1024px){
+		  font-size: 1.8vw;
+		  margin-top: 3vw;
+	  }
+	  @media (max-width: 767px){
+		  font-size: 4vw;
+		  margin-top: 4.1vw;
+	  }
   }
 
   &, > div:first-child, > div:first-child > div:first-child {

@@ -1,0 +1,158 @@
+extends ../layouts/default
+
+block variables
+	- const title = "TIQUM";
+
+block content
+	.wrapper
+		include ../../blocks/modules/header/header
+		.page
+			.container
+				.page-header.page-header--long.flex-lr
+					.flex-lr__left
+						.page-header__btns
+							.page-header__btn Backend
+							.page-header__btn Web
+					.page-header__medals.flex-lr__right
+						h1.general-title Island Soul
+						.page-header__labels
+							.page-header__label
+								img(src="img/svg/bronze.svg", alt="alt")
+
+			.portfolio
+				.portfolio__img
+					img(src="img/pages/portfolio/3-1.jpg", alt="alt")
+				.project-portfolio
+					.container
+						.project-portfolio__top.flex-lr
+							.flex-lr__left
+								a(href="#").project-portfolio__link Смотреть проект →
+							.flex-lr__right
+								.project-portfolio__title Облачная ERP-система, которая охватывает все процессы всех клиентов ювелирного бизнеса: от партнеров до покупателей
+						.project-portfolio__items
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title IT – сердце Island Soul
+								.project-portfolio__item-right.flex-lr__right
+									p ISIT – это облачная ERP-система, которая охватывает все процессы всех клиентов бизнеса: от партнеров до покупателей — полная автоматизация.
+									p Цифровые инструменты обеспечивают максимальную эффективность и безопасность бизнеса, позволяют более точно понимать клиентов и отвечать запросам нового времени.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/3-2.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/3-2.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Монобрендовый маркетплейс для партнеров-франчайзи
+								.project-portfolio__item-right.flex-lr__right
+									p 1. Продажа товаров по всей стране. Все магазины партнёров представлены на сайте и могут продавать товары по всей стране с центрального сайта.
+									p 2. Сплитирование платежей при покупке: каждый партнёр получает деньги за покупки с центрального сайта сразу, при совершении оплаты. При этом партнеру не нужно заводить эквайринг.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/3-3.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/3-3.jpg", alt="alt")
+									p 3. Сборные заказы: это значит что любой клиент с любой точки страны может купить любые товары сети. Если нет у партнёра, автоматически создастся внутренний автозаказ на перемещение от другого партнёра, где есть в наличии. При этом деньги каждый получит автоматом.
+									p 4. Автозаказ курьера: партнеру не нужно беспокоиться о доставке по стране, система сама закажет курьера, который заберет из магазина и доставит товар до клиента.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/3-4.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/3-4.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Единая бонусная система
+								.project-portfolio__item-right.flex-lr__right
+									p Это значит, что клиент может копить баллы у любого партнёра на единый кошелек и тратить у любого партнёра по стране.
+									p Мы разработали бизнес-модель и систему при которой клиенту удобно, а партнёр никогда не теряет при продаже за баллы (компенсация деньгами из единого банка).
+									p У продавца есть удобный интерфейс программы лояльности для быстрой фиксации оффлайн покупок.
+
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Кабинет франчайзи-партнера
+								.project-portfolio__item-right.flex-lr__right
+									p 1. База знаний по всем аспектам работы ювелирного магазина: рекламе, найму, общению с клиентом, управлению. В базе знаний хранятся все рабочие документы, макеты рекламных материалов, стандарты, фотографии и пр.
+									p 2. Работа с заказами в том числе сборными (из разных магазинов)
+									p 3. Аналитика: товарная и финансовая аналитика для франчайзи
+									p 4. Обучение (скоро): онлайн-курсы с тестированием позволят всем консультантам легко овладеть необходимым объемом знаний. А ведь мы – не просто про украшения, мы - про что-то большее. Поэтому и знаний больше.
+									p 5. Роадмап открытия (скоро)
+									p 6. Корпоративный портал и система рейтингов (скоро) <br>Омниакальный кабинет клиента
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Омниакальный кабинет клиента
+								.project-portfolio__item-right.flex-lr__right
+									p Омниканальный кабинет клиента: клиент видит не только онлайн покупки, но и офлайн покупки у любого партнёра, и более того - состав офлайн заказа.
+									p Такая система позволяет быть максимально клиентоцентричным и создавать необходимую атмосферу прозрачности и доверия с любимыми клиентами.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/3-5.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/3-5.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Омниакальный кабинет клиента
+								.project-portfolio__item-right.flex-lr__right
+									p Омниканальный кабинет клиента: клиент видит не только онлайн покупки, но и офлайн покупки у любого партнёра, и более того - состав офлайн заказа.
+									p Такая система позволяет быть максимально клиентоцентричным и создавать необходимую атмосферу прозрачности и доверия с любимыми клиентами.
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Достигнутые цели и KPI по итогам запуска
+								.project-portfolio__item-right.flex-lr__right
+									ul
+										li ежемесячные старты профессий (более 5 потоков)
+										li 28 курсов добавлено
+										li более 500 студентов
+
+					.project-portfolio__fullwidth
+						img(src="img/pages/portfolio/1-6.jpg", alt="alt")
+
+
+				.portfolio__next-cases.next-cases-portfolio
+					.next-cases-portfolio__container.container
+						.next-cases-portfolio__flex-lr.flex-lr
+							.next-cases-portfolio__flex-left.flex-lr__left
+							.next-cases-portfolio__flex-right.flex-lr__right
+								.next-cases-portfolio__flex-title.general-title
+									| Следующие
+									br
+									| кейсы
+						.next-cases-portfolio__projects
+							.items-projects
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-blue
+										figure
+											.item-projects__header
+												.item-projects__title ATM и терминалы оплаты банка
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Интерфейс и верстка экранов для
+													br
+													| банкоматов NCR, WinCor, Nautilus и
+													br
+													| платежных терминалов
+											.item-projects__img
+												img(src="img/item-projects/check.png", alt="alt")
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-grey-dark
+										figure
+											.item-projects__header
+												.item-projects__title Romeks
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Сайты застройщика Ромекс
+													br
+													| Девелопмент
+											.item-projects__img
+												img(src="img/item-projects/romeks.png", alt="alt")
+
+		include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
+	script(src="js/main.js")

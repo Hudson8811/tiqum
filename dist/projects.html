@@ -50,7 +50,7 @@
                   <li class="menu-header__item menu-header__item-hide"> <a class="menu-header__link" href="#">Карьера</a></li>
                 </ul>
               </div>
-              <div class="header__connection"><a href="#">tg</a><a href="#">8 800</a><a href="#">Связаться</a></div>
+              <div class="header__connection"><a href="#">tg</a><a href="#">8 800</a><a class="js-to-form" href="javascript:;">Связаться</a></div>
             </div>
           </div>
         </div>
@@ -69,14 +69,14 @@
           </ul>
           <div class="menu-mobile__footer"> 
             <div class="menu-mobile__conect"> <a href="tel:8007757363">8 800 775 73 63 </a><br><a href="mailto:info@tiqum.ru">info@tiqum.ru</a></div>
-            <div class="menu-mobile__loc"> <span>Питер – opening</span><br>Уфа – Гоголя 53</div><a class="menu-mobile__btn" href="#">Связаться</a>
+            <div class="menu-mobile__loc"> <span>Питер – opening</span><br>Уфа – Гоголя 53</div><a class="menu-mobile__btn js-to-form" href="javascript:;">Связаться</a>
           </div>
         </div>
       </div>
       <div class="page"> 
         <div class="container"> 
           <div class="page-header flex-lr"> 
-            <div class="page-header__left flex-lr__left"><a class="link-hv" href="#">Бесплатная консультация  →</a></div>
+            <div class="page-header__left flex-lr__left"><a class="link-hv js-to-form" href="javascript:;">Бесплатная консультация  →</a></div>
             <div class="page-header__right flex-lr__right page-header__spans"> 
               <h1 class="general-title"> <span>Проекты</span><span>(+350)</span></h1>
             </div>
@@ -99,7 +99,11 @@
                            Маркетплейс, социальная <br>сеть, конструктор образов</div>
                       </div>
                       <div class="item-projects__img"> <img src="img/item-projects/mark.png" alt="alt"></div>
-                      <div class="item-projects-bronze">	<img src="img/svg/bronze.svg" alt="alt"></div>
+                      <div class="item-projects-bronze">
+                        <div class="page-header__labels">
+                          <div class="page-header__label"><img src="img/svg/bronze.svg" alt="alt"></div>
+                        </div>
+                      </div>
                     </figure></a></div>
                 <div class="item-projects"><a class="item-projects__content item-projects-content-grey" href="#">
                     <figure>
@@ -240,7 +244,7 @@
               <div class="wewillfind-footer__location">
                  Питер – opening <span>Уфа – Гоголя 53</span></div>
             </div>
-            <div class="wewillfind-footer__right"> 
+            <div class="wewillfind-footer__right" id="footer-form">
               <div class="wewillfind-footer__title general-title">
                  Найдем <span>решение вашей задачи</span></div>
               <form class="wewillfind-footer__form form-wewillfind-footer" action="#" method="method">
@@ -280,6 +284,7 @@
           </div>
         </div>
       </footer>
+      <div class="mobile-fixed-bottom"><a class="mobile-fixed-bottom__btn blue-btn js-to-form" href="javascript:;"><span>ОСТАВИТЬ ЗАЯВКУ</span></a></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

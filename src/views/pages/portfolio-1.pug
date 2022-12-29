@@ -1,0 +1,119 @@
+extends ../layouts/default
+
+block variables
+	- const title = "TIQUM";
+
+block content
+	.wrapper
+		include ../../blocks/modules/header/header
+		.page
+			.container
+				.page-header.page-header--long.flex-lr
+					.flex-lr__left
+						.page-header__btns
+							.page-header__btn Mobile
+					.page-header__medals.flex-lr__right
+						h1.general-title Мобильное приложение агента Самолет Плюс
+
+			.portfolio
+				.portfolio__img
+					img(src="img/pages/portfolio/1-1.jpg", alt="alt")
+				.project-portfolio
+					.container
+						.project-portfolio__top.flex-lr
+							.flex-lr__left
+								a(href="#").project-portfolio__link Смотреть проект →
+							.flex-lr__right
+								.project-portfolio__title Мобильное приложение агента «Самолёт Плюс» — полнофункциональная CRM для работы агента «в полях»
+						.project-portfolio__items
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Поставленная задача и ее решение
+								.project-portfolio__item-right.flex-lr__right
+									p Всего за 4 месяца командой из 3 человек мы разработали более удобный мобильный front-end CRM-системы, которую заказчик разрабатывал командой из 12 человек в течение 4 лет.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/1-2.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/1-2.jpg", alt="alt")
+									p Разработаны:
+									ul
+										li Подбор объектов: эксклюзивы и объекты с классифайдов, фильтрация, подбор по карте (с выделением зоны поиска), контакты агентов и др.
+										li Воронка клиентов: на продажу для добавления объекта в базу, и подбор.
+										li Интерактивная презентация подбора клиенту: менеджер в мобильном приложении может собрать список объектов в рамках сделки, отправить веб-ссылку клиенту, где клиент отметит интерес и комментарии, а менеджер в реальном времени видит это и может лучше подстроить свое предложение клиенту.
+										li Задачи для агента: рекуррентные автоматические и созданные вручную.
+										li Публикация объявлений на площадках классифайдах (Авито, Циан, Домклик и др.).
+										li Работа с лидами из контакт-центра.
+										li Загрузка документов по сделке для распознавания и автоматического заполнения полей.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/1-3.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/1-3.jpg", alt="alt")
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/1-4.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/1-4.jpg", alt="alt")
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/1-5.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/1-5.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Достигнутые цели и KPI по итогам запуска
+								.project-portfolio__item-right.flex-lr__right
+									ul
+										li ежемесячные старты профессий (более 5 потоков)
+										li 28 курсов добавлено
+										li более 500 студентов
+
+					.project-portfolio__fullwidth
+						img(src="img/pages/portfolio/1-6.jpg", alt="alt")
+
+
+				.portfolio__next-cases.next-cases-portfolio
+					.next-cases-portfolio__container.container
+						.next-cases-portfolio__flex-lr.flex-lr
+							.next-cases-portfolio__flex-left.flex-lr__left
+							.next-cases-portfolio__flex-right.flex-lr__right
+								.next-cases-portfolio__flex-title.general-title
+									| Следующие
+									br
+									| кейсы
+						.next-cases-portfolio__projects
+							.items-projects
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-blue
+										figure
+											.item-projects__header
+												.item-projects__title ATM и терминалы оплаты банка
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Интерфейс и верстка экранов для
+													br
+													| банкоматов NCR, WinCor, Nautilus и
+													br
+													| платежных терминалов
+											.item-projects__img
+												img(src="img/item-projects/check.png", alt="alt")
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-grey-dark
+										figure
+											.item-projects__header
+												.item-projects__title Romeks
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Сайты застройщика Ромекс
+													br
+													| Девелопмент
+											.item-projects__img
+												img(src="img/item-projects/romeks.png", alt="alt")
+
+		include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
+	script(src="js/main.js")

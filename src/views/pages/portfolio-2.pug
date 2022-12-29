@@ -1,0 +1,134 @@
+extends ../layouts/default
+
+block variables
+	- const title = "TIQUM";
+
+block content
+	.wrapper
+		include ../../blocks/modules/header/header
+		.page
+			.container
+				.page-header.page-header--long.flex-lr
+					.flex-lr__left
+						.page-header__btns
+							.page-header__btn Backend
+							.page-header__btn Web
+					.page-header__medals.flex-lr__right
+						h1.general-title Swiftbook
+						.page-header__labels
+							.page-header__label
+								img(src="img/svg/bronze.svg", alt="alt")
+			.portfolio
+				.portfolio__img
+					img(src="img/pages/portfolio/2-1.jpg", alt="alt")
+				.project-portfolio
+					.container
+						.project-portfolio__top.flex-lr
+							.flex-lr__left
+								a(href="#").project-portfolio__link Смотреть проект →
+							.flex-lr__right
+								.project-portfolio__title Портал дистанционного обучения Swift-разработчиков
+						.project-portfolio__items
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Полноценная LMS
+								.project-portfolio__item-right.flex-lr__right
+									p Ядром портала является карта компетенций iOS-разработчика, выполненная в стиле фэнтези, в игровой форме стимулирующая к обучению. Это путь, который главный герой (студент) преодолевает с уровня Junior до Middle. Карта — индикатор знаний и интерактивный инструмент для поиска обучающего контента на портале.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-2.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-2.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Основные функции
+								.project-portfolio__item-right.flex-lr__right
+									ul
+										li автоматизация параллельных потоков (групп студентов) обучения;
+										li управление учебным планом;
+										li стримы, вебинары, записи уроков;
+										li домашние задания и кабинет преподавателя для проверки;
+										li интерактивный календарь обучения и событий.
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-3.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-3.jpg", alt="alt")
+									p Студент может посмотреть лекцию в прямом эфире и в записи. После просмотра ему становится доступно домашнее задание и тестирование
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-4.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-4.jpg", alt="alt")
+									p Во время урока студенты могут общаться и задавать вопросы в чате
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-5.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-5.jpg", alt="alt")
+									p Для успешного прохождения курса, студенты должны пройти несколько тестирований
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-6.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-6.jpg", alt="alt")
+									p Интерактивный календарь не только для студентов, но и для администратора и преподавателей
+									.project-portfolio__item-img
+										a(href="img/pages/portfolio/2-7.jpg" data-fancybox="gallery1")
+											img(src="img/pages/portfolio/2-7.jpg", alt="alt")
+
+							.project-portfolio__item.flex-lr
+								.flex-lr__left
+									.project-portfolio__item-title Достигнутые цели и KPI по итогам запуска
+								.project-portfolio__item-right.flex-lr__right
+									ul
+										li ежемесячные старты профессий (более 5 потоков)
+										li 28 курсов добавлено
+										li более 500 студентов
+
+					.project-portfolio__fullwidth
+						img(src="img/pages/portfolio/2-8.jpg", alt="alt")
+
+
+				.portfolio__next-cases.next-cases-portfolio
+					.next-cases-portfolio__container.container
+						.next-cases-portfolio__flex-lr.flex-lr
+							.next-cases-portfolio__flex-left.flex-lr__left
+							.next-cases-portfolio__flex-right.flex-lr__right
+								.next-cases-portfolio__flex-title.general-title
+									| Следующие
+									br
+									| кейсы
+						.next-cases-portfolio__projects
+							.items-projects
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-blue
+										figure
+											.item-projects__header
+												.item-projects__title ATM и терминалы оплаты банка
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Интерфейс и верстка экранов для
+													br
+													| банкоматов NCR, WinCor, Nautilus и
+													br
+													| платежных терминалов
+											.item-projects__img
+												img(src="img/item-projects/check.png", alt="alt")
+								.item-projects
+									a(href="#").item-projects__content.item-projects-content-grey-dark
+										figure
+											.item-projects__header
+												.item-projects__title Romeks
+												.item-projects__btns
+													.item-projects__btn Backend
+													.item-projects__btn Web
+													.item-projects__btn Mobile
+												.item-projects__text
+													| Сайты застройщика Ромекс
+													br
+													| Девелопмент
+											.item-projects__img
+												img(src="img/item-projects/romeks.png", alt="alt")
+
+		include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
+	script(src="js/main.js")
