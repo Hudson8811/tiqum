@@ -32,7 +32,7 @@
   margin-bottom: 1em;
 }
 .exposed-filters .current-filters .placeholder {
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
 }
 .exposed-filters .additional-filters {

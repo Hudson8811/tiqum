@@ -476,7 +476,7 @@ body.body-overflow {
 .general-title {
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 80px;
   line-height: 100.8%;
   letter-spacing: -0.03em;
@@ -507,11 +507,11 @@ body.body-overflow {
 }
 .general-title span {
   color: #0047ff;
-  font-weight: 500;
+  font-weight: 400;
 }
 .general-title a {
   color: #0047ff;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.5s ease 0s;
   position: relative;
 }
@@ -810,7 +810,7 @@ body.body-overflow {
 }
 .items-projects .item-projects__title {
   max-width: 50%;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -1017,7 +1017,7 @@ body.body-overflow {
   margin-top: 105px;
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -1053,7 +1053,7 @@ body.body-overflow {
   margin-top: 32px;
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 24px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -1088,7 +1088,7 @@ body.body-overflow {
 }
 
 .paragraph--type--photos, .portfolio .project-portfolio__item-img {
-  margin-top: 100px;
+  margin-top: 60px;
   overflow: hidden;
   margin-left: -34px;
   margin-bottom: -34px;
@@ -1097,7 +1097,7 @@ body.body-overflow {
 }
 @media (max-width: 1919px) {
   .paragraph--type--photos, .portfolio .project-portfolio__item-img {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 @media (max-width: 1440px) {
@@ -1116,7 +1116,7 @@ body.body-overflow {
 }
 @media (max-width: 767px) {
   .paragraph--type--photos, .portfolio .project-portfolio__item-img {
-    margin-top: 8vw;
+    margin-top: 18vw;
     margin-left: 0;
     margin-bottom: -2.47vw;
   }
@@ -1379,7 +1379,7 @@ ul.tabs {
   color: #fff;
 }
 .messages__title {
-  font-weight: 600;
+  font-weight: 400;
 }
 .messages__title, .messages__content {
   margin-left: 2.125rem;
@@ -2004,7 +2004,7 @@ summary {
   width: 100%;
 }
 .header.js-header-fixed .header__inner {
-  background-color: rgba(101, 101, 101, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(24px);
   margin: 20px 30px 0;
 }
@@ -2221,7 +2221,7 @@ summary {
 .menu-mobile__link {
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 58px;
   line-height: 95.8%;
   letter-spacing: -0.03em;
@@ -3546,7 +3546,7 @@ summary {
   flex: 0 1 65%;
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -4417,7 +4417,7 @@ summary {
 .projects__subtitle {
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -4943,8 +4943,8 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio p {
-    font-size: 3.2vw;
-    line-height: 4.533vw;
+    font-size: 5vw;
+    line-height: 1.41;
   }
 }
 .portfolio p:not(:first-child) {
@@ -5080,8 +5080,8 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__link {
-    font-size: 3.2vw;
-    line-height: 3.733vw;
+    font-size: 5vw;
+    line-height: 1.41;
     margin-bottom: 3.333vw;
     display: block;
   }
@@ -5091,7 +5091,7 @@ summary {
   max-width: 750px;
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
@@ -5123,8 +5123,8 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__title, .portfolio .project-portfolio .field--name-field-title {
-    font-size: 5.333vw;
-    line-height: 6.133vw;
+    font-size: 6.25vw;
+    line-height: 1.15;
     max-width: 100%;
   }
 }
@@ -5133,16 +5133,16 @@ summary {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 .portfolio .project-portfolio__item:not(:first-child) {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 @media (max-width: 1919px) {
   .portfolio .project-portfolio__item:not(:first-child) {
-    margin-top: 55px;
+    margin-top: 60px;
   }
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__item:not(:first-child) {
-    margin-top: 14.667vw;
+    margin-top: 16.667vw;
   }
 }
 @media (max-width: 1919px) {
@@ -5186,8 +5186,8 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__item-right p, .portfolio .project-portfolio__item-right li {
-    font-size: 3.2vw;
-    line-height: 4.533vw;
+    font-size: 5vw;
+    line-height: 1.41;
   }
 }
 .portfolio .project-portfolio__item-right p {
@@ -5282,6 +5282,52 @@ summary {
 .portfolio .project-portfolio__item-right > p:first-child, .portfolio .project-portfolio__item-right > div:first-child > p:first-child, .portfolio .project-portfolio__item-right > div:first-child > div:first-child > p:first-child {
   margin-top: 0;
 }
+.portfolio .project-portfolio__item-img + .project-portfolio__item-img {
+  margin-top: 30px;
+}
+@media (max-width: 1919px) {
+  .portfolio .project-portfolio__item-img + .project-portfolio__item-img {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1440px) {
+  .portfolio .project-portfolio__item-img + .project-portfolio__item-img {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .portfolio .project-portfolio__item-img + .project-portfolio__item-img {
+    margin-top: 2.93vw;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .project-portfolio__item-img + .project-portfolio__item-img {
+    margin-top: 8.33vw;
+  }
+}
+.portfolio .project-portfolio__item-img + *:not(.project-portfolio__item-img) {
+  margin-top: 60px;
+}
+@media (max-width: 1919px) {
+  .portfolio .project-portfolio__item-img + *:not(.project-portfolio__item-img) {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 1440px) {
+  .portfolio .project-portfolio__item-img + *:not(.project-portfolio__item-img) {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .portfolio .project-portfolio__item-img + *:not(.project-portfolio__item-img) {
+    margin-top: 5.859vw;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .project-portfolio__item-img + *:not(.project-portfolio__item-img) {
+    margin-top: 18vw;
+  }
+}
 .portfolio .project-portfolio__item-title {
   max-width: 360px;
   font-family: "Suisse Intl";
@@ -5306,8 +5352,8 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__item-title {
-    font-size: 4.8vw;
-    margin-bottom: 8vw;
+    font-size: 6.25vw;
+    margin-bottom: 1.15;
     max-width: 100%;
   }
 }
@@ -5369,7 +5415,7 @@ summary {
 @media (max-width: 767px) {
   .portfolio .project-portfolio__bottom-item {
     border-bottom: 0.267vw solid rgba(0, 0, 0, 0.2);
-    font-size: 4.8vw;
+    font-size: 6.25vw;
     padding: 8vw 0;
   }
   .portfolio .project-portfolio__bottom-item:first-child {
@@ -5411,7 +5457,7 @@ summary {
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__bottom-title {
-    font-size: 4.8vw;
+    font-size: 6.25vw;
     padding-top: 4vw;
     max-width: 100%;
   }
