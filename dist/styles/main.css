@@ -6803,6 +6803,16 @@ summary {
 .about-page__confirm .confirm__items {
   padding-top: 0;
 }
+@media (max-width: 1023px) {
+  .about-page__confirm .confirm__item {
+    color: #000000;
+  }
+}
+@media (max-width: 1023px) {
+  .about-page__confirm .confirm__item-right {
+    justify-content: flex-start;
+  }
+}
 .about-page__clients {
   padding-top: 30px;
 }

@@ -56,6 +56,16 @@
 		.confirm__items{
 			padding-top: 0;
 		}
+		.confirm__item{
+			@media (max-width: 1023px) {
+				color: #000000;
+			}
+		}
+		.confirm__item-right{
+			@media (max-width: 1023px) {
+				justify-content: flex-start;
+			}
+		}
 	}
 	&__clients{
 		padding-top: 30px;
