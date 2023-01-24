@@ -442,6 +442,13 @@ body.body-overflow {
     padding: 0 5.333vw;
   }
 }
+.container--gray {
+  background: #F5F5F5;
+}
+.container--gray .general-intro span {
+  opacity: 1;
+  color: #0047FF;
+}
 
 .page-header {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -548,6 +555,45 @@ body.body-overflow {
 }
 .general-title a:hover::before {
   opacity: 1;
+}
+
+.general-intro {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 108.8%;
+  letter-spacing: -0.03em;
+  color: #2A2A2A;
+  max-width: 1068px;
+}
+@media (max-width: 1919px) {
+  .general-intro {
+    font-size: 36px;
+    line-height: 110%;
+    max-width: 775px;
+  }
+}
+@media (max-width: 1439px) {
+  .general-intro {
+    font-size: 28px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 1024px) {
+  .general-intro {
+    font-size: 3.645vw;
+    line-height: 120%;
+  }
+}
+@media (max-width: 767px) {
+  .general-intro {
+    font-size: 6.25vw;
+    line-height: 125%;
+  }
+}
+.general-intro span {
+  opacity: 0.45;
 }
 
 .link-hv {
@@ -1747,6 +1793,7 @@ summary {
 }
 .header__inner {
   backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   padding: 50px 0;
   transition: margin 0.5s, background-color 0.5s;
 }
@@ -2032,6 +2079,7 @@ summary {
 .header.js-header-fixed .header__inner {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   margin: 20px 30px 0;
 }
 @media (max-width: 1919px) {
@@ -2081,6 +2129,7 @@ summary {
   margin: 0 !important;
   background-color: transparent;
   backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0px);
 }
 .header.header-mobile_active .header__inner .header__right {
   flex: 0 1 65.2%;
@@ -6674,5 +6723,347 @@ summary {
 }
 .new-page1 .new-page1-archive-projects .archive-projects__right {
   align-items: flex-start;
+}
+
+.about-page__block {
+  padding-bottom: 30px;
+}
+@media (max-width: 1919px) {
+  .about-page__block {
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__block {
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__block {
+    padding-bottom: 1.95vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__block {
+    padding-bottom: 4.0625vw;
+  }
+}
+.about-page__gray .container {
+  padding-top: 30px;
+}
+@media (max-width: 1919px) {
+  .about-page__gray .container {
+    padding-top: 18px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__gray .container {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__gray .container {
+    padding-top: 1.95vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__gray .container {
+    padding-top: 4.0625vw;
+  }
+}
+.about-page__confirm {
+  padding-top: 220px;
+  padding-bottom: 0;
+}
+.about-page__confirm .confirm__items {
+  padding-top: 0;
+}
+.about-page__clients {
+  padding-top: 30px;
+}
+@media (max-width: 1919px) {
+  .about-page__clients {
+    padding-top: 18px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__clients {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__clients {
+    padding-top: 1.95vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__clients {
+    padding-top: 4.0625vw;
+  }
+}
+.about-page__clients-title .about-page__text {
+  margin-top: 220px;
+}
+@media (max-width: 1919px) {
+  .about-page__clients-title .about-page__text {
+    margin-top: 165px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__clients-title .about-page__text {
+    margin-top: 113px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__clients-title .about-page__text {
+    margin-top: 14.7135vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__clients-title .about-page__text {
+    margin-top: 18.75vw;
+  }
+}
+.about-page__clients-grid {
+  margin-top: 30px;
+}
+@media (max-width: 1919px) {
+  .about-page__clients-grid {
+    margin-top: 18px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__clients-grid {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__clients-grid {
+    margin-top: 1.95vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__clients-grid {
+    margin-top: 4.0625vw;
+  }
+}
+.about-page__team {
+  padding-top: 30px;
+}
+@media (max-width: 1919px) {
+  .about-page__team {
+    padding-top: 18px;
+  }
+}
+@media (max-width: 1439px) {
+  .about-page__team {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page__team {
+    padding-top: 1.95vw;
+  }
+}
+@media (max-width: 767px) {
+  .about-page__team {
+    padding-top: 4.0625vw;
+  }
+}
+.about-page__team-content {
+  margin-top: 220px;
+}
+.about-page__team-text {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #2A2A2A;
+  padding-right: 55px;
+}
+.about-page__team-full {
+  width: 100%;
+  margin-top: 220px;
+}
+.about-page__team-full img {
+  width: 100%;
+}
+.about-page__next-cases .general-title {
+  display: flex;
+  justify-content: space-between;
+}
+.about-page__next-cases .general-title span:nth-child(1) {
+  color: #2A2A2A;
+}
+.about-page__next-cases .general-title span:nth-child(2) {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.clients-grid {
+  padding: 0 12px;
+  background: #F5F5F5;
+}
+@media (max-width: 1919px) {
+  .clients-grid {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1439px) {
+  .clients-grid {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .clients-grid {
+    padding: 0 1.953125vw;
+  }
+}
+@media (max-width: 767px) {
+  .clients-grid {
+    padding: 0 5.625vw;
+  }
+}
+.clients-grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.clients-grid__item {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 0 19px;
+}
+@media (max-width: 1439px) {
+  .clients-grid__item {
+    padding: 0 13px;
+  }
+}
+@media (max-width: 1024px) {
+  .clients-grid__item {
+    padding: 0 1.953125vw;
+    width: 33.3333%;
+  }
+}
+@media (max-width: 767px) {
+  .clients-grid__item {
+    padding: 0 1.875vw;
+    width: 50%;
+  }
+}
+.clients-grid__item-inner {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1919px) {
+  .clients-grid__item-inner {
+    height: 150px;
+  }
+}
+@media (max-width: 1439px) {
+  .clients-grid__item-inner {
+    height: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .clients-grid__item-inner {
+    height: 13.02vw;
+  }
+}
+@media (max-width: 767px) {
+  .clients-grid__item-inner {
+    height: 31.25vw;
+  }
+}
+.clients-grid__item-inner img {
+  max-width: 84%;
+  max-height: 90%;
+  display: block;
+  object-fit: contain;
+}
+.clients-grid__item:nth-last-child(1) .clients-grid__item-inner, .clients-grid__item:nth-last-child(2) .clients-grid__item-inner, .clients-grid__item:nth-last-child(3) .clients-grid__item-inner, .clients-grid__item:nth-last-child(4) .clients-grid__item-inner {
+  border: 0;
+}
+
+.team-grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -15px;
+}
+.team-grid__item {
+  width: calc((100% - 15px) / 2);
+  margin-right: 15px;
+  padding-top: 15px;
+}
+.team-grid__item:nth-child(even) {
+  margin-right: 0;
+}
+.team-grid__item-inner {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  z-index: 2;
+}
+.team-grid__item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.team-grid__item-text {
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.team-grid__item-name {
+  font-family: "Suisse Intl";
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.team-grid__item-post {
+  font-family: "Suisse Intl";
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.team-grid__item-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Suisse Intl";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #2A2A2A;
+  height: 100%;
+}
+.team-grid__item-content > * + * {
+  margin-top: 18px;
+}
+.team-grid__item-content a {
+  color: #0047FF;
 }
 /*# sourceMappingURL=maps/main.css.map */

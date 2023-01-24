@@ -1,0 +1,298 @@
+.about-page {
+	&__block{
+		padding-bottom: 30px;
+		@media (max-width: 1919px) {
+			padding-bottom: 18px;
+		}
+		@media (max-width: 1439px) {
+			padding-bottom: 15px;
+		}
+		@media (max-width: 1024px) {
+			padding-bottom: 1.95vw;
+		}
+		@media (max-width: 767px) {
+			padding-bottom: 4.0625vw;
+		}
+	}
+	&__gray{
+		.container{
+			padding-top: 30px;
+			@media (max-width: 1919px) {
+				padding-top: 18px;
+			}
+			@media (max-width: 1439px) {
+				padding-top: 15px;
+			}
+			@media (max-width: 1024px) {
+				padding-top: 1.95vw;
+			}
+			@media (max-width: 767px) {
+				padding-top: 4.0625vw;
+			}
+		}
+	}
+	&__confirm{
+		padding-top: 220px;
+		padding-bottom: 0;
+		.confirm__items{
+			padding-top: 0;
+		}
+	}
+	&__clients{
+		padding-top: 30px;
+		@media (max-width: 1919px) {
+			padding-top: 18px;
+		}
+		@media (max-width: 1439px) {
+			padding-top: 15px;
+		}
+		@media (max-width: 1024px) {
+			padding-top: 1.95vw;
+		}
+		@media (max-width: 767px) {
+			padding-top: 4.0625vw;
+		}
+		&-title{
+			.about-page__text{
+				margin-top: 220px;
+				@media (max-width: 1919px) {
+					margin-top: 165px;
+				}
+				@media (max-width: 1439px) {
+					margin-top: 113px;
+				}
+				@media (max-width: 1024px) {
+					margin-top: 14.7135vw;
+				}
+				@media (max-width: 767px) {
+					margin-top: 18.75vw;
+				}
+			}
+		}
+		&-grid{
+			margin-top: 30px;
+			@media (max-width: 1919px) {
+				margin-top: 18px;
+			}
+			@media (max-width: 1439px) {
+				margin-top: 15px;
+			}
+			@media (max-width: 1024px) {
+				margin-top: 1.95vw;
+			}
+			@media (max-width: 767px) {
+				margin-top: 4.0625vw;
+			}
+		}
+	}
+
+	&__team{
+		padding-top: 30px;
+		@media (max-width: 1919px) {
+			padding-top: 18px;
+		}
+		@media (max-width: 1439px) {
+			padding-top: 15px;
+		}
+		@media (max-width: 1024px) {
+			padding-top: 1.95vw;
+		}
+		@media (max-width: 767px) {
+			padding-top: 4.0625vw;
+		}
+		&-title{}
+		&-content{
+			margin-top: 220px;
+		}
+		&-text{
+			font-family: 'Suisse Intl';
+			font-style: normal;
+			font-size: 36px;
+			line-height: 110%;
+			letter-spacing: -0.03em;
+			color: #2A2A2A;
+			padding-right: 55px;
+		}
+		&-grid{}
+		&-full{
+			width: 100%;
+			margin-top: 220px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+
+	&__next-cases{
+		.general-title{
+			display: flex;
+			justify-content: space-between;
+			span{
+				&:nth-child(1){
+					color: #2A2A2A;
+				}
+				&:nth-child(2){
+					color: #000000;
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+}
+
+.clients-grid{
+	padding: 0 12px;
+	background: #F5F5F5;
+	@media (max-width: 1919px) {
+		padding: 0 5px;
+	}
+	@media (max-width: 1439px) {
+		padding: 0 16px;
+	}
+	@media (max-width: 1024px) {
+		padding: 0 1.953125vw;
+	}
+	@media (max-width: 767px) {
+		padding: 0 5.625vw;
+	}
+	&__wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	&__item{
+		box-sizing: border-box;
+		width: 25%;
+		padding: 0 19px;
+		@media (max-width: 1919px) {
+		}
+		@media (max-width: 1439px) {
+			padding: 0 13px;
+		}
+		@media (max-width: 1024px) {
+			padding: 0 1.953125vw;
+			width: 33.3333%;
+		}
+		@media (max-width: 767px) {
+			padding: 0 1.875vw;
+			width: 50%;
+		}
+		&-inner{
+			height: 200px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			@media (max-width: 1919px) {
+				height: 150px;
+			}
+			@media (max-width: 1439px) {
+				height: 100px;
+			}
+			@media (max-width: 1024px) {
+				height: 13.02vw;
+			}
+			@media (max-width: 767px) {
+				height: 31.25vw;
+			}
+			img{
+				max-width: 84%;
+				max-height: 90%;
+				display: block;
+				object-fit: contain;
+			}
+		}
+		&:nth-last-child(1),
+		&:nth-last-child(2),
+		&:nth-last-child(3),
+		&:nth-last-child(4){
+			.clients-grid__item-inner{
+				border: 0;
+			}
+		}
+	}
+}
+
+.team-grid{
+	&__wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: -15px;
+	}
+	&__item{
+		width: calc((100% - 15px)/2);
+		margin-right: 15px;
+		padding-top: 15px;
+		&:nth-child(even){
+			margin-right: 0;
+		}
+		&-inner{
+			width: 100%;
+			padding-bottom: 100%;
+			position: relative;
+			z-index: 2;
+		}
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+		&-text{
+			padding: 15px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&-name{
+			font-family: 'Suisse Intl';
+			font-size: 32px;
+			line-height: 120%;
+			letter-spacing: -0.03em;
+			color: #000000;
+			margin-bottom: 15px;
+		}
+		&-post{
+			font-family: 'Suisse Intl';
+			font-size: 20px;
+			line-height: 120%;
+			letter-spacing: -0.03em;
+			color: #000000;
+			margin-bottom: 15px;
+		}
+
+		&-content{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+			align-items: flex-start;
+			font-family: 'Suisse Intl';
+			font-weight: 400;
+			font-size: 36px;
+			line-height: 110%;
+			letter-spacing: -0.03em;
+			color: #2A2A2A;
+			height: 100%;
+			>*+*{
+				margin-top: 18px;
+			}
+			a{
+				color: #0047FF;
+			}
+		}
+		&--text{
+
+		}
+	}
+}

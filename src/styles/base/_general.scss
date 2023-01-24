@@ -81,6 +81,15 @@ body.body-overflow {
   @media (max-width: 767px) {
     padding: 0 5.333vw;
   }
+	&--gray{
+		background: #F5F5F5;
+		.general-intro{
+			span{
+				opacity: 1;
+				color: #0047FF;
+			}
+		}
+	}
 }
 
 .page-header {
@@ -174,6 +183,39 @@ body.body-overflow {
     }
   }
 }
+.general-intro{
+	font-family: "Suisse Intl";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 108.8%;
+	letter-spacing: -0.03em;
+	color: #2A2A2A;
+	max-width: 1068px;
+	@media (max-width: 1919px) {
+		font-size: 36px;
+		line-height: 110%;
+		max-width: 775px;
+	}
+	@media (max-width: 1439px) {
+		font-size: 28px;
+		line-height: 120%;
+	}
+	@media (max-width: 1024px) {
+		font-size: 3.645vw;
+		line-height: 120%;
+	}
+	@media (max-width: 767px) {
+		font-size: 6.25vw;
+		line-height: 125%;
+	}
+
+	span {
+		opacity: 0.45;
+	}
+}
+
+
 .link-hv {
   transition: all 0.5s ease 0s;
   &:hover {
