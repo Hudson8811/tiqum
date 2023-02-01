@@ -151,6 +151,22 @@
       height: 100%;
     }
   }
+
+	&--portfolio{
+		@media (max-width: 767px){
+			padding-top: 3.125vw;
+			padding-bottom: 3.125vw;
+			min-height: 60.3125vw;
+		}
+
+		.general-title {
+			@media (max-width: 767px){
+				display: flex;
+				align-items: flex-end;
+			}
+		}
+
+	}
 }
 
 .portfolio {
@@ -227,7 +243,7 @@
     }
 
     @media (max-width: 767px) {
-      padding-top: 2.667vw;
+      padding-top: 4.375vw;
     }
 
     &__container {}
@@ -269,7 +285,7 @@
         @media (max-width: 767px) {
           flex: 1 1 100% !important;
           order: 2;
-          margin-top: 7.333vw;
+          margin-top: 17.8125vw;
         }
 
         .project-portfolio__title {
@@ -307,9 +323,9 @@
       }
 
       @media (max-width: 767px) {
-        font-size: 5vw;
-        line-height: 1.41;
-        margin-bottom: 3.333vw;
+        font-size: 3.75vw;
+        line-height: 4.375vw;
+        margin-bottom: 0;
         display: block;
       }
     }

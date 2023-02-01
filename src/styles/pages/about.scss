@@ -302,8 +302,8 @@
 				height: 31.25vw;
 			}
 			img{
-				max-width: 84%;
-				max-height: 90%;
+				max-width: 100%;
+				max-height: 95%;
 				display: block;
 				object-fit: contain;
 			}
@@ -325,6 +325,212 @@
 			&:nth-last-child(4){
 				.clients-grid__item-inner{
 					border: 0;
+				}
+			}
+		}
+
+
+		&--1{
+			img{
+				width: 208px;
+				@media (max-width: 1919px) {
+					width: 148px;
+				}
+				@media (max-width: 1439px) {
+					width: 103px;
+				}
+				@media (max-width: 1023px) {
+					width: 13.28vw;
+				}
+				@media (max-width: 767px) {
+					width: 29.0625vw;
+				}
+			}
+		}
+		&--2{
+			img{
+				width: 240px;
+				@media (max-width: 1919px) {
+					width: 172px;
+				}
+				@media (max-width: 1439px) {
+					width: 119px;
+				}
+				@media (max-width: 1023px) {
+					width: 15.23vw;
+				}
+				@media (max-width: 767px) {
+					width: 33.4375vw;
+				}
+			}
+		}
+		&--3{
+			img{
+				width: 224px;
+				@media (max-width: 1919px) {
+					width: 160px;
+				}
+				@media (max-width: 1439px) {
+					width: 111px;
+				}
+				@media (max-width: 1023px) {
+					width: 14.322vw;
+				}
+				@media (max-width: 767px) {
+					width: 26.98125vw;
+				}
+			}
+		}
+		&--4{
+			img{
+				width: 155px;
+				@media (max-width: 1919px) {
+					width: 110px;
+				}
+				@media (max-width: 1439px) {
+					width: 76px;
+				}
+				@media (max-width: 1023px) {
+					width: 9.7656vw;
+				}
+				@media (max-width: 767px) {
+					width: 17.5vw;
+				}
+			}
+		}
+		&--5{
+			img{
+				width: 233px;
+				@media (max-width: 1919px) {
+					width: 166px;
+				}
+				@media (max-width: 1439px) {
+					width: 116px;
+				}
+				@media (max-width: 1023px) {
+					width: 14.84375vw;
+				}
+				@media (max-width: 767px) {
+					width: 28.125vw;
+				}
+			}
+		}
+		&--6{
+			img{
+				width: 285px;
+				@media (max-width: 1919px) {
+					width: 204px;
+				}
+				@media (max-width: 1439px) {
+					width: 141px;
+				}
+				@media (max-width: 1023px) {
+					width: 18.099vw;
+				}
+				@media (max-width: 767px) {
+					width: 35.3125vw;
+				}
+			}
+		}
+		&--7{
+			img{
+				width: 240px;
+				@media (max-width: 1919px) {
+					width: 172px;
+				}
+				@media (max-width: 1439px) {
+					width: 120px;
+				}
+				@media (max-width: 1023px) {
+					width: 15.3645vw;
+				}
+				@media (max-width: 767px) {
+					width: 30.9375vw;
+				}
+			}
+		}
+		&--8{
+			img{
+				width: 356px;
+				@media (max-width: 1919px) {
+					width: 254px;
+				}
+				@media (max-width: 1439px) {
+					width: 176px;
+				}
+				@media (max-width: 1023px) {
+					width: 22.65625vw;
+				}
+				@media (max-width: 767px) {
+					width: 34.375vw;
+				}
+			}
+		}
+		&--9{
+			img{
+				width: 195px;
+				@media (max-width: 1919px) {
+					width: 139px;
+				}
+				@media (max-width: 1439px) {
+					width: 97px;
+				}
+				@media (max-width: 1023px) {
+					width: 12.3697vw;
+				}
+				@media (max-width: 767px) {
+					width: 24.375vw;
+				}
+			}
+		}
+		&--10{
+			img{
+				width: 180px;
+				@media (max-width: 1919px) {
+					width: 129px;
+				}
+				@media (max-width: 1439px) {
+					width: 93px;
+				}
+				@media (max-width: 1023px) {
+					width: 11.849vw;
+				}
+				@media (max-width: 767px) {
+					width: 21.875vw;
+				}
+			}
+		}
+		&--11{
+			img{
+				width: 158px;
+				@media (max-width: 1919px) {
+					width: 113px;
+				}
+				@media (max-width: 1439px) {
+					width: 78.3px;
+				}
+				@media (max-width: 1023px) {
+					width: 10.026vw;
+				}
+				@media (max-width: 767px) {
+					width: 21.875vw;
+				}
+			}
+		}
+		&--12{
+			img{
+				width: 174px;
+				@media (max-width: 1919px) {
+					width: 124px;
+				}
+				@media (max-width: 1439px) {
+					width: 86px;
+				}
+				@media (max-width: 1023px) {
+					width: 11.0677vw;
+				}
+				@media (max-width: 767px) {
+					width: 20.3125vw;
 				}
 			}
 		}
@@ -479,7 +685,9 @@
 			line-height: 110%;
 			letter-spacing: -0.03em;
 			color: #2A2A2A;
-			height: 100%;
+			@media (min-width: 1920px) {
+				max-width: 580px;
+			}
 			@media (max-width: 1919px) {
 				font-size: 24px;
 			}
@@ -506,6 +714,12 @@
 			}
 			a{
 				color: #0047FF;
+				@media (min-width: 1920px) {
+					font-size: 24px;
+					line-height: 108.8%;
+					letter-spacing: -0.03em;
+					margin-top: 30px;
+				}
 			}
 		}
 		&--text{
