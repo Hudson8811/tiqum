@@ -869,3 +869,194 @@ body.body-overflow {
 .fancybox__container {
   z-index: 99999;
 }
+
+
+
+
+/***type-kit***/
+.h1{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 80px;
+	line-height: 90%;
+	letter-spacing: -0.03em;
+	@media (max-width: 1919px) {
+		line-height: 95%;
+		font-size: 60px;
+	}
+	@media (max-width: 1439px) {
+		line-height: 95%;
+		font-size: 50px;
+	}
+	@media (max-width: 1279px) {
+		font-size: 40px;
+		line-height: 100%;
+	}
+	@media (max-width: 1023px) {
+		line-height: 95%;
+		font-size: 7.03125vw;
+	}
+	@media (max-width: 767px) {
+		line-height: 95%;
+		font-size: 8.37209vw;
+	}
+	@media (max-width: 429px) {
+		line-height: 95%;
+		font-size: 8vw;
+	}
+	@media (max-width: 374px) {
+		line-height: 95%;
+		font-size: 7.5vw;
+	}
+}
+
+
+.h2{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 110%;
+	letter-spacing: -0.03em;
+	@media (max-width: 1919px) {
+		font-size: 36px;
+		line-height: 110%;
+	}
+	@media (max-width: 1439px) {
+		font-size: 32px;
+		line-height: 110%;
+		letter-spacing: -0.02em;
+	}
+	@media (max-width: 1279px) {
+		font-size: 28px;
+		line-height: 110%;
+	}
+	@media (max-width: 1023px) {
+		font-size: 3.64583vw;
+		line-height: 110%;
+	}
+	@media (max-width: 767px) {
+		font-size: 5.5814vw;
+		line-height: 110%;
+	}
+	@media (max-width: 429px) {
+		font-size: 5.8666vw;
+		line-height: 110%;
+	}
+	@media (max-width: 374px) {
+		font-size: 6.25vw;
+		line-height: 110%;
+	}
+}
+
+
+
+.h3{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 110%;
+	letter-spacing: -0.02em;
+	@media (max-width: 1919px) {
+		font-size: 24px;
+		line-height: 110%;
+	}
+	@media (max-width: 1439px) {
+		font-size: 24px;
+		line-height: 110%;
+	}
+	@media (max-width: 1279px) {
+		font-size: 24px;
+		line-height: 110%;
+	}
+	@media (max-width: 1023px) {
+		font-size: 3.125vw;
+		line-height: 110%;
+	}
+	@media (max-width: 767px) {
+		font-size: 5.11628vw;
+		line-height: 120%;
+	}
+	@media (max-width: 429px) {
+		font-size: 5.3333vw;
+		line-height: 120%;
+	}
+	@media (max-width: 374px) {
+		font-size: 5.625vw;
+		line-height: 120%;
+	}
+}
+
+
+
+.b1{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: 0;
+	@media (max-width: 1919px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@media (max-width: 1439px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@media (max-width: 1279px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@media (max-width: 1023px) {
+		font-size: 2.34375vw;
+		line-height: 3.125vw;
+	}
+	@media (max-width: 767px) {
+		font-size: 4.186vw;
+		line-height: 5.5814vw;
+	}
+	@media (max-width: 429px) {
+		font-size: 4.26667vw;
+		line-height: 5.86666vw;
+	}
+	@media (max-width: 374px) {
+		font-size: 5vw;
+		line-height: 6.875vw;
+	}
+}
+
+
+.b2{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0;
+	@media (max-width: 1919px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@media (max-width: 1439px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@media (max-width: 1279px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@media (max-width: 1023px) {
+		font-size: 1.82291;
+		line-height: 2.60416vw;
+	}
+	@media (max-width: 767px) {
+		font-size: 3.25581vw;
+		line-height: 4.65116vw;
+	}
+	@media (max-width: 429px) {
+		font-size: 3.73333vw;
+		line-height: 5.3333vw;
+	}
+	@media (max-width: 374px) {
+		font-size: 4.375vw;
+		line-height: 6.25vw;
+	}
+}
