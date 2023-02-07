@@ -283,6 +283,7 @@
 	flex-wrap: wrap;
 	margin: 0 -20px;
 	margin-top: 180px;
+	position: relative;
 	@media (max-width: 1919px){
 		margin: 0 -15px;
 		margin-top: 140px;
@@ -311,10 +312,43 @@
 		color: white;
 		flex: 0 1 100%;
 	}
+
+	&__error{
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: #FD5A5A;
+		position: absolute;
+		left: 20px;
+		bottom: -27px;
+		width: 100%;
+		pointer-events: none;
+		display: none;
+		@media (max-width: 1919px){
+			font-size: 14px;
+			line-height: 16px;
+			left: 1.465vw;
+			bottom: -27px;
+		}
+		@media (max-width: 1024px){
+			font-size: 1.3vw;
+			line-height: 1.5vw;
+			bottom: -2vw;
+		}
+		@media (max-width: 767px){
+			font-size: 3vw;
+			line-height: 3.2vw;
+			bottom: -3.7vw;
+			left: 4vw;
+		}
+	}
+
 	&__item {
 		flex: 0 1 50%;
-		opacity: 0.2;
 		transition: all 0.5s ease 0s;
+		position: relative;
 		@media (max-width: 767px){
 			flex: 0 1 100%;
 		}
@@ -324,10 +358,10 @@
 				margin-top: 45px;
 			}
 			@media (max-width: 1024px){
-				margin-top: 4.395vw;
+				margin-top: 5.208vw;
 			}
 			@media (max-width: 767px){
-				margin-top: 5.333vw;
+				margin-top: 6.25vw;
 			}
 		}
 		input, textarea {
@@ -342,7 +376,7 @@
 			padding-bottom: 20px;
 			background-color: transparent;
 			width: 100%;
-			border-bottom: 1px solid #FFFFFF;
+			border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
 			@media (max-width: 1919px){
 				font-size: 14px;
 				line-height: 16px;
@@ -362,8 +396,7 @@
 			}
 		}
 		input::placeholder, textarea::placeholder {
-			color: rgba($color: #ffffff, $alpha: 1.0);
-			transition: all 0.3s ease 0.3s;
+			color: rgba($color: #ffffff, $alpha: 0.2);
 		}
 		&-description {
 			flex: 1 1 100%;
@@ -397,10 +430,16 @@
 			}
 		}
 		&.js-active-area {
-			opacity: 1;
-			input::placeholder, textarea::placeholder {
-				transition: all 0.3s ease 0s;
-				color: rgba($color: #ffffff, $alpha: 0.1);
+			input, textarea{
+				border-bottom: 1px solid #ffffff;
+			}
+		}
+		&.js-error {
+			input, textarea{
+				border-bottom: 1px solid #FD5A5A;
+			}
+			.form-wewillfind-footer__error{
+				display: block;
 			}
 		}
 		&--big {
@@ -408,69 +447,97 @@
 		}
 	}
 	
-		&__bottom {
-			font-family: "Suisse Intl";
-			font-style: normal;
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 21px;
-			text-transform: uppercase;
-			color: #ffffff;
-			margin-top: 60px;
-			display: flex;
-			align-items: center;
-			@media (max-width: 1919px){
-				margin-top: 45px;
-			}
-			@media (max-width: 1440px){
-				margin-top: 40px;
-			}
-			@media (max-width: 1024px){
-				margin-top: 3.906vw;
-			}
-			@media (max-width: 767px){
-				margin-top: 5.333vw;
-				flex-wrap: wrap;
-				flex: 1 1 100%;
-			}
+	&__bottom {
+		font-family: "Suisse Intl";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-top: 60px;
+		display: flex;
+		align-items: center;
+		@media (max-width: 1919px){
+			margin-top: 45px;
 		}
-	
-		&__btn {
-
-
-			@media (max-width: 767px){
-				flex: 1 1 100%;
-			}
-
-
+		@media (max-width: 1440px){
+			margin-top: 40px;
 		}
-	
-		&__text {
-			margin-left: 40px;
-			font-family: 'Suisse Intl';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 21px;
-			color: #F5F5F5;
+		@media (max-width: 1024px){
+			margin-top: 3.906vw;
+		}
+		@media (max-width: 767px){
+			margin-top: 5.333vw;
+			flex-wrap: wrap;
+			flex: 1 1 100%;
+		}
+	}
+
+	&__btn {
+
+
+		@media (max-width: 767px){
+			flex: 1 1 100%;
+		}
+
+
+	}
+
+	&__text {
+		margin-left: 40px;
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		color: #F5F5F5;
+		opacity: 0.2;
+		@media (max-width: 1919px){
+			margin-left: 30px;
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@media (max-width: 1024px){
+			margin-left: 2.930vw;
+			font-size: 1.367vw;
+			line-height: 1.563vw;
+		}
+		@media (max-width: 767px){
+			margin-top: 3.733vw;
+			margin-left: 0;
+			font-size: 3.200vw;
+			line-height: 3.733vw;
+		}
+	}
+
+	&__success{
+		font-family: 'Suisse Intl';
+		pointer-events: none;
+		color: #ffffff;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		display: none;
+		span{
 			opacity: 0.2;
-			@media (max-width: 1919px){
-				margin-left: 30px;
-				font-size: 14px;
-				line-height: 16px;
-			}
-			@media (max-width: 1024px){
-				margin-left: 2.930vw;
-				font-size: 1.367vw;
-				line-height: 1.563vw;
-			}
-			@media (max-width: 767px){
-				margin-top: 3.733vw;
-				margin-left: 0;
-				font-size: 3.200vw;
-				line-height: 3.733vw;
-			}
 		}
+	}
+
+	&.submited{
+		> *:not(.form-wewillfind-footer__success){
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+		.form-wewillfind-footer__success{
+			display: block;
+			pointer-events: auto;
+		}
+	}
 }
 
 .mobile-fixed-bottom{

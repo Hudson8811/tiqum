@@ -310,40 +310,35 @@ template {
 
 @font-face {
   font-family: "Euclid Square";
-  src: url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot");
-  src: local("EuclidSquare_Medium"), local("../fonts/EuclidSquare_Medium/EuclidSquare_Medium"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.woff") format("woff"), url("../fonts/EuclidSquare_Medium/EuclidSquare_Medium.ttf") format("truetype");
+  src: url("../fonts/EuclidSquare_Medium/EuclidSquare-Medium.woff2") format("woff2"), url("../fonts/EuclidSquare_Medium/EuclidSquare-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy_Medium/Gilroy_Medium.eot");
-  src: local("Gilroy_Medium"), local("../fonts/Gilroy_Medium/Gilroy_Medium"), url("../fonts/Gilroy_Medium/Gilroy_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy_Medium/Gilroy_Medium.woff") format("woff"), url("../fonts/Gilroy_Medium/Gilroy_Medium.ttf") format("truetype");
+  src: url("../fonts/Gilroy_Medium/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy_Medium/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot");
-  src: local("Gilroy_SemiBold"), local("../fonts/Gilroy_SemiBold/Gilroy_SemiBold"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.woff") format("woff"), url("../fonts/Gilroy_SemiBold/Gilroy_SemiBold.ttf") format("truetype");
+  src: url("../fonts/Gilroy_SemiBold/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy_SemiBold/Gilroy-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Suisse Intl";
-  src: url("../fonts/Suisse_Intl/Suisse_Intl.eot");
-  src: local("Suisse_Intl"), local("../fonts/Suisse_Intl/Suisse_Intl"), url("../fonts/Suisse_Intl/Suisse_Intl.eot?#iefix") format("embedded-opentype"), url("../fonts/Suisse_Intl/Suisse_Intl.woff") format("woff"), url("../fonts/Suisse_Intl/Suisse_Intl.ttf") format("truetype");
-  font-weight: 400;
+  src: url("../fonts/Suisse_Intl/SuisseIntl-Regular.woff2") format("woff2"), url("../fonts/Suisse_Intl/SuisseIntl-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Suisse Intl";
-  src: url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot");
-  src: local("Suisse_Intl_Book"), local("../fonts/Suisse_Intl_Book/Suisse_Intl_Book"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.woff") format("woff"), url("../fonts/Suisse_Intl_Book/Suisse_Intl_Book.ttf") format("truetype");
+  src: url("../fonts/Suisse_Intl_Book/SuisseIntl-Book.woff2") format("woff2"), url("../fonts/Suisse_Intl_Book/SuisseIntl-Book.woff") format("woff");
   font-weight: 450;
   font-style: normal;
   font-display: swap;
@@ -3119,6 +3114,7 @@ summary {
   flex-wrap: wrap;
   margin: 0 -20px;
   margin-top: 180px;
+  position: relative;
 }
 @media (max-width: 1919px) {
   .form-wewillfind-footer {
@@ -3160,10 +3156,47 @@ summary {
   color: white;
   flex: 0 1 100%;
 }
+.form-wewillfind-footer__error {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FD5A5A;
+  position: absolute;
+  left: 20px;
+  bottom: -27px;
+  width: 100%;
+  pointer-events: none;
+  display: none;
+}
+@media (max-width: 1919px) {
+  .form-wewillfind-footer__error {
+    font-size: 14px;
+    line-height: 16px;
+    left: 1.465vw;
+    bottom: -27px;
+  }
+}
+@media (max-width: 1024px) {
+  .form-wewillfind-footer__error {
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    bottom: -2vw;
+  }
+}
+@media (max-width: 767px) {
+  .form-wewillfind-footer__error {
+    font-size: 3vw;
+    line-height: 3.2vw;
+    bottom: -3.7vw;
+    left: 4vw;
+  }
+}
 .form-wewillfind-footer__item {
   flex: 0 1 50%;
-  opacity: 0.2;
   transition: all 0.5s ease 0s;
+  position: relative;
 }
 @media (max-width: 767px) {
   .form-wewillfind-footer__item {
@@ -3180,12 +3213,12 @@ summary {
 }
 @media (max-width: 1024px) {
   .form-wewillfind-footer__item:not(:first-child) {
-    margin-top: 4.395vw;
+    margin-top: 5.208vw;
   }
 }
 @media (max-width: 767px) {
   .form-wewillfind-footer__item:not(:first-child) {
-    margin-top: 5.333vw;
+    margin-top: 6.25vw;
   }
 }
 .form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea {
@@ -3200,7 +3233,7 @@ summary {
   padding-bottom: 20px;
   background-color: transparent;
   width: 100%;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1919px) {
   .form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea {
@@ -3226,8 +3259,7 @@ summary {
   }
 }
 .form-wewillfind-footer__item input::placeholder, .form-wewillfind-footer__item textarea::placeholder {
-  color: white;
-  transition: all 0.3s ease 0.3s;
+  color: rgba(255, 255, 255, 0.2);
 }
 .form-wewillfind-footer__item-description {
   flex: 1 1 100%;
@@ -3262,12 +3294,14 @@ summary {
   padding-bottom: 0 !important;
   padding-right: 30px;
 }
-.form-wewillfind-footer__item.js-active-area {
-  opacity: 1;
+.form-wewillfind-footer__item.js-active-area input, .form-wewillfind-footer__item.js-active-area textarea {
+  border-bottom: 1px solid #ffffff;
 }
-.form-wewillfind-footer__item.js-active-area input::placeholder, .form-wewillfind-footer__item.js-active-area textarea::placeholder {
-  transition: all 0.3s ease 0s;
-  color: rgba(255, 255, 255, 0.1);
+.form-wewillfind-footer__item.js-error input, .form-wewillfind-footer__item.js-error textarea {
+  border-bottom: 1px solid #FD5A5A;
+}
+.form-wewillfind-footer__item.js-error .form-wewillfind-footer__error {
+  display: block;
 }
 .form-wewillfind-footer__item--big {
   flex: 0 1 100%;
@@ -3342,6 +3376,30 @@ summary {
     font-size: 3.2vw;
     line-height: 3.733vw;
   }
+}
+.form-wewillfind-footer__success {
+  font-family: "Suisse Intl";
+  pointer-events: none;
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+.form-wewillfind-footer__success span {
+  opacity: 0.2;
+}
+.form-wewillfind-footer.submited > *:not(.form-wewillfind-footer__success) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.form-wewillfind-footer.submited .form-wewillfind-footer__success {
+  display: block;
+  pointer-events: auto;
 }
 
 .mobile-fixed-bottom {

@@ -1,10 +1,7 @@
 @font-face {
 	font-family: 'Euclid Square';
-	src: url('../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot');
-	src: local('EuclidSquare_Medium'), local('../fonts/EuclidSquare_Medium/EuclidSquare_Medium'),
-		url('../fonts/EuclidSquare_Medium/EuclidSquare_Medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/EuclidSquare_Medium/EuclidSquare_Medium.woff') format('woff'),
-		url('../fonts/EuclidSquare_Medium/EuclidSquare_Medium.ttf') format('truetype');
+	src: url('../fonts/EuclidSquare_Medium/EuclidSquare-Medium.woff2') format('woff2'),
+	url('../fonts/EuclidSquare_Medium/EuclidSquare-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -12,22 +9,17 @@
 
 @font-face {
 	font-family: 'Gilroy';
-	src: url('../fonts/Gilroy_Medium/Gilroy_Medium.eot');
-	src: local('Gilroy_Medium'), local('../fonts/Gilroy_Medium/Gilroy_Medium'),
-		url('../fonts/Gilroy_Medium/Gilroy_Medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Gilroy_Medium/Gilroy_Medium.woff') format('woff'),
-		url('../fonts/Gilroy_Medium/Gilroy_Medium.ttf') format('truetype');
+	src: url('../fonts/Gilroy_Medium/Gilroy-Medium.woff2') format('woff2'),
+	url('../fonts/Gilroy_Medium/Gilroy-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Gilroy';
-	src: url('../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot');
-	src: local('Gilroy_SemiBold'), local('../fonts/Gilroy_SemiBold/Gilroy_SemiBold'),
-		url('../fonts/Gilroy_SemiBold/Gilroy_SemiBold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Gilroy_SemiBold/Gilroy_SemiBold.woff') format('woff'),
-		url('../fonts/Gilroy_SemiBold/Gilroy_SemiBold.ttf') format('truetype');
+	src: url('../fonts/Gilroy_SemiBold/Gilroy-SemiBold.woff2') format('woff2'),
+	url('../fonts/Gilroy_SemiBold/Gilroy-SemiBold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -35,22 +27,17 @@
 
 @font-face {
 	font-family: 'Suisse Intl';
-	src: url('../fonts/Suisse_Intl/Suisse_Intl.eot');
-	src: local('Suisse_Intl'), local('../fonts/Suisse_Intl/Suisse_Intl'),
-		url('../fonts/Suisse_Intl/Suisse_Intl.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Suisse_Intl/Suisse_Intl.woff') format('woff'),
-		url('../fonts/Suisse_Intl/Suisse_Intl.ttf') format('truetype');
-	font-weight: 400;
+	src: url('../fonts/Suisse_Intl/SuisseIntl-Regular.woff2') format('woff2'),
+	url('../fonts/Suisse_Intl/SuisseIntl-Regular.woff') format('woff');
+	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Suisse Intl';
-	src: url('../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot');
-	src: local('Suisse_Intl_Book'), local('../fonts/Suisse_Intl_Book/Suisse_Intl_Book'),
-		url('../fonts/Suisse_Intl_Book/Suisse_Intl_Book.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Suisse_Intl_Book/Suisse_Intl_Book.woff') format('woff'),
-		url('../fonts/Suisse_Intl_Book/Suisse_Intl_Book.ttf') format('truetype');
+	src: url('../fonts/Suisse_Intl_Book/SuisseIntl-Book.woff2') format('woff2'),
+	url('../fonts/Suisse_Intl_Book/SuisseIntl-Book.woff') format('woff');
 	font-weight: 450;
 	font-style: normal;
 	font-display: swap;
