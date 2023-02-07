@@ -7026,6 +7026,9 @@ summary {
   align-items: flex-start;
 }
 
+.about-page .general-title {
+  color: #2A2A2A;
+}
 @media (max-width: 1023px) {
   .about-page .flex-lr .flex-lr__right {
     flex: 1 0 100%;
