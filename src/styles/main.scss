@@ -8,8 +8,11 @@
 
 // Основное
 @import "base/fonts";
-@import "base/general";
 @import "base/reset";
+@import "base/text-style";
+@import "base/general";
+@import "base/margins";
+@import "base/paddings";
 
 // Основное
 @import "modules/pager";
@@ -38,4 +41,3 @@
 @import "pages/new-page";
 @import "pages/new-page1";
 @import "pages/about";
-@import "pages/type-kit";

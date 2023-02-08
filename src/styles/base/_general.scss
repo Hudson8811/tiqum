@@ -122,28 +122,10 @@ body.body-overflow {
 }
 
 .general-title {
+	@extend .h1;
   font-family: "Suisse Intl";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 100.8%;
-  letter-spacing: -0.03em;
   color: #000000;
-  @media (max-width: 1919px) {
-    font-size: 60px;
-    line-height: 90.8%;
-  }
-  @media (max-width: 1439px) {
-    font-size: 40px;
-    line-height: 102.8%;
-  }
-  @media (max-width: 1024px) {
-    font-size: 3.906vw;
-    line-height: 95.8%;
-  }
-  @media (max-width: 767px) {
-    font-size: 7.733vw;
-  }
+
   span {
     color: #0047ff;
     font-weight: 400;
@@ -605,121 +587,9 @@ body.body-overflow {
   margin-bottom: 20px;
 }
 
-.right-content-blog, .project-portfolio__item-right {
-  ul, ol {
-    margin: 30px 0 20px 20px;
-	  &:first-child{
-		  margin-top: 0;
-	  }
-	  &:last-child{
-		  margin-bottom: 0;
-	  }
-
-
-	  &:not(:first-child) {
-		  @media (max-width: 1919px) {
-			  margin-top: 20px;
-		  }
-
-		  @media (max-width: 1440px) {
-			  margin-top: 30px;
-		  }
-
-		  @media (max-width: 1024px) {
-			  margin-top: 2.93vw;
-		  }
-
-		  @media (max-width: 767px) {
-			  margin-top: 4vw;
-		  }
-	  }
-
-
-    li {
-      list-style: inherit;
-      padding: 0 0.5em;
-      font-family: "Suisse Intl";
-      font-size: 22px;
-      line-height: 168.8%;
-    }
-  }
-  ol {
-    margin-left: 25px;
-  }
-	p + ul,
-	p + ol{
-		margin-top: 0;
-	}
-
-  h1, h2, h3 {
-    margin-top: 105px;
-    font-family: 'Suisse Intl';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 108.8%;
-    letter-spacing: -0.03em;
-    color: #2A2A2A;
-    @media (max-width: 1919px){
-      font-size: 36px;
-      line-height: 108.8%;
-    }
-    @media (max-width: 1440px){
-      font-size: 28px;
-      line-height: 32px;
-    }
-    @media (max-width: 1024px){
-      font-size: 2.734vw;
-      line-height: 3.125vw;
-      margin-top: 5.859vw;
-    }
-    @media (max-width: 767px){
-      font-size: 5.333vw;
-      line-height: 6.133vw;
-      margin-top: 12vw;
-    }
-  }
-
-  h4 {
-    margin-top: 32px;
-    font-family: 'Suisse Intl';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 108.8%;
-    letter-spacing: -0.03em;
-    color: #2A2A2A;
-	  @media (max-width: 1919px){
-		  margin-top: 32px;
-		  font-size: 22px;
-	  }
-	  @media (max-width: 1440px){
-		  margin-top: 32px;
-		  font-size: 20px;
-	  }
-	  @media (max-width: 1024px){
-		  font-size: 1.8vw;
-		  margin-top: 3vw;
-	  }
-	  @media (max-width: 767px){
-		  font-size: 4vw;
-		  margin-top: 4.1vw;
-	  }
-  }
-
-  &, > div:first-child, > div:first-child > div:first-child {
-    > {
-      h1, h2, h3, h4 {
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
 
 .paragraph--type--photos {
-  margin-top: 60px;
+  @extend .mt60;
 
   overflow: hidden;
   margin-left: -34px;
@@ -727,25 +597,18 @@ body.body-overflow {
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: 1919px) {
-    margin-top: 60px;
-  }
 
   @media (max-width: 1440px) {
-    margin-top: 60px;
     margin-left: -25px;
     margin-bottom: -25px;
   }
 
   @media (max-width: 1024px) {
-    margin-top: 5.859vw;
     margin-left: -1.66vw;
     margin-bottom: -1.66vw;
   }
 
   @media (max-width: 767px) {
-
-    margin-top: 18vw;
     margin-left: 0;
     margin-bottom: -2.47vw;
   }
@@ -771,13 +634,6 @@ body.body-overflow {
       min-width: calc(50% - 1.66vw); // 1/2
     }
 
-    /* width: 49%;
-    @media (max-width: 767px) {
-        width: 100%;
-    }
-    &:first-child:last-child{
-        width:100%
-    } */
     @media (max-width: 767px) {
       width: 100% !important;
       margin-left: 0;
@@ -785,14 +641,6 @@ body.body-overflow {
       width: 100%;
     }
 
-    &+img {
-      /*margin-left: 2%;
-
-      @media (max-width: 767px) {
-          margin-left: auto;
-          margin-top: 4%;
-      }*/
-    }
     img {
       width: 100%;
       height: auto;
@@ -827,41 +675,11 @@ body.body-overflow {
 
   & +.paragraph--type--photos,
   & +.project-portfolio__item-img {
-    margin-top: 30px;
-    @media (max-width: 1919px) {
-      margin-top: 30px;
-    }
-
-    @media (max-width: 1440px) {
-      margin-top: 30px;
-    }
-
-    @media (max-width: 1024px) {
-      margin-top: 2.93vw;
-    }
-
-    @media (max-width: 767px) {
-      margin-top: 8.33vw;
-    }
+	  @extend .mt30;
   }
 
-  + *:not(.paragraph--type--photos, .project-portfolio__item-img) {
-    margin-top: 60px;
-    @media (max-width: 1919px) {
-      margin-top: 60px;
-    }
-
-    @media (max-width: 1440px) {
-      margin-top: 60px;
-    }
-
-    @media (max-width: 1024px) {
-      margin-top: 5.859vw;
-    }
-
-    @media (max-width: 767px) {
-      margin-top: 18vw;
-    }
+  + *:not(.paragraph--type--photos, .project-portfolio__item-img):not(:first-child) {
+    @extend .mt60;
   }
 }
 
@@ -872,191 +690,3 @@ body.body-overflow {
 
 
 
-
-/***type-kit***/
-.h1{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 80px;
-	line-height: 90%;
-	letter-spacing: -0.03em;
-	@media (max-width: 1919px) {
-		line-height: 95%;
-		font-size: 60px;
-	}
-	@media (max-width: 1439px) {
-		line-height: 95%;
-		font-size: 50px;
-	}
-	@media (max-width: 1279px) {
-		font-size: 40px;
-		line-height: 100%;
-	}
-	@media (max-width: 1023px) {
-		line-height: 95%;
-		font-size: 7.03125vw;
-	}
-	@media (max-width: 767px) {
-		line-height: 95%;
-		font-size: 8.37209vw;
-	}
-	@media (max-width: 429px) {
-		line-height: 95%;
-		font-size: 8vw;
-	}
-	@media (max-width: 374px) {
-		line-height: 95%;
-		font-size: 7.5vw;
-	}
-}
-
-
-.h2{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 48px;
-	line-height: 110%;
-	letter-spacing: -0.03em;
-	@media (max-width: 1919px) {
-		font-size: 36px;
-		line-height: 110%;
-	}
-	@media (max-width: 1439px) {
-		font-size: 32px;
-		line-height: 110%;
-		letter-spacing: -0.02em;
-	}
-	@media (max-width: 1279px) {
-		font-size: 28px;
-		line-height: 110%;
-	}
-	@media (max-width: 1023px) {
-		font-size: 3.64583vw;
-		line-height: 110%;
-	}
-	@media (max-width: 767px) {
-		font-size: 5.5814vw;
-		line-height: 110%;
-	}
-	@media (max-width: 429px) {
-		font-size: 5.8666vw;
-		line-height: 110%;
-	}
-	@media (max-width: 374px) {
-		font-size: 6.25vw;
-		line-height: 110%;
-	}
-}
-
-
-
-.h3{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 110%;
-	letter-spacing: -0.02em;
-	@media (max-width: 1919px) {
-		font-size: 24px;
-		line-height: 110%;
-	}
-	@media (max-width: 1439px) {
-		font-size: 24px;
-		line-height: 110%;
-	}
-	@media (max-width: 1279px) {
-		font-size: 24px;
-		line-height: 110%;
-	}
-	@media (max-width: 1023px) {
-		font-size: 3.125vw;
-		line-height: 110%;
-	}
-	@media (max-width: 767px) {
-		font-size: 5.11628vw;
-		line-height: 120%;
-	}
-	@media (max-width: 429px) {
-		font-size: 5.3333vw;
-		line-height: 120%;
-	}
-	@media (max-width: 374px) {
-		font-size: 5.625vw;
-		line-height: 120%;
-	}
-}
-
-
-
-.b1{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 32px;
-	letter-spacing: 0;
-	@media (max-width: 1919px) {
-		font-size: 18px;
-		line-height: 24px;
-	}
-	@media (max-width: 1439px) {
-		font-size: 18px;
-		line-height: 24px;
-	}
-	@media (max-width: 1279px) {
-		font-size: 18px;
-		line-height: 24px;
-	}
-	@media (max-width: 1023px) {
-		font-size: 2.34375vw;
-		line-height: 3.125vw;
-	}
-	@media (max-width: 767px) {
-		font-size: 4.186vw;
-		line-height: 5.5814vw;
-	}
-	@media (max-width: 429px) {
-		font-size: 4.26667vw;
-		line-height: 5.86666vw;
-	}
-	@media (max-width: 374px) {
-		font-size: 5vw;
-		line-height: 6.875vw;
-	}
-}
-
-
-.b2{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 26px;
-	letter-spacing: 0;
-	@media (max-width: 1919px) {
-		font-size: 14px;
-		line-height: 20px;
-	}
-	@media (max-width: 1439px) {
-		font-size: 14px;
-		line-height: 20px;
-	}
-	@media (max-width: 1279px) {
-		font-size: 14px;
-		line-height: 20px;
-	}
-	@media (max-width: 1023px) {
-		font-size: 1.82291;
-		line-height: 2.60416vw;
-	}
-	@media (max-width: 767px) {
-		font-size: 3.25581vw;
-		line-height: 4.65116vw;
-	}
-	@media (max-width: 429px) {
-		font-size: 3.73333vw;
-		line-height: 5.3333vw;
-	}
-	@media (max-width: 374px) {
-		font-size: 4.375vw;
-		line-height: 6.25vw;
-	}
-}
