@@ -561,6 +561,11 @@
 		border-top: 1px solid rgba(0, 0, 0, 0.2);
 		min-height: 150px;
 		padding-top: 20px;
+		@media (max-width: 576px) {
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 		.wewillfind-footer__title {
 			min-width: 80%;
 			margin-bottom: 0;
@@ -569,7 +574,10 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: flex-start;
-			flex: 0 1 50%
+			flex: 0 1 50%;
+			@media (max-width: 576px) {
+				margin-bottom: vw3(20);
+			}
 		}
 		&--right {
 			display: flex;
@@ -593,7 +601,7 @@
 				margin-bottom: 100px;
 			}
 			@media (max-width: 576px) {
-				margin-bottom: vw3(65);
+				margin-bottom: vw3(30);
 			}
 		}
 	}
