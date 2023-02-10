@@ -2340,7 +2340,7 @@
   "version" "1.0.1"
 
 "bem-tools-core@bem-tools/bem-tools-core":
-  "integrity" "sha512-MdmlsVWz1KbAvx1MvAZetwhQmNOEYcAmODi/UVrg2GXFgruNgPV8Z+6E17IlW8+uQetxnwot6ImGXom5nyRtFA=="
+  "integrity" "sha512-1znNOd8vYrXsthy2ZfrEMxR84SHvPWFHRcKouh9/VqVvzqBR/x+wrwZLrdNDHATDs0wIo47gzbSFC6BqpokpIg=="
   "resolved" "git+ssh://git@github.com/bem-tools/bem-tools-core.git"
   "version" "0.0.3"
   dependencies:

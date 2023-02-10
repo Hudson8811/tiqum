@@ -1,3 +1,33 @@
+@use 'sass:math';
 @function rem($px) {
     @return ($px / 16) +rem;
+}
+@function vw0($px, $resolutiond: 1440) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
+}
+@function vw($px, $resolutiond: 1024) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
+}
+
+@function vh($px, $resolutiond: 800) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vh';
+}
+
+
+@function vw2($px, $resolutiond: 768) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
+
+@function vw3($px, $resolutiond: 576) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
+
+@function vw4($px, $resolutiond: 375) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
 }

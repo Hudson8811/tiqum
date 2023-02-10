@@ -1,6 +1,13 @@
 (function ($) {
 
 	//projects
+	$('.calc-page__underBlok__input:checkbox').change(function(){
+    if($(this).is(":checked")) {
+        $(this).parents('.calc-page__underBlok').addClass("active");
+    } else {
+			$(this).parents('.calc-page__underBlok').removeClass("active");
+    }
+	});
 	$(document).ready(function(){
 		$('.archive-projects__item').mouseover(function(){
 			$('.archive-projects__item').addClass("js-opacity-item");
@@ -146,5 +153,6 @@
             }
         });
     });
+
 })(jQuery);
 
