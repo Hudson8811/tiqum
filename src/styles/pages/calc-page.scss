@@ -100,7 +100,7 @@
 				}
 			}
 		}
-		&--whatLaunching {
+		&--checkbox {
 			.calc-page__underBlok {
 				@media (max-width: 768px) {
 					padding-bottom: 60px;
@@ -320,12 +320,14 @@
 		svg {
 			position: absolute;
 			left: -50px;
+			top: 4px;
 			display: block;
 			opacity: 0;
 			width: 35px;
 			@media (max-width: 1023px) {
 				position: absolute;
 				left: 0;
+				top: 0;
 				width: 20px;
 				opacity: 1;
 
@@ -353,6 +355,7 @@
 		input[type='checkbox']{
 			position: absolute;
 			left: -65px;
+			top: 3px;
 			text-align: center;
 			display: flex;
 			justify-content: center;
@@ -531,6 +534,24 @@
 		}
 		&--desc {
 			opacity: 0.4;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 26px;
+			@media (max-width: 1440px) {
+				font-size: 18px;
+				line-height: 26px;
+			}
+			@media (max-width: 1024px) {
+				font-size: 18px;
+				line-height: 26px;
+			}
+			@media (max-width: 768px) {
+				margin-bottom: 100px;
+			}
+			@media (max-width: 576px) {
+				margin-bottom: vw3(65);
+			}
 		}
 	}
 
