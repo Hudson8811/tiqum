@@ -72,34 +72,8 @@
 			padding-right: 38px;
 		}
 	}
-	&__block {
-		&--service{
-			.flex-lr__left {
-				.calc-page__underBlok {
-					
-					min-height: auto;
-					padding-bottom: 20px;
-					@media (max-width: 768px) {
-						border-top: none;
-					}
-				}
-			}
-		}
-		&--allService {
-			.calc-page--subtitle {
-				color: #0047FF;
-			}
-			.flex-lr__left {
-				.calc-page__underBlok {
-					@media (max-width: 768px) {
-						min-height: auto;
-						padding-bottom: 20px;
-						border-top: none;
-					}
 
-				}
-			}
-		}
+	&__block {
 		&--checkbox {
 			.calc-page__underBlok {
 				@media (max-width: 768px) {
@@ -167,7 +141,6 @@
 		padding-top: 15px;
 		padding-bottom: 40px;
 		border-top: 1px solid rgba(0, 0, 0, 0.2);
-		transition: all .5s;
 		&.active {
 			.calc-page--subtitle {
 				color: #0047FF;
@@ -272,6 +245,37 @@
 		@media (max-width: 1023px) {
 			min-height: 150px;
 		}
+
+
+		label{
+			cursor: pointer;
+			user-select: none;
+		}
+
+		&--service{
+			cursor: pointer;
+			transition: opacity .4s, min-height .4s;
+			user-select: none;
+			&.collapsed{
+				min-height: 0 !important;
+				opacity: 0;
+			}
+			&.opacity{
+				opacity: 0.4;
+			}
+			&.active{
+				cursor: default;
+				.calc-page--subtitle {
+					color: #0047FF;
+					svg {
+						opacity: 1;
+						[stroke="#2A2A2A"]{
+							stroke: #0047FF !important;
+						}
+					}
+				}
+			}
+		}
 	}
 	&--text {
 		position: relative;
@@ -282,7 +286,6 @@
 			opacity: 0.4;
 			@media (max-width: 374px) {
 				display: none;
-				
 			}
 		}
 		@media (max-width: 1023px) {
@@ -296,7 +299,14 @@
 		@media (max-width: 374px) {
 			line-height: 95%;
 			font-size: vw4(16);
+		}
 
+		&.js-calc-allServices{
+			opacity: 0.4;
+			&:hover{
+				color: #0047FF;
+				opacity: 1;
+			}
 		}
 	}
 	&--subtitle {
@@ -488,6 +498,39 @@
 			line-height: 22px;
 		}
 	}
+
+
+	&__left-control{
+		min-height: auto;
+		padding-bottom: 20px;
+		@media (max-width: 768px) {
+			border-top: none;
+		}
+		&:not(.active){
+			> * {
+				&:nth-child(2){
+					display: none;
+				}
+			}
+		}
+		&.active{
+			> * {
+				&:nth-child(1){
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__serviceBlock{
+		display: none;
+	}
+
+	&__footer{
+		&:not(.active){
+			display: none;
+		}
+	}
 }
 
 .calculator {
@@ -593,3 +636,4 @@
 		}
 	}
 }
+
