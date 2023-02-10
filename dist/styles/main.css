@@ -8968,6 +8968,13 @@ summary {
   min-height: 150px;
   padding-top: 20px;
 }
+@media (max-width: 576px) {
+  .calculator .finalCost__block {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
 .calculator .finalCost__block .wewillfind-footer__title {
   min-width: 80%;
   margin-bottom: 0;
@@ -8977,6 +8984,11 @@ summary {
   justify-content: flex-start;
   align-items: flex-start;
   flex: 0 1 50%;
+}
+@media (max-width: 576px) {
+  .calculator .finalCost__block--left {
+    margin-bottom: 3.4722222222vw;
+  }
 }
 .calculator .finalCost__block--right {
   display: flex;
@@ -9008,7 +9020,7 @@ summary {
 }
 @media (max-width: 576px) {
   .calculator .finalCost__block--desc {
-    margin-bottom: 11.2847222222vw;
+    margin-bottom: 5.2083333333vw;
   }
 }
 
