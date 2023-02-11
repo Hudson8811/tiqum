@@ -3,3 +3,4 @@ import "./libs/ScrollTrigger.min";
 
 import "./import/modules";
 import "./import/pages";
+import "./import/calc";

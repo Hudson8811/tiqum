@@ -1,121 +1,94 @@
 extends ../layouts/default
 
 block variables
-		- const title = "Calculator";
+	- const title = "Calculator";
 block content
-		.wrapper.calculator
-			include ../../blocks/modules/header/header
-			.page.calc-page
-				.container
-					.page-header.flex-lr
+	.wrapper.calculator
+		include ../../blocks/modules/header/header
+		.page.calc-page
+			.container
+				.page-header.flex-lr
+					.flex-lr__left
+						a(href="").b1.calc-page--advice Бесплатная консультация  →
+					.flex-lr__right
+						.h1.calc-page--title Расчет стоимости <br>услуг
+						.h1.calc-page--title-label
+							!="(online)"
+				.calc-page__block
+					.flex-lr
 						.flex-lr__left
-							a(href="").b1.calc-page--advice Бесплатная консультация  →
+							.calc-page__underBlok.calc-page__left-control
+								.calc-page--text.h3
+									!="Выберите услугу <span>,<br>а мы рассчитаем состав команды и стоимость</span>"
+								a.calc-page--text.h3.js-calc-allServices(href="javascript:;")
+									!="Все услуги"
+
 						.flex-lr__right
-							.h1.calc-page--title Расчет стоимости <br>услуг
-							.h1.calc-page--title-label
-								!="(online)" 
-								.about-page__content
-					.calc-page__block.calc-page__block--service
-						.flex-lr
-							.flex-lr__left
-								.calc-page__underBlok
-									.calc-page--text.h3
-										!="Выберите услугу <span>,<br>а мы рассчитаем состав команды и стоимость</span>"
-							.flex-lr__right
-								.calc-page__underBlok
-									.calc-page--subtitle.h2
-										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_3837_49823)">
-										<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-										<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
-										</g>
-										<defs>
-										<clipPath id="clip0_3837_49823">
-										<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
-										</clipPath>
-										</defs>
-										</svg>
-										!="Запуск MVP" 
-									.calc-page--treetitle.b2 Разработаем веб или мобильный сервис за 4-6 месяцев, с фиксированной стоимостью
-					.calc-page__block
-						.flex-lr
-							.flex-lr__left
-							.flex-lr__right
-								.calc-page__underBlok
-									.calc-page--subtitle.h2 
-										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_3837_49823)">
-										<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-										<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
-										</g>
-										<defs>
-										<clipPath id="clip0_3837_49823">
-										<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
-										</clipPath>
-										</defs>
-										</svg>
-										!="Цифровая трансформация. Консалтинг"
-									.calc-page--treetitle Внедрение подхода к управлению на основе данных, внедрение/оптимизация производственных процессов, создание цифровых активов
-					.calc-page__block
-						.flex-lr
-							.flex-lr__left
-							.flex-lr__right
-								.calc-page__underBlok
-									.calc-page--subtitle.h2
-										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_3837_49823)">
-										<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-										<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
-										</g>
-										<defs>
-										<clipPath id="clip0_3837_49823">
-										<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
-										</clipPath>
-										</defs>
-										</svg>
-										!="Проектирование сервиса"
-									.calc-page--treetitle Исследование рынка, проектирование клиентского пути и разработка готового проекта для передачи в разработку
-					.calc-page__block
-						.flex-lr
-							.flex-lr__left
-							.flex-lr__right
-								.calc-page__underBlok
-									.calc-page--subtitle.h2
-										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_3837_49823)">
-										<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-										<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
-										</g>
-										<defs>
-										<clipPath id="clip0_3837_49823">
-										<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
-										</clipPath>
-										</defs>
-										</svg> 
-										!="Продуктовая команда"
-									.calc-page--treetitle Выделенная команда разработки, или усиление вашей действующей команды
-					.calc-page__block.calc-page__block--allService
-						.flex-lr
-							.flex-lr__left
-								.calc-page__underBlok
-									.calc-page--text.h3
-										!="<span>Все услуги</span>"
-							.flex-lr__right
-								.calc-page__underBlok
-									.calc-page--subtitle.h2
-										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_3837_49823)">
-										<path d="M0 18H29" stroke="#0047FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-										<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#0047FF" stroke-width="4" stroke-linecap="square"/>
-										</g>
-										<defs>
-										<clipPath id="clip0_3837_49823">
-										<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
-										</clipPath>
-										</defs>
-										</svg>
-										!="Запуск MVP" 
-									.calc-page--treetitle.b2 Разработаем веб или мобильный сервис за 4-6 месяцев, с фиксированной стоимостью
+							.calc-page__underBlok.calc-page__underBlok--service.js-calc-service(data-service="0")
+								.calc-page--subtitle.h2
+									<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_3837_49823)">
+									<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+									<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_3837_49823">
+									<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
+									</clipPath>
+									</defs>
+									</svg>
+									!="Запуск MVP"
+								.calc-page--treetitle.b2 Разработаем веб или мобильный сервис за 4-6 месяцев, с фиксированной стоимостью
+
+							.calc-page__underBlok.calc-page__underBlok--service.js-calc-service(data-service="1")
+								.calc-page--subtitle.h2
+									<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_3837_49823)">
+									<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+									<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_3837_49823">
+									<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
+									</clipPath>
+									</defs>
+									</svg>
+									!="Продуктовая команда "
+								.calc-page--treetitle Выделенная команда разработки, или усиление вашей действующей команды
+
+							.calc-page__underBlok.calc-page__underBlok--service.js-calc-service(data-service="2")
+								.calc-page--subtitle.h2
+									<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_3837_49823)">
+									<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+									<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_3837_49823">
+									<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
+									</clipPath>
+									</defs>
+									</svg>
+									!="Цифровая трансформация. Консалтинг"
+								.calc-page--treetitle Внедрение подхода к управлению на основе данных, внедрение/оптимизация производственных процессов, создание цифровых активов
+
+							.calc-page__underBlok.calc-page__underBlok--service.js-calc-service(data-service="3")
+								.calc-page--subtitle.h2
+									<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_3837_49823)">
+									<path d="M0 18H29" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+									<path d="M17.8906 30.8517L31.1128 17.6294L17.8906 4.40723" stroke="#2A2A2A" stroke-width="4" stroke-linecap="square"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_3837_49823">
+									<rect width="34" height="34" fill="white" transform="translate(34) rotate(90)"/>
+									</clipPath>
+									</defs>
+									</svg>
+									!="Проектирование сервиса "
+								.calc-page--treetitle Исследование рынка, проектирование клиентского пути, и разработка готового проекта для передачи в разработку
+
+				.calc-page__serviceBlock(data-service="0")
 					.calc-page__block.calc-page__block--checkbox.calc-page__block--whatLaunching
 						.flex-lr
 							.flex-lr__left
@@ -125,26 +98,206 @@ block content
 							.flex-lr__right
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Веб-сервис" 
+										label.calc-page--subtitle.h3
+											input(type="checkbox", name="what[]" value="Веб-сервис" data-time="3.5" data-price="5000000").calc-page__underBlok__input
+											!="Веб-сервис"
 										.calc-page--twotitle.b2 Разработка и сопровождение высоконагруженных веб-сервисов, с обширным функционалом
-										.calc-page--treetitle.b2 
+										.calc-page--treetitle.b2
 											!="Уже включено в услугу: <br>— Архитектура<br>— Системная аналитика<br>— UX проектирование<br>— UI (дизайн пользовательских интерфейсов)<br>— Back-end разработка (бизнес-логика и API)<br>— Front-end разработка (админка, кабинеты пользователей)"
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--animation
 											img(src="img/calc/Web_services.png", alt="")
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Мобильное приложение" 
+										label.calc-page--subtitle.h3
+											input(type="checkbox", name="what[]" value="Мобильное приложение" data-time="2.5" data-price="3000000").calc-page__underBlok__input
+											!="Мобильное приложение"
 										.calc-page--twotitle.b2 Разработка Android и iOS приложений мобильного сервиса
-										.calc-page--treetitle.b2 
+										.calc-page--treetitle.b2
 											!="Уже включено в услугу:<br>— Архитектура<br>— Системная аналитика<br>— UX проектирование<br>— UI (дизайн пользовательских интерфейсов)<br>— Back-end разработка (бизнес-логика и API)<br>— Front-end разработка (админка, кабинеты пользователей)<br>— Front-end разработка Android<br>— Front-end разработка iOS"
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--animation
 											img(src="img/calc/Mobile_app.png", alt="")
+					.calc-page__block.calc-page__block--team
+						.flex-lr
+							.flex-lr__left
+								.calc-page__underBlok
+									.calc-page--text.h3
+										!="Команда необходимая для запуска MVP"
+							.flex-lr__right
+								.calc-page__underBlok
+									.calc-page__underBlok--left
+										.calc-page--subtitle.h2 от 7 человек
+									.calc-page__underBlok--right
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >Product Owner</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >System Analytics</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >UX Architect</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >UI Designer</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >Backend Developer</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >Frontend Developer</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="b1" >Project Manager</h4>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+
 					.calc-page__block.calc-page__block--checkbox.calc-page__block--Additionally
 						.flex-lr
 							.flex-lr__left
@@ -154,125 +307,530 @@ block content
 							.flex-lr__right
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Quality Assurance" 
+										label.calc-page--subtitle.b1
+											input(type="checkbox", name="add[]" value="Quality Assurance" data-price="+200000" data-time="+0.5").calc-page__underBlok__input
+											!="Quality Assurance"
 										.calc-page--twotitle.b2 Обеспечение качества продукта на всех этапах: от проектирования до эксплуатации
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--cost.b1 +200 000 ₽
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Автотестирование" 
+										label.calc-page--subtitle.b1
+											input(type="checkbox", name="add[]" value="Автотестирование" data-price="+200000" data-time="+0.5").calc-page__underBlok__input
+											!="Автотестирование"
 										.calc-page--twotitle.b2 Разработка автоматизированных тестов для повышения скорости разработки и качества продукта, внедрение CI-процессов
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--cost.b1 +200 000 ₽
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Инфраструктура" 
+										label.calc-page--subtitle.b1
+											input(type="checkbox", name="add[]" value="Инфраструктура" data-price="+200000" data-time="+1").calc-page__underBlok__input
+											!="Инфраструктура"
 										.calc-page--twotitle.b2 Построение отказоустойчивой масштабируемой инфраструктуры, внедрение CD-процессов
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--cost.b1 +200 000 ₽
 								.calc-page__underBlok
 									.calc-page__underBlok--left
-										.calc-page--subtitle.h3
-											input(type="checkbox", name="").calc-page__underBlok__input 
-											!="Промо-сайт" 
+										label.calc-page--subtitle.b1
+											input(type="checkbox", name="add[]" value="Промо-сайт" data-price="+200000" data-time="3").calc-page__underBlok__input
+											!="Промо-сайт"
 										.calc-page--twotitle.b2 Разработка промо-сайта о разрабатываемом сервисе
-									.calc-page__underBlok--right 
+									.calc-page__underBlok--right
 										.calc-page__underBlok--cost.b1 +200 000 ₽
-			footer.footer.footer--light
-				.footer__container.container 
-					.footer__wewillfind.wewillfind-footer
-						.wewillfind-footer__left 
-							.wewillfind-footer__connection 
-								a(href="#") 8 800 775 73 63 
-								a(href="#") info@tiqum.ru
-							.wewillfind-footer__location 
-								| Уфа – Гоголя 53
-								span Питер – opening
-						.wewillfind-footer__right#contact-form
-							.wewillfind-footer__title.general-title 
-								|Срок и стоимость 
-								span 
-									!="<br>запуска вашего MVP"
-							.finalCost__block 
+
+				.calc-page__serviceBlock(data-service="1")
+					.calc-page__block.calc-page__block--team
+						.flex-lr
+							.flex-lr__left
+								.calc-page__underBlok
+									.calc-page--text.h3
+										!="Команда профессионалов под ваш проект"
+							.flex-lr__right
+								.calc-page__underBlok
+									.calc-page__underBlok--left
+										.calc-page--subtitle.h2 11 человек
+									.calc-page__underBlok--right
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Backend Developer</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Frontend Developer (Web)</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Frontend Developer (Mobile)</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >System Analytics</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Product Owner</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >UX Architect</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >UI Designer</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Quality Assurance</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Тестировщик</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >DevOps</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+								.calc-page__underBlok.calc-page__underBlok--accordion
+									<div class="accordion">
+										<div class="accordion__intro">
+											<h4 class="numberPeople--title b1" >Project Manager</h4>
+											.numberPeople
+												.numberPeople--perv
+													<svg width="20" height="3" viewBox="0 0 20 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="20" width="3" height="20" transform="rotate(90 20 0)" fill="#D9D9D9"/>
+													</svg>
+												.numberPeople--count 1
+												.numberPeople--next
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="8.53125" width="3" height="20" fill="#D9D9D9"/>
+													<rect x="20" y="8.5293" width="3" height="20" transform="rotate(90 20 8.5293)" fill="#D9D9D9"/>
+													</svg>
+											<div class="accordion__intro__img">
+												<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g opacity="0.4">
+													<g clip-path="url(#clip0_3892_44461)">
+													<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+													<path d="M24.5 14L14 3.5L3.5 14" stroke="#2A2A2A" stroke-width="2.5" stroke-linecap="square"/>
+													</g>
+													</g>
+													<defs>
+													<clipPath id="clip0_3892_44461">
+													<rect width="27" height="27" rx="13.5" fill="white"/>
+													</clipPath>
+													</defs>
+												</svg>						
+											</div>
+										</div>
+										<div class="accordion__content ">
+											<p class="">Отвечает за максимизацию ценности продукта, получаемого в результате работы команды. В его обязанности также входит курирование и приоритизация, бэклог продукта</p>
+										</div>
+									</div>
+
+				.calc-page__serviceBlock(data-service="2")
+					| placeholder
+
+				.calc-page__serviceBlock(data-service="3")
+					| placeholder
+
+		footer.footer.footer--light.calc-page__footer
+			.footer__container.container
+				.footer__wewillfind.wewillfind-footer
+					.wewillfind-footer__left
+						.wewillfind-footer__connection
+							a(href="#") 8 800 775 73 63
+							a(href="#") info@tiqum.ru
+						.wewillfind-footer__location
+							| Уфа – Гоголя 53
+							span Питер – opening
+					.wewillfind-footer__right#contact-form
+						.wewillfind-footer__title.general-title.js-calc-formTitle
+							| Срок и стоимость
+							span
+								!="<br>запуска вашего MVP"
+						.finalCost__blocks.js-calc-finalBlocks
+							//-.finalCost__block
 								.finalCost__block--left
 									.finalCost__block--time.h2 4.5 месяца
 								.finalCost__block--right
-									.finalCost__block--desc Максимальный срок запуска вашего сервиса/продукта с момента подписания договора 
-							.finalCost__block 
+									.finalCost__block--desc Максимальный срок запуска вашего сервиса/продукта с момента подписания договора
+							//-.finalCost__block
 								.finalCost__block--left
 									.finalCost__block--cost.h2 6 200 000 ₽
 								.finalCost__block--right
-									.finalCost__block--desc Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений 
-							.finalCost__block 
-								.wewillfind-footer__title.h2 
-									|Заполните форму ниже и мы вышлем коммерческое предложение 
-									span 
-										!="<br>в течение 30 минут"
-							
-							form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
-								.form-wewillfind-footer__item.form-wewillfind-footer__item--big
-									input(type="text" placeholder="Имя и фамилия" name="name" required)
-									.form-wewillfind-footer__error Пожалуйста, заполните имя
-								.form-wewillfind-footer__item 
-									input(type="tel" placeholder="Телефон, телеграм" name="phone" required)
-									.form-wewillfind-footer__error Пожалуйста, заполните корректный телефон
-								.form-wewillfind-footer__item 
-									input(type="email" placeholder="Рабочий email" name="email" required)
-									.form-wewillfind-footer__error Пожалуйста, заполните корректный email
-								.form-wewillfind-footer__item.form-wewillfind-footer__item-description 
-									textarea(name="msg" placeholder="Короткое описание проекта" required)
-									.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
-									input(type="file" name="file" id="form-wewillfind-footer__item-file")
-									label(for="form-wewillfind-footer__item-file") 
-										svg(width='22' height='26' viewBox='0 0 22 26' fill='none' xmlns='http://www.w3.org/2000/svg')
-											path(d='M19.221 14.3065L17.9432 15.6065L11.7971 21.8985C10.6916 22.9571 9.22441 23.5361 7.70644 23.5128C6.18848 23.4894 4.73912 22.8655 3.66564 21.7734C2.59215 20.6812 1.97893 19.2066 1.95597 17.6623C1.93301 16.1179 2.50212 14.6252 3.54266 13.5005L13.4454 3.42548C13.771 3.09514 14.1573 2.83327 14.5823 2.65482C15.0073 2.47637 15.4627 2.38483 15.9225 2.38543C16.3822 2.38604 16.8374 2.47877 17.2619 2.65834C17.6865 2.8379 18.0721 3.10079 18.3968 3.43198C18.7215 3.76318 18.9789 4.15619 19.1543 4.58859C19.3297 5.02099 19.4197 5.4843 19.4191 5.95208C19.4185 6.41985 19.3274 6.88293 19.1509 7.31487C18.9744 7.7468 18.716 8.13914 18.3904 8.46948L9.31821 17.6995C9.09835 17.9194 8.80237 18.0426 8.49404 18.0426C8.18572 18.0426 7.88974 17.9194 7.66988 17.6995C7.45588 17.472 7.33643 17.1693 7.33643 16.8545C7.33643 16.5396 7.45588 16.2369 7.66988 16.0095L12.6277 10.9785L13.0365 10.5625L14.3143 9.26248C14.4991 9.03229 14.5931 8.74033 14.5779 8.44351C14.5626 8.14669 14.4393 7.86627 14.2319 7.65691C14.0245 7.44755 13.748 7.32426 13.4561 7.31105C13.1643 7.29785 12.878 7.39568 12.6532 7.58548L11.3754 8.88548L11.0049 9.30148L6.02154 14.3065C5.36071 14.9788 4.98946 15.8907 4.98946 16.8415C4.98946 17.3123 5.08061 17.7785 5.25769 18.2134C5.43478 18.6484 5.69433 19.0436 6.02154 19.3765C6.34875 19.7094 6.73721 19.9735 7.16473 20.1536C7.59225 20.3338 8.05047 20.4265 8.51321 20.4265C9.44777 20.4265 10.344 20.0488 11.0049 19.3765L20.0771 10.1465C21.1717 9.02939 21.7853 7.51566 21.7829 5.93829C21.7805 4.36092 21.1623 2.84913 20.0643 1.73548C18.9663 0.621838 17.4785 -0.00243086 15.9281 7.11404e-06C14.3777 0.00244509 12.8917 0.631391 11.7971 1.74848L10.1488 3.42548L1.89432 11.8235C0.589063 13.4159 -0.0836641 15.4474 0.00832879 17.5187C0.100322 19.5901 0.950384 21.5515 2.39148 23.0177C3.83258 24.4838 5.76051 25.3487 7.79645 25.4423C9.83239 25.5359 11.8291 24.8514 13.3943 23.5235L19.5915 17.2185L20.8693 15.9185C21.0894 15.6942 21.2129 15.3903 21.2129 15.0735C21.2129 14.7566 21.0894 14.4527 20.8693 14.2285C20.7563 14.123 20.6239 14.0413 20.4797 13.9881C20.3355 13.9349 20.1824 13.9112 20.0292 13.9185C19.876 13.9257 19.7257 13.9637 19.587 14.0303C19.4483 14.0969 19.3239 14.1908 19.221 14.3065V14.3065Z' fill='white')
-								.form-wewillfind-footer__bottom
-									button(type='submit').form-wewillfind-footer__btn.blue-btn 
-										span Отправить
-									.form-wewillfind-footer__text 
-										|Нажимая кнопку вы соглашаетесь на 
-										br
-										|обработку персональных данных и 
-										br
-										|улучшение вашего бизнеса
+									.finalCost__block--desc Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений
 
-								.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span>
+						.finalCost__block.finalCost__block--subtitle
+							.wewillfind-footer__title.wewillfind-footer__subtitle
+								| Заполните форму ниже и мы вышлем коммерческое предложение
+								span
+									!="<br>в течение 30 минут"
+
+						form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
+							input.js-calc-formInput(type="hidden" name="calc_info" value="")
+							.form-wewillfind-footer__item.form-wewillfind-footer__item--big
+								input(type="text" placeholder="Имя и фамилия" name="name" required)
+								.form-wewillfind-footer__error Пожалуйста, заполните имя
+							.form-wewillfind-footer__item
+								input(type="tel" placeholder="Телефон, телеграм" name="phone" required)
+								.form-wewillfind-footer__error Пожалуйста, заполните корректный телефон
+							.form-wewillfind-footer__item
+								input(type="email" placeholder="Рабочий email" name="email" required)
+								.form-wewillfind-footer__error Пожалуйста, заполните корректный email
+							.form-wewillfind-footer__item.form-wewillfind-footer__item-description
+								textarea(name="msg" placeholder="Короткое описание проекта" required)
+								.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
+								input(type="file" name="file" id="form-wewillfind-footer__item-file")
+								label(for="form-wewillfind-footer__item-file")
+									svg(width='22' height='26' viewBox='0 0 22 26' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M19.221 14.3065L17.9432 15.6065L11.7971 21.8985C10.6916 22.9571 9.22441 23.5361 7.70644 23.5128C6.18848 23.4894 4.73912 22.8655 3.66564 21.7734C2.59215 20.6812 1.97893 19.2066 1.95597 17.6623C1.93301 16.1179 2.50212 14.6252 3.54266 13.5005L13.4454 3.42548C13.771 3.09514 14.1573 2.83327 14.5823 2.65482C15.0073 2.47637 15.4627 2.38483 15.9225 2.38543C16.3822 2.38604 16.8374 2.47877 17.2619 2.65834C17.6865 2.8379 18.0721 3.10079 18.3968 3.43198C18.7215 3.76318 18.9789 4.15619 19.1543 4.58859C19.3297 5.02099 19.4197 5.4843 19.4191 5.95208C19.4185 6.41985 19.3274 6.88293 19.1509 7.31487C18.9744 7.7468 18.716 8.13914 18.3904 8.46948L9.31821 17.6995C9.09835 17.9194 8.80237 18.0426 8.49404 18.0426C8.18572 18.0426 7.88974 17.9194 7.66988 17.6995C7.45588 17.472 7.33643 17.1693 7.33643 16.8545C7.33643 16.5396 7.45588 16.2369 7.66988 16.0095L12.6277 10.9785L13.0365 10.5625L14.3143 9.26248C14.4991 9.03229 14.5931 8.74033 14.5779 8.44351C14.5626 8.14669 14.4393 7.86627 14.2319 7.65691C14.0245 7.44755 13.748 7.32426 13.4561 7.31105C13.1643 7.29785 12.878 7.39568 12.6532 7.58548L11.3754 8.88548L11.0049 9.30148L6.02154 14.3065C5.36071 14.9788 4.98946 15.8907 4.98946 16.8415C4.98946 17.3123 5.08061 17.7785 5.25769 18.2134C5.43478 18.6484 5.69433 19.0436 6.02154 19.3765C6.34875 19.7094 6.73721 19.9735 7.16473 20.1536C7.59225 20.3338 8.05047 20.4265 8.51321 20.4265C9.44777 20.4265 10.344 20.0488 11.0049 19.3765L20.0771 10.1465C21.1717 9.02939 21.7853 7.51566 21.7829 5.93829C21.7805 4.36092 21.1623 2.84913 20.0643 1.73548C18.9663 0.621838 17.4785 -0.00243086 15.9281 7.11404e-06C14.3777 0.00244509 12.8917 0.631391 11.7971 1.74848L10.1488 3.42548L1.89432 11.8235C0.589063 13.4159 -0.0836641 15.4474 0.00832879 17.5187C0.100322 19.5901 0.950384 21.5515 2.39148 23.0177C3.83258 24.4838 5.76051 25.3487 7.79645 25.4423C9.83239 25.5359 11.8291 24.8514 13.3943 23.5235L19.5915 17.2185L20.8693 15.9185C21.0894 15.6942 21.2129 15.3903 21.2129 15.0735C21.2129 14.7566 21.0894 14.4527 20.8693 14.2285C20.7563 14.123 20.6239 14.0413 20.4797 13.9881C20.3355 13.9349 20.1824 13.9112 20.0292 13.9185C19.876 13.9257 19.7257 13.9637 19.587 14.0303C19.4483 14.0969 19.3239 14.1908 19.221 14.3065V14.3065Z' fill='white')
+							.form-wewillfind-footer__bottom
+								button(type='submit').form-wewillfind-footer__btn.blue-btn
+									span Отправить
+								.form-wewillfind-footer__text
+									| Нажимая кнопку вы соглашаетесь на
+									br
+									| обработку персональных данных и
+									br
+									| улучшение вашего бизнеса
+
+							.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span>
 
 
-					.footer__bottom
-						.footer__left
-							span Tiqum © 2007—2021
-						.footer__right-soc.footer__right-soc-mob
+				.footer__bottom
+					.footer__left
+						span Tiqum © 2007—2021
+					.footer__right-soc.footer__right-soc-mob
+						a(href="#") Linkedin
+						a(href="#") Facebook
+						a(href="#") VK
+						a(href="#") Telegram
+						a(href="#") Instagram
+						a(href="#") Youtube
+					.footer__right
+						.footer__right-soc.footer__right-soc-desk
 							a(href="#") Linkedin
 							a(href="#") Facebook
 							a(href="#") VK
 							a(href="#") Telegram
 							a(href="#") Instagram
 							a(href="#") Youtube
-						.footer__right
-							.footer__right-soc.footer__right-soc-desk
-								a(href="#") Linkedin
-								a(href="#") Facebook
-								a(href="#") VK
-								a(href="#") Telegram
-								a(href="#") Instagram
-								a(href="#") Youtube
-							.footer__right-lang
-								a(href="#") 中文版网站
-								a(href="#") English version
-								a(href="#").active-lang Русская версия
+						.footer__right-lang
+							a(href="#") 中文版网站
+							a(href="#") English version
+							a(href="#").active-lang Русская версия
 
-
-			.mobile-fixed-bottom
-				a.mobile-fixed-bottom__btn.blue-btn.js-to-form(href="javascript:;")
-					span ОСТАВИТЬ ЗАЯВКУ
 block scripts
-		script(src="https://code.jquery.com/jquery-3.6.1.min.js")
-		script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
-		script(src="js/main.js")
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js")
+	script(src="js/main.js")

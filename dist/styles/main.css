@@ -8372,46 +8372,126 @@ summary {
 .calc-page {
   font-family: "Suisse Intl";
 }
+.calc-page .container {
+  padding: 0 30px;
+}
+@media (max-width: 576px) {
+  .calc-page .container {
+    padding: 0 20px;
+  }
+}
+.calc-page .h1, .calc-page .general-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90%;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1919px) {
+  .calc-page .h1, .calc-page .general-title {
+    font-size: 80px;
+    line-height: 90%;
+  }
+}
+@media (max-width: 1439px) {
+  .calc-page .h1, .calc-page .general-title {
+    font-size: 60px;
+    line-height: 95%;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page .h1, .calc-page .general-title {
+    font-size: 40px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page .h1, .calc-page .general-title {
+    font-size: 7.03125vw;
+    line-height: 95%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .h1, .calc-page .general-title {
+    font-size: 24px;
+    line-height: 95.8%;
+  }
+}
+@media (max-width: 1919px) {
+  .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
+    font-size: 48px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1439px) {
+  .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
+    font-size: 36px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
+.calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #2A2A2A;
+}
+@media (max-width: 1919px) {
+  .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 32px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1439px) {
+  .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 24px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 24px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 24px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
 .calc-page--title {
   color: #2A2A2A;
 }
 .calc-page--title-label {
   opacity: 0.2;
 }
-@media (max-width: 1023px) {
-  .calc-page--title-label {
-    font-size: 3.90625vw;
-    line-height: 110%;
-  }
-}
-@media (max-width: 767px) {
-  .calc-page--title-label {
-    line-height: 95%;
-    font-size: 7.03125vw;
-  }
-}
-@media (max-width: 374px) {
-  .calc-page--title-label {
-    line-height: 95%;
-    font-size: 6.4vw;
-  }
-}
-@media (max-width: 1023px) {
+@media (max-width: 320px) {
   .calc-page--title {
-    font-size: 3.90625vw;
-    line-height: 110%;
+    margin-right: 10px;
   }
-}
-@media (max-width: 767px) {
-  .calc-page--title {
-    line-height: 95%;
-    font-size: 7.03125vw;
-  }
-}
-@media (max-width: 374px) {
-  .calc-page--title {
-    line-height: 95%;
-    font-size: 6.4vw;
+  .calc-page--title br {
+    display: none;
   }
 }
 @media (max-width: 1023px) {
@@ -8424,6 +8504,9 @@ summary {
   .calc-page--advice {
     display: none;
   }
+}
+.calc-page .page-header {
+  min-height: 399px;
 }
 .calc-page .page-header .flex-lr__right {
   display: flex;
@@ -8445,38 +8528,44 @@ summary {
 @media (max-width: 768px) {
   .calc-page .page-header {
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     min-height: 208px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .calc-page .page-header {
     padding-top: 10px;
-    padding-bottom: 8.4635416667vw;
+    padding-bottom: 65px;
     min-height: auto;
   }
 }
 .calc-page .flex-lr .flex-lr__left {
   padding-right: 38px;
 }
-.calc-page__block--service .flex-lr__left .calc-page__underBlok {
-  min-height: auto;
-  padding-bottom: 20px;
-}
-@media (max-width: 768px) {
-  .calc-page__block--service .flex-lr__left .calc-page__underBlok {
-    border-top: none;
+@media (max-width: 1023px) {
+  .calc-page .flex-lr .flex-lr__left {
+    padding-right: 30px;
   }
 }
-.calc-page__block--allService .calc-page--subtitle {
-  color: #0047FF;
+@media (max-width: 1023px) {
+  .calc-page__block--checkbox .calc-page__underBlok .calc-page--subtitle {
+    padding-left: 0;
+  }
 }
-@media (max-width: 768px) {
-  .calc-page__block--allService .flex-lr__left .calc-page__underBlok {
-    min-height: auto;
-    padding-bottom: 20px;
-    border-top: none;
+@media (max-width: 767px) {
+  .calc-page__block--checkbox .calc-page__underBlok .calc-page--subtitle {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--checkbox .calc-page__underBlok .calc-page--twotitle {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--checkbox .calc-page__underBlok .calc-page--treetitle {
+    padding-left: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -8486,7 +8575,7 @@ summary {
 }
 @media (max-width: 576px) {
   .calc-page__block--checkbox .calc-page__underBlok {
-    padding-bottom: 6.9444444444vw;
+    padding-bottom: 40px;
   }
 }
 .calc-page__block--checkbox .calc-page--subtitle {
@@ -8546,6 +8635,144 @@ summary {
     border-top: none;
   }
 }
+@media (max-width: 768px) {
+  .calc-page__block--checkbox .flex-lr__left .calc-page__underBlok {
+    padding-bottom: 10px;
+  }
+}
+.calc-page__block--team {
+  padding-bottom: 50px;
+}
+.calc-page__block--team .calc-page--subtitle {
+  padding-left: 0;
+  flex: 1 0 auto;
+}
+@media (max-width: 767px) {
+  .calc-page__block--team .flex-lr__left .calc-page__underBlok {
+    min-height: 100px;
+    align-items: flex-end;
+    border-top: none;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--team .flex-lr__left .calc-page__underBlok {
+    min-height: 100px;
+    align-items: flex-start;
+    border-top: none;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--team .flex-lr__left .calc-page__underBlok .calc-page--text.h3, .calc-page__block--team .flex-lr__left .calc-page__underBlok .text-style h3.calc-page--text, .text-style .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .text-style h4.calc-page--text, .text-style .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--team .flex-lr__left .calc-page__underBlok p.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page__block--team .flex-lr__left .calc-page__underBlok .calc-page--text.project-portfolio__item-title, .calc-page__block--team .flex-lr__left .calc-page__underBlok .right-content-blog h3.calc-page--text, .right-content-blog .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .right-content-blog h4.calc-page--text, .right-content-blog .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text {
+    max-width: 200px;
+  }
+}
+.calc-page__block--team .calc-page__underBlok {
+  min-height: 180px;
+}
+@media (max-width: 1439px) {
+  .calc-page__block--team .calc-page__underBlok {
+    min-height: 140px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__block--team .calc-page__underBlok {
+    min-height: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__block--team .calc-page__underBlok {
+    min-height: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--team .calc-page__underBlok {
+    min-height: 62px;
+  }
+}
+@media (max-width: 375px) {
+  .calc-page__block--team .accordion__intro {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 375px) {
+  .calc-page__block--team .accordion__intro .numberPeople {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+.calc-page__block--whatLaunching .calc-page__underBlok {
+  padding-bottom: 60px;
+}
+@media (max-width: 576px) {
+  .calc-page__block--whatLaunching .h3, .calc-page__block--whatLaunching .text-style h3, .text-style .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .text-style h4, .text-style .calc-page__block--whatLaunching h4, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching h4, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--whatLaunching p, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-title, .portfolio .calc-page__block--whatLaunching .project-portfolio__item-title, .calc-page__block--whatLaunching .right-content-blog h3, .right-content-blog .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .right-content-blog h4, .right-content-blog .calc-page__block--whatLaunching h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__block--Additionally .calc-page__underBlok--left {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--Additionally .calc-page__underBlok {
+    padding-bottom: 60;
+  }
+}
+.calc-page__block--Additionally .calc-page--subtitle.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page--subtitle, .right-content-blog__coment .calc-page__block--Additionally span.calc-page--subtitle, .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (max-width: 768px) {
+  .calc-page__block--Additionally .calc-page--subtitle.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page--subtitle, .right-content-blog__coment .calc-page__block--Additionally span.calc-page--subtitle, .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--Additionally .calc-page--subtitle.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page--subtitle, .right-content-blog__coment .calc-page__block--Additionally span.calc-page--subtitle, .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
+    display: none;
+  }
+}
+.calc-page__block--Additionally .calc-page--twotitle.b2, .calc-page__block--Additionally .text-style p.calc-page--twotitle, .text-style .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .text-style ul.calc-page--twotitle, .text-style .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .text-style ol.calc-page--twotitle, .text-style .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .portfolio .calc-page--twotitle.project-portfolio__link, .portfolio .calc-page__block--Additionally .calc-page--twotitle.project-portfolio__link, .calc-page__block--Additionally .portfolio .project-portfolio__item-right p.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ul.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ol.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .page-header-big .calc-page--twotitle.page-header__date, .page-header-big .calc-page__block--Additionally .calc-page--twotitle.page-header__date, .calc-page__block--Additionally .right-content-blog p.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ul.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ol.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ol.calc-page--twotitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+@media (max-width: 1023px) {
+  .calc-page__block--Additionally .calc-page--twotitle.b2, .calc-page__block--Additionally .text-style p.calc-page--twotitle, .text-style .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .text-style ul.calc-page--twotitle, .text-style .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .text-style ol.calc-page--twotitle, .text-style .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .portfolio .calc-page--twotitle.project-portfolio__link, .portfolio .calc-page__block--Additionally .calc-page--twotitle.project-portfolio__link, .calc-page__block--Additionally .portfolio .project-portfolio__item-right p.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ul.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ol.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .page-header-big .calc-page--twotitle.page-header__date, .page-header-big .calc-page__block--Additionally .calc-page--twotitle.page-header__date, .calc-page__block--Additionally .right-content-blog p.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ul.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ol.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ol.calc-page--twotitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--Additionally .calc-page--twotitle.b2, .calc-page__block--Additionally .text-style p.calc-page--twotitle, .text-style .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .text-style ul.calc-page--twotitle, .text-style .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .text-style ol.calc-page--twotitle, .text-style .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .portfolio .calc-page--twotitle.project-portfolio__link, .portfolio .calc-page__block--Additionally .calc-page--twotitle.project-portfolio__link, .calc-page__block--Additionally .portfolio .project-portfolio__item-right p.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ul.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ol.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .page-header-big .calc-page--twotitle.page-header__date, .page-header-big .calc-page__block--Additionally .calc-page--twotitle.page-header__date, .calc-page__block--Additionally .right-content-blog p.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ul.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ol.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ol.calc-page--twotitle {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .calc-page__underBlok {
   position: relative;
   display: flex;
@@ -8553,13 +8780,79 @@ summary {
   min-height: 190px;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
+}
+.calc-page__underBlok .numberPeople {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding-left: 20px;
+}
+.calc-page__underBlok .numberPeople--perv {
+  position: relative;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 0px;
+  color: #D9D9D9;
+}
+.calc-page__underBlok .numberPeople--next {
+  position: relative;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 0px;
+  color: #D9D9D9;
+}
+.calc-page__underBlok .numberPeople--title {
+  position: relative;
+  display: block;
+  width: 50%;
+}
+.calc-page__underBlok .numberPeople--count {
+  position: relative;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 0px;
+  color: #2A2A2A;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__underBlok.active {
+    padding-bottom: 0;
+  }
 }
 .calc-page__underBlok.active .calc-page--subtitle {
   color: #0047FF;
+}
+@media (max-width: 576px) {
+  .calc-page__underBlok.active .calc-page--subtitle.h2 svg, .calc-page__underBlok.active .text-style h2.calc-page--subtitle svg, .text-style .calc-page__underBlok.active h2.calc-page--subtitle svg, .calc-page__underBlok.active .portfolio .calc-page--subtitle.project-portfolio__title svg, .portfolio .calc-page__underBlok.active .calc-page--subtitle.project-portfolio__title svg, .calc-page__underBlok.active .portfolio .project-portfolio .calc-page--subtitle.field--name-field-title svg, .portfolio .project-portfolio .calc-page__underBlok.active .calc-page--subtitle.field--name-field-title svg, .calc-page__underBlok.active .portfolio .project-portfolio__item-right h2.calc-page--subtitle svg, .portfolio .project-portfolio__item-right .calc-page__underBlok.active h2.calc-page--subtitle svg, .calc-page__underBlok.active .right-content-blog h2.calc-page--subtitle svg, .right-content-blog .calc-page__underBlok.active h2.calc-page--subtitle svg {
+    top: -5px;
+    width: 16px;
+  }
 }
 .calc-page__underBlok.active .calc-page--twotitle {
   opacity: 1;
@@ -8572,12 +8865,40 @@ summary {
 }
 @media (max-width: 576px) {
   .calc-page__underBlok.active .calc-page--treetitle {
-    margin-top: 0;
     margin-bottom: 6.9444444444vw;
   }
 }
 .calc-page__underBlok.active .calc-page__underBlok--cost {
   opacity: 1;
+}
+.calc-page__underBlok--accordion {
+  min-height: 90px !important;
+  padding-bottom: 0;
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--accordion {
+    min-height: 60px !important;
+  }
+}
+.calc-page__underBlok--accordion .b1, .calc-page__underBlok--accordion .right-content-blog__coment span, .right-content-blog__coment .calc-page__underBlok--accordion span {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2A2A2A;
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--accordion .b1, .calc-page__underBlok--accordion .right-content-blog__coment span, .right-content-blog__coment .calc-page__underBlok--accordion span {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__underBlok--accordion .b1, .calc-page__underBlok--accordion .right-content-blog__coment span, .right-content-blog__coment .calc-page__underBlok--accordion span {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .calc-page__underBlok--cost {
   position: relative;
@@ -8630,8 +8951,14 @@ summary {
 }
 @media (max-width: 1300px) {
   .calc-page__underBlok--animation {
-    width: 23.0555555556vw;
-    height: 12.4305555556vw;
+    width: 332px;
+    height: 179px;
+  }
+}
+@media (max-width: 1024px) {
+  .calc-page__underBlok--animation {
+    width: 32.421875vw;
+    height: 17.48046875vw;
   }
 }
 @media (max-width: 768px) {
@@ -8656,7 +8983,7 @@ summary {
   .calc-page__underBlok {
     min-height: auto !important;
     flex-flow: column nowrap;
-    padding-bottom: 5.2083333333vw;
+    padding-top: 10px;
     min-height: auto;
   }
 }
@@ -8674,6 +9001,126 @@ summary {
     min-height: 150px;
   }
 }
+.calc-page__underBlok label {
+  cursor: pointer;
+  user-select: none;
+}
+.calc-page__underBlok--service {
+  cursor: pointer;
+  transition: opacity 0.4s, min-height 0.4s;
+  user-select: none;
+  justify-content: flex-start;
+}
+.calc-page__underBlok--service.collapsed {
+  min-height: 0 !important;
+  opacity: 0;
+}
+.calc-page__underBlok--service .calc-page--subtitle {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 0;
+  width: 50%;
+}
+@media (max-width: 1439px) {
+  .calc-page__underBlok--service .calc-page--subtitle {
+    width: 52%;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--service .calc-page--subtitle {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--service .calc-page--subtitle {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__underBlok--service .calc-page--subtitle {
+    width: 100%;
+    padding-left: 36px;
+    padding-right: 10px;
+  }
+}
+.calc-page__underBlok--service .calc-page--treetitle {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 44px;
+  max-width: 431px;
+}
+@media (max-width: 1439px) {
+  .calc-page__underBlok--service .calc-page--treetitle {
+    padding-left: 24px;
+    width: 48%;
+    max-width: 411px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--service .calc-page--treetitle {
+    padding-left: 14px;
+    width: 55%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--service .calc-page--treetitle {
+    padding-left: 14px;
+    width: 50%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__underBlok--service .calc-page--treetitle {
+    width: 100%;
+    padding-left: 36px;
+    padding-right: 10px;
+  }
+}
+.calc-page__underBlok--service.opacity {
+  opacity: 0.4;
+}
+.calc-page__underBlok--service.active {
+  cursor: default;
+}
+.calc-page__underBlok--service.active .calc-page--subtitle {
+  color: #0047FF;
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--service.active .calc-page--subtitle {
+    padding-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__underBlok--service.active .calc-page--subtitle {
+    padding-left: 40px;
+  }
+}
+.calc-page__underBlok--service.active .calc-page--subtitle svg {
+  opacity: 1;
+}
+.calc-page__underBlok--service.active .calc-page--subtitle svg [stroke="#2A2A2A"] {
+  stroke: #0047FF !important;
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--service.active .calc-page--subtitle svg {
+    left: -50px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__underBlok--service.active .calc-page--subtitle svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+  }
+}
 .calc-page--text {
   position: relative;
   width: 100%;
@@ -8688,23 +9135,12 @@ summary {
     display: none;
   }
 }
-@media (max-width: 1023px) {
-  .calc-page--text {
-    font-size: 24px;
-    line-height: 110%;
-  }
+.calc-page--text.js-calc-allServices {
+  opacity: 0.4;
 }
-@media (max-width: 767px) {
-  .calc-page--text {
-    line-height: 110%;
-    font-size: 3.125vw;
-  }
-}
-@media (max-width: 374px) {
-  .calc-page--text {
-    line-height: 95%;
-    font-size: 4.2666666667vw;
-  }
+.calc-page--text.js-calc-allServices:hover {
+  color: #0047FF;
+  opacity: 1;
 }
 .calc-page--subtitle {
   position: relative;
@@ -8719,7 +9155,8 @@ summary {
 }
 @media (max-width: 1023px) {
   .calc-page--subtitle {
-    padding-left: 30px;
+    padding-left: 40px;
+    padding-right: 7px;
   }
 }
 @media (max-width: 375px) {
@@ -8729,11 +9166,17 @@ summary {
 }
 .calc-page--subtitle svg {
   position: absolute;
-  left: -50px;
-  top: 4px;
+  left: -72px;
+  top: 10px;
   display: block;
   opacity: 0;
   width: 35px;
+}
+@media (max-width: 1439px) {
+  .calc-page--subtitle svg {
+    position: absolute;
+    top: 0;
+  }
 }
 @media (max-width: 1023px) {
   .calc-page--subtitle svg {
@@ -8746,20 +9189,8 @@ summary {
 }
 @media (max-width: 576px) {
   .calc-page--subtitle svg {
-    width: 3.4722222222vw;
-    top: -0.6944444444vw;
-  }
-}
-@media (max-width: 460px) {
-  .calc-page--subtitle svg {
-    width: 3.4722222222vw;
-    top: -1.3888888889vw;
-  }
-}
-@media (max-width: 374px) {
-  .calc-page--subtitle svg {
-    width: 3.4722222222vw;
-    top: -1.7361111111vw;
+    width: 16px;
+    top: -5px;
   }
 }
 .calc-page--subtitle input[type=checkbox]:checked {
@@ -8789,7 +9220,16 @@ summary {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
+  .calc-page--subtitle input[type=checkbox] {
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+  }
+}
+@media (max-width: 767px) {
   .calc-page--subtitle input[type=checkbox] {
     position: absolute;
     left: 0;
@@ -8919,6 +9359,8 @@ summary {
     padding-left: 30px;
     flex: 1 0 auto;
     width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
     margin-top: 3.4722222222vw;
   }
 }
@@ -8930,32 +9372,115 @@ summary {
     line-height: 22px;
   }
 }
+.calc-page__left-control {
+  min-height: auto;
+  padding-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .calc-page__left-control .calc-page--text.h3, .calc-page__left-control .text-style h3.calc-page--text, .text-style .calc-page__left-control h3.calc-page--text, .calc-page__left-control .text-style h4.calc-page--text, .text-style .calc-page__left-control h4.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__left-control h3.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__left-control h4.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__left-control p.calc-page--text, .calc-page__left-control .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page__left-control .calc-page--text.project-portfolio__item-title, .calc-page__left-control .right-content-blog h3.calc-page--text, .right-content-blog .calc-page__left-control h3.calc-page--text, .calc-page__left-control .right-content-blog h4.calc-page--text, .right-content-blog .calc-page__left-control h4.calc-page--text {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__left-control {
+    border-top: none;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__left-control {
+    border-top: none;
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+}
+.calc-page__left-control:not(.active) > *:nth-child(2) {
+  display: none;
+}
+.calc-page__left-control.active > *:nth-child(1) {
+  display: none;
+}
+.calc-page__serviceBlock {
+  display: none;
+}
+.calc-page__footer:not(.active) {
+  display: none;
+}
 
 .calculator {
   font-family: "Suisse Intl";
+}
+.calculator .finalCost__block.finalCost__block--subtitle {
+  min-height: auto;
+}
+.calculator .form-wewillfind-footer {
+  margin-top: 200px;
+}
+@media (max-width: 1919px) {
+  .calculator .form-wewillfind-footer {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 1439px) {
+  .calculator .form-wewillfind-footer {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 1023px) {
+  .calculator .form-wewillfind-footer {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .calculator .form-wewillfind-footer {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .calculator .form-wewillfind-footer {
+    margin-top: 65px;
+  }
 }
 .calculator .wewillfind-footer__title {
   min-width: 100%;
   margin-bottom: 200px;
 }
+@media (max-width: 1919px) {
+  .calculator .wewillfind-footer__title {
+    font-size: 80px;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+  }
+}
 @media (max-width: 1440px) {
   .calculator .wewillfind-footer__title {
     margin-bottom: 170px;
+    font-size: 60px;
+    line-height: 95%;
+    letter-spacing: -0.03em;
   }
 }
 @media (max-width: 1024px) {
   .calculator .wewillfind-footer__title {
     margin-bottom: 110px;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
   }
 }
 @media (max-width: 768px) {
   .calculator .wewillfind-footer__title {
     margin-bottom: 100px;
+    font-size: 54px;
+    line-height: 95%;
+    letter-spacing: -0.03em;
   }
 }
 @media (max-width: 576px) {
   .calculator .wewillfind-footer__title {
     margin-bottom: 11.2847222222vw;
+    font-size: 24px;
+    line-height: 95%;
+    letter-spacing: -0.03em;
   }
 }
 .calculator .finalCost__block {
@@ -8968,16 +9493,50 @@ summary {
   min-height: 150px;
   padding-top: 20px;
 }
+@media (max-width: 1023px) {
+  .calculator .finalCost__block {
+    min-height: 110px;
+  }
+}
 @media (max-width: 576px) {
   .calculator .finalCost__block {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    min-height: auto;
   }
 }
 .calculator .finalCost__block .wewillfind-footer__title {
   min-width: 80%;
   margin-bottom: 0;
+}
+.calculator .finalCost__block .wewillfind-footer__subtitle {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1439px) {
+  .calculator .finalCost__block .wewillfind-footer__subtitle {
+    font-size: 36px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1024px) {
+  .calculator .finalCost__block .wewillfind-footer__subtitle {
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+}
+@media (max-width: 576px) {
+  .calculator .finalCost__block .wewillfind-footer__subtitle {
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
 }
 .calculator .finalCost__block--left {
   display: flex;
@@ -9009,8 +9568,8 @@ summary {
 }
 @media (max-width: 1024px) {
   .calculator .finalCost__block--desc {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -9021,6 +9580,186 @@ summary {
 @media (max-width: 576px) {
   .calculator .finalCost__block--desc {
     margin-bottom: 5.2083333333vw;
+  }
+}
+.calculator .finalCost__block--time {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1024px) {
+  .calculator .finalCost__block--time {
+    font-size: 40px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .calculator .finalCost__block--time {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 576px) {
+  .calculator .finalCost__block--time {
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+}
+.calculator .finalCost__block--cost {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1024px) {
+  .calculator .finalCost__block--cost {
+    font-size: 40px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .calculator .finalCost__block--cost {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 576px) {
+  .calculator .finalCost__block--cost {
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+}
+.calculator .accordions {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.calculator .accordion {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  display: block;
+}
+.calculator .accordion__intro {
+  position: relative;
+  cursor: pointer;
+  padding: 0px;
+  padding-left: 0px;
+  background: transparent;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  color: #2A2A2A;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.calculator .accordion__intro__img {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  animation-name: rotationClose;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 1024px) {
+  .calculator .accordion__intro__img svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.calculator .accordion__intro__img:hover {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+.calculator .accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  color: #2A2A2A;
+  font-style: normal;
+  max-width: 594px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+.calculator .accordion__content p {
+  opacity: 0.4;
+}
+.calculator .accordion__active .accordion__intro {
+  background: transparent;
+  font-style: normal;
+}
+.calculator .accordion__active .accordion__intro .accordion__intro__img {
+  animation-name: rotationOpen;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.calculator .accordion__active .accordion__content {
+  background: transparent;
+  opacity: 1;
+  width: 100%;
+}
+.calculator .accordion__active .accordion__content p {
+  padding-top: 15px;
+  position: relative;
+  display: inline-block;
+  color: #2A2A2A;
+  opacity: 0.4;
+  font-style: normal;
+  max-width: 594px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+@media (max-width: 1024px) {
+  .calculator .accordion__active .accordion__content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@keyframes rotationOpen {
+  0% {
+    transform-origin: 40% 35%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 40% 35%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotationClose {
+  0% {
+    transform-origin: 40% 35%;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform-origin: 40% 35%;
+    transform: rotate(0deg);
   }
 }
 

@@ -318,6 +318,211 @@ if (windowInnerWidth > 1022) {
 
 /***/ }),
 
+/***/ "./src/js/import/calc.js":
+/*!*******************************!*\
+  !*** ./src/js/import/calc.js ***!
+  \*******************************/
+/***/ (function() {
+
+(function ($) {
+  $('.calc-page__underBlok__input:checkbox').change(function () {
+    if ($(this).is(":checked")) {
+      $(this).parents('.calc-page__underBlok').addClass("active");
+    } else {
+      $(this).parents('.calc-page__underBlok').removeClass("active");
+    }
+  });
+
+  function splitNumberIntoGroups(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
+
+  function replacePlaceholders(str, data) {
+    var result = str;
+
+    for (var key in data) {
+      result = result.replace(new RegExp('\\{\\$' + key + '\\}', 'g'), data[key]);
+    }
+
+    return result;
+  }
+
+  function getMonthEnding(count) {
+    if (count % 10 === 1 && count % 100 !== 11) {
+      return 'месяц';
+    } else if ([2, 3, 4].includes(count % 10) && ![12, 13, 14].includes(count % 100)) {
+      return 'месяца';
+    } else {
+      return 'месяцев';
+    }
+  }
+
+  var finalBlockHtml = "<div class='finalCost__block'>" + "<div class='finalCost__block--left'>" + "<div class='finalCost__block--time h2 {$class}'></div>" + "</div>" + "<div class='finalCost__block--right'>" + "<div class='finalCost__block--desc'>{$text}</div>" + "</div>" + "</div>";
+  var serviceSelect = false;
+  var selectedService;
+  var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость', 'Стоимость', 'Стоимость'];
+  var values = {
+    title: 'My Title',
+    subtitle: 'My Subtitle'
+  };
+  var finalBlocks = [[{
+    class: 'js-calc-finalTime',
+    text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
+  }, {
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }], [], [], []];
+  $('.js-calc-service').hover(function () {
+    $(this).siblings('.js-calc-service').addClass('opacity');
+  }, function () {
+    $('.js-calc-service').removeClass('opacity');
+  });
+  $('.js-calc-service').on('click', function () {
+    event.preventDefault();
+    serviceSelect = true;
+    selectedService = parseInt($(this).data('service'));
+    $('.calc-page__left-control').addClass('active');
+    $(this).siblings('.js-calc-service').slideUp(400).addClass('collapsed').removeClass('active');
+
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active');
+      selectService(selectedService);
+    }
+  });
+
+  function selectService(service) {
+    var htmlFinal = '';
+    finalBlocks[service].forEach(function (elem) {
+      htmlFinal += replacePlaceholders(finalBlockHtml, elem);
+    });
+    $('.js-calc-finalBlocks').html(htmlFinal);
+    var firstBlockElement = $('.calc-page__serviceBlock.active');
+    var secondBlockElement = $('.calc-page__serviceBlock[data-service=' + service + ']');
+    var windowScroll = $(window).scrollTop();
+
+    if (firstBlockElement.length) {
+      firstBlockElement.css({
+        display: 'block',
+        opacity: 1
+      });
+      var firstBlockMargin = $(window).height();
+      firstBlockElement.animate({
+        opacity: 0,
+        marginTop: firstBlockMargin
+      }, 400, 'easeOutCirc', function () {
+        firstBlockElement.removeClass('active');
+        firstBlockElement.css({
+          display: 'none'
+        });
+        var secondBlockMargin = $(window).height() - secondBlockElement.offset().top - windowScroll + 100;
+        secondBlockElement.css({
+          display: 'block',
+          opacity: 0,
+          marginTop: secondBlockMargin
+        });
+        secondBlockElement.animate({
+          opacity: 1,
+          marginTop: 0
+        }, 400, 'easeOutCirc', function () {
+          secondBlockElement.addClass('active');
+        });
+      });
+    } else {
+      secondBlockElement.css({
+        display: 'block',
+        opacity: 0
+      });
+      var secondBlockFinishPosition = $(window).height() - secondBlockElement.offset().top - windowScroll + 100;
+      secondBlockElement.css({
+        marginTop: secondBlockFinishPosition
+      });
+      secondBlockElement.animate({
+        opacity: 1,
+        marginTop: 0
+      }, 400, 'easeOutCirc', function () {
+        secondBlockElement.addClass('active');
+      });
+    }
+
+    $('.calc-page__footer').addClass('active');
+    calcFinal(selectedService);
+  }
+
+  function calcFinal(service) {
+    var jsonArray = {};
+
+    switch (service) {
+      case 0:
+        var timeBlock = finalBlocks[0][0]['class'];
+        var priceBlock = finalBlocks[0][1]['class'];
+        var totalPrice = 0;
+        var totalTime = 0;
+        $('.calc-page__serviceBlock[data-service=' + service + ']').find('input:checked').each(function () {
+          totalPrice += parseInt($(this).data('price'));
+          totalTime += parseFloat($(this).data('time'));
+          var name = $(this).attr('name').replace(/[^a-zA-Z]+/g, '');
+          var value = $(this).val();
+
+          if (!jsonArray.hasOwnProperty(name)) {
+            jsonArray[name] = [value];
+          } else {
+            jsonArray[name].push(value);
+          }
+        });
+        $('.' + timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
+        break;
+
+      default:
+        break;
+    }
+
+    var json = JSON.stringify(jsonArray);
+    $('.js-calc-formInput').val(json);
+  }
+
+  $(document).on('change', '.calc-page__serviceBlock.active input', function () {
+    calcFinal(selectedService);
+  });
+  $('.js-calc-allServices').on('click', function () {
+    event.preventDefault();
+    $('.calc-page__left-control').removeClass('active');
+    $('.js-calc-service').slideDown(400).removeClass('collapsed');
+  });
+  var accordions = document.querySelectorAll(".accordion");
+
+  var openAccordion = function openAccordion(accordion) {
+    var content = accordion.querySelector(".accordion__content");
+    accordion.classList.add("accordion__active");
+    content.style.maxHeight = content.scrollHeight + "px";
+  };
+
+  var closeAccordion = function closeAccordion(accordion) {
+    var content = accordion.querySelector(".accordion__content");
+    accordion.classList.remove("accordion__active");
+    content.style.maxHeight = null;
+  };
+
+  accordions.forEach(function (accordion) {
+    var intro = accordion.querySelector(".accordion__intro");
+    var content = accordion.querySelector(".accordion__content");
+
+    intro.onclick = function () {
+      if (content.style.maxHeight) {
+        closeAccordion(accordion);
+      } else {
+        accordions.forEach(function (accordion) {
+          return closeAccordion(accordion);
+        });
+        openAccordion(accordion);
+      }
+    };
+  });
+})(jQuery);
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -358,13 +563,6 @@ __webpack_require__.r(__webpack_exports__);
 
 (function ($) {
   //projects
-  $('.calc-page__underBlok__input:checkbox').change(function () {
-    if ($(this).is(":checked")) {
-      $(this).parents('.calc-page__underBlok').addClass("active");
-    } else {
-      $(this).parents('.calc-page__underBlok').removeClass("active");
-    }
-  });
   $(document).ready(function () {
     $('.archive-projects__item').mouseover(function () {
       $('.archive-projects__item').addClass("js-opacity-item");
@@ -5069,6 +5267,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 /* harmony import */ var _import_pages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./import/pages */ "./src/js/import/pages.js");
 /* harmony import */ var _import_pages__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_import_pages__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _import_calc__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./import/calc */ "./src/js/import/calc.js");
+/* harmony import */ var _import_calc__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_import_calc__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
