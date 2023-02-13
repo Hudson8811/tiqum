@@ -53,7 +53,7 @@
 
     let formTitles = [
         'Срок и стоимость <span><br>запуска вашего MVP</span>',
-        'Стоимость',
+        'Стоимость продуктовой <span><br>команды</span>',
         'Стоимость',
         'Стоимость'
     ];
@@ -73,7 +73,12 @@
                 text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
             },
         ],
-        [],
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая стоимость команды с учетом ваших предпочтений',
+            },
+        ],
         [],
         []
     ];
@@ -100,14 +105,65 @@
     });
 
 
+    $('.numberPeople--perv').on('click', function() {
+        const $count = $(this).siblings('.numberPeople--count');
+        const $input = $(this).siblings('input');
+        let count = parseInt($count.text(), 10);
+        let minimum = 0;
+        if ($input.data('minimum')){
+            minimum =  parseInt($input.data('minimum'), 10)
+        }
+        count--;
+        if (count < minimum) {
+            count = minimum;
+        }
+        $count.text(count);
+        $input.val(count);
+        if (count === 0) {
+            $(this).closest('.calc-page__underBlok').addClass('disabled');
+        } else {
+            $(this).closest('.calc-page__underBlok').removeClass('disabled');
+        }
+        if ($input.data('minimum')){
+            if (count === minimum) {
+                $(this).addClass('hidden');
+            }
+        }
+        calcFinal(selectedService);
+    });
+
+    $('.numberPeople--next').on('click', function() {
+        const $count = $(this).siblings('.numberPeople--count');
+        const $input = $(this).siblings('input');
+        let count = parseInt($count.text(), 10);
+        let minimum = 0;
+        if ($input.data('minimum')){
+            minimum =  parseInt($input.data('minimum'), 10)
+        }
+        count++;
+        $count.text(count);
+        $input.val(count);
+        if (count === 0) {
+            $(this).closest('.calc-page__underBlok').addClass('disabled');
+        } else {
+            $(this).closest('.calc-page__underBlok').removeClass('disabled');
+        }
+        if ($input.data('minimum')){
+            if (count > minimum) {
+                $(this).siblings('.numberPeople--perv').removeClass('hidden');
+            }
+        }
+        calcFinal(selectedService);
+    });
+
+
     function selectService(service){
         let htmlFinal = '';
         finalBlocks[service].forEach(function (elem){
             htmlFinal += replacePlaceholders(finalBlockHtml, elem);
         });
         $('.js-calc-finalBlocks').html(htmlFinal);
-
-
+        $('.js-calc-formTitle').html(formTitles[service]);
 
         const firstBlockElement = $('.calc-page__serviceBlock.active');
         const secondBlockElement = $('.calc-page__serviceBlock[data-service='+service+']');
@@ -171,16 +227,18 @@
 
     function calcFinal(service){
         let jsonArray = {};
+        jsonArray['service'] = serviceList[service];
+        let totalPrice = 0;
+        let totalTime = 0;
+        let timeBlock;
+        let priceBlock;
         switch(service) {
             case 0:
-                let timeBlock = finalBlocks[0][0]['class'];
-                let priceBlock = finalBlocks[0][1]['class'];
-                let totalPrice = 0;
-                let totalTime = 0;
+                timeBlock = finalBlocks[0][0]['class'];
+                priceBlock = finalBlocks[0][1]['class'];
                 $('.calc-page__serviceBlock[data-service='+service+']').find('input:checked').each(function (){
                     totalPrice += parseInt($(this).data('price'));
                     totalTime += parseFloat($(this).data('time'));
-
                     let name = $(this).attr('name').replace(/[^a-zA-Z]+/g, '');
                     let value = $(this).val();
                     if (!jsonArray.hasOwnProperty(name)) {
@@ -189,8 +247,32 @@
                         jsonArray[name].push(value);
                     }
                 });
+                jsonArray['totalPrice'] = totalPrice;
+                jsonArray['totalTime'] = totalTime;
+                if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
+                    $('.calc-page__x2').addClass('active');
+                } else {
+                    $('.calc-page__x2').removeClass('active');
+                }
+
                 $('.'+timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
+                break;
+            case 1:
+                let count = 0;
+                priceBlock = finalBlocks[1][0]['class'];
+                $('.calc-page__serviceBlock[data-service="1"] input').each(function () {
+                    let value = parseInt($(this).val());
+                    count += value;
+                    totalPrice += parseInt($(this).data('price')) * value;
+                    let name = $(this).data('title');
+                    if (!jsonArray.hasOwnProperty(name)) {
+                        jsonArray[name] = value;
+                    }
+                });
+                jsonArray['totalPrice'] = totalPrice;
+                $('.js-calc-manCount').text(count);
+                $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
                 break;
             default:
                 break;
@@ -212,33 +294,38 @@
         $('.js-calc-service').slideDown(400).removeClass('collapsed');
     });
 
-		const accordions = document.querySelectorAll(".accordion");
 
-		const openAccordion = (accordion) => {
-			const content = accordion.querySelector(".accordion__content");
-			accordion.classList.add("accordion__active");
-			content.style.maxHeight = content.scrollHeight + "px";
-		};
-	
-		const closeAccordion = (accordion) => {
-			const content = accordion.querySelector(".accordion__content");
-			accordion.classList.remove("accordion__active");
-			content.style.maxHeight = null;
-		};
-	
-		accordions.forEach((accordion) => {
-			const intro = accordion.querySelector(".accordion__intro");
-			const content = accordion.querySelector(".accordion__content");
-	
-			intro.onclick = () => {
-				if (content.style.maxHeight) {
-					closeAccordion(accordion);
-				} else {
-					accordions.forEach((accordion) => closeAccordion(accordion));
-					openAccordion(accordion);
-				}
-			};
-		});
+
+
+    const accordions = document.querySelectorAll(".accordion");
+
+    const openAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.add("accordion__active");
+        content.style.maxHeight = content.scrollHeight + "px";
+    };
+
+    const closeAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.remove("accordion__active");
+        content.style.maxHeight = null;
+    };
+
+    accordions.forEach((accordion) => {
+        const intro = accordion.querySelector(".accordion__intro");
+        const content = accordion.querySelector(".accordion__content");
+
+        intro.addEventListener('click', function(event) {
+            if (!event.target.closest('.numberPeople')) {
+                if (content.style.maxHeight) {
+                    closeAccordion(accordion);
+                } else {
+                    accordions.forEach((accordion) => closeAccordion(accordion));
+                    openAccordion(accordion);
+                }
+            }
+        });
+    });
 
 
 })(jQuery);

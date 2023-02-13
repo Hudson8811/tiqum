@@ -8791,6 +8791,7 @@ summary {
   align-items: center;
   height: 24px;
   padding-left: 20px;
+  cursor: default;
 }
 .calc-page__underBlok .numberPeople--perv {
   position: relative;
@@ -8834,6 +8835,22 @@ summary {
   color: #2A2A2A;
   margin-right: 20px;
   margin-left: 20px;
+  cursor: default;
+  user-select: none;
+}
+.calc-page__underBlok .numberPeople--perv, .calc-page__underBlok .numberPeople--next {
+  cursor: pointer;
+}
+.calc-page__underBlok .numberPeople--perv:hover svg rect, .calc-page__underBlok .numberPeople--next:hover svg rect {
+  fill: #95B2FD !important;
+}
+.calc-page__underBlok .numberPeople--perv:active svg rect, .calc-page__underBlok .numberPeople--next:active svg rect {
+  fill: #0047FF !important;
+}
+.calc-page__underBlok .numberPeople--perv.hidden, .calc-page__underBlok .numberPeople--next.hidden {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
 }
 @media (max-width: 1023px) {
   .calc-page__underBlok {
@@ -8899,6 +8916,10 @@ summary {
     font-size: 16px;
     line-height: 22px;
   }
+}
+.calc-page__underBlok--accordion.disabled .accordion__intro .numberPeople--count,
+.calc-page__underBlok--accordion.disabled .accordion__intro .numberPeople--title {
+  opacity: 0.4;
 }
 .calc-page__underBlok--cost {
   position: relative;
@@ -9287,6 +9308,9 @@ summary {
     font-size: 5.3333333333vw;
   }
 }
+.calc-page--subtitle-block {
+  display: block;
+}
 .calc-page--twotitle {
   position: relative;
   display: block;
@@ -9403,6 +9427,9 @@ summary {
   display: none;
 }
 .calc-page__footer:not(.active) {
+  display: none;
+}
+.calc-page__x2:not(.active) {
   display: none;
 }
 
