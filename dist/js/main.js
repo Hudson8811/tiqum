@@ -361,11 +361,7 @@ if (windowInnerWidth > 1022) {
   var serviceSelect = false;
   var selectedService;
   var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
-  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость', 'Стоимость'];
-  var values = {
-    title: 'My Title',
-    subtitle: 'My Subtitle'
-  };
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>', 'Стоимость проектирования <span><br>сервиса</span>'];
   var finalBlocks = [[{
     class: 'js-calc-finalTime',
     text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
@@ -375,7 +371,13 @@ if (windowInnerWidth > 1022) {
   }], [{
     class: 'js-calc-finalPrice',
     text: 'Итоговая стоимость команды с учетом ваших предпочтений'
-  }], [], []];
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }]];
   $('.js-calc-service').hover(function () {
     $(this).siblings('.js-calc-service').addClass('opacity');
   }, function () {
@@ -524,8 +526,8 @@ if (windowInnerWidth > 1022) {
 
     switch (service) {
       case 0:
-        timeBlock = finalBlocks[0][0]['class'];
-        priceBlock = finalBlocks[0][1]['class'];
+        timeBlock = finalBlocks[service][0]['class'];
+        priceBlock = finalBlocks[service][1]['class'];
         $('.calc-page__serviceBlock[data-service=' + service + ']').find('input:checked').each(function () {
           totalPrice += parseInt($(this).data('price'));
           totalTime += parseFloat($(this).data('time'));
@@ -553,8 +555,8 @@ if (windowInnerWidth > 1022) {
 
       case 1:
         var count = 0;
-        priceBlock = finalBlocks[1][0]['class'];
-        $('.calc-page__serviceBlock[data-service="1"] input').each(function () {
+        priceBlock = finalBlocks[service][0]['class'];
+        $('.calc-page__serviceBlock[data-service="' + service + '"] input').each(function () {
           var value = parseInt($(this).val());
           count += value;
           totalPrice += parseInt($(this).data('price')) * value;
@@ -567,6 +569,15 @@ if (windowInnerWidth > 1022) {
         jsonArray['totalPrice'] = totalPrice;
         $('.js-calc-manCount').text(count);
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+        break;
+
+      case 2:
+      case 3:
+        priceBlock = finalBlocks[service][0]['class'];
+        totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
+        jsonArray['totalPrice'] = totalPrice;
+        $('.js-calc-manCount').text(count);
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
         break;
 
       default:
