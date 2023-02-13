@@ -2,6 +2,7 @@
 	background-color: #2A2A2A;
 	padding: 30px 0 0;
 	position: relative;
+	overflow: hidden;
 	@media (max-width: 1919px){
 		padding: 20px 0 0;
 	}
@@ -72,7 +73,7 @@
 			flex: 0 0 auto;
 		}
 	}
-	
+
 	&__right {
 		flex: 0 1 65%;
 		display: flex;
@@ -95,7 +96,7 @@
 			}
 		}
 	}
-	
+
 	&__right-soc {
 		display: grid;
 		grid-template: repeat(2, 1fr) / repeat(3, 1fr);
@@ -130,10 +131,10 @@
 			}
 		}
 	}
-	
+
 	&__right-lang {
 		@media (max-width: 767px){
-			  
+
 		}
 		a {
 			display: block;
@@ -173,7 +174,7 @@
 			margin-top: 6.400vw;
 		}
 	}
-	
+
 		&__connection {
 			@media (max-width: 1024px){
 				flex: 0 0 23.926vw;
@@ -201,7 +202,7 @@
 				}
 			}
 		}
-		
+
 		&__location {
 			margin-top: 40px;
 			font-family: 'Suisse Intl';
@@ -228,7 +229,7 @@
 				display: block;
 			}
 		}
-	
+
 	&__right {
 		flex: 0 1 65%;
 		padding-bottom: 195px;
@@ -249,7 +250,7 @@
 			padding-bottom: 0;
 		}
 	}
-	
+
 		&__title {
 			color: #F5F5F5;
 			max-width: 750px;
@@ -273,7 +274,7 @@
 				}
 			}
 		}
-	
+
 		&__form {
 		}
 }
@@ -446,7 +447,7 @@
 			flex: 0 1 100%;
 		}
 	}
-	
+
 	&__bottom {
 		font-family: "Suisse Intl";
 		font-style: normal;
