@@ -54,13 +54,9 @@
     let formTitles = [
         'Срок и стоимость <span><br>запуска вашего MVP</span>',
         'Стоимость продуктовой <span><br>команды</span>',
-        'Стоимость',
-        'Стоимость'
+        'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>',
+        'Стоимость проектирования <span><br>сервиса</span>'
     ];
-    const values = {
-        title: 'My Title',
-        subtitle: 'My Subtitle',
-    };
 
     let finalBlocks = [
         [
@@ -79,8 +75,18 @@
                 text: 'Итоговая стоимость команды с учетом ваших предпочтений',
             },
         ],
-        [],
-        []
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+            },
+        ],
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+            },
+        ]
     ];
 
 
@@ -234,8 +240,8 @@
         let priceBlock;
         switch(service) {
             case 0:
-                timeBlock = finalBlocks[0][0]['class'];
-                priceBlock = finalBlocks[0][1]['class'];
+                timeBlock = finalBlocks[service][0]['class'];
+                priceBlock = finalBlocks[service][1]['class'];
                 $('.calc-page__serviceBlock[data-service='+service+']').find('input:checked').each(function (){
                     totalPrice += parseInt($(this).data('price'));
                     totalTime += parseFloat($(this).data('time'));
@@ -260,8 +266,8 @@
                 break;
             case 1:
                 let count = 0;
-                priceBlock = finalBlocks[1][0]['class'];
-                $('.calc-page__serviceBlock[data-service="1"] input').each(function () {
+                priceBlock = finalBlocks[service][0]['class'];
+                $('.calc-page__serviceBlock[data-service="'+service+'"] input').each(function () {
                     let value = parseInt($(this).val());
                     count += value;
                     totalPrice += parseInt($(this).data('price')) * value;
@@ -273,6 +279,14 @@
                 jsonArray['totalPrice'] = totalPrice;
                 $('.js-calc-manCount').text(count);
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+                break;
+            case 2:
+            case 3:
+                priceBlock = finalBlocks[service][0]['class'];
+                totalPrice = parseInt($('.calc-page__serviceBlock[data-service="'+service+'"] input[name="fixedPrice"]').val());
+                jsonArray['totalPrice'] = totalPrice;
+                $('.js-calc-manCount').text(count);
+                $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
                 break;
             default:
                 break;
