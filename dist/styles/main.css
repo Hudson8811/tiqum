@@ -8372,14 +8372,6 @@ summary {
 .calc-page {
   font-family: "Suisse Intl";
 }
-.calc-page .container {
-  padding: 0 30px;
-}
-@media (max-width: 576px) {
-  .calc-page .container {
-    padding: 0 20px;
-  }
-}
 .calc-page .h1, .calc-page .general-title {
   font-style: normal;
   font-weight: 400;
@@ -8476,6 +8468,26 @@ summary {
 }
 @media (max-width: 576px) {
   .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+.calc-page .b24 {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #2A2A2A;
+}
+@media (max-width: 1439px) {
+  .calc-page .b24 {
+    font-size: 18px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .b24 {
     font-size: 16px;
     line-height: 120%;
   }
@@ -8771,6 +8783,79 @@ summary {
   .calc-page__block--Additionally .calc-page--twotitle.b2, .calc-page__block--Additionally .text-style p.calc-page--twotitle, .text-style .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .text-style ul.calc-page--twotitle, .text-style .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .text-style ol.calc-page--twotitle, .text-style .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .portfolio .calc-page--twotitle.project-portfolio__link, .portfolio .calc-page__block--Additionally .calc-page--twotitle.project-portfolio__link, .calc-page__block--Additionally .portfolio .project-portfolio__item-right p.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ul.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .portfolio .project-portfolio__item-right ol.calc-page--twotitle, .portfolio .project-portfolio__item-right .calc-page__block--Additionally ol.calc-page--twotitle, .calc-page__block--Additionally .page-header-big .calc-page--twotitle.page-header__date, .page-header-big .calc-page__block--Additionally .calc-page--twotitle.page-header__date, .calc-page__block--Additionally .right-content-blog p.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally p.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ul.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ul.calc-page--twotitle, .calc-page__block--Additionally .right-content-blog ol.calc-page--twotitle, .right-content-blog .calc-page__block--Additionally ol.calc-page--twotitle {
     width: 100%;
     max-width: 100%;
+  }
+}
+.calc-page__block--text {
+  padding-bottom: 150px;
+}
+@media (max-width: 1439px) {
+  .calc-page__block--text {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__block--text {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--text {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--text .flex-lr__left {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--text .flex-lr__right {
+    margin-top: 40px;
+  }
+}
+.calc-page__block--text .flex-lr__right .calc-page__underBlok {
+  border-top: none;
+  min-height: auto;
+  padding-right: 20px;
+}
+.calc-page__block--text .flex-lr__right .calc-page__underBlok:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 576px) {
+  .calc-page__block--text .flex-lr__right .calc-page__underBlok {
+    padding-bottom: 30px;
+    padding-right: 0;
+  }
+}
+.calc-page__block--text .calc-page__underBlok--left {
+  width: 100%;
+}
+.calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+  width: 100%;
+  max-width: 880px;
+  margin-right: 0;
+}
+@media (max-width: 1439px) {
+  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+    max-width: 558px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+    flex: 1 0 auto;
+    padding-left: 0;
+  }
+}
+.calc-page__block--text .calc-page__underBlok--left .calc-page--twotitle.b24 {
+  opacity: 0.4;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 491px;
+}
+@media (max-width: 576px) {
+  .calc-page__block--text .calc-page__underBlok--left .calc-page--twotitle.b24 {
+    margin-top: 0px;
+    padding-left: 0;
   }
 }
 .calc-page__underBlok {

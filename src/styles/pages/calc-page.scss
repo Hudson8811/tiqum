@@ -1,11 +1,11 @@
 .calc-page {
 	font-family: "Suisse Intl";
-	.container {
-		padding: 0 30px;
-		@media (max-width: 576px) {
-			padding: 0 20px;
-		}
-	}
+	// .container {
+	// 	padding: 0 30px;
+	// 	@media (max-width: 576px) {
+	// 		padding: 0 20px;
+	// 	}
+	// }
 	.h1 {
 		font-style: normal;
 		font-weight: 400;
@@ -88,6 +88,22 @@
 	}
 	.b2 {
 
+	}
+	.b24 {
+		font-family: 'Suisse Intl';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 110%;
+		color: #2A2A2A; 
+		@media (max-width: 1439px) {
+			font-size: 18px;
+			line-height: 110%;
+		}
+		@media (max-width: 576px) {
+			font-size: 16px;
+			line-height: 120%;
+		}
 	}
 	&--title {
 		color: #2A2A2A;
@@ -359,6 +375,75 @@
 					max-width: 100%;
 				}
 			}
+		}
+		&--text {
+			padding-bottom: 150px;
+			@media (max-width: 1439px) {
+				padding-bottom: 80px;
+			}
+			@media (max-width: 1023px) {
+				padding-bottom: 40px;
+			
+			}
+			@media (max-width: 576px) {
+				padding-bottom: 20px;
+			
+			}
+			.flex-lr__left {
+				@media (max-width: 767px) {
+					display: none;
+				
+				}
+			}
+			.flex-lr__right {
+				@media (max-width: 767px) {
+					margin-top: 40px;
+				
+				}
+				.calc-page__underBlok {
+					border-top: none;
+					min-height: auto;
+					padding-right: 20px;
+					&:first-child {
+						border-top: 1px solid rgba(0, 0, 0, 0.2);
+					}
+					@media (max-width: 576px) {
+						padding-bottom: 30px;
+						padding-right: 0;
+					}
+				}
+			}
+			.calc-page__underBlok--left	 {
+				width: 100%;
+				.calc-page--subtitle.h3 {
+					width: 100%;
+					max-width: 880px;
+					margin-right: 0;
+					@media (max-width: 1439px) {
+						max-width: 558px;
+					}
+					@media (max-width: 1023px) {
+						flex: 1 0 auto;
+						padding-left: 0;
+					
+					}
+			
+				}
+				.calc-page--twotitle.b24 {
+					opacity: 0.4;
+					padding-top: 20px;
+					width: 100%;
+					max-width: 491px;
+					@media (max-width: 576px) {
+						margin-top: 0px;
+						padding-left: 0;
+					
+					}
+				}
+			}
+		}
+		&--Discovery  {
+
 		}
 	}
 	&__underBlok {
