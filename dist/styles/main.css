@@ -8830,18 +8830,18 @@ summary {
 .calc-page__block--text .calc-page__underBlok--left {
   width: 100%;
 }
-.calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+.calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle {
   width: 100%;
   max-width: 880px;
   margin-right: 0;
 }
 @media (max-width: 1439px) {
-  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle {
     max-width: 558px;
   }
 }
 @media (max-width: 1023px) {
-  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.h3, .calc-page__block--text .calc-page__underBlok--left .text-style h3.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .text-style h4.calc-page--subtitle, .text-style .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h3.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right h4.calc-page--subtitle, .portfolio .project-portfolio__item-right .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--subtitle, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--text .calc-page__underBlok--left p.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .portfolio .calc-page--subtitle.project-portfolio__item-title, .portfolio .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle.project-portfolio__item-title, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h3.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h3.calc-page--subtitle, .calc-page__block--text .calc-page__underBlok--left .right-content-blog h4.calc-page--subtitle, .right-content-blog .calc-page__block--text .calc-page__underBlok--left h4.calc-page--subtitle {
+  .calc-page__block--text .calc-page__underBlok--left .calc-page--subtitle {
     flex: 1 0 auto;
     padding-left: 0;
   }
@@ -8856,6 +8856,108 @@ summary {
   .calc-page__block--text .calc-page__underBlok--left .calc-page--twotitle.b24 {
     margin-top: 0px;
     padding-left: 0;
+  }
+}
+.calc-page__block--Discovery {
+  padding-bottom: 80px;
+}
+@media (max-width: 1439px) {
+  .calc-page__block--Discovery {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 1024px) {
+  .calc-page__block--Discovery {
+    padding-bottom: 43px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__block--Discovery {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page__block--Discovery {
+    padding-bottom: 35px;
+  }
+}
+.calc-page__block--team-secvice {
+  padding-bottom: 131px;
+}
+@media (max-width: 1439px) {
+  .calc-page__block--team-secvice {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__block--team-secvice {
+    padding-bottom: 33px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__block--team-secvice {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page__block--team-secvice {
+    padding-bottom: 35px;
+  }
+}
+.calc-page__block--team-secvice .flex-lr__left .calc-page--text.h3, .calc-page__block--team-secvice .flex-lr__left .text-style h3.calc-page--text, .text-style .calc-page__block--team-secvice .flex-lr__left h3.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .text-style h4.calc-page--text, .text-style .calc-page__block--team-secvice .flex-lr__left h4.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team-secvice .flex-lr__left h3.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team-secvice .flex-lr__left h4.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--team-secvice .flex-lr__left p.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page__block--team-secvice .flex-lr__left .calc-page--text.project-portfolio__item-title, .calc-page__block--team-secvice .flex-lr__left .right-content-blog h3.calc-page--text, .right-content-blog .calc-page__block--team-secvice .flex-lr__left h3.calc-page--text, .calc-page__block--team-secvice .flex-lr__left .right-content-blog h4.calc-page--text, .right-content-blog .calc-page__block--team-secvice .flex-lr__left h4.calc-page--text {
+  max-width: 437px;
+}
+.calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--subtitle {
+  max-width: 910px;
+}
+@media (max-width: 1439px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--subtitle {
+    max-width: 667px;
+  }
+}
+.calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--twotitle.b24 {
+  padding-top: 40px;
+  opacity: 1;
+  max-width: 910px;
+}
+@media (max-width: 1439px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--twotitle.b24 {
+    max-width: 664px;
+  }
+}
+@media (max-width: 768px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--twotitle.b24 {
+    max-width: 462px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__right {
+    margin-top: 0px;
+  }
+}
+.calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok {
+    margin-top: 40px;
+    min-height: auto;
+    align-items: flex-end;
+    border-top: none;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok {
+    min-height: 100px;
+    align-items: flex-start;
+    border-top: none;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .calc-page--text.h3, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .text-style h3.calc-page--text, .text-style .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .text-style h4.calc-page--text, .text-style .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok p.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .calc-page--text.project-portfolio__item-title, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .right-content-blog h3.calc-page--text, .right-content-blog .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .right-content-blog h4.calc-page--text, .right-content-blog .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text {
+    max-width: 200px;
   }
 }
 .calc-page__underBlok {
@@ -8876,6 +8978,7 @@ summary {
   align-items: center;
   height: 24px;
   padding-left: 20px;
+  cursor: default;
 }
 .calc-page__underBlok .numberPeople--perv {
   position: relative;
@@ -8919,6 +9022,22 @@ summary {
   color: #2A2A2A;
   margin-right: 20px;
   margin-left: 20px;
+  cursor: default;
+  user-select: none;
+}
+.calc-page__underBlok .numberPeople--perv, .calc-page__underBlok .numberPeople--next {
+  cursor: pointer;
+}
+.calc-page__underBlok .numberPeople--perv:hover svg rect, .calc-page__underBlok .numberPeople--next:hover svg rect {
+  fill: #95B2FD !important;
+}
+.calc-page__underBlok .numberPeople--perv:active svg rect, .calc-page__underBlok .numberPeople--next:active svg rect {
+  fill: #0047FF !important;
+}
+.calc-page__underBlok .numberPeople--perv.hidden, .calc-page__underBlok .numberPeople--next.hidden {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
 }
 @media (max-width: 1023px) {
   .calc-page__underBlok {
@@ -8984,6 +9103,10 @@ summary {
     font-size: 16px;
     line-height: 22px;
   }
+}
+.calc-page__underBlok--accordion.disabled .accordion__intro .numberPeople--count,
+.calc-page__underBlok--accordion.disabled .accordion__intro .numberPeople--title {
+  opacity: 0.4;
 }
 .calc-page__underBlok--cost {
   position: relative;
@@ -9372,6 +9495,9 @@ summary {
     font-size: 5.3333333333vw;
   }
 }
+.calc-page--subtitle-block {
+  display: block;
+}
 .calc-page--twotitle {
   position: relative;
   display: block;
@@ -9488,6 +9614,9 @@ summary {
   display: none;
 }
 .calc-page__footer:not(.active) {
+  display: none;
+}
+.calc-page__x2:not(.active) {
   display: none;
 }
 

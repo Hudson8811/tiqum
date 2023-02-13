@@ -361,7 +361,7 @@ if (windowInnerWidth > 1022) {
   var serviceSelect = false;
   var selectedService;
   var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
-  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость', 'Стоимость', 'Стоимость'];
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость', 'Стоимость'];
   var values = {
     title: 'My Title',
     subtitle: 'My Subtitle'
@@ -372,7 +372,10 @@ if (windowInnerWidth > 1022) {
   }, {
     class: 'js-calc-finalPrice',
     text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
-  }], [], [], []];
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая стоимость команды с учетом ваших предпочтений'
+  }], [], []];
   $('.js-calc-service').hover(function () {
     $(this).siblings('.js-calc-service').addClass('opacity');
   }, function () {
@@ -390,6 +393,67 @@ if (windowInnerWidth > 1022) {
       selectService(selectedService);
     }
   });
+  $('.numberPeople--perv').on('click', function () {
+    var $count = $(this).siblings('.numberPeople--count');
+    var $input = $(this).siblings('input');
+    var count = parseInt($count.text(), 10);
+    var minimum = 0;
+
+    if ($input.data('minimum')) {
+      minimum = parseInt($input.data('minimum'), 10);
+    }
+
+    count--;
+
+    if (count < minimum) {
+      count = minimum;
+    }
+
+    $count.text(count);
+    $input.val(count);
+
+    if (count === 0) {
+      $(this).closest('.calc-page__underBlok').addClass('disabled');
+    } else {
+      $(this).closest('.calc-page__underBlok').removeClass('disabled');
+    }
+
+    if ($input.data('minimum')) {
+      if (count === minimum) {
+        $(this).addClass('hidden');
+      }
+    }
+
+    calcFinal(selectedService);
+  });
+  $('.numberPeople--next').on('click', function () {
+    var $count = $(this).siblings('.numberPeople--count');
+    var $input = $(this).siblings('input');
+    var count = parseInt($count.text(), 10);
+    var minimum = 0;
+
+    if ($input.data('minimum')) {
+      minimum = parseInt($input.data('minimum'), 10);
+    }
+
+    count++;
+    $count.text(count);
+    $input.val(count);
+
+    if (count === 0) {
+      $(this).closest('.calc-page__underBlok').addClass('disabled');
+    } else {
+      $(this).closest('.calc-page__underBlok').removeClass('disabled');
+    }
+
+    if ($input.data('minimum')) {
+      if (count > minimum) {
+        $(this).siblings('.numberPeople--perv').removeClass('hidden');
+      }
+    }
+
+    calcFinal(selectedService);
+  });
 
   function selectService(service) {
     var htmlFinal = '';
@@ -397,6 +461,7 @@ if (windowInnerWidth > 1022) {
       htmlFinal += replacePlaceholders(finalBlockHtml, elem);
     });
     $('.js-calc-finalBlocks').html(htmlFinal);
+    $('.js-calc-formTitle').html(formTitles[service]);
     var firstBlockElement = $('.calc-page__serviceBlock.active');
     var secondBlockElement = $('.calc-page__serviceBlock[data-service=' + service + ']');
     var windowScroll = $(window).scrollTop();
@@ -451,13 +516,16 @@ if (windowInnerWidth > 1022) {
 
   function calcFinal(service) {
     var jsonArray = {};
+    jsonArray['service'] = serviceList[service];
+    var totalPrice = 0;
+    var totalTime = 0;
+    var timeBlock;
+    var priceBlock;
 
     switch (service) {
       case 0:
-        var timeBlock = finalBlocks[0][0]['class'];
-        var priceBlock = finalBlocks[0][1]['class'];
-        var totalPrice = 0;
-        var totalTime = 0;
+        timeBlock = finalBlocks[0][0]['class'];
+        priceBlock = finalBlocks[0][1]['class'];
         $('.calc-page__serviceBlock[data-service=' + service + ']').find('input:checked').each(function () {
           totalPrice += parseInt($(this).data('price'));
           totalTime += parseFloat($(this).data('time'));
@@ -470,8 +538,35 @@ if (windowInnerWidth > 1022) {
             jsonArray[name].push(value);
           }
         });
+        jsonArray['totalPrice'] = totalPrice;
+        jsonArray['totalTime'] = totalTime;
+
+        if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
+          $('.calc-page__x2').addClass('active');
+        } else {
+          $('.calc-page__x2').removeClass('active');
+        }
+
         $('.' + timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
+        break;
+
+      case 1:
+        var count = 0;
+        priceBlock = finalBlocks[1][0]['class'];
+        $('.calc-page__serviceBlock[data-service="1"] input').each(function () {
+          var value = parseInt($(this).val());
+          count += value;
+          totalPrice += parseInt($(this).data('price')) * value;
+          var name = $(this).data('title');
+
+          if (!jsonArray.hasOwnProperty(name)) {
+            jsonArray[name] = value;
+          }
+        });
+        jsonArray['totalPrice'] = totalPrice;
+        $('.js-calc-manCount').text(count);
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
         break;
 
       default:
@@ -507,17 +602,18 @@ if (windowInnerWidth > 1022) {
   accordions.forEach(function (accordion) {
     var intro = accordion.querySelector(".accordion__intro");
     var content = accordion.querySelector(".accordion__content");
-
-    intro.onclick = function () {
-      if (content.style.maxHeight) {
-        closeAccordion(accordion);
-      } else {
-        accordions.forEach(function (accordion) {
-          return closeAccordion(accordion);
-        });
-        openAccordion(accordion);
+    intro.addEventListener('click', function (event) {
+      if (!event.target.closest('.numberPeople')) {
+        if (content.style.maxHeight) {
+          closeAccordion(accordion);
+        } else {
+          accordions.forEach(function (accordion) {
+            return closeAccordion(accordion);
+          });
+          openAccordion(accordion);
+        }
       }
-    };
+    });
   });
 })(jQuery);
 
