@@ -516,7 +516,7 @@
 		font-family: 'Suisse Intl';
 		pointer-events: none;
 		color: #ffffff;
-		position: absolute;
+		//position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -525,6 +525,10 @@
 		display: none;
 		span{
 			opacity: 0.2;
+		}
+
+		.footer--light & {
+			color: inherit;
 		}
 	}
 
@@ -540,6 +544,7 @@
 		}
 	}
 }
+
 
 .mobile-fixed-bottom{
 	position: fixed;
@@ -566,4 +571,22 @@
 	&.hide{
 		opacity: 0;
 	}
+}
+
+
+
+.calc__link{
+	position: fixed;
+	background: rgba(0, 71, 255, 0.2);
+	backdrop-filter: blur(5.5px);
+	color:#0047FF;
+	bottom:30px;
+	font-size: 32px;
+	line-height: 35px;
+	font-family: "Suisse Intl";
+	font-style: normal;
+	font-weight: 400;
+	padding:30px 70px ;
+	left:35%;
+	margin-left: 9px;
 }

@@ -396,7 +396,7 @@
         }
         let json = JSON.stringify(jsonArray);
 
-        $('.js-calc-formInput').val(json);
+        $('input[name="calc_info"]').val(json);
     }
 
 
