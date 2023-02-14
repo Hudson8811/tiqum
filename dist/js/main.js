@@ -625,6 +625,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
         break;
       case 2:
+        priceBlock = finalBlocks[service][0]['class'];
+        totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
+        jsonArray['totalPrice'] = totalPrice;
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+        break;
       case 3:
         priceBlock = finalBlocks[service][0]['class'];
         totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
