@@ -134,15 +134,15 @@
             let scrollTop = $(window).scrollTop();
             let windowH = $(window).height();
             if (scrollTop > windowH) {
-                $('.mobile-fixed-bottom').addClass('active');
+                $('.calc__link').addClass('active');
             } else {
-                $('.mobile-fixed-bottom').removeClass('active');
+                $('.calc__link').removeClass('active');
             }
             let formTop = $('#contact-form').offset().top;
             if (scrollTop + windowH > formTop) {
-                $('.mobile-fixed-bottom').addClass('hide');
+                $('.calc__link').addClass('hide');
             } else {
-                $('.mobile-fixed-bottom').removeClass('hide');
+                $('.calc__link').removeClass('hide');
             }
         });
     });
