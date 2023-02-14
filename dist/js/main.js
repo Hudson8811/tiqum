@@ -844,8 +844,7 @@ __webpack_require__.r(__webpack_exports__);
     $(window).on('scroll', function () {
       var scrollTop = $(window).scrollTop();
       var windowH = $(window).height();
-      var windowH2 = $(window).height() / 2;
-      if (scrollTop > windowH2) {
+      if (scrollTop > windowH) {
         $('.calc__link').addClass('active');
       } else {
         $('.calc__link').removeClass('active');
