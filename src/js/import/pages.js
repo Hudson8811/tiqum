@@ -133,7 +133,8 @@
         $(window).on('scroll', function(){
             let scrollTop = $(window).scrollTop();
             let windowH = $(window).height();
-            if (scrollTop > windowH/2) {
+            let windowH2 = $(window).height()/2; 
+            if (scrollTop > windowH2) {
                 $('.calc__link').addClass('active');
             } else {
                 $('.calc__link').removeClass('active');
