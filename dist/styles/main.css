@@ -3966,7 +3966,7 @@ summary {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-@media (max-width: 1439px) {
+@media (max-width: 1440px) {
   .calc__link {
     font-size: 24px;
     line-height: 32px;
