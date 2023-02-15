@@ -9217,38 +9217,6 @@ summary {
 .calc-page__underBlok--animation {
   position: relative;
   display: block;
-  width: 594px;
-  height: 320px;
-}
-@media (max-width: 1439px) {
-  .calc-page__underBlok--animation {
-    width: 33.125vw;
-    height: 17.7777777778vw;
-  }
-}
-@media (max-width: 1300px) {
-  .calc-page__underBlok--animation {
-    width: 332px;
-    height: 179px;
-  }
-}
-@media (max-width: 1023px) {
-  .calc-page__underBlok--animation {
-    width: 32.421875vw;
-    height: 17.48046875vw;
-  }
-}
-@media (max-width: 767px) {
-  .calc-page__underBlok--animation {
-    width: 44.0104166667vw;
-    height: 23.6979166667vw;
-  }
-}
-@media (max-width: 767px) {
-  .calc-page__underBlok--animation {
-    width: 280px;
-    height: 150px;
-  }
 }
 .calc-page__underBlok--animation img {
   position: relative;
@@ -9257,13 +9225,82 @@ summary {
   height: 100%;
 }
 .calc-page__underBlok--animation .lotte {
-  width: 100%;
-  height: 100%;
   display: block;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   text-align: center;
   opacity: 1;
+  width: 239px;
+  height: 152px;
+}
+@media (max-width: 1439px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 16.5972222222vw;
+    height: 10.5555555556vw;
+  }
+}
+@media (max-width: 1300px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 239px;
+    height: 152px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 23.33984375vw;
+    height: 14.84375vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 31.1197916667vw;
+    height: 19.7916666667vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 74.6875vw;
+    height: 47.5vw;
+  }
+}
+.calc-page__underBlok--animation .lotte {
+  display: block;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  text-align: center;
+  opacity: 1;
+  width: 594px;
+  height: 320px;
+}
+@media (max-width: 1439px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 33.125vw;
+    height: 17.7777777778vw;
+  }
+}
+@media (max-width: 1300px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 332px;
+    height: 179px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 32.421875vw;
+    height: 17.48046875vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 44.0104166667vw;
+    height: 23.6979166667vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--animation .lotte {
+    width: 87.5vw;
+    height: 46.875vw;
+  }
 }
 @media (max-width: 767px) {
   .calc-page__underBlok {

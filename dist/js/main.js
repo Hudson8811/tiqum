@@ -538,6 +538,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
     calcFinal(selectedService);
   }
+  var lottie1Play = false;
+  var lottie2Play = false;
+  var lottie1_2Play = false;
+  var lottie2_2Play = false;
   function calcFinal(service) {
     var jsonArray = {};
     jsonArray['service'] = serviceList[service];
@@ -560,14 +564,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             jsonArray[name].push(value);
           }
         });
-        if (animLotte1) {
-          animLotte1.stop();
-          animLotte1.play();
-        }
-        if (animLotte2) {
-          animLotte2.stop();
-          animLotte2.play();
-        }
         var currentWhat;
         var mvpCount = 7;
         if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
@@ -575,6 +571,64 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
         if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length === 1) {
           currentWhat = jsonArray['what'][0];
+        }
+        if ($('.calc-page__serviceBlock[data-service=' + service + '] input[name="what[]"][value="Веб-сервис"]').is(':checked')) {
+          if (!lottie1_2Play) {
+            $('#lottie1').hide();
+            $('#lottie1_2').show();
+            if (animLotte1) {
+              animLotte1.stop();
+            }
+            if (animLotte1_2) {
+              animLotte1_2.stop();
+              animLotte1_2.play();
+            }
+            lottie1Play = false;
+            lottie1_2Play = true;
+          }
+        } else {
+          if (!lottie1Play) {
+            $('#lottie1_2').hide();
+            $('#lottie1').show();
+            if (animLotte1_2) {
+              animLotte1_2.stop();
+            }
+            if (animLotte1) {
+              animLotte1.stop();
+              animLotte1.play();
+            }
+            lottie1Play = true;
+            lottie1_2Play = false;
+          }
+        }
+        if ($('.calc-page__serviceBlock[data-service=' + service + '] input[name="what[]"][value="Мобильное приложение"]').is(':checked')) {
+          if (!lottie2_2Play) {
+            $('#lottie2').hide();
+            $('#lottie2_2').show();
+            if (animLotte2) {
+              animLotte2.stop();
+            }
+            if (animLotte2_2) {
+              animLotte2_2.stop();
+              animLotte2_2.play();
+            }
+            lottie2Play = false;
+            lottie2_2Play = true;
+          }
+        } else {
+          if (!lottie2Play) {
+            $('#lottie2_2').hide();
+            $('#lottie2').show();
+            if (animLotte2_2) {
+              animLotte2_2.stop();
+            }
+            if (animLotte2) {
+              animLotte2.stop();
+              animLotte2.play();
+            }
+            lottie2Play = true;
+            lottie2_2Play = false;
+          }
         }
         $('.calc-page__frontend-dev').removeClass('active');
         if (currentWhat) {

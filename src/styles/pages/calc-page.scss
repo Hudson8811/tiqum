@@ -747,28 +747,6 @@
 		&--animation {
 			position: relative;
 			display: block;
-			width: 594px;
-			height: 320px;
-			@media (max-width: 1439px) {
-				width: vw0(477);
-				height: vw0(256);
-			}
-			@media (max-width: 1300px) {
-				width: 332px;
-				height: 179px;
-			}
-			@media (max-width: 1023px) {
-				width: vw(332);
-				height:vw(179);
-			}
-			@media (max-width: 767px) {
-				width: vw2(338);
-				height: vw2(182);
-			}
-			@media (max-width: 767px) {
-				width: 280px;
-				height: 150px;
-			}
 			img {
 				position: relative;
 				display: block;
@@ -776,13 +754,62 @@
 				height: 100%;
 			}
 			.lotte{
-				width:100%;
-				height:100%;
 				display:block;
 				overflow: hidden;
 				transform: translate3d(0,0,0);
 				text-align: center;
 				opacity: 1;
+				width: 239px;
+				height: 152px;
+				@media (max-width: 1439px) {
+					width: vw0(239);
+					height: vw0(152);
+				}
+				@media (max-width: 1300px) {
+					width: 239px;
+					height: 152px;
+				}
+				@media (max-width: 1023px) {
+					width: vw(239);
+					height:vw(152);
+				}
+				@media (max-width: 767px) {
+					width: vw2(239);
+					height: vw2(152);
+				}
+				@media (max-width: 767px) {
+					width: vw(239,320);
+					height: vw(152,320);
+				}
+			}
+			.lotte{
+				display:block;
+				overflow: hidden;
+				transform: translate3d(0,0,0);
+				text-align: center;
+				opacity: 1;
+				width: 594px;
+				height: 320px;
+				@media (max-width: 1439px) {
+					width: vw0(477);
+					height: vw0(256);
+				}
+				@media (max-width: 1300px) {
+					width: 332px;
+					height: 179px;
+				}
+				@media (max-width: 1023px) {
+					width: vw(332);
+					height:vw(179);
+				}
+				@media (max-width: 767px) {
+					width: vw2(338);
+					height: vw2(182);
+				}
+				@media (max-width: 767px) {
+					width: vw(280,320);
+					height: vw(150,320);
+				}
 			}
 		}
 		@media (max-width: 767px) {
