@@ -313,6 +313,7 @@
 					}					
 				}
 			}
+
 		}
 		&--whatLaunching {
 			.calc-page__underBlok {
@@ -380,6 +381,7 @@
 					font-size: 4.375vw;
 				}
 			}
+
 		}
 		&--text {
 			padding-bottom: 150px;
@@ -489,6 +491,11 @@
 					max-width: 437px;
 				}
 			}
+		}
+
+
+		&.hidden{
+			display: none;
 		}
 
 	}
@@ -767,6 +774,15 @@
 				display: block;
 				width: 100%;
 				height: 100%;
+			}
+			.lotte{
+				width:100%;
+				height:100%;
+				display:block;
+				overflow: hidden;
+				transform: translate3d(0,0,0);
+				text-align: center;
+				opacity: 1;
 			}
 		}
 		@media (max-width: 767px) {
@@ -1166,7 +1182,7 @@
 		}
 	}
 
-	&__x2{
+	&__frontend-dev{
 		&:not(.active){
 			display: none;
 		}

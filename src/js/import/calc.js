@@ -54,8 +54,9 @@
             'UX Architect',
             'UI designer',
             'Backend Developer',
-            'Frontend Developer'
         ],
+        'Веб-сервис' : 'Frontend Developer',
+        'Мобильное приложение' : '2x mobile Frontend Developer',
         'add' : {
             'Quality Assurance' : 'QA Engineer',
             'Автотестирование' : 'Тестировщик',
@@ -277,7 +278,11 @@
                 secondBlockElement.addClass('active');
             });
         }
-        $('.calc-page__footer').addClass('active');
+        if (service === 0){
+
+        } else {
+            $('.calc-page__footer').addClass('active');
+        }
 
         calcFinal(selectedService);
     }
@@ -309,22 +314,48 @@
 
                 let currentWhat;
 
+
                 if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
-                    $('.calc-page__x2').addClass('active');
                     currentWhat = 'all';
-                } else {
-                    $('.calc-page__x2').removeClass('active');
                 }
 
                 if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length === 1){
                     currentWhat = jsonArray['what'][0];
                 }
 
+                $('.calc-page__frontend-dev').removeClass('active');
                 if (currentWhat){
+                    $('.calc-page__serviceBlock[data-service='+service+']')
+                        .find('.calc-page__block--team ,.calc-page__block--Additionally').removeClass('hidden');
+                    $('.calc-page__footer').addClass('active');
+
                     totalTime = mvpPrices[currentWhat]['time'];
                     totalPrice = mvpPrices[currentWhat]['mainPrice'];
                     let tempArray = [...mvpStaff['main']];
                     teamArray = tempArray;
+
+                    if (currentWhat === 'Веб-сервис'){
+                        if (mvpStaff.hasOwnProperty(currentWhat)){
+                            teamArray.push(mvpStaff[currentWhat]);
+                        }
+                        $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
+                    } else if (currentWhat === 'Мобильное приложение') {
+                        if (mvpStaff.hasOwnProperty(currentWhat)){
+                            teamArray.push(mvpStaff[currentWhat]);
+                        }
+                        $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
+                        count++;
+                    } else {
+                        if (mvpStaff.hasOwnProperty( 'Веб-сервис')){
+                            teamArray.push(mvpStaff[ 'Веб-сервис']);
+                        }
+                        if (mvpStaff.hasOwnProperty( 'Мобильное приложение')){
+                            teamArray.push(mvpStaff[ 'Мобильное приложение']);
+                        }
+                        $('.calc-page__frontend-dev').addClass('active');
+                        count++;
+                    }
+
                     if (jsonArray.hasOwnProperty('add')){
                         jsonArray['add'].forEach(function (value){
                             if (mvpPrices[currentWhat]['add'].hasOwnProperty(value)){
@@ -337,16 +368,8 @@
 
                         });
                     }
-                    count = teamArray.length;
-                    if (currentWhat === 'all'){
-                        for (var i = 0; i < teamArray.length; i++) {
-                            if (teamArray[i] === 'Frontend Developer') {
-                                teamArray[i] = '2x Frontend Developer';
-                                break;
-                            }
-                        }
-                        count++;
-                    }
+                    count += teamArray.length;
+
                     for (var key in mvpPrices[currentWhat]['add']) {
                         $('.calc-page__serviceBlock[data-service='+service+'] input[name="add[]"][value="'+key+'"]')
                             .closest('.calc-page__underBlok').find('.calc-page__underBlok--cost')
@@ -354,6 +377,9 @@
                     }
                 } else {
                     $('.calc-page__serviceBlock[data-service='+service+'] .calc-page__underBlok--cost').text('+0 ₽')
+                    $('.calc-page__serviceBlock[data-service='+service+']')
+                        .find('.calc-page__block--team ,.calc-page__block--Additionally').addClass('hidden');
+                    $('.calc-page__footer').removeClass('active');
                 }
 
                 jsonArray['team'] = teamArray;
