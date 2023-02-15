@@ -922,14 +922,6 @@
 				display: none;
 			}
 		}
-
-		&.js-calc-allServices{
-			opacity: 0.4;
-			&:hover{
-				color: #0047FF;
-				opacity: 1;
-			}
-		}
 		@media (max-width: 1439px) {
 			max-width: 240px;
 		}
@@ -939,6 +931,20 @@
 		@media (max-width: 767px) {
 			max-width: 39.63020833333333vw;
 		}
+		&.js-calc-allServices{
+			color: #0047FF;
+			max-width: 380px;
+			@media (max-width: 1439px) {
+				max-width: 165px;
+			}
+			@media (max-width: 1023px) {
+				max-width: 17vw;
+			}
+			@media (max-width: 767px) {
+				max-width: 100%;
+			}
+		}
+
 
 	}
 	&--subtitle {

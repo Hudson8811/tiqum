@@ -9422,13 +9422,6 @@ summary {
     display: none;
   }
 }
-.calc-page--text.js-calc-allServices {
-  opacity: 0.4;
-}
-.calc-page--text.js-calc-allServices:hover {
-  color: #0047FF;
-  opacity: 1;
-}
 @media (max-width: 1439px) {
   .calc-page--text {
     max-width: 240px;
@@ -9442,6 +9435,25 @@ summary {
 @media (max-width: 767px) {
   .calc-page--text {
     max-width: 39.6302083333vw;
+  }
+}
+.calc-page--text.js-calc-allServices {
+  color: #0047FF;
+  max-width: 380px;
+}
+@media (max-width: 1439px) {
+  .calc-page--text.js-calc-allServices {
+    max-width: 165px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page--text.js-calc-allServices {
+    max-width: 17vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page--text.js-calc-allServices {
+    max-width: 100%;
   }
 }
 .calc-page--subtitle {
