@@ -278,9 +278,7 @@
                 secondBlockElement.addClass('active');
             });
         }
-        if (service === 0){
-
-        } else {
+        if (service !== 0){
             $('.calc-page__footer').addClass('active');
         }
 
@@ -310,6 +308,15 @@
                         jsonArray[name].push(value);
                     }
                 });
+
+                if (animLotte1){
+                    animLotte1.stop();
+                    animLotte1.play();
+                }
+                if (animLotte2){
+                    animLotte2.stop();
+                    animLotte2.play();
+                }
 
 
                 let currentWhat;

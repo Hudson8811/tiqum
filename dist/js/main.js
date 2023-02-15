@@ -533,7 +533,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         secondBlockElement.addClass('active');
       });
     }
-    if (service === 0) {} else {
+    if (service !== 0) {
       $('.calc-page__footer').addClass('active');
     }
     calcFinal(selectedService);
@@ -560,6 +560,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             jsonArray[name].push(value);
           }
         });
+        if (animLotte1) {
+          animLotte1.stop();
+          animLotte1.play();
+        }
+        if (animLotte2) {
+          animLotte2.stop();
+          animLotte2.play();
+        }
         var currentWhat;
         var mvpCount = 7;
         if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
