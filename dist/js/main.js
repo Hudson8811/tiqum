@@ -561,6 +561,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           }
         });
         var currentWhat;
+        var mvpCount = 7;
         if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
           currentWhat = 'all';
         }
@@ -580,12 +581,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
               teamArray.push(mvpStaff[currentWhat]);
             }
             $('.calc-page__frontend-dev[data-type="' + currentWhat + '"]').addClass('active');
+            mvpCount = 7;
           } else if (currentWhat === 'Мобильное приложение') {
             if (mvpStaff.hasOwnProperty(currentWhat)) {
               teamArray.push(mvpStaff[currentWhat]);
             }
             $('.calc-page__frontend-dev[data-type="' + currentWhat + '"]').addClass('active');
             count++;
+            mvpCount = 8;
           } else {
             if (mvpStaff.hasOwnProperty('Веб-сервис')) {
               teamArray.push(mvpStaff['Веб-сервис']);
@@ -595,7 +598,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             }
             $('.calc-page__frontend-dev').addClass('active');
             count++;
+            mvpCount = 9;
           }
+          $('.js-mvp-count').text(mvpCount);
           if (jsonArray.hasOwnProperty('add')) {
             jsonArray['add'].forEach(function (value) {
               if (mvpPrices[currentWhat]['add'].hasOwnProperty(value)) {

@@ -314,6 +314,8 @@
 
                 let currentWhat;
 
+                let mvpCount = 7;
+
 
                 if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
                     currentWhat = 'all';
@@ -339,12 +341,14 @@
                             teamArray.push(mvpStaff[currentWhat]);
                         }
                         $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
+                        mvpCount = 7;
                     } else if (currentWhat === 'Мобильное приложение') {
                         if (mvpStaff.hasOwnProperty(currentWhat)){
                             teamArray.push(mvpStaff[currentWhat]);
                         }
                         $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
                         count++;
+                        mvpCount = 8;
                     } else {
                         if (mvpStaff.hasOwnProperty( 'Веб-сервис')){
                             teamArray.push(mvpStaff[ 'Веб-сервис']);
@@ -354,7 +358,10 @@
                         }
                         $('.calc-page__frontend-dev').addClass('active');
                         count++;
+                        mvpCount = 9;
                     }
+
+                    $('.js-mvp-count').text(mvpCount);
 
                     if (jsonArray.hasOwnProperty('add')){
                         jsonArray['add'].forEach(function (value){
