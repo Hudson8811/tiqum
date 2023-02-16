@@ -10153,10 +10153,10 @@ summary {
   color: #2A2A2A;
 }
 .footer.footer--light .wewillfind-footer__location {
-  color: rgba(42, 42, 42, 0.21);
+  color: #2A2A2A;
 }
 .footer.footer--light .wewillfind-footer__location span {
-  color: #2A2A2A;
+  color: rgba(42, 42, 42, 0.21);
 }
 .footer.footer--light .form-wewillfind-footer__text {
   color: #2A2A2A;
