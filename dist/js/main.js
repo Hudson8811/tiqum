@@ -328,7 +328,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function ($) {
   var serviceSelect = false;
   var selectedService;
-  var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
+  var serviceList = ['Запуск MVP', 'Продуктовая команда', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса'];
   var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>', 'Стоимость проектирования <span><br>сервиса</span>'];
   var finalBlocks = [[{
     class: 'js-calc-finalTime',
