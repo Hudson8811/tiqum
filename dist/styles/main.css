@@ -1366,6 +1366,20 @@ body.body-overflow {
 .items-projects .item-projects-big {
   flex: 1 1 100%;
 }
+.items-projects .item-projects-big .item-projects__img .big {
+  display: block;
+}
+.items-projects .item-projects-big .item-projects__img .small {
+  display: none;
+}
+@media (max-width: 767px) {
+  .items-projects .item-projects-big .item-projects__img .big {
+    display: none;
+  }
+  .items-projects .item-projects-big .item-projects__img .small {
+    display: block;
+  }
+}
 .items-projects .item-projects-content-grey {
   background-color: #f4eaea;
 }
@@ -1478,6 +1492,17 @@ body.body-overflow {
 }
 .fancybox__container {
   z-index: 99999;
+}
+
+.captcha {
+  width: 100%;
+}
+.captcha .g-recaptcha div {
+  margin-top: 45px;
+}
+
+.grecaptcha-badge {
+  display: none !important;
 }
 
 .mt30, .right-content-blog .right-content-blog__img + .right-content-blog__img, .page-header-big .page-header__date, .text-style p:not(:first-child), .right-content-blog p:not(:first-child), .portfolio .project-portfolio__item-right p:not(:first-child), .text-style ul:not(:first-child), .right-content-blog ul:not(:first-child), .portfolio .project-portfolio__item-right ul:not(:first-child), .text-style ol:not(:first-child), .right-content-blog ol:not(:first-child), .portfolio .project-portfolio__item-right ol:not(:first-child), .paragraph--type--photos + .paragraph--type--photos, .portfolio .project-portfolio__item-img + .paragraph--type--photos, .portfolio .project-portfolio__item-img + .project-portfolio__item-img, .paragraph--type--photos + .project-portfolio__item-img {
@@ -3667,6 +3692,16 @@ summary {
   color: white;
   flex: 0 1 100%;
 }
+.form-wewillfind-footer .messages {
+  padding: 0;
+}
+.form-wewillfind-footer .messages .messages__title, .form-wewillfind-footer .messages .messages__content {
+  margin-left: 0;
+  color: red;
+}
+.form-wewillfind-footer .messages .button--dismiss {
+  display: none;
+}
 .form-wewillfind-footer__error {
   font-family: "Suisse Intl";
   font-style: normal;
@@ -3904,6 +3939,9 @@ summary {
 }
 .footer--light .form-wewillfind-footer__success {
   color: inherit;
+}
+.webform-submission-form .form-wewillfind-footer.submited {
+  margin-top: 70px;
 }
 .form-wewillfind-footer.submited > *:not(.form-wewillfind-footer__success) {
   opacity: 0;

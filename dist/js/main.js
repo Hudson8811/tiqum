@@ -485,7 +485,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     finalBlocks[service].forEach(function (elem) {
       htmlFinal += replacePlaceholders(finalBlockHtml, elem);
     });
-    $('.js-calc-finalBlocks').html(htmlFinal);
+    $('.js-calc-finalBlocks .finalCost__block:not(.finalCost__block--subtitle)').remove();
+    $('.js-calc-finalBlocks').prepend(htmlFinal);
     $('.js-calc-formTitle').html(formTitles[service]);
     var firstBlockElement = $('.calc-page__serviceBlock.active');
     var secondBlockElement = $('.calc-page__serviceBlock[data-service=' + service + ']');
