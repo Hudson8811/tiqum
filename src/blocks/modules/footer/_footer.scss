@@ -314,6 +314,17 @@
 		flex: 0 1 100%;
 	}
 
+	.messages {
+		padding: 0;
+		.messages__title, .messages__content {
+			margin-left: 0;
+			color: red;
+		}
+		.button--dismiss {
+			display: none;
+		}
+	}
+
 	&__error{
 		font-family: 'Suisse Intl';
 		font-style: normal;
@@ -533,6 +544,10 @@
 	}
 
 	&.submited{
+		.webform-submission-form & {
+			margin-top: 70px;
+		}
+
 		> *:not(.form-wewillfind-footer__success){
 			opacity: 0;
 			visibility: hidden;
