@@ -8,7 +8,7 @@
 		font-size: 18px;
 		line-height: 21px;
 		color: #000000;
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			font-size: 14px;
 			line-height: 16px;
 
@@ -58,7 +58,7 @@
 			font-size: 36px;
 			margin-top: 20px;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			font-size: 28px;
 			line-height: 32px;
 
@@ -90,7 +90,7 @@
 			@media (max-width: 1919px){
 				max-width: 610px;
 			}
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				max-width: 530px;
 			}
 			@media (max-width: 1024px){
@@ -110,7 +110,7 @@
 	@media (max-width: 1919px){
 		margin-top: 165px;
 	}
-	@media (max-width: 1440px){
+	@media (max-width: 1439px){
 		margin-top: 130px;
 	}
 	@media (max-width: 1024px){
@@ -148,22 +148,14 @@
 			flex-wrap: nowrap!important;
 			align-items: flex-start;
 			padding: 2.930vw 0;
-			border-top: 0.098vw solid rgba($color: #000000, $alpha: 0.2);
 		}
 		@media (max-width: 767px){
 			flex-wrap: wrap !important;
 			padding: 4vw 0;
-			border-top: 0.267vw solid rgba($color: #000000, $alpha: 0.2);
 		}
 		&.js-opacity-item {
 			border-top: 1px solid rgba($color: #000000, $alpha: 1);
 			opacity: 0.2;
-			@media (max-width: 1024px){
-				border-top: 0.098vw solid rgba($color: #000000, $alpha: 1);
-			}
-			@media (max-width: 767px){
-				border-top: 0.267vw solid rgba($color: #000000, $alpha: 1);
-			}
 		}
 		&.js-active-item {
 			color: #000000;
@@ -212,7 +204,7 @@
 		@media (max-width: 1919px){
 			padding: 8px 12px;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			font-size: 14px;
 			line-height: 16px;
 
@@ -233,19 +225,19 @@
 			margin-left: 1.600vw;
 		}
 		&-hide {
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				display: none;
 			}
 		}
 		&-show {
 			display: none;
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				display: block;
 			}
 		}
 		&-show-more {
 			display: none;
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				display: block;
 			}
 		}
@@ -272,7 +264,7 @@
 			font-size: 32px;
 			line-height: 126.8%;
 
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				font-size: 24px;
 			}
 			@media (max-width: 1024px){
@@ -296,7 +288,7 @@
 				min-width: 21px;
 				min-height: 21px;
 			}
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				display: none;
 			}
 			&-gold {
@@ -321,7 +313,7 @@
 			font-size: 18px;
 			line-height: 21px;
 
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				font-size: 14px;
 				line-height: 16px;
 			}

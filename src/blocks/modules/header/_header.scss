@@ -26,7 +26,7 @@
 		@media (max-width: 1919px){
 			padding: 40px 0;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			padding: 25px 0;
 		}
 		@media (max-width: 1024px) {
@@ -52,7 +52,7 @@
 				width: 90px;
 				height: 20px;
 			}
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				width: 80px;
 				height: 18px;
 			}
@@ -78,7 +78,7 @@
 
 	&__burger {
 		display: none;
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			cursor: pointer;
 			margin-left: 150px;
 			font-family: 'Suisse Intl';
@@ -128,7 +128,7 @@
 				}
 			}
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			margin-left: 100px;
 			span {
 				&:nth-child(2){
@@ -187,7 +187,7 @@
 				font-size: 14px;
 				line-height: 16px;
 			}
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				flex: 0 1 65%;
 				font-size: 14px;
 				line-height: 16px;
@@ -218,7 +218,7 @@
 				@media (max-width: 1919px){
 					margin-left: 40px;
 				}
-				@media (max-width: 1440px){
+				@media (max-width: 1439px){
 					margin-left: 55px;
 				}
 				@media (max-width: 1024px) {
@@ -290,7 +290,7 @@
 				@media (max-width: 1919px){
 					margin: 20px 20px 0;
 				}
-				@media (max-width: 1440px){
+				@media (max-width: 1439px){
 					margin: 20px 30px 0;
 				}
 				@media (max-width: 1024px) {
@@ -304,7 +304,7 @@
 					@media (max-width: 1919px) {
 						flex: 0 1 64.2%;
 					}
-					@media (max-width: 1440px) {
+					@media (max-width: 1439px) {
 						flex: 0 1 67%;
 					}
 				}
@@ -330,7 +330,7 @@
 					@media (max-width: 1919px) {
 						flex: 0 1 64.2%;
 					}
-					@media (max-width: 1440px) {
+					@media (max-width: 1439px) {
 						flex: 0 1 67%;
 					}
 				}
@@ -431,7 +431,7 @@
 			margin-left: 9.333vw;
 		}
 		&-hide {
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				display: none;
 			}
 		}
@@ -454,7 +454,7 @@
 	background-color: #2A2A2A;
 	transition: all 0.3s ease 0s;
 	padding: 100px 20px 0;
-	@media (max-width: 1440px){
+	@media (max-width: 1439px){
 		padding: 70px 30px 0;
 	}
 	@media (max-width: 1024px){
@@ -470,16 +470,14 @@
 		justify-content: space-between;
 		height: 100%;
 		padding-top: 30px;
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			padding-top: 15px;
 		}
-		@media (max-width: 1440px){
-			border-top: 0.098vw solid rgba($color: #ffffff, $alpha: 0.2);
+		@media (max-width: 1439px){
 			padding-top: 1.465vw;
 		}
 		@media (max-width: 767px){
 			padding-top: 3.200vw;
-			border-top: 0.267vw solid rgba($color: #ffffff, $alpha: 0.2);
 		}
 	}
 	
