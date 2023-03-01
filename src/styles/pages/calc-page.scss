@@ -348,8 +348,10 @@
 		}
 		.calc-page--twotitle {
 			opacity: 0.4;
+			margin-top: 20px;
 			@media (max-width: 767px) {
 				padding-left: 0;
+				margin-top: vw(10,320);
 				
 			}
 		}

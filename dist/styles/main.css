@@ -8261,10 +8261,12 @@ summary {
 }
 .calc-page .calc-page__block--consulting .calc-page--twotitle {
   opacity: 0.4;
+  margin-top: 20px;
 }
 @media (max-width: 767px) {
   .calc-page .calc-page__block--consulting .calc-page--twotitle {
     padding-left: 0;
+    margin-top: 3.125vw;
   }
 }
 .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--subtitle {
