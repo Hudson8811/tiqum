@@ -339,6 +339,21 @@
 		}
 
 	}
+	.calc-page__block--consulting {
+		.calc-page--subtitle {
+			@media (max-width: 767px) {
+				font-size: vw(16,320);
+			
+			}
+		}
+		.calc-page--twotitle {
+			opacity: 0.4;
+			@media (max-width: 767px) {
+				padding-left: 0;
+				
+			}
+		}
+	}
 	.calc-page__block--text.calc-page__block--Discovery  {
 		.calc-page--subtitle {
 			max-width: 910px;
@@ -683,6 +698,7 @@
 					width: 100%;
 					padding-left: 11.25vw;
 					padding-right: 10px;
+					font-size: vw(20,320);
 				}
 			}
 			.calc-page--treetitle {
@@ -795,8 +811,6 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: row wrap;
-
-
 		@media (max-width: 1024px) {
 			padding-left: 40px;
 			padding-right: 7px;

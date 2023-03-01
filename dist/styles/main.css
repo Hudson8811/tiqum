@@ -8254,6 +8254,19 @@ summary {
 .calc-page__block.hidden {
   display: none;
 }
+@media (max-width: 767px) {
+  .calc-page .calc-page__block--consulting .calc-page--subtitle {
+    font-size: 5vw;
+  }
+}
+.calc-page .calc-page__block--consulting .calc-page--twotitle {
+  opacity: 0.4;
+}
+@media (max-width: 767px) {
+  .calc-page .calc-page__block--consulting .calc-page--twotitle {
+    padding-left: 0;
+  }
+}
 .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--subtitle {
   max-width: 910px;
 }
@@ -8612,6 +8625,7 @@ summary {
     width: 100%;
     padding-left: 11.25vw;
     padding-right: 10px;
+    font-size: 6.25vw;
   }
 }
 .calc-page__underBlok--service .calc-page--treetitle {
