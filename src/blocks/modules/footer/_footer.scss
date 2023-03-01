@@ -82,7 +82,7 @@
 		@media (max-width: 1919px){
 			flex: 0 1 65%;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			flex: 0 1 65%;
 		}
 		@media (max-width: 767px){
@@ -102,7 +102,7 @@
 		grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 		margin-left: -70px;
 		row-gap: 20px;
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			margin-left: -50px;
 		}
 		@media (max-width: 1024px){
@@ -120,7 +120,7 @@
 		}
 		a {
 			margin-left: 70px;
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				margin-left: 50px;
 			}
 			@media (max-width: 1024px){
@@ -237,7 +237,7 @@
 			flex: 0 1 65%;
 			padding-bottom: 130px;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			flex: 0 1 65%;
 			padding-bottom: 100px;
 		}
@@ -257,7 +257,7 @@
 			@media (max-width: 1919px){
 				max-width: 570px;
 			}
-			@media (max-width: 1440px){
+			@media (max-width: 1439px){
 				max-width: 340px;
 			}
 			@media (max-width: 1024px){
@@ -289,7 +289,7 @@
 		margin: 0 -15px;
 		margin-top: 140px;
 	}
-	@media (max-width: 1440px){
+	@media (max-width: 1439px){
 		margin-top: 110px;
 	}
 	@media (max-width: 1024px){
@@ -312,6 +312,17 @@
 	&__result {
 		color: white;
 		flex: 0 1 100%;
+	}
+
+	.messages {
+		padding: 0;
+		.messages__title, .messages__content {
+			margin-left: 0;
+			color: red;
+		}
+		.button--dismiss {
+			display: none;
+		}
 	}
 
 	&__error{
@@ -414,7 +425,7 @@
 				@media (max-width: 1919px){
 					right: 15px;
 				}
-				@media (max-width: 1440px){
+				@media (max-width: 1439px){
 					display: none;
 				}
 				&.active-file {
@@ -462,7 +473,7 @@
 		@media (max-width: 1919px){
 			margin-top: 45px;
 		}
-		@media (max-width: 1440px){
+		@media (max-width: 1439px){
 			margin-top: 40px;
 		}
 		@media (max-width: 1024px){
@@ -533,6 +544,10 @@
 	}
 
 	&.submited{
+		.webform-submission-form & {
+			margin-top: 70px;
+		}
+
 		> *:not(.form-wewillfind-footer__success){
 			opacity: 0;
 			visibility: hidden;
@@ -577,10 +592,11 @@
 
 .calc__link{
 	position: fixed;
-	background: rgba(0, 71, 255, 0.2);
+	background-color: rgba(0, 71, 255, 0.2);
 	backdrop-filter: blur(5.5px);
+	-webkit-backdrop-filter: blur(5.5px);
 	color:#0047FF;
-	bottom:30px;
+	bottom:-125px;
 	font-size: 32px;
 	line-height: 35px;
 	font-family: "Suisse Intl";
@@ -589,4 +605,38 @@
 	padding:30px 70px ;
 	left:35%;
 	margin-left: 9px;
+	z-index: 2;
+	transition: .5s bottom;
+	&-white{
+		background-color: rgba(255, 255, 255, 0.2);
+		color: #fff;
+	}
+	@media (max-width: 1439px){
+		font-size: 24px;
+		line-height: 32px;
+		padding: 24px 20px ;
+	}
+	@media (max-width: 1024px){
+		font-size: 1.7578125vw;
+		line-height: 135%;
+		padding: 1.904296875vw 1.953125vw;
+	}
+	@media (max-width: 767px){
+		font-size: 5vw;
+		padding: 4.6875vw 0;
+		left:0;
+		width:calc(100% - 12.5vw);
+		margin-left: 6.25vw;
+		text-align: center;
+	}
+	&.active{
+		bottom: 30px;
+		@media (max-width: 767px){
+
+			bottom: 6.25vw;
+		}
+	}
+	&.active.hide{
+		bottom:-125px;
+	}
 }

@@ -32,16 +32,3 @@
   @return $temp +'vw';
 }
 
-
-// // @media (max-width: 1023px)  тянем с макета
-// @function vw($px, $resolutiond: 768) {
-// 	$temp: #{math.div($px, $resolutiond) * 100};
-// 	@return $temp +'vw';
-// }
-
-
-// // @media (max-width: 767px) тянем смакета
-// @function vw2($px, $resolutiond: 320) {
-//   $temp: #{math.div($px, $resolutiond) * 100};
-//   @return $temp +'vw';
-// }

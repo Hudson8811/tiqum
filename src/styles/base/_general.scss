@@ -188,7 +188,7 @@ body.body-overflow {
 		line-height: 120%;
 	}
 	@media (max-width: 1024px) {
-		font-size: 3.645vw;
+		font-size: 2.734375vw;
 		line-height: 120%;
 	}
 	@media (max-width: 767px) {
@@ -558,6 +558,20 @@ body.body-overflow {
   .item-projects-big {
     flex: 1 1 100%;
     .item-projects__img {
+      .big {
+        display: block;
+      }
+      .small {
+        display: none;
+      }
+      @media (max-width: 767px) {
+        .big {
+          display: none;
+        }
+        .small {
+          display: block;
+        }
+      }
     }
   }
 
@@ -598,7 +612,7 @@ body.body-overflow {
   flex-wrap: wrap;
 
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     margin-left: -25px;
     margin-bottom: -25px;
   }
@@ -622,7 +636,7 @@ body.body-overflow {
     display: block;
     min-width: calc(16.66% - 34px); //меньше 1/6 не разрешаем
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       margin-left: 25px;
       margin-bottom: 25px;
       min-width: calc(16.66% - 25px); //меньше 1/6 не разрешаем
@@ -688,5 +702,13 @@ body.body-overflow {
   z-index: 99999;
 }
 
+.captcha {
+  width: 100%;
 
-
+  .g-recaptcha div {
+    margin-top: 45px;
+  }
+}
+.grecaptcha-badge {
+  display: none !important;
+}

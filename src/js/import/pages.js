@@ -133,16 +133,17 @@
         $(window).on('scroll', function(){
             let scrollTop = $(window).scrollTop();
             let windowH = $(window).height();
-            if (scrollTop > windowH) {
-                $('.mobile-fixed-bottom').addClass('active');
+            let windowH2 = $(window).height()/2;
+            if (scrollTop > windowH2) {
+                $('.calc__link').addClass('active');
             } else {
-                $('.mobile-fixed-bottom').removeClass('active');
+                $('.calc__link').removeClass('active');
             }
             let formTop = $('#contact-form').offset().top;
             if (scrollTop + windowH > formTop) {
-                $('.mobile-fixed-bottom').addClass('hide');
+                $('.calc__link').addClass('hide');
             } else {
-                $('.mobile-fixed-bottom').removeClass('hide');
+                $('.calc__link').removeClass('hide');
             }
         });
     });
