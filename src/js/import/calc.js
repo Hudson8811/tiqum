@@ -1,4 +1,102 @@
 (function ($) {
+    let serviceSelect = false;
+    let selectedService;
+    let serviceList = [
+        'Запуск MVP',
+        'Цифровая трансформация. Консалтинг',
+        'Проектирование сервиса',
+        'Продуктовая команда'
+    ];
+
+    let formTitles = [
+        'Срок и стоимость <span><br>запуска вашего MVP</span>',
+        'Стоимость продуктовой <span><br>команды</span>',
+        'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>',
+        'Стоимость проектирования <span><br>сервиса</span>'
+    ];
+
+    let finalBlocks = [
+        [
+            {
+                class: 'js-calc-finalTime',
+                text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора',
+            },
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+            },
+        ],
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая стоимость команды с учетом ваших предпочтений',
+            },
+        ],
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+            },
+        ],
+        [
+            {
+                class: 'js-calc-finalPrice',
+                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+            },
+        ]
+    ];
+
+    let mvpStaff = {
+        'main': [
+            'Product Owner',
+            'Project Manager',
+            'System Analytics',
+            'UX Architect',
+            'UI designer',
+            'Backend Developer',
+            'Frontend Developer'
+        ],
+        'add' : {
+            'Quality Assurance' : 'QA Engineer',
+            'Автотестирование' : 'Тестировщик',
+            'Инфраструктура' : 'DevOps',
+        }
+
+    };
+
+    let mvpPrices = {
+        'Веб-сервис': {
+            'time': 4.5,
+            'mainPrice': 6560400,
+            'add': {
+                'Quality Assurance': 630000,
+                'Автотестирование': 1176000,
+                'Инфраструктура': 756000,
+                'Промо-сайт': 250000
+            }
+        },
+        'Мобильное приложение': {
+            'time': 5.5,
+            'mainPrice': 8752800,
+            'add': {
+                'Quality Assurance': 882000,
+                'Автотестирование': 588000,
+                'Инфраструктура': 882000,
+                'Промо-сайт': 250000
+            }
+        },
+        'all': {
+            'time': 5.5,
+            'mainPrice': 11029200,
+            'add': {
+                'Quality Assurance': 1134000,
+                'Автотестирование': 1176000,
+                'Инфраструктура': 1260000,
+                'Промо-сайт': 250000
+            }
+        }
+    };
+
 
     $('.calc-page__underBlok__input:checkbox').change(function(){
         if($(this).is(":checked")) {
@@ -41,53 +139,7 @@
     "</div>";
 
 
-    let serviceSelect = false;
-    let selectedService;
-    let serviceList = [
-        'Запуск MVP',
-        'Цифровая трансформация. Консалтинг',
-        'Проектирование сервиса',
-        'Продуктовая команда'
-    ];
 
-
-    let formTitles = [
-        'Срок и стоимость <span><br>запуска вашего MVP</span>',
-        'Стоимость продуктовой <span><br>команды</span>',
-        'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>',
-        'Стоимость проектирования <span><br>сервиса</span>'
-    ];
-
-    let finalBlocks = [
-        [
-            {
-                class: 'js-calc-finalTime',
-                text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора',
-            },
-            {
-                class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
-            },
-        ],
-        [
-            {
-                class: 'js-calc-finalPrice',
-                text: 'Итоговая стоимость команды с учетом ваших предпочтений',
-            },
-        ],
-        [
-            {
-                class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
-            },
-        ],
-        [
-            {
-                class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
-            },
-        ]
-    ];
 
 
 
@@ -238,13 +290,13 @@
         let totalTime = 0;
         let timeBlock;
         let priceBlock;
+        let count = 0;
+        let teamArray = [];
         switch(service) {
             case 0:
                 timeBlock = finalBlocks[service][0]['class'];
                 priceBlock = finalBlocks[service][1]['class'];
                 $('.calc-page__serviceBlock[data-service='+service+']').find('input:checked').each(function (){
-                    totalPrice += parseInt($(this).data('price'));
-                    totalTime += parseFloat($(this).data('time'));
                     let name = $(this).attr('name').replace(/[^a-zA-Z]+/g, '');
                     let value = $(this).val();
                     if (!jsonArray.hasOwnProperty(name)) {
@@ -253,29 +305,81 @@
                         jsonArray[name].push(value);
                     }
                 });
-                jsonArray['totalPrice'] = totalPrice;
-                jsonArray['totalTime'] = totalTime;
+
+
+                let currentWhat;
+
                 if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
                     $('.calc-page__x2').addClass('active');
+                    currentWhat = 'all';
                 } else {
                     $('.calc-page__x2').removeClass('active');
                 }
+
+                if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length === 1){
+                    currentWhat = jsonArray['what'][0];
+                }
+
+                if (currentWhat){
+                    totalTime = mvpPrices[currentWhat]['time'];
+                    totalPrice = mvpPrices[currentWhat]['mainPrice'];
+                    let tempArray = [...mvpStaff['main']];
+                    teamArray = tempArray;
+                    if (jsonArray.hasOwnProperty('add')){
+                        jsonArray['add'].forEach(function (value){
+                            if (mvpPrices[currentWhat]['add'].hasOwnProperty(value)){
+                                totalPrice += mvpPrices[currentWhat]['add'][value];
+                            }
+
+                            if (mvpStaff['add'].hasOwnProperty(value)){
+                                teamArray.push(mvpStaff['add'][value])
+                            }
+
+                        });
+                    }
+                    count = teamArray.length;
+                    if (currentWhat === 'all'){
+                        for (var i = 0; i < teamArray.length; i++) {
+                            if (teamArray[i] === 'Frontend Developer') {
+                                teamArray[i] = '2x Frontend Developer';
+                                break;
+                            }
+                        }
+                        count++;
+                    }
+                    for (var key in mvpPrices[currentWhat]['add']) {
+                        $('.calc-page__serviceBlock[data-service='+service+'] input[name="add[]"][value="'+key+'"]')
+                            .closest('.calc-page__underBlok').find('.calc-page__underBlok--cost')
+                            .text('+' + splitNumberIntoGroups(mvpPrices[currentWhat]['add'][key]) + ' ₽');
+                    }
+                } else {
+                    $('.calc-page__serviceBlock[data-service='+service+'] .calc-page__underBlok--cost').text('+0 ₽')
+                }
+
+                jsonArray['team'] = teamArray;
+                jsonArray['teamTotal'] = count;
+                jsonArray['totalPrice'] = totalPrice;
+                jsonArray['totalTime'] = totalTime;
 
                 $('.'+timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
                 break;
             case 1:
-                let count = 0;
+                let manArray = {};
                 priceBlock = finalBlocks[service][0]['class'];
                 $('.calc-page__serviceBlock[data-service="'+service+'"] input').each(function () {
                     let value = parseInt($(this).val());
                     count += value;
                     totalPrice += parseInt($(this).data('price')) * value;
                     let name = $(this).data('title');
-                    if (!jsonArray.hasOwnProperty(name)) {
-                        jsonArray[name] = value;
+                    if (!manArray.hasOwnProperty(name)) {
+                        manArray[name] = value;
+                    } else {
+                        manArray[name].push(value);
                     }
                 });
+                jsonArray['team'] = manArray;
+                jsonArray['teamTotal'] = count;
                 jsonArray['totalPrice'] = totalPrice;
                 $('.js-calc-manCount').text(count);
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
@@ -285,7 +389,6 @@
                 priceBlock = finalBlocks[service][0]['class'];
                 totalPrice = parseInt($('.calc-page__serviceBlock[data-service="'+service+'"] input[name="fixedPrice"]').val());
                 jsonArray['totalPrice'] = totalPrice;
-                $('.js-calc-manCount').text(count);
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
                 break;
             default:
@@ -293,7 +396,7 @@
         }
         let json = JSON.stringify(jsonArray);
 
-        $('.js-calc-formInput').val(json);
+        $('input[name="calc_info"]').val(json);
     }
 
 

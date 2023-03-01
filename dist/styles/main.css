@@ -3288,6 +3288,7 @@ summary {
   background-color: #2A2A2A;
   padding: 30px 0 0;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1919px) {
   .footer {
@@ -3891,7 +3892,6 @@ summary {
   font-family: "Suisse Intl";
   pointer-events: none;
   color: #ffffff;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -3901,6 +3901,9 @@ summary {
 }
 .form-wewillfind-footer__success span {
   opacity: 0.2;
+}
+.footer--light .form-wewillfind-footer__success {
+  color: inherit;
 }
 .form-wewillfind-footer.submited > *:not(.form-wewillfind-footer__success) {
   opacity: 0;
@@ -3939,6 +3942,22 @@ summary {
 }
 .mobile-fixed-bottom.hide {
   opacity: 0;
+}
+
+.calc__link {
+  position: fixed;
+  background: rgba(0, 71, 255, 0.2);
+  backdrop-filter: blur(5.5px);
+  color: #0047FF;
+  bottom: 30px;
+  font-size: 32px;
+  line-height: 35px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  padding: 30px 70px;
+  left: 35%;
+  margin-left: 9px;
 }
 
 .hero {
@@ -8393,20 +8412,20 @@ summary {
 }
 @media (max-width: 1023px) {
   .calc-page .h1, .calc-page .general-title {
-    font-size: 40px;
+    font-size: 3.90625vw;
     line-height: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page .h1, .calc-page .general-title {
     font-size: 7.03125vw;
     line-height: 95%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .h1, .calc-page .general-title {
-    font-size: 24px;
-    line-height: 95.8%;
+    font-size: 7.5vw;
+    line-height: 95%;
   }
 }
 @media (max-width: 1919px) {
@@ -8429,7 +8448,13 @@ summary {
 }
 @media (max-width: 767px) {
   .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
-    font-size: 2.6041666667vw;
+    font-size: 3.6458333333vw;
+    line-height: 110%;
+  }
+}
+@media (max-width: 429px) {
+  .calc-page .h2, .calc-page .text-style h2, .text-style .calc-page h2, .calc-page .portfolio .project-portfolio__title, .portfolio .calc-page .project-portfolio__title, .calc-page .portfolio .project-portfolio .field--name-field-title, .portfolio .project-portfolio .calc-page .field--name-field-title, .calc-page .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .calc-page h2, .calc-page .right-content-blog h2, .right-content-blog .calc-page h2 {
+    font-size: 6.25vw;
     line-height: 110%;
   }
 }
@@ -8456,20 +8481,20 @@ summary {
 }
 @media (max-width: 1023px) {
   .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
-    font-size: 24px;
+    font-size: 2.34375vw;
     line-height: 110%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
-    font-size: 24px;
+    font-size: 3.125vw;
     line-height: 110%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .h3, .calc-page .text-style h3, .text-style .calc-page h3, .calc-page .text-style h4, .text-style .calc-page h4, .calc-page .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page h3, .calc-page .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page h4, .calc-page .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page p, .calc-page .portfolio .project-portfolio__item-title, .portfolio .calc-page .project-portfolio__item-title, .calc-page .right-content-blog h3, .right-content-blog .calc-page h3, .calc-page .right-content-blog h4, .right-content-blog .calc-page h4 {
-    font-size: 16px;
-    line-height: 120%;
+    font-size: 5vw;
+    line-height: 110%;
   }
 }
 .calc-page .b24 {
@@ -8486,7 +8511,7 @@ summary {
     line-height: 110%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .b24 {
     font-size: 16px;
     line-height: 120%;
@@ -8531,13 +8556,13 @@ summary {
     min-height: 300px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calc-page .page-header {
     padding-top: 15px;
     min-height: 208px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page .page-header {
     padding-top: 30px;
     padding-bottom: 90px;
@@ -8545,7 +8570,7 @@ summary {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .page-header {
     padding-top: 10px;
     padding-bottom: 65px;
@@ -8580,12 +8605,12 @@ summary {
     padding-left: 40px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .calc-page__underBlok {
     padding-bottom: 60px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--checkbox .calc-page__underBlok {
     padding-bottom: 40px;
   }
@@ -8598,12 +8623,12 @@ summary {
     flex: 1 0 auto;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .calc-page--subtitle {
     padding-left: 30px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--checkbox .calc-page--subtitle {
     margin-bottom: 0;
   }
@@ -8614,12 +8639,12 @@ summary {
 .calc-page__block--checkbox .calc-page--twotitle {
   opacity: 0.4;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .calc-page--twotitle {
     padding-left: 30px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--checkbox .calc-page--twotitle {
     margin-bottom: 5.2083333333vw;
   }
@@ -8629,25 +8654,25 @@ summary {
   visibility: hidden;
   opacity: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .calc-page--treetitle {
     padding-left: 30px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--checkbox .calc-page--treetitle {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .flex-lr__left .calc-page__underBlok {
     min-height: auto;
     padding-bottom: 20px;
     border-top: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--checkbox .flex-lr__left .calc-page__underBlok {
     padding-bottom: 10px;
   }
@@ -8667,7 +8692,7 @@ summary {
     padding-bottom: 20px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--team .flex-lr__left .calc-page__underBlok {
     min-height: 100px;
     align-items: flex-start;
@@ -8675,7 +8700,7 @@ summary {
     padding-bottom: 10px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--team .flex-lr__left .calc-page__underBlok .calc-page--text.h3, .calc-page__block--team .flex-lr__left .calc-page__underBlok .text-style h3.calc-page--text, .text-style .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .text-style h4.calc-page--text, .text-style .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--team .flex-lr__left .calc-page__underBlok p.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page__block--team .flex-lr__left .calc-page__underBlok .calc-page--text.project-portfolio__item-title, .calc-page__block--team .flex-lr__left .calc-page__underBlok .right-content-blog h3.calc-page--text, .right-content-blog .calc-page__block--team .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page__block--team .flex-lr__left .calc-page__underBlok .right-content-blog h4.calc-page--text, .right-content-blog .calc-page__block--team .flex-lr__left .calc-page__underBlok h4.calc-page--text {
     max-width: 200px;
   }
@@ -8693,12 +8718,12 @@ summary {
     min-height: 110px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--team .calc-page__underBlok {
     min-height: 80px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--team .calc-page__underBlok {
     min-height: 62px;
   }
@@ -8719,17 +8744,17 @@ summary {
 .calc-page__block--whatLaunching .calc-page__underBlok {
   padding-bottom: 60px;
 }
-@media (max-width: 576px) {
-  .calc-page__block--whatLaunching .h3, .calc-page__block--whatLaunching .text-style h3, .text-style .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .text-style h4, .text-style .calc-page__block--whatLaunching h4, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching h4, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--whatLaunching p, .calc-page__block--whatLaunching .portfolio .project-portfolio__item-title, .portfolio .calc-page__block--whatLaunching .project-portfolio__item-title, .calc-page__block--whatLaunching .right-content-blog h3, .right-content-blog .calc-page__block--whatLaunching h3, .calc-page__block--whatLaunching .right-content-blog h4, .right-content-blog .calc-page__block--whatLaunching h4 {
-    font-size: 20px;
+@media (max-width: 429px) {
+  .calc-page__block--whatLaunching .flex-lr__right .h3, .calc-page__block--whatLaunching .flex-lr__right .text-style h3, .text-style .calc-page__block--whatLaunching .flex-lr__right h3, .calc-page__block--whatLaunching .flex-lr__right .text-style h4, .text-style .calc-page__block--whatLaunching .flex-lr__right h4, .calc-page__block--whatLaunching .flex-lr__right .portfolio .project-portfolio__item-right h3, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching .flex-lr__right h3, .calc-page__block--whatLaunching .flex-lr__right .portfolio .project-portfolio__item-right h4, .portfolio .project-portfolio__item-right .calc-page__block--whatLaunching .flex-lr__right h4, .calc-page__block--whatLaunching .flex-lr__right .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__block--whatLaunching .flex-lr__right p, .calc-page__block--whatLaunching .flex-lr__right .portfolio .project-portfolio__item-title, .portfolio .calc-page__block--whatLaunching .flex-lr__right .project-portfolio__item-title, .calc-page__block--whatLaunching .flex-lr__right .right-content-blog h3, .right-content-blog .calc-page__block--whatLaunching .flex-lr__right h3, .calc-page__block--whatLaunching .flex-lr__right .right-content-blog h4, .right-content-blog .calc-page__block--whatLaunching .flex-lr__right h4 {
+    font-size: 6.25vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--Additionally .calc-page__underBlok--left {
     width: 100%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--Additionally .calc-page__underBlok {
     padding-bottom: 60;
   }
@@ -8741,13 +8766,13 @@ summary {
   font-size: 24px;
   line-height: 32px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--Additionally .calc-page--subtitle.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page--subtitle, .right-content-blog__coment .calc-page__block--Additionally span.calc-page--subtitle, .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
     width: 100%;
     max-width: 100%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--Additionally .calc-page--subtitle.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page--subtitle, .right-content-blog__coment .calc-page__block--Additionally span.calc-page--subtitle, .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
     font-size: 16px;
     line-height: 22px;
@@ -8756,14 +8781,14 @@ summary {
 .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
   white-space: nowrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
     text-align: right;
     width: 100%;
     display: block;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--Additionally .calc-page__underBlok--cost.b1, .calc-page__block--Additionally .right-content-blog__coment span.calc-page__underBlok--cost, .right-content-blog__coment .calc-page__block--Additionally span.calc-page__underBlok--cost {
     display: none;
   }
@@ -8798,7 +8823,7 @@ summary {
     padding-bottom: 40px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--text {
     padding-bottom: 20px;
   }
@@ -8821,7 +8846,7 @@ summary {
 .calc-page__block--text .flex-lr__right .calc-page__underBlok:first-child {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--text .flex-lr__right .calc-page__underBlok {
     padding-bottom: 30px;
     padding-right: 0;
@@ -8852,7 +8877,7 @@ summary {
   width: 100%;
   max-width: 491px;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--text .calc-page__underBlok--left .calc-page--twotitle.b24 {
     margin-top: 0px;
     padding-left: 0;
@@ -8866,17 +8891,17 @@ summary {
     padding-bottom: 70px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calc-page__block--Discovery {
     padding-bottom: 43px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--Discovery {
     padding-bottom: 60px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__block--Discovery {
     padding-bottom: 35px;
   }
@@ -8894,12 +8919,12 @@ summary {
     padding-bottom: 33px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--team-secvice {
     padding-bottom: 40px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__block--team-secvice {
     padding-bottom: 35px;
   }
@@ -8925,7 +8950,7 @@ summary {
     max-width: 664px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page .calc-page__block--text.calc-page__block--Discovery .calc-page--twotitle.b24 {
     max-width: 462px;
   }
@@ -8947,7 +8972,7 @@ summary {
     padding-bottom: 20px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok {
     min-height: 100px;
     align-items: flex-start;
@@ -8955,7 +8980,7 @@ summary {
     padding-bottom: 10px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .calc-page--text.h3, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .text-style h3.calc-page--text, .text-style .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .text-style h4.calc-page--text, .text-style .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok p.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .calc-page--text.project-portfolio__item-title, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .right-content-blog h3.calc-page--text, .right-content-blog .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h3.calc-page--text, .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok .right-content-blog h4.calc-page--text, .right-content-blog .calc-page .calc-page__block--text.calc-page__block--Discovery .flex-lr__left .calc-page__underBlok h4.calc-page--text {
     max-width: 200px;
   }
@@ -9044,7 +9069,7 @@ summary {
     padding-top: 15px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok.active {
     padding-bottom: 0;
   }
@@ -9052,7 +9077,7 @@ summary {
 .calc-page__underBlok.active .calc-page--subtitle {
   color: #0047FF;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok.active .calc-page--subtitle.h2 svg, .calc-page__underBlok.active .text-style h2.calc-page--subtitle svg, .text-style .calc-page__underBlok.active h2.calc-page--subtitle svg, .calc-page__underBlok.active .portfolio .calc-page--subtitle.project-portfolio__title svg, .portfolio .calc-page__underBlok.active .calc-page--subtitle.project-portfolio__title svg, .calc-page__underBlok.active .portfolio .project-portfolio .calc-page--subtitle.field--name-field-title svg, .portfolio .project-portfolio .calc-page__underBlok.active .calc-page--subtitle.field--name-field-title svg, .calc-page__underBlok.active .portfolio .project-portfolio__item-right h2.calc-page--subtitle svg, .portfolio .project-portfolio__item-right .calc-page__underBlok.active h2.calc-page--subtitle svg, .calc-page__underBlok.active .right-content-blog h2.calc-page--subtitle svg, .right-content-blog .calc-page__underBlok.active h2.calc-page--subtitle svg {
     top: -5px;
     width: 16px;
@@ -9067,7 +9092,7 @@ summary {
   visibility: inherit;
   opacity: 0.4;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok.active .calc-page--treetitle {
     margin-bottom: 6.9444444444vw;
   }
@@ -9098,7 +9123,7 @@ summary {
     line-height: 24px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok--accordion .b1, .calc-page__underBlok--accordion .right-content-blog__coment span, .right-content-blog__coment .calc-page__underBlok--accordion span {
     font-size: 16px;
     line-height: 22px;
@@ -9125,7 +9150,7 @@ summary {
     padding-left: 70px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok--cost {
     display: none;
   }
@@ -9163,19 +9188,19 @@ summary {
     height: 179px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calc-page__underBlok--animation {
     width: 32.421875vw;
     height: 17.48046875vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__underBlok--animation {
     width: 44.0104166667vw;
     height: 23.6979166667vw;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok--animation {
     width: 280px;
     height: 150px;
@@ -9187,7 +9212,7 @@ summary {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok {
     min-height: auto !important;
     flex-flow: column nowrap;
@@ -9246,7 +9271,7 @@ summary {
     width: 50%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok--service .calc-page--subtitle {
     width: 100%;
     padding-left: 36px;
@@ -9284,7 +9309,7 @@ summary {
     max-width: 100%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__underBlok--service .calc-page--treetitle {
     width: 100%;
     padding-left: 36px;
@@ -9305,7 +9330,7 @@ summary {
     padding-left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__underBlok--service.active .calc-page--subtitle {
     padding-left: 40px;
   }
@@ -9321,7 +9346,7 @@ summary {
     left: -50px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__underBlok--service.active .calc-page--subtitle svg {
     position: absolute;
     left: 0;
@@ -9338,7 +9363,7 @@ summary {
 .calc-page--text span {
   opacity: 0.4;
 }
-@media (max-width: 374px) {
+@media (max-width: 429px) {
   .calc-page--text span {
     display: none;
   }
@@ -9349,6 +9374,21 @@ summary {
 .calc-page--text.js-calc-allServices:hover {
   color: #0047FF;
   opacity: 1;
+}
+@media (max-width: 1439px) {
+  .calc-page--text {
+    max-width: 240px;
+  }
+}
+@media (max-width: 1023px) {
+  .calc-page--text {
+    max-width: 28.3203125vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page--text {
+    max-width: 39.6302083333vw;
+  }
 }
 .calc-page--subtitle {
   position: relative;
@@ -9390,12 +9430,12 @@ summary {
   .calc-page--subtitle svg {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -0.4vw;
     width: 20px;
     opacity: 1;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--subtitle svg {
     width: 16px;
     top: -5px;
@@ -9428,7 +9468,7 @@ summary {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calc-page--subtitle input[type=checkbox] {
     left: -50px;
     width: 20px;
@@ -9449,7 +9489,7 @@ summary {
     font-size: 18px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--subtitle input[type=checkbox] {
     position: absolute;
     left: 0;
@@ -9461,7 +9501,7 @@ summary {
     font-size: 16px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--subtitle input[type=checkbox] {
     top: 0.8680555556vw;
   }
@@ -9471,7 +9511,6 @@ summary {
     line-height: 110%;
     flex: 1 0 240px;
     font-size: 28px;
-    line-height: 110%;
     min-width: auto;
   }
 }
@@ -9482,7 +9521,7 @@ summary {
     line-height: 110%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--subtitle {
     line-height: 110%;
     font-size: 4.8611111111vw;
@@ -9521,7 +9560,7 @@ summary {
     min-width: 300px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--twotitle {
     line-height: 110%;
     font-size: 3.125vw;
@@ -9547,57 +9586,54 @@ summary {
   color: #2A2A2A;
   opacity: 0.4;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
   font-style: normal;
   font-weight: 400;
+}
+@media (max-width: 1439px) {
+  .calc-page--treetitle {
+    line-height: 24px;
+  }
 }
 @media (max-width: 1023px) {
   .calc-page--treetitle {
     flex: 0 1 auto;
+    font-size: 1.7578125vw;
+    line-height: 2.34375vw;
   }
 }
 @media (max-width: 767px) {
   .calc-page--treetitle {
     width: 300px;
-    line-height: 110%;
-    min-width: 300px;
+    line-height: 133%;
+    font-size: 2.34375vw;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page--treetitle {
-    line-height: 110%;
-    font-size: 3.125vw;
     padding-left: 30px;
     flex: 1 0 auto;
     width: 100%;
-    margin-top: 20px;
-    font-size: 16px;
-    margin-top: 3.4722222222vw;
-  }
-}
-@media (max-width: 374px) {
-  .calc-page--treetitle {
-    padding-left: 6.1333333333vw;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 5vw;
+    margin-top: 6.25vw;
+    line-height: 135%;
   }
 }
 .calc-page__left-control {
   min-height: auto;
   padding-bottom: 20px;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__left-control .calc-page--text.h3, .calc-page__left-control .text-style h3.calc-page--text, .text-style .calc-page__left-control h3.calc-page--text, .calc-page__left-control .text-style h4.calc-page--text, .text-style .calc-page__left-control h4.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right h3.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__left-control h3.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right h4.calc-page--text, .portfolio .project-portfolio__item-right .calc-page__left-control h4.calc-page--text, .calc-page__left-control .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote p.calc-page--text, .portfolio .project-portfolio__item-right.project-portfolio__item-right--quote .calc-page__left-control p.calc-page--text, .calc-page__left-control .portfolio .calc-page--text.project-portfolio__item-title, .portfolio .calc-page__left-control .calc-page--text.project-portfolio__item-title, .calc-page__left-control .right-content-blog h3.calc-page--text, .right-content-blog .calc-page__left-control h3.calc-page--text, .calc-page__left-control .right-content-blog h4.calc-page--text, .right-content-blog .calc-page__left-control h4.calc-page--text {
     padding-bottom: 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calc-page__left-control {
     border-top: none;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calc-page__left-control {
     border-top: none;
     padding-bottom: 10px;
@@ -9640,7 +9676,7 @@ summary {
     padding-top: 45px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .wewillfind-footer__left {
     padding-top: 5.208vw;
     margin-top: 0;
@@ -9665,7 +9701,7 @@ summary {
     letter-spacing: -0.03em;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .wewillfind-footer__title {
     margin-bottom: 10.7421875vw;
     font-size: 3.90625vw;
@@ -9673,18 +9709,18 @@ summary {
     letter-spacing: -0.03em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calculator .wewillfind-footer__title {
-    margin-bottom: 13.0208333333vw;
+    margin-bottom: 9.765625vw;
     font-size: 7.03125vw;
     line-height: 95%;
     letter-spacing: -0.03em;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .wewillfind-footer__title {
-    margin-bottom: 11.2847222222vw;
-    font-size: 4.1666666667vw;
+    margin-bottom: 20.3125vw;
+    font-size: 7.5vw;
     line-height: 95%;
     letter-spacing: -0.03em;
   }
@@ -9714,7 +9750,7 @@ summary {
     padding-bottom: 10.4166666667vw;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .calc-page.calc-page-gray {
     padding-bottom: 11.2847222222vw;
   }
@@ -9743,7 +9779,7 @@ summary {
     padding-top: 1.953125vw;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block {
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -9769,19 +9805,24 @@ summary {
     line-height: 110%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .finalCost__block .wewillfind-footer__subtitle {
     font-size: 2.34375vw;
     line-height: 110%;
     letter-spacing: -0.02em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calculator .finalCost__block .wewillfind-footer__subtitle {
     font-size: 3.125vw;
     line-height: 110%;
-    max-width: 60.9375vw;
+    max-width: 63.28125vw;
     letter-spacing: -0.02em;
+  }
+}
+@media (max-width: 429px) {
+  .calculator .finalCost__block .wewillfind-footer__subtitle {
+    font-size: 6.25vw;
   }
 }
 .calculator .finalCost__block--left {
@@ -9790,7 +9831,7 @@ summary {
   align-items: flex-start;
   flex: 0 1 50%;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block--left {
     margin-bottom: 3.4722222222vw;
   }
@@ -9800,7 +9841,7 @@ summary {
   display: flex;
   flex: 0 1 50%;
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block--right {
     padding-left: 0;
   }
@@ -9818,24 +9859,23 @@ summary {
     line-height: 26px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .finalCost__block--desc {
     font-size: 1.3671875vw;
-    line-height: 20px;
+    line-height: 1.953125vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calculator .finalCost__block--desc {
     margin-bottom: 7.1614583333vw;
-    line-height: 110%;
     font-size: 1.8229166667vw;
-    line-height: 110%;
+    line-height: 148%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block--desc {
     margin-bottom: 5.2083333333vw;
-    font-size: 2.4305555556vw;
+    font-size: 4.375vw;
   }
 }
 .calculator .finalCost__block--time {
@@ -9846,21 +9886,21 @@ summary {
   line-height: 110%;
   letter-spacing: -0.03em;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .finalCost__block--time {
     font-size: 3.90625vw;
     line-height: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calculator .finalCost__block--time {
     font-size: 3.6458333333vw;
     line-height: 110%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block--time {
-    font-size: 3.4722222222vw;
+    font-size: 6.25vw;
     line-height: 110%;
     letter-spacing: -0.02em;
   }
@@ -9873,21 +9913,21 @@ summary {
   line-height: 110%;
   letter-spacing: -0.03em;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .finalCost__block--cost {
     font-size: 3.90625vw;
     line-height: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .calculator .finalCost__block--cost {
     font-size: 3.6458333333vw;
     line-height: 110%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 429px) {
   .calculator .finalCost__block--cost {
-    font-size: 3.4722222222vw;
+    font-size: 6.25vw;
     line-height: 110%;
     letter-spacing: -0.02em;
   }
@@ -9934,7 +9974,7 @@ summary {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .accordion__intro__img svg {
     width: 20px;
     height: 20px;
@@ -9992,7 +10032,7 @@ summary {
   font-size: 18px;
   line-height: 26px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .calculator .accordion__active .accordion__content p {
     font-size: 14px;
     line-height: 20px;

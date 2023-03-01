@@ -28,52 +28,55 @@
   \*********************************************/
 /***/ (function() {
 
-if (typeof Drupal !== 'undefined') {
-  (function ($, Drupal) {
-    Drupal.behaviors.tiqumFooter = {
-      attach: function attach(context) {
-        $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').focus(function () {
-          $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area");
-        });
-        $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').blur(function () {
-          if (validInput(this)) {
-            $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
-            $(this).closest('.form-wewillfind-footer__item');
-          } else {
-            $(this).closest('.form-wewillfind-footer__item').addClass("js-error").removeClass("js-active-area");
-            $(this).closest('.form-wewillfind-footer__item');
-          }
-        });
-        $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').on('paste keyup', function () {
-          if ($(this).closest('.form-wewillfind-footer__item').hasClass('js-error')) {
+(function ($) {
+  if (typeof Drupal !== 'undefined') {
+    (function ($, Drupal) {
+      Drupal.behaviors.tiqumFooter = {
+        attach: function attach(context) {
+          $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').once('focus').focus(function () {
+            $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area");
+          });
+          $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').once('blur').blur(function () {
             if (validInput(this)) {
               $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
-            }
-          }
-        });
-        $(document).on('click', '.form-wewillfind-footer button[type=submit]', function () {
-          event.preventDefault();
-          var valid = true;
-          $(this).closest('form').find('input:not([type=file]), textarea').each(function () {
-            if (validInput(this)) {
-              $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
+              $(this).closest('.form-wewillfind-footer__item');
+              $('.form-wewillfind-footer input[type=submit].webform-button--submit').prop('disabled', false);
             } else {
               $(this).closest('.form-wewillfind-footer__item').addClass("js-error").removeClass("js-active-area");
-              valid = false;
+              $(this).closest('.form-wewillfind-footer__item');
             }
           });
+          $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').once('paste keyup').on('paste keyup', function () {
+            if ($(this).closest('.form-wewillfind-footer__item').hasClass('js-error')) {
+              if (validInput(this)) {
+                $('.form-wewillfind-footer input[type=submit].webform-button--submit').prop('disabled', false);
+                $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
+              }
+            }
+          });
+          $('.form-wewillfind-footer button[type=submit], .form-wewillfind-footer input[type=submit].webform-button--submit').once('hover').hover(function (event) {
+            var valid = true;
+            $(this).closest('form').find('input:not([type=file]), textarea').each(function () {
+              if (validInput(this)) {
+                $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
+              } else {
+                $(this).closest('.form-wewillfind-footer__item').addClass("js-error").removeClass("js-active-area");
+                valid = false;
+              }
+            });
 
-          if (valid) {
-            //$(this).closest('form').submit();
-            //submit code here
-            $(this).closest('form').addClass('submited');
-          }
-        });
-      }
-    };
-  })(jQuery, Drupal);
-} else {
-  (function ($) {
+            if (valid) {
+              //submit code here
+              $(this).prop('disabled', false);
+            } else {
+              $(this).prop('disabled', true);
+              return false;
+            }
+          });
+        }
+      };
+    })(jQuery, Drupal);
+  } else {
     $('.form-wewillfind-footer__item input, .form-wewillfind-footer__item textarea').focus(function () {
       $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area");
     });
@@ -111,36 +114,44 @@ if (typeof Drupal !== 'undefined') {
         $(this).closest('form').addClass('submited');
       }
     });
-  })(jQuery);
-}
-
-function validInput(elem) {
-  var type = $(elem).attr('type');
-  var value = $(elem).val();
-  var required = $(elem).attr('required');
-  var trimmed, pattern;
-
-  if (required || value.trim() !== '') {
-    switch (type) {
-      case 'tel':
-        trimmed = value.trim().replace(/[\s().-]+/g, '');
-        pattern = /^\+?[7-8]\d{8,12}$/;
-        return pattern.test(trimmed);
-
-      case 'email':
-        trimmed = value.trim();
-        pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-        return pattern.test(trimmed);
-        break;
-
-      case 'text':
-      default:
-        return value.trim() !== '';
-    }
-  } else {
-    return true;
   }
-}
+
+  function validInput(elem) {
+    var type = $(elem).attr('type');
+    var name = $(elem).attr('name');
+    var value = $(elem).val();
+    var required = $(elem).attr('required');
+    var trimmed, pattern;
+
+    if (required || value.trim() !== '') {
+      switch (type) {
+        case 'tel':
+          trimmed = value.trim().replace(/[\s().-]+/g, '');
+          pattern = /^\+?[7-8]\d{8,12}$/;
+          return pattern.test(trimmed);
+
+        case 'email':
+          trimmed = value.trim();
+          pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+          return pattern.test(trimmed);
+          break;
+
+        case 'text':
+          switch (name) {
+            case 'phone':
+              trimmed = value.trim().replace(/[\s().-]+/g, '');
+              pattern = /^\+?[7-8]\d{8,12}$/;
+              return pattern.test(trimmed);
+          }
+
+        default:
+          return value.trim() !== '';
+      }
+    } else {
+      return true;
+    }
+  }
+})(jQuery);
 
 /***/ }),
 
@@ -324,7 +335,79 @@ if (windowInnerWidth > 1022) {
   \*******************************/
 /***/ (function() {
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 (function ($) {
+  var serviceSelect = false;
+  var selectedService;
+  var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>', 'Стоимость проектирования <span><br>сервиса</span>'];
+  var finalBlocks = [[{
+    class: 'js-calc-finalTime',
+    text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
+  }, {
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая стоимость команды с учетом ваших предпочтений'
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }], [{
+    class: 'js-calc-finalPrice',
+    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
+  }]];
+  var mvpStaff = {
+    'main': ['Product Owner', 'Project Manager', 'System Analytics', 'UX Architect', 'UI designer', 'Backend Developer', 'Frontend Developer'],
+    'add': {
+      'Quality Assurance': 'QA Engineer',
+      'Автотестирование': 'Тестировщик',
+      'Инфраструктура': 'DevOps'
+    }
+  };
+  var mvpPrices = {
+    'Веб-сервис': {
+      'time': 4.5,
+      'mainPrice': 6560400,
+      'add': {
+        'Quality Assurance': 630000,
+        'Автотестирование': 1176000,
+        'Инфраструктура': 756000,
+        'Промо-сайт': 250000
+      }
+    },
+    'Мобильное приложение': {
+      'time': 5.5,
+      'mainPrice': 8752800,
+      'add': {
+        'Quality Assurance': 882000,
+        'Автотестирование': 588000,
+        'Инфраструктура': 882000,
+        'Промо-сайт': 250000
+      }
+    },
+    'all': {
+      'time': 5.5,
+      'mainPrice': 11029200,
+      'add': {
+        'Quality Assurance': 1134000,
+        'Автотестирование': 1176000,
+        'Инфраструктура': 1260000,
+        'Промо-сайт': 250000
+      }
+    }
+  };
   $('.calc-page__underBlok__input:checkbox').change(function () {
     if ($(this).is(":checked")) {
       $(this).parents('.calc-page__underBlok').addClass("active");
@@ -358,26 +441,6 @@ if (windowInnerWidth > 1022) {
   }
 
   var finalBlockHtml = "<div class='finalCost__block'>" + "<div class='finalCost__block--left'>" + "<div class='finalCost__block--time h2 {$class}'></div>" + "</div>" + "<div class='finalCost__block--right'>" + "<div class='finalCost__block--desc'>{$text}</div>" + "</div>" + "</div>";
-  var serviceSelect = false;
-  var selectedService;
-  var serviceList = ['Запуск MVP', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса', 'Продуктовая команда'];
-  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>', 'Стоимость проектирования <span><br>сервиса</span>'];
-  var finalBlocks = [[{
-    class: 'js-calc-finalTime',
-    text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
-  }, {
-    class: 'js-calc-finalPrice',
-    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
-  }], [{
-    class: 'js-calc-finalPrice',
-    text: 'Итоговая стоимость команды с учетом ваших предпочтений'
-  }], [{
-    class: 'js-calc-finalPrice',
-    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
-  }], [{
-    class: 'js-calc-finalPrice',
-    text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений'
-  }]];
   $('.js-calc-service').hover(function () {
     $(this).siblings('.js-calc-service').addClass('opacity');
   }, function () {
@@ -523,14 +586,14 @@ if (windowInnerWidth > 1022) {
     var totalTime = 0;
     var timeBlock;
     var priceBlock;
+    var count = 0;
+    var teamArray = [];
 
     switch (service) {
       case 0:
         timeBlock = finalBlocks[service][0]['class'];
         priceBlock = finalBlocks[service][1]['class'];
         $('.calc-page__serviceBlock[data-service=' + service + ']').find('input:checked').each(function () {
-          totalPrice += parseInt($(this).data('price'));
-          totalTime += parseFloat($(this).data('time'));
           var name = $(this).attr('name').replace(/[^a-zA-Z]+/g, '');
           var value = $(this).val();
 
@@ -540,21 +603,69 @@ if (windowInnerWidth > 1022) {
             jsonArray[name].push(value);
           }
         });
-        jsonArray['totalPrice'] = totalPrice;
-        jsonArray['totalTime'] = totalTime;
+        var currentWhat;
 
         if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length >= 2) {
           $('.calc-page__x2').addClass('active');
+          currentWhat = 'all';
         } else {
           $('.calc-page__x2').removeClass('active');
         }
 
+        if (jsonArray.hasOwnProperty('what') && jsonArray['what'].length === 1) {
+          currentWhat = jsonArray['what'][0];
+        }
+
+        if (currentWhat) {
+          totalTime = mvpPrices[currentWhat]['time'];
+          totalPrice = mvpPrices[currentWhat]['mainPrice'];
+
+          var tempArray = _toConsumableArray(mvpStaff['main']);
+
+          teamArray = tempArray;
+
+          if (jsonArray.hasOwnProperty('add')) {
+            jsonArray['add'].forEach(function (value) {
+              if (mvpPrices[currentWhat]['add'].hasOwnProperty(value)) {
+                totalPrice += mvpPrices[currentWhat]['add'][value];
+              }
+
+              if (mvpStaff['add'].hasOwnProperty(value)) {
+                teamArray.push(mvpStaff['add'][value]);
+              }
+            });
+          }
+
+          count = teamArray.length;
+
+          if (currentWhat === 'all') {
+            for (var i = 0; i < teamArray.length; i++) {
+              if (teamArray[i] === 'Frontend Developer') {
+                teamArray[i] = '2x Frontend Developer';
+                break;
+              }
+            }
+
+            count++;
+          }
+
+          for (var key in mvpPrices[currentWhat]['add']) {
+            $('.calc-page__serviceBlock[data-service=' + service + '] input[name="add[]"][value="' + key + '"]').closest('.calc-page__underBlok').find('.calc-page__underBlok--cost').text('+' + splitNumberIntoGroups(mvpPrices[currentWhat]['add'][key]) + ' ₽');
+          }
+        } else {
+          $('.calc-page__serviceBlock[data-service=' + service + '] .calc-page__underBlok--cost').text('+0 ₽');
+        }
+
+        jsonArray['team'] = teamArray;
+        jsonArray['teamTotal'] = count;
+        jsonArray['totalPrice'] = totalPrice;
+        jsonArray['totalTime'] = totalTime;
         $('.' + timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
         break;
 
       case 1:
-        var count = 0;
+        var manArray = {};
         priceBlock = finalBlocks[service][0]['class'];
         $('.calc-page__serviceBlock[data-service="' + service + '"] input').each(function () {
           var value = parseInt($(this).val());
@@ -562,10 +673,14 @@ if (windowInnerWidth > 1022) {
           totalPrice += parseInt($(this).data('price')) * value;
           var name = $(this).data('title');
 
-          if (!jsonArray.hasOwnProperty(name)) {
-            jsonArray[name] = value;
+          if (!manArray.hasOwnProperty(name)) {
+            manArray[name] = value;
+          } else {
+            manArray[name].push(value);
           }
         });
+        jsonArray['team'] = manArray;
+        jsonArray['teamTotal'] = count;
         jsonArray['totalPrice'] = totalPrice;
         $('.js-calc-manCount').text(count);
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
@@ -576,7 +691,6 @@ if (windowInnerWidth > 1022) {
         priceBlock = finalBlocks[service][0]['class'];
         totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
         jsonArray['totalPrice'] = totalPrice;
-        $('.js-calc-manCount').text(count);
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
         break;
 
@@ -585,7 +699,7 @@ if (windowInnerWidth > 1022) {
     }
 
     var json = JSON.stringify(jsonArray);
-    $('.js-calc-formInput').val(json);
+    $('input[name="calc_info"]').val(json);
   }
 
   $(document).on('change', '.calc-page__serviceBlock.active input', function () {
