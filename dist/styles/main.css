@@ -8047,6 +8047,17 @@ summary {
     max-width: 62.5vw;
   }
 }
+@media (max-width: 767px) {
+  .calc-page__block--team .flex-lr__right .calc-page__underBlok-manCount {
+    padding-top: 6.25vw;
+    padding-bottom: 6.25vw;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__block--team .flex-lr__right .calc-page--subtitle {
+    font-size: 6.25vw;
+  }
+}
 .calc-page__block--team .calc-page__underBlok {
   min-height: 180px;
 }

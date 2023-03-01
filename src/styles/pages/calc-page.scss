@@ -143,6 +143,19 @@
 					}
 				}
 			}
+			.flex-lr__right {
+				.calc-page__underBlok-manCount {
+					@media (max-width: 767px) {
+					padding-top: vw(20,320);
+					padding-bottom: vw(20,320);
+					}
+				}
+				.calc-page--subtitle {
+					@media (max-width: 767px) {
+						font-size: vw(20,320);
+					}
+				}
+			}
 			.calc-page__underBlok {
 				min-height: 180px;
 				@media (max-width: 1439px) {
