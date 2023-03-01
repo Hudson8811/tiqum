@@ -8255,6 +8255,21 @@ summary {
   display: none;
 }
 @media (max-width: 767px) {
+  .calc-page .calc-page__block--Discovery .calc-page--subtitle {
+    font-size: 6.25vw;
+  }
+}
+.calc-page .calc-page__block--Discovery .calc-page--twotitle {
+  margin-top: 40px;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .calc-page .calc-page__block--Discovery .calc-page--twotitle {
+    margin-top: 15.625vw;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
   .calc-page .calc-page__block--consulting .calc-page--subtitle {
     font-size: 5vw;
   }

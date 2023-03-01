@@ -339,6 +339,23 @@
 		}
 
 	}
+	.calc-page__block--Discovery {
+		.calc-page--subtitle {
+			@media (max-width: 767px) {
+				font-size: vw(20,320);
+			
+			}
+		}
+		.calc-page--twotitle {
+			margin-top: 40px;
+			max-width: 100%;
+			@media (max-width: 767px) {
+				margin-top: vw(50,320);
+				padding-left: 0;
+			}
+
+		}
+	}
 	.calc-page__block--consulting {
 		.calc-page--subtitle {
 			@media (max-width: 767px) {
