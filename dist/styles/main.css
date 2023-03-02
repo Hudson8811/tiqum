@@ -8458,12 +8458,10 @@ summary {
 @media (max-width: 1439px) {
   .calc-page__underBlok--launch .calc-page__underBlok--left {
     width: 52%;
-    padding-right: 20px;
   }
 }
 @media (max-width: 1024px) {
   .calc-page__underBlok--launch .calc-page__underBlok--left {
-    padding-right: 20px;
     width: 45%;
   }
 }
@@ -8476,15 +8474,18 @@ summary {
   width: 50%;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  padding-left: 44px;
 }
 @media (max-width: 1439px) {
   .calc-page__underBlok--launch .calc-page__underBlok--right {
     width: 48%;
+    padding-left: 24px;
   }
 }
 @media (max-width: 1024px) {
   .calc-page__underBlok--launch .calc-page__underBlok--right {
     width: 55%;
+    padding-left: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -8723,9 +8724,6 @@ summary {
 }
 .calc-page__underBlok--service.active {
   cursor: default;
-}
-.calc-page__underBlok--service.active .calc-page--treetitle {
-  padding-left: 0;
 }
 .calc-page__underBlok--service.active .calc-page--subtitle {
   color: #0047FF;

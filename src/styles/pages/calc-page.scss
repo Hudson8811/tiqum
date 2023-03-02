@@ -563,10 +563,8 @@
 				width: 50%;
 				@media (max-width: 1439px) {
 					width: 52%;
-					padding-right: 20px;
 				}
 				@media (max-width: 1024px) {
-					padding-right: 20px;
 					width: 45%;
 				}
 				@media (max-width: 767px) {
@@ -577,11 +575,14 @@
 				width: 50%;
 				flex-flow: row nowrap;
 				justify-content: flex-start;
+				padding-left: 44px;
 				@media (max-width: 1439px) {
 					width: 48%;
+					padding-left: 24px;
 				}
 				@media (max-width: 1024px) {
 					width: 55%;
+					padding-left: 14px;
 				}
 				@media (max-width: 767px) {
 					width: 100%;
@@ -799,9 +800,6 @@
 			}
 			&.active{
 				cursor: default;
-				.calc-page--treetitle {
-					padding-left: 0;
-				}
 				.calc-page--subtitle {
 					color: #0047FF;
 					@media (max-width: 1024px) {
