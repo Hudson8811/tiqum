@@ -8837,6 +8837,11 @@ summary {
   opacity: 0;
   width: 35px;
 }
+@media (max-width: 1919px) {
+  .calc-page--subtitle svg {
+    top: 1px;
+  }
+}
 @media (max-width: 1439px) {
   .calc-page--subtitle svg {
     position: absolute;
@@ -8882,6 +8887,11 @@ summary {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 1919px) {
+  .calc-page--subtitle input[type=checkbox] {
+    top: 0;
+  }
+}
 @media (max-width: 1024px) {
   .calc-page--subtitle input[type=checkbox] {
     left: -50px;
@@ -8889,6 +8899,7 @@ summary {
     height: 20px;
     min-width: 20px;
     min-height: 20px;
+    top: 5px;
   }
 }
 @media (max-width: 767px) {
