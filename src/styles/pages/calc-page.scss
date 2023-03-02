@@ -345,7 +345,9 @@
 				}
 			}
 		}
+		&__serviceBlock {
 
+		}
 
 		&.hidden{
 			display: none;
@@ -556,6 +558,33 @@
 				opacity: 1;
 			}
 		}
+		&--launch {
+			.calc-page__underBlok--left {
+				width: 50%;
+				@media (max-width: 1020px) {
+					padding-right: 20px;
+				}
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+				.calc-page--twotitle {
+					@media (max-width: 1150px) {
+						padding-right: 20px;
+					}
+					@media (max-width: 767px) {
+						padding-right: 0px;
+					}
+				}
+			}
+			.calc-page__underBlok--right {
+				width: 50%;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+			}
+		}
 		&--accordion {
 			min-height: 90px !important;
 			padding-bottom: 0;
@@ -637,18 +666,18 @@
 				transform: translate3d(0,0,0);
 				text-align: center;
 				opacity: 1;
-				width: 239px;
+				width: 100%;
 				height: 152px;
 				@media (max-width: 1439px) {
-					width: vw0(239);
+					// width: vw0(239);
 					height: vw0(152);
 				}
 				@media (max-width: 1024px) {
-					width: vw(239);
+					// width: vw(239);
 					height:vw(152);
 				}
 				@media (max-width: 767px) {
-					width: vw(239,320);
+					// width: vw(239,320);
 					height: vw(152,320);
 				}
 			}
@@ -658,18 +687,18 @@
 				transform: translate3d(0,0,0);
 				text-align: center;
 				opacity: 1;
-				width: 594px;
+				width: 100%;
 				height: 320px;
 				@media (max-width: 1439px) {
-					width: vw0(477);
+					// width: vw0(477);
 					height: vw0(256);
 				}
 				@media (max-width: 1024px) {
-					width: vw(332);
+					// width: vw(332);
 					height:vw(179);
 				}
 				@media (max-width: 767px) {
-					width: vw(280,320);
+					// width: vw(280,320);
 					height: vw(150,320);
 				}
 			}
@@ -767,13 +796,28 @@
 			}
 			&.active{
 				cursor: default;
+				.calc-page--treetitle {
+					padding-left: 0;
+					@media (max-width: 1439px) {
+						width: 50%;
+					}
+					@media (max-width: 1024px) {
+						width: 50%;
+					}
+					@media (max-width: 767px) {
+						width: 100%;
+						padding-left: 11.25vw;
+					}
+				}
 				.calc-page--subtitle {
 					color: #0047FF;
+					width: 50%;
 					@media (max-width: 1024px) {
 						padding-left: 0;
 					}
 					@media (max-width: 767px) {
 						padding-left: 11.25vw;
+						width: 100%;
 					}
 					svg {
 						opacity: 1;

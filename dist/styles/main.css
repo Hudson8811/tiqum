@@ -8457,6 +8457,39 @@ summary {
 .calc-page__underBlok.active .calc-page__underBlok--cost {
   opacity: 1;
 }
+.calc-page__underBlok--launch .calc-page__underBlok--left {
+  width: 50%;
+}
+@media (max-width: 1020px) {
+  .calc-page__underBlok--launch .calc-page__underBlok--left {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--launch .calc-page__underBlok--left {
+    width: 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .calc-page__underBlok--launch .calc-page__underBlok--left .calc-page--twotitle {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--launch .calc-page__underBlok--left .calc-page--twotitle {
+    padding-right: 0px;
+  }
+}
+.calc-page__underBlok--launch .calc-page__underBlok--right {
+  width: 50%;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--launch .calc-page__underBlok--right {
+    width: 100%;
+  }
+}
 .calc-page__underBlok--accordion {
   min-height: 90px !important;
   padding-bottom: 0;
@@ -8543,24 +8576,21 @@ summary {
   transform: translate3d(0, 0, 0);
   text-align: center;
   opacity: 1;
-  width: 239px;
+  width: 100%;
   height: 152px;
 }
 @media (max-width: 1439px) {
   .calc-page__underBlok--animation .lotte {
-    width: 16.5972222222vw;
     height: 10.5555555556vw;
   }
 }
 @media (max-width: 1024px) {
   .calc-page__underBlok--animation .lotte {
-    width: 23.33984375vw;
     height: 14.84375vw;
   }
 }
 @media (max-width: 767px) {
   .calc-page__underBlok--animation .lotte {
-    width: 74.6875vw;
     height: 47.5vw;
   }
 }
@@ -8570,24 +8600,21 @@ summary {
   transform: translate3d(0, 0, 0);
   text-align: center;
   opacity: 1;
-  width: 594px;
+  width: 100%;
   height: 320px;
 }
 @media (max-width: 1439px) {
   .calc-page__underBlok--animation .lotte {
-    width: 33.125vw;
     height: 17.7777777778vw;
   }
 }
 @media (max-width: 1024px) {
   .calc-page__underBlok--animation .lotte {
-    width: 32.421875vw;
     height: 17.48046875vw;
   }
 }
 @media (max-width: 767px) {
   .calc-page__underBlok--animation .lotte {
-    width: 87.5vw;
     height: 46.875vw;
   }
 }
@@ -8695,8 +8722,28 @@ summary {
 .calc-page__underBlok--service.active {
   cursor: default;
 }
+.calc-page__underBlok--service.active .calc-page--treetitle {
+  padding-left: 0;
+}
+@media (max-width: 1439px) {
+  .calc-page__underBlok--service.active .calc-page--treetitle {
+    width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .calc-page__underBlok--service.active .calc-page--treetitle {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page__underBlok--service.active .calc-page--treetitle {
+    width: 100%;
+    padding-left: 11.25vw;
+  }
+}
 .calc-page__underBlok--service.active .calc-page--subtitle {
   color: #0047FF;
+  width: 50%;
 }
 @media (max-width: 1024px) {
   .calc-page__underBlok--service.active .calc-page--subtitle {
@@ -8706,6 +8753,7 @@ summary {
 @media (max-width: 767px) {
   .calc-page__underBlok--service.active .calc-page--subtitle {
     padding-left: 11.25vw;
+    width: 100%;
   }
 }
 .calc-page__underBlok--service.active .calc-page--subtitle svg {
