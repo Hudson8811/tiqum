@@ -78,7 +78,7 @@
 
 	&__burger {
 		display: none;
-		@media (max-width: 1439px){
+		@media (max-width: 1919px){
 			cursor: pointer;
 			margin-left: 150px;
 			font-family: 'Suisse Intl';
@@ -128,7 +128,7 @@
 				}
 			}
 		}
-		@media (max-width: 1439px){
+		@media (max-width: 1919px){
 			margin-left: 100px;
 			span {
 				&:nth-child(2){
@@ -413,6 +413,7 @@
 		@media (max-width: 1024px){
 			margin-left: -3.418vw;
 		}
+
 	}
 	
 	&__item {
@@ -430,7 +431,42 @@
 		@media (max-width: 767px){
 			margin-left: 9.333vw;
 		}
-		&-hide {
+		// &-hide {
+		// 	@media (max-width: 1439px){
+		// 		display: none;
+		// 	}
+		// }
+		&:nth-child(1) {
+			@media (max-width: 1224px){
+				display: none;
+			}
+		}
+		&:nth-child(2) {
+			@media (max-width: 1224px){
+				display: none;
+			}
+		}
+		&:nth-child(3) {
+			@media (max-width: 1224px){
+				display: none;
+			}
+		}
+		&:nth-child(4) {
+			@media (max-width: 1279px){
+				display: none;
+			}
+		}
+		&:nth-child(5) {
+			@media (max-width: 1279px){
+				display: none;
+			}
+		}
+		&:nth-child(6) {
+			@media (max-width: 1365px){
+				display: none;
+			}
+		}
+		&:nth-child(7) {
 			@media (max-width: 1439px){
 				display: none;
 			}
