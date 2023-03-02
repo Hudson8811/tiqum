@@ -154,6 +154,7 @@
         event.preventDefault();
         serviceSelect = true;
         selectedService = parseInt($(this).data('service'));
+        $('.js-calc-allServices').addClass('active');
         $('.calc-page__left-control').addClass('active');
         $(this).siblings('.js-calc-service').slideUp(400).addClass('collapsed').removeClass('active');
 
@@ -512,6 +513,7 @@
         event.preventDefault();
         $('.calc-page__left-control').removeClass('active');
         $('.js-calc-service').slideDown(400).removeClass('collapsed');
+				$(this).removeClass('active');
     });
 
 
