@@ -325,15 +325,15 @@
 				background-color: transparent;
 				backdrop-filter: blur(0);
 				-webkit-backdrop-filter: blur(0px);
-				.header__right {
-					flex: 0 1 65.2%;
-					@media (max-width: 1919px) {
-						flex: 0 1 64.2%;
-					}
-					@media (max-width: 1439px) {
-						flex: 0 1 67%;
-					}
-				}
+				// .header__right {
+				// 	flex: 0 1 65.2%;
+				// 	@media (max-width: 1919px) {
+				// 		flex: 0 1 64.2%;
+				// 	}
+				// 	@media (max-width: 1439px) {
+				// 		flex: 0 1 67%;
+				// 	}
+				// }
 				.menu-mobile__link-active {
 					&::before{
 						background-color: #ffffff;
