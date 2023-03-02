@@ -639,4 +639,45 @@
 	&.active.hide{
 		bottom:-125px;
 	}
+
+}
+.calc__link.calc__link--circle {
+	backdrop-filter: blur(0px);
+	width: 168px;
+	height: 168px;
+	border-radius: 100px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:  #0047FF;
+	color: #FFFFFF;
+	opacity: 0;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	left: auto;
+	right: 30px;
+	@media (max-width: 1439px){
+		width: 130px;
+		height: 130px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 26px;
+	}
+	@media (max-width: 375px){
+		width: vw(335,375);
+		height: 48px;
+		border-radius: 0px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		margin-left: 0;
+		right: auto;
+		left: 5.333vw;
+	}
+	&.active {
+		opacity: 1;
+	}
 }
