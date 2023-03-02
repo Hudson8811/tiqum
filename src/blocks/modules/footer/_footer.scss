@@ -269,9 +269,9 @@
 			span {
 				opacity: 0.2;
 				color: #F5F5F5;
-				@media (max-width: 767px){
-					opacity: 1;
-				}
+				// @media (max-width: 767px){
+				// 	opacity: 1;
+				// }
 			}
 		}
 
@@ -398,13 +398,13 @@
 				font-size: 1.367vw;
 				line-height: 1.563vw;
 				padding-bottom: 1.465vw;
-				border-bottom: 0.098vw solid #FFFFFF;
+				border-bottom: 0.098vw solid rgba($color: #ffffff, $alpha: 0.2);
 			}
 			@media (max-width: 767px){
 				font-size: 3.200vw;
 				line-height: 3.733vw;
 				padding-bottom: 2.667vw;
-				border-bottom: 0.267vw solid #FFFFFF;
+				border-bottom: 0.267vw solid rgba($color: #ffffff, $alpha: 0.2);
 			}
 		}
 		input::placeholder, textarea::placeholder {

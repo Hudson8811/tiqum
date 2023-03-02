@@ -91,8 +91,8 @@
 		line-height: 2.34375vw;
 	}
 	@media (max-width: 767px) {
-		font-size: 5.625vw;
-		line-height: 7.5vw;
+		font-size: vw(16,320);
+		line-height: vw(22,320);
 	}
 }
 
