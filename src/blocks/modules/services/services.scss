@@ -44,7 +44,18 @@
 		}
 	}
 
-	&__items {}
+	&__items {
+		padding-bottom: 110px;
+		@media (max-width: 1919px){
+			padding-bottom: 80px;
+		}
+		@media (max-width: 1024px) {
+			padding-bottom: 0;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 0;
+		}
+	}
 	
 		&__item-wrapper {
 			display: block;

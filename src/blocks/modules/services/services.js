@@ -1,12 +1,12 @@
 (function ($) {
   const windowInnerWidth = window.innerWidth
   console.log(windowInnerWidth);
-  if (windowInnerWidth > 1022) {
+  if (windowInnerWidth > 1024) {
     gsap.registerPlugin(ScrollTrigger);
     gsap.utils.toArray(".services__items").forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
-        start: 'top top',
+        start: 'bottom bottom',
         pin: true,
         pinSpacing: false
       });

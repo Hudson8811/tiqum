@@ -4169,6 +4169,24 @@ summary {
     margin-top: 8.4375vw;
   }
 }
+.services__items {
+  padding-bottom: 110px;
+}
+@media (max-width: 1919px) {
+  .services__items {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1024px) {
+  .services__items {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .services__items {
+    padding-bottom: 0;
+  }
+}
 .services__item-wrapper {
   display: block;
   position: relative;
