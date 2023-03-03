@@ -46,11 +46,13 @@
 
 	&__items {
 		padding-bottom: 110px;
+		min-height: 100vh;
 		@media (max-width: 1919px){
 			padding-bottom: 80px;
 		}
 		@media (max-width: 1024px) {
 			padding-bottom: 0;
+			min-height: 0;
 		}
 		@media (max-width: 767px){
 			padding-bottom: 0;
