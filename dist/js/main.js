@@ -1015,25 +1015,66 @@ __webpack_require__.r(__webpack_exports__);
         scrollTop: $('#contact-form').offset().top - offsetTop
       }, 1000);
     });
-    $(window).on('scroll', function () {
-      var scrollTop = $(window).scrollTop();
-      var windowH = $(window).height();
-      var windowH2 = $(window).height() / 2;
 
-      if (scrollTop > windowH2) {
+    function showSubmitButton() {
+      if (window.innerWidth > 375) {
+        showSubmitButtonDesc();
+      } else {
+        showSubmitButtonMob();
+      }
+    }
+
+    showSubmitButton();
+
+    function showSubmitButtonDesc() {
+      setTimeout(function () {
         $('.calc__link').addClass('active');
-      } else {
-        $('.calc__link').removeClass('active');
-      }
+      }, 2000);
+      $(window).on('scroll', function () {
+        var scrollTop = $(window).scrollTop();
+        var windowH = $(window).height();
+        var windowH2 = $(window).height() / 2; // if (scrollTop > windowH2) {
+        // 		$('.calc__link').addClass('active');
+        // } else {
+        // 		$('.calc__link').removeClass('active');
+        // }
 
-      var formTop = $('#contact-form').offset().top;
+        var formTop = $('#contact-form').offset().top;
 
-      if (scrollTop + windowH > formTop) {
-        $('.calc__link').addClass('hide');
-      } else {
-        $('.calc__link').removeClass('hide');
-      }
-    });
+        if (scrollTop + windowH > formTop) {
+          $('.calc__link').addClass('hide');
+        } else {
+          $('.calc__link').removeClass('hide');
+        }
+      });
+    }
+
+    function showSubmitButtonMob() {
+      $(document).scroll(function () {
+        if ($(document).scrollTop() > 10) {
+          $('.calc__link').addClass('active');
+        } else if ($(document).scrollTop() < 10) {
+          $('.calc__link').removeClass('active');
+        }
+      });
+      $(window).on('scroll', function () {
+        var scrollTop = $(window).scrollTop();
+        var windowH = $(window).height();
+        var windowH2 = $(window).height() / 2; // if (scrollTop > windowH2) {
+        // 		$('.calc__link').addClass('active');
+        // } else {
+        // 		$('.calc__link').removeClass('active');
+        // }
+
+        var formTop = $('#contact-form').offset().top;
+
+        if (scrollTop + windowH > formTop) {
+          $('.calc__link').addClass('hide');
+        } else {
+          $('.calc__link').removeClass('hide');
+        }
+      });
+    }
   });
 })(jQuery);
 

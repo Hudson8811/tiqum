@@ -39,20 +39,20 @@ body.body-overflow {
   background-color: #ffffff;
   .page {
     flex: 1 1 auto;
-    padding: 130px 0 0;
+    padding: 128px 0 0;
 
     @media (max-width: 1919px) {
-      padding: 100px 0 0;
+      padding: 103px 0 0;
     }
 
     @media (max-width: 1439px) {
-      padding: 70px 0 0;
+      padding: 98px 0 0;
     }
     @media (max-width: 1024px) {
       padding: 6.836vw 0 0;
     }
     @media (max-width: 767px) {
-      padding: 12vw 0 0;
+      padding: vw(45,320) 0 0;
     }
     &-main,
     &-blog {

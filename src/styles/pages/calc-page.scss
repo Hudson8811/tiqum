@@ -836,6 +836,7 @@
 						padding-left: 11.25vw;
 					}
 					svg {
+						display: none;
 						opacity: 1;
 						[stroke="#2A2A2A"]{
 							stroke: #0047FF !important;
@@ -844,6 +845,7 @@
 							left: -50px;
 						}
 						@media (max-width: 767px) {
+							display: block;
 							position: absolute;
 							left: 0;
 							top: 0;

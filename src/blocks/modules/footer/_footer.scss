@@ -637,7 +637,10 @@
 		}
 	}
 	&.active.hide{
-		bottom:-125px;
+		bottom:-169px;
+		@media (max-width: 1439px){
+			bottom:-135px;
+		}
 	}
 
 }
