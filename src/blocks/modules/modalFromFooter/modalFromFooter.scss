@@ -1,0 +1,63 @@
+.footer.modalFromFooter {
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	z-index: 99999;
+	min-height: 100vh;
+	transition: all .5s;
+	height: 100%;
+	overflow: auto;
+	opacity: 0;
+	width: 0;
+	&.active {
+		display: block;
+		left: 0;
+		width: 100vw;
+		opacity: 1;
+	}
+	.wewillfind-footer {
+		@media (max-width: 767px) {
+			flex-flow: column-reverse nowrap;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+	}
+	
+	.footer__right {
+		.footer__right-soc {
+			@media (max-width: 1024px) {
+				grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+			}
+			@media (max-width: 767px) {
+				grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+			}
+		}		
+	}
+	
+}
+.wewillfind-footer__title.general-title{
+	&.mob {
+		display: none;
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
+	&.desc {
+		display: block;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	@media (max-width: 1439px) {
+		max-width: 570px;
+	}
+} 
+.modalFromFooter--close  {
+	position: absolute;
+	right: 28px;
+	top: 28px;
+	@media (max-width: 767px) {
+		right: 10px;
+		top: 10px;
+	}
+}

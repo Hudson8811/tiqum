@@ -656,6 +656,7 @@
 	background:  #0047FF;
 	color: #FFFFFF;
 	opacity: 0;
+	z-index: 9999;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
@@ -669,16 +670,15 @@
 		font-size: 14px;
 		line-height: 26px;
 	}
-	@media (max-width: 375px){
-		width: vw(335,375);
-		height: 48px;
+	@media (max-width: 767px){
+		width: vw(280,320);
+		height: vh(48,568);
 		border-radius: 0px;
 		font-weight: 400;
-		font-size: 14px;
+		font-size: vw(14,320);
 		line-height: 16px;
-		margin-left: 0;
-		right: auto;
-		left: 5.333vw;
+		right: vw(20,320);;
+
 	}
 	&.active {
 		opacity: 1;

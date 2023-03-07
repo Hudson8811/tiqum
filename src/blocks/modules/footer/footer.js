@@ -1,5 +1,12 @@
 (function ($) {
-
+	$(".calc__link--circle").click(function(){
+		$(".modalFromFooter").addClass("active")
+		$("body").addClass("noScroll")
+	})
+	$(".modalFromFooter--close").click(function(){
+		$(".modalFromFooter").removeClass("active")
+		$("body").removeClass("noScroll")
+	})
   if (typeof Drupal !== 'undefined') {
     (function ($, Drupal) {
       Drupal.behaviors.tiqumFooter = {
