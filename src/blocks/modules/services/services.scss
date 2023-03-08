@@ -120,6 +120,7 @@
 					display: block;
 					max-width: 250px;
 					margin-left: -20px;
+					
 					@media (max-width: 1919px){
 						margin-left: -15px;
 						max-width: 240px;
@@ -157,6 +158,10 @@
 					color: #000000;
 					opacity: 0.6;
 					word-spacing: 10px;
+					b{
+						display: inline-block;
+						width: 5px;
+					}
 					@media (max-width: 1919px){
 						font-size: 14px;
 						line-height: 16px;

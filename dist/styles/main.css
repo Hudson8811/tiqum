@@ -4374,6 +4374,10 @@ summary {
   opacity: 0.6;
   word-spacing: 10px;
 }
+.services__item-left span b {
+  display: inline-block;
+  width: 5px;
+}
 @media (max-width: 1919px) {
   .services__item-left span {
     font-size: 14px;
