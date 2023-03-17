@@ -4360,7 +4360,7 @@ summary {
 }
 .services__item-left > span {
   display: block;
-  max-width: 250px;
+  max-width: 290px;
   margin-left: -20px;
   padding-left: 20px;
 }
@@ -4404,34 +4404,38 @@ summary {
     padding-left: 2.667vw;
   }
 }
-.services__item-left span {
+.services__item-left > span {
   font-family: "Suisse Intl";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  opacity: 0.6;
-  word-spacing: 10px;
+  opacity: 0.4;
 }
-.services__item-left span b {
+.services__item-left > span span {
+  white-space: nowrap;
+  margin-right: 20px;
+  display: inline-block;
+}
+.services__item-left > span b {
   display: inline-block;
   width: 5px;
 }
 @media (max-width: 1919px) {
-  .services__item-left span {
+  .services__item-left > span {
     font-size: 14px;
     line-height: 16px;
   }
 }
 @media (max-width: 1024px) {
-  .services__item-left span {
+  .services__item-left > span {
     font-size: 1.367vw;
     line-height: 1.563vw;
   }
 }
 @media (max-width: 767px) {
-  .services__item-left span {
+  .services__item-left > span {
     font-size: 3.2vw;
     line-height: 3.733vw;
   }

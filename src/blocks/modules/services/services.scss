@@ -118,7 +118,7 @@
 				}
 				>span {
 					display: block;
-					max-width: 250px;
+					max-width: 290px;
 					margin-left: -20px;
 					
 					@media (max-width: 1919px){
@@ -149,15 +149,20 @@
 						padding-left: 2.667vw;
 					}
 				}
-				span {
+				& > span {
 					font-family: 'Suisse Intl';
 					font-style: normal;
 					font-weight: 400;
 					font-size: 18px;
 					line-height: 21px;
 					color: #000000;
-					opacity: 0.6;
-					word-spacing: 10px;
+					opacity: 0.4;
+					span{
+						white-space: nowrap;
+						margin-right: 20px;
+						display: inline-block;
+					}
+
 					b{
 						display: inline-block;
 						width: 5px;
