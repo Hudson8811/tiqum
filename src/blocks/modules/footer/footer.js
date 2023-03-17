@@ -33,24 +33,24 @@
                 }
             });
 
-            $('.form-wewillfind-footer button[type=submit], .form-wewillfind-footer input[type=submit].webform-button--submit').once('hover').hover(function (event){
-                let valid = true;
-                $(this).closest('form').find('input:not([type=file]), textarea').each(function (){
-                    if (validInput(this)){
-                        $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
-                    } else {
-                        $(this).closest('.form-wewillfind-footer__item').addClass("js-error").removeClass("js-active-area");
-                        valid = false;
-                    }
-                });
-                if (valid) {
-                    //submit code here
-                    $(this).prop('disabled', false);
+            $(document).on('click','.form-wewillfind-footer button[type=submit]',function (){
+              event.preventDefault();
+              let valid = true;
+              $(this).closest('form').find('input:not([type=file]), textarea').each(function (){
+                if (validInput(this)){
+                  $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
+                } else {
+                  $(this).closest('.form-wewillfind-footer__item').addClass("js-error").removeClass("js-active-area");
+                  valid = false;
                 }
-                else {
-                  $(this).prop('disabled', true);
-                  return false;
+              });
+              if (valid) {
+                //submit code here
+                let $button = $('.form-wewillfind-footer input[type=submit].webform-button--submit');
+                if (!$button.hasClass('processed')) {
+                  $button.addClass('processed').mousedown().click();
                 }
+              }
             });
         },
       };

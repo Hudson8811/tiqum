@@ -543,6 +543,10 @@
 		}
 	}
 
+	input.webform-button--submit {
+		display: none;
+	}
+
 	&.submited{
 		.webform-submission-form & {
 			margin-top: 70px;
@@ -656,7 +660,7 @@
 	background:  #0047FF;
 	color: #FFFFFF;
 	opacity: 0;
-	z-index: 9999;
+	z-index: 10;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
