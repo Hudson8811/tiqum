@@ -9745,4 +9745,154 @@ summary {
 .footer.footer--light .form-wewillfind-footer__item input, .footer.footer--light .form-wewillfind-footer__item textarea {
   color: #2A2A2A;
 }
+
+.services-page-item {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  min-height: 250px;
+}
+.services-page-item--title {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 95%;
+  /* or 61px */
+  letter-spacing: -0.03em;
+  max-width: 793px;
+  color: #FFFFFF;
+}
+.services-page-item .accordion {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  display: block;
+}
+.services-page-item .accordion__intro {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  padding-left: 0;
+  background: transparent;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  color: #2A2A2A;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.services-page-item .accordion__intro .flex-lr__right {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 30px;
+}
+.services-page-item .accordion__intro__img {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  animation-name: rotationClose;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 1024px) {
+  .services-page-item .accordion__intro__img svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.services-page-item .accordion__intro__img:hover {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+.services-page-item .accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  color: #2A2A2A;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  background: transparent;
+  width: 100%;
+  margin-top: 120px;
+}
+.services-page-item .accordion__content--desc {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  opacity: 0.4;
+  color: #fff;
+  max-width: 431px;
+  margin-bottom: 30px;
+}
+.services-page-item .accordion__content--link {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  max-width: 431px;
+}
+.services-page-item .accordion__content--link-detail {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  margin-bottom: 65px;
+}
+.services-page-item .accordion__content .flex-lr__left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  padding-bottom: 171px;
+}
+.services-page-item .accordion__content p {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 65px;
+  max-width: 1024px;
+}
+.services-page-item .accordion__active .accordion__intro {
+  background: transparent;
+  font-style: normal;
+}
+.services-page-item .accordion__active .accordion__intro .accordion__intro__img {
+  animation-name: rotationOpen;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.services-page-item .accordion__active .accordion__content {
+  opacity: 1;
+}
 /*# sourceMappingURL=maps/main.css.map */
