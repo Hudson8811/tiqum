@@ -2628,6 +2628,11 @@ summary {
 .header.header-mobile_active {
   background: #2A2A2A;
 }
+@media (max-width: 1439px) {
+  .header.header-mobile_active .menu-header__item.active::before {
+    bottom: -38px;
+  }
+}
 .header.header-mobile_active:after {
   content: "";
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -2815,11 +2820,6 @@ summary {
   background-color: #2A2A2A;
   transition: all 0.3s ease 0s;
   padding: 100px 20px 0;
-}
-@media (max-width: 1439px) {
-  .menu-mobile {
-    padding: 70px 30px 0;
-  }
 }
 @media (max-width: 1024px) {
   .menu-mobile {
@@ -3050,6 +3050,41 @@ summary {
 
 .menu-mobile.menu-mobile_active {
   top: 0;
+}
+
+.header__border-bottom .header.header-mobile_active .header__inner {
+  border-bottom: none;
+}
+@media (max-width: 1439px) {
+  .header__border-bottom .header.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -39px;
+  }
+}
+
+.header__border-bottom .header__inner {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1439px) {
+  .header__border-bottom .header__inner .menu-header__item.active::before {
+    bottom: -39px;
+  }
+}
+.header__border-bottom .js-header-fixed .header__inner {
+  border-bottom: none;
+}
+@media (max-width: 1439px) {
+  .header__border-bottom .js-header-fixed .header__inner .menu-header__item.active::before {
+    bottom: -28px;
+  }
+}
+
+.header.js-header-fixed.header-mobile_active .header__inner {
+  border-bottom: none;
+}
+@media (max-width: 1439px) {
+  .header.js-header-fixed.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -28px;
+  }
 }
 
 .footer {
@@ -6463,7 +6498,11 @@ summary {
 }
 .page-header-big .flex-lr {
   height: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1439px) {
+  .page-header-big .flex-lr {
+    margin-top: 27px;
+  }
 }
 @media (max-width: 767px) {
   .page-header-big .flex-lr {
@@ -9746,6 +9785,9 @@ summary {
   color: #2A2A2A;
 }
 
+.services-page .about-page__next-cases.next-cases-portfolio {
+  margin-top: 160px;
+}
 .services-page-item {
   position: relative;
   display: flex;
