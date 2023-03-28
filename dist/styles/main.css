@@ -8824,6 +8824,12 @@ summary {
 .calc-page__underBlok.active .calc-page__underBlok--cost {
   opacity: 1;
 }
+.calc-page__underBlok.default {
+  cursor: default;
+}
+.calc-page__underBlok.default label {
+  pointer-events: none;
+}
 .calc-page__underBlok--launch .calc-page__underBlok--left {
   width: 50%;
 }
@@ -9357,6 +9363,31 @@ summary {
     font-size: 5vw;
     margin-top: 6.25vw;
     line-height: 135%;
+  }
+}
+.calc-page--info {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #2A2A2A;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  opacity: 0.4;
+  margin-top: 10px;
+}
+@media (max-width: 1024px) {
+  .calc-page--info {
+    font-size: 1.367vw;
+    line-height: 135%;
+  }
+}
+@media (max-width: 767px) {
+  .calc-page--info {
+    line-height: 135%;
+    font-size: 3.7vw;
+    margin-top: 2.6vw;
   }
 }
 .calc-page__left-control {

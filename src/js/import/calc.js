@@ -23,25 +23,25 @@
             },
             {
                 class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+                text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений',
             },
         ],
         [
             {
                 class: 'js-calc-finalPrice',
-                text: 'Итоговая стоимость команды с учетом ваших предпочтений',
+                text: 'Предварительная стоимость команды с учетом ваших предпочтений',
             },
         ],
         [
             {
                 class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+                text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений',
             },
         ],
         [
             {
                 class: 'js-calc-finalPrice',
-                text: 'Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений',
+                text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений',
             },
         ]
     ];
@@ -55,14 +55,18 @@
             'UI designer',
             'Backend Developer',
         ],
-        'Веб-сервис' : 'Frontend Developer',
-        'Мобильное приложение' : '2x mobile Frontend Developer',
+        'Веб-сервис' : [
+            'Frontend Developer (Web)'
+        ],
+        'Мобильное приложение' : [
+            'Mobile Frontend Developer (iOS)',
+            'Mobile Frontend Developer (Android)'
+        ],
         'add' : {
             'Quality Assurance' : 'QA Engineer',
-            'Автотестирование' : 'Тестировщик',
+            'Автотестирование' : 'Test Engineer',
             'Инфраструктура' : 'DevOps',
         }
-
     };
 
     let mvpPrices = {
@@ -95,6 +99,23 @@
                 'Инфраструктура': 1260000,
                 'Промо-сайт': 250000
             }
+        }
+    };
+
+    let mvpDetails = {
+        'main': {
+            'Архитектура' : 1,
+            'Системная аналитика' : 1,
+            'UX проектирование' : 1,
+            'UI (дизайн пользовательских интерфейсов)' : 1,
+            'Back-end разработка (бизнес-логика и API)' : 1
+        },
+        'Веб-сервис' : {
+            'Front-end разработка (админка, кабинеты пользователей)' : 1
+        },
+        'Мобильное приложение' : {
+            'Front-end разработка Android' : 1,
+            'Front-end разработка iOS' : 1
         }
     };
 
@@ -295,6 +316,7 @@
     function calcFinal(service){
         let jsonArray = {};
         jsonArray['service'] = serviceList[service];
+        let details = {};
         let totalPrice = 0;
         let totalTime = 0;
         let timeBlock;
@@ -393,6 +415,7 @@
 
                 $('.calc-page__frontend-dev').removeClass('active');
                 if (currentWhat){
+                    let tempMans  = {};
                     $('.calc-page__serviceBlock[data-service='+service+']')
                         .find('.calc-page__block--team ,.calc-page__block--Additionally').removeClass('hidden');
                     $('.calc-page__footer').addClass('active');
@@ -404,35 +427,64 @@
 
                     if (currentWhat === 'Веб-сервис'){
                         if (mvpStaff.hasOwnProperty(currentWhat)){
-                            teamArray.push(mvpStaff[currentWhat]);
+                            teamArray.push(...mvpStaff[currentWhat]);
                         }
                         $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
                         mvpCount = 7;
+                        Object.assign(tempMans, mvpDetails['main'], mvpDetails[currentWhat]);
+                        details['main'] = {
+                            'title': 'Разработка веб-сервиса',
+                            'price': mvpPrices[currentWhat]['mainPrice'],
+                            'parts': tempMans
+                        }
                     } else if (currentWhat === 'Мобильное приложение') {
                         if (mvpStaff.hasOwnProperty(currentWhat)){
-                            teamArray.push(mvpStaff[currentWhat]);
+                            teamArray.push(...mvpStaff[currentWhat]);
                         }
                         $('.calc-page__frontend-dev[data-type="'+currentWhat+'"]').addClass('active');
-                        count++;
+                        count++
                         mvpCount = 8;
+                        Object.assign(tempMans, mvpDetails['main'], mvpDetails[currentWhat]);
+                        details['main'] = {
+                            'title': 'Разработка мобильного приложения',
+                            'price': mvpPrices[currentWhat]['mainPrice'],
+                            'parts': tempMans
+                        }
                     } else {
                         if (mvpStaff.hasOwnProperty( 'Веб-сервис')){
-                            teamArray.push(mvpStaff[ 'Веб-сервис']);
+                            teamArray.push(...mvpStaff[ 'Веб-сервис']);
                         }
                         if (mvpStaff.hasOwnProperty( 'Мобильное приложение')){
-                            teamArray.push(mvpStaff[ 'Мобильное приложение']);
+                            teamArray.push(...mvpStaff[ 'Мобильное приложение']);
                         }
                         $('.calc-page__frontend-dev').addClass('active');
-                        count++;
                         mvpCount = 9;
+                        Object.assign(tempMans, mvpDetails['main'], mvpDetails['Веб-сервис'], mvpDetails['Мобильное приложение']);
+                        details['main'] = {
+                            'title': 'Разработка веб-сервиса и мобильного приложения',
+                            'price': mvpPrices[currentWhat]['mainPrice'],
+                            'parts': tempMans
+                        }
                     }
 
-                    $('.js-mvp-count').text(mvpCount);
 
+
+
+
+
+                    details['additional'] = {
+                        'title': 'Дополнительные услуги',
+                        'price': 0,
+                        'parts': {}
+                    }
                     if (jsonArray.hasOwnProperty('add')){
+                        let tempDetailsAdd = {};
+                        let tempDetailsPrice= 0;
                         jsonArray['add'].forEach(function (value){
                             if (mvpPrices[currentWhat]['add'].hasOwnProperty(value)){
                                 totalPrice += mvpPrices[currentWhat]['add'][value];
+                                tempDetailsPrice += mvpPrices[currentWhat]['add'][value];
+                                Object.assign(tempDetailsAdd, {[value] : mvpPrices[currentWhat]['add'][value]});
                             }
 
                             if (mvpStaff['add'].hasOwnProperty(value)){
@@ -440,8 +492,18 @@
                             }
 
                         });
+
+                        details['additional'] = {
+                            'title': 'Дополнительные услуги',
+                            'price': tempDetailsPrice,
+                            'parts': tempDetailsAdd
+                        }
                     }
-                    count += teamArray.length;
+                    count = teamArray.length;
+
+                    $('.js-mvp-count').text(count);
+
+
 
                     for (var key in mvpPrices[currentWhat]['add']) {
                         $('.calc-page__serviceBlock[data-service='+service+'] input[name="add[]"][value="'+key+'"]')
@@ -459,6 +521,7 @@
                 jsonArray['teamTotal'] = count;
                 jsonArray['totalPrice'] = totalPrice;
                 jsonArray['totalTime'] = totalTime;
+                jsonArray['details'] = details;
 
                 $('.'+timeBlock).html(totalTime + ' ' + getMonthEnding(totalTime));
                 $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
