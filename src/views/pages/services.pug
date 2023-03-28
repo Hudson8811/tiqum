@@ -1,224 +1,226 @@
 extends ../layouts/default
 
 block variables
-    - const title = "TIQUM";
+	- const title = "TIQUM";
 
 block content
-    .wrapper.main-page.services-page
-        include ../../blocks/modules/header/header
-        .page(style="position:relative" )
-            .new-page.new-page1
-                .new-page__image(data-depth='0.2')
-                    img(src="img/pages/new-page/img1.jpg", alt="alt")
-                .new-page__header
-                    .container
-                        .flex-lr
-                            .flex-lr__left
-                            .flex-lr__right
-                                h1.general-title Услуги
-                .new-page1__serveces-title
-                    .container
-                        .flex-lr
-                            .flex-lr__left
-                            .flex-lr__right
-                .new-page1__services
-                    .container
-                      .flex-lr
-                        .services-page-item
-                          <div class="accordion">
-                            <div class="accordion__intro">
-                              .flex-lr
-                                .flex-lr__left
-                                  ul
-                                    li.item-services-new-page1__number 01
-                                .flex-lr__right
-                                  <h4 class="services-page-item--title" >Веб-сервисы и мобильные приложения</h4>
-                              <div class="accordion__intro__img">
-                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g opacity="1">
-                                  <g clip-path="url(#clip0_3892_44461)">
-                                  <path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                  <path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-                                  </g>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_3892_44461">
-                                  <rect width="27" height="27" rx="13.5" fill="white"/>
-                                  </clipPath>
-                                  </defs>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="accordion__content">
-                              .flex-lr
-                                  .flex-lr__left
-                                    .accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах 
-                                    a(href="").accordion__content--link  Получить коммерческое предложение за 1 минуту →
-                                  .flex-lr__right                                    
-                                    <p class="">Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.</p>
-                                    <p class="">С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.</p>
-                                    <p class="">Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.</p>
-                                    a(href="").accordion__content--link-detail Подробнее об услуге
-                            </div>
-                          </div>                            
-                      .flex-lr
-                        .services-page-item
-                          <div class="accordion">
-                            <div class="accordion__intro">
-                              .flex-lr
-                                .flex-lr__left
-                                  ul
-                                    li.item-services-new-page1__number 02
-                                .flex-lr__right
-                                  <h4 class="services-page-item--title" >Корпоративные сайты</h4>
-                              <div class="accordion__intro__img">
-                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g opacity="1">
-                                  <g clip-path="url(#clip0_3892_44461)">
-                                  <path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                  <path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-                                  </g>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_3892_44461">
-                                  <rect width="27" height="27" rx="13.5" fill="white"/>
-                                  </clipPath>
-                                  </defs>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="accordion__content">
-                              .flex-lr
-                                  .flex-lr__left
-                                    .accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах 
-                                    a(href="").accordion__content--link  Получить коммерческое предложение за 1 минуту →
-                                  .flex-lr__right                                    
-                                    <p class="">Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.</p>
-                                    <p class="">С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.</p>
-                                    <p class="">Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.</p>
-                                    a(href="").accordion__content--link-detail Подробнее об услуге
-                            </div>
-                          </div>                            
-                      .flex-lr
-                        .services-page-item
-                          <div class="accordion">
-                            <div class="accordion__intro">
-                              .flex-lr
-                                .flex-lr__left
-                                  ul
-                                    li.item-services-new-page1__number 03
-                                .flex-lr__right
-                                  <h4 class="services-page-item--title" >Проектирование сервисов CJM/UX/UI</h4>
-                              <div class="accordion__intro__img">
-                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g opacity="1">
-                                  <g clip-path="url(#clip0_3892_44461)">
-                                  <path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                  <path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-                                  </g>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_3892_44461">
-                                  <rect width="27" height="27" rx="13.5" fill="white"/>
-                                  </clipPath>
-                                  </defs>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="accordion__content">
-                              .flex-lr
-                                  .flex-lr__left
-                                    .accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах 
-                                    a(href="").accordion__content--link  Получить коммерческое предложение за 1 минуту →
-                                  .flex-lr__right                                    
-                                    <p class="">Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.</p>
-                                    <p class="">С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.</p>
-                                    <p class="">Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.</p>
-                                    a(href="").accordion__content--link-detail Подробнее об услуге
-                            </div>
-                          </div>                            
-                      .flex-lr
-                        .services-page-item
-                          <div class="accordion">
-                            <div class="accordion__intro">
-                              .flex-lr
-                                .flex-lr__left
-                                  ul
-                                    li.item-services-new-page1__number 04
-                                .flex-lr__right
-                                  <h4 class="services-page-item--title" >Продуктовая команда</h4>
-                              <div class="accordion__intro__img">
-                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g opacity="1">
-                                  <g clip-path="url(#clip0_3892_44461)">
-                                  <path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                  <path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-                                  </g>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_3892_44461">
-                                  <rect width="27" height="27" rx="13.5" fill="white"/>
-                                  </clipPath>
-                                  </defs>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="accordion__content">
-                              .flex-lr
-                                  .flex-lr__left
-                                    .accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах 
-                                    a(href="").accordion__content--link  Получить коммерческое предложение за 1 минуту →
-                                  .flex-lr__right                                    
-                                    <p class="">Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.</p>
-                                    <p class="">С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.</p>
-                                    <p class="">Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.</p>
-                                    a(href="").accordion__content--link-detail Подробнее об услуге
-                            </div>
-                          </div>                            
-                      .flex-lr
-                        .services-page-item
-                          <div class="accordion">
-                            <div class="accordion__intro">
-                              .flex-lr
-                                .flex-lr__left
-                                  ul
-                                    li.item-services-new-page1__number 05
-                                .flex-lr__right
-                                  <h4 class="services-page-item--title" >Цифровая трансформация. Консалтинг</h4>
-                              <div class="accordion__intro__img">
-                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g opacity="1">
-                                  <g clip-path="url(#clip0_3892_44461)">
-                                  <path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                  <path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-                                  </g>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_3892_44461">
-                                  <rect width="27" height="27" rx="13.5" fill="white"/>
-                                  </clipPath>
-                                  </defs>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="accordion__content">
-                              .flex-lr
-                                  .flex-lr__left
-                                    .accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах 
-                                    a(href="").accordion__content--link  Получить коммерческое предложение за 1 минуту →
-                                  .flex-lr__right                                    
-                                    <p class="">Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.</p>
-                                    <p class="">С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.</p>
-                                    <p class="">Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.</p>
-                                    a(href="").accordion__content--link-detail Подробнее об услуге
-                            </div>
-                          </div>                            
+	.wrapper.main-page.services-page
+		include ../../blocks/modules/header/header
+		.page
+			.new-page.new-page1
+				.new-page__image(data-depth='0.2')
+					img(src="img/pages/new-page/img1.jpg", alt="alt")
+				.new-page__header
+					.container
+						.flex-lr
+							.flex-lr__left
+							.flex-lr__right
+								h1.general-title Услуги
+				.new-page1__serveces-title
+					.container
+						.flex-lr
+							.flex-lr__left
+							.flex-lr__right
 
-        include ../../blocks/modules/cases-porfolio/cases-porfolio
-        include ../../blocks/modules/footer/footer
-    a.calc__link.calc__link--circle(href="#") Оставить заявку
+
+				.new-page1__services
+					.container
+						.flex-lr
+							.services-page-item
+								.accordion
+									.accordion__intro
+										.flex-lr
+											.flex-lr__left
+												ul
+													li.item-services-new-page1__number 01
+											.flex-lr__right
+												h4.services-page-item--title Веб-сервисы и мобильные приложения
+										.accordion__intro__img
+											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g opacity="1">
+											<g clip-path="url(#clip0_3892_44461)">
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											</g>
+											</g>
+											<defs>
+											<clipPath id="clip0_3892_44461">
+											<rect width="27" height="27" rx="13.5" fill="white"/>
+											</clipPath>
+											</defs>
+											</svg>
+									.accordion__content
+										.flex-lr
+											.flex-lr__left
+												.accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах
+												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
+											.flex-lr__right
+												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
+												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
+												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
+										.flex-lr
+											.flex-lr__left
+											.flex-lr__right
+												a.accordion__content--link-detail(href="") Подробнее об услуге
+
+						.flex-lr
+							.services-page-item
+								.accordion
+									.accordion__intro
+										.flex-lr
+											.flex-lr__left
+												ul
+													li.item-services-new-page1__number 02
+											.flex-lr__right
+												h4.services-page-item--title Корпоративные сайты
+										.accordion__intro__img
+											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g opacity="1">
+											<g clip-path="url(#clip0_3892_44461)">
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											</g>
+											</g>
+											<defs>
+											<clipPath id="clip0_3892_44461">
+											<rect width="27" height="27" rx="13.5" fill="white"/>
+											</clipPath>
+											</defs>
+											</svg>
+									.accordion__content
+										.flex-lr
+											.flex-lr__left
+												.accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах
+												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
+											.flex-lr__right
+												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
+												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
+												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
+										.flex-lr
+											.flex-lr__left
+											.flex-lr__right
+												a.accordion__content--link-detail(href="") Подробнее об услуге
+
+						.flex-lr
+							.services-page-item
+								.accordion
+									.accordion__intro
+										.flex-lr
+											.flex-lr__left
+												ul
+													li.item-services-new-page1__number 03
+											.flex-lr__right
+												h4.services-page-item--title Проектирование сервисов
+										.accordion__intro__img
+											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g opacity="1">
+											<g clip-path="url(#clip0_3892_44461)">
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											</g>
+											</g>
+											<defs>
+											<clipPath id="clip0_3892_44461">
+											<rect width="27" height="27" rx="13.5" fill="white"/>
+											</clipPath>
+											</defs>
+											</svg>
+									.accordion__content
+										.flex-lr
+											.flex-lr__left
+												.accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах
+												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
+											.flex-lr__right
+												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
+												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
+												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
+										.flex-lr
+											.flex-lr__left
+											.flex-lr__right
+												a.accordion__content--link-detail(href="") Подробнее об услуге
+
+						.flex-lr
+							.services-page-item
+								.accordion
+									.accordion__intro
+										.flex-lr
+											.flex-lr__left
+												ul
+													li.item-services-new-page1__number 04
+											.flex-lr__right
+												h4.services-page-item--title Продуктовая команда
+										.accordion__intro__img
+											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g opacity="1">
+											<g clip-path="url(#clip0_3892_44461)">
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											</g>
+											</g>
+											<defs>
+											<clipPath id="clip0_3892_44461">
+											<rect width="27" height="27" rx="13.5" fill="white"/>
+											</clipPath>
+											</defs>
+											</svg>
+									.accordion__content
+										.flex-lr
+											.flex-lr__left
+												.accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах
+												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
+											.flex-lr__right
+												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
+												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
+												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
+										.flex-lr
+											.flex-lr__left
+											.flex-lr__right
+												a.accordion__content--link-detail(href="") Подробнее об услуге
+
+						.flex-lr
+							.services-page-item
+								.accordion
+									.accordion__intro
+										.flex-lr
+											.flex-lr__left
+												ul
+													li.item-services-new-page1__number 05
+											.flex-lr__right
+												h4.services-page-item--title Цифровая трансформация. Консалтинг
+										.accordion__intro__img
+											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g opacity="1">
+											<g clip-path="url(#clip0_3892_44461)">
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											</g>
+											</g>
+											<defs>
+											<clipPath id="clip0_3892_44461">
+											<rect width="27" height="27" rx="13.5" fill="white"/>
+											</clipPath>
+											</defs>
+											</svg>
+									.accordion__content
+										.flex-lr
+											.flex-lr__left
+												.accordion__content--desc Специализируемся на функционально сложных и высоко нагруженных проектах
+												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
+											.flex-lr__right
+												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
+												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
+												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
+										.flex-lr
+											.flex-lr__left
+											.flex-lr__right
+												a.accordion__content--link-detail(href="") Подробнее об услуге
+
+
+		include ../../blocks/modules/cases-porfolio/cases-porfolio
+		include ../../blocks/modules/footer/footer
+	a.calc__link.calc__link--circle(href="#") Оставить заявку
 
 block scripts
-    script(src="https://code.jquery.com/jquery-3.6.1.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
-    script(src="js/main.js")
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="js/main.js")

@@ -1,4 +1,7 @@
 .services-page{
+	.page{
+		position: relative;
+	}
 	.about-page__next-cases.next-cases-portfolio {
 		margin-top: 160px;
 	}
@@ -7,17 +10,15 @@
 		display: flex;
 		width: 100vw;
 		min-height: 250px;
+		@media (max-width: 767px) {
+			border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+		}
 		&--title {
-			font-family: 'Suisse Intl';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 64px;
-			line-height: 95%;
-			/* or 61px */
-
-			letter-spacing: -0.03em;
+			@extend .h1;
+			@media (min-width: 1920px){
+				font-size: 64px;
+			}
 			max-width: 793px;
-			color: #FFFFFF;
 		}
 		.accordion {
 			width: 100%;
@@ -42,7 +43,10 @@
 				.flex-lr__right {
 					border-top: 1px solid rgba(255, 255, 255, 0.2);
 					padding-top: 30px;
-			
+					@media (max-width: 767px) {
+						padding-top: 0;
+						border-top: 0;
+					}
 				}
 				&__img {
 					position: absolute;
@@ -83,34 +87,44 @@
 				background: transparent;
 				width: 100%;
 				margin-top: 120px;
+
+				@media (max-width: 767px) {
+					.flex-lr{
+						flex-direction: column-reverse;
+					}
+					.flex-lr__left{
+						margin-top: 65px;
+					}
+				}
+
 				&--desc {
+					@extend .b1;
 					font-family: 'Suisse Intl';
 					font-style: normal;
 					font-weight: 400;
-					font-size: 24px;
-					line-height: 32px;
 					opacity: 0.4;
 					color: #fff;
 					max-width: 431px;
-					margin-bottom: 30px;					
+					margin-bottom: 30px;
+					@media (max-width: 767px) {
+						max-width: 100%;
+					}
 				}
 				&--link {
+					@extend .h3;
 					font-family: 'Suisse Intl';
 					font-style: normal;
 					font-weight: 400;
-					font-size: 32px;
-					line-height: 110%;
-					letter-spacing: -0.02em;
 					color: #FFFFFF;
 					max-width: 431px;
+					@media (max-width: 767px) {
+						max-width: 100%;
+					}
 					&-detail  {
+						@extend .h3;
 						font-family: 'Suisse Intl';
 						font-style: normal;
 						font-weight: 400;
-						font-size: 32px;
-						line-height: 110%;
-						letter-spacing: -0.02em;
-						text-decoration-line: underline;
 						text-decoration-line: underline;
 						text-decoration-thickness: 1px;
 						text-underline-offset: 5px;
@@ -118,7 +132,8 @@
 						text-decoration-skip-ink: none;
 						color: #FFFFFF;
 						margin-bottom: 65px;
-						
+						margin-top: 65px;
+						display: inline-block;
 					}
 				}
 				.flex-lr__left {
@@ -126,30 +141,15 @@
 					justify-content: flex-end;
 					align-items: flex-start;
 					flex-flow: column nowrap;
-					padding-bottom: 171px;
 				}
-				// @media (max-width: 1439px) {
-				// 	max-width: 435px;
-				// }
-				// @media (max-width: 1024px) {
-				// 	font-size: 1.3671875vw;
-				// 	line-height: 135%;
-				// 	max-width: 29.39453125vw;
-				// }
-				// @media (max-width: 767px) {
-				// 	font-size: 4.375vw;
-				// 	max-width: 100%;
-				// }
 				p {
+					@extend .h3;
 					font-family: 'Suisse Intl';
-					font-style: normal;
-					font-weight: 400;
-					font-size: 32px;
-					line-height: 110%;
-					letter-spacing: -0.02em;
 					color: #FFFFFF;
-					margin-bottom: 65px;
 					max-width: 1024px;
+					&:not(:last-child){
+						margin-bottom: 65px;
+					}
 				}
 	
 			}

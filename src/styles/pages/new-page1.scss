@@ -27,11 +27,14 @@
 		}
 		.flex-lr__left {
 			padding-right: 30px;
+			flex-shrink: 0;
+			width: 35%;
 			@media (max-width: 1024px){
 				padding-right: 2.930vw;
 			}
 			@media (max-width: 767px){
 				padding: 0;
+				width: auto;
 			}
 			ul {
 				border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
@@ -41,6 +44,7 @@
 				}
 				@media (max-width: 767px){
 					padding-top: 4vw;
+					border-top: 0;
 				}
 				li {
 					font-family: 'Suisse Intl';
