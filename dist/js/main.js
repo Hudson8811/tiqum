@@ -341,8 +341,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function ($) {
   var serviceSelect = false;
   var selectedService;
-  var serviceList = ['Запуск MVP', 'Продуктовая команда', 'Цифровая трансформация. Консалтинг', 'Проектирование сервиса'];
-  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>', 'Стоимость проектирования <span><br>сервиса</span>'];
+  var serviceList = ['Запуск MVP', 'Проектирование сервиса CJM/UX/UI', 'Продуктовая команда', 'Цифровая трансформация. Консалтинг'];
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость проектирования <span><br>сервиса</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>'];
   var finalBlocks = [[{
     class: 'js-calc-finalTime',
     text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
@@ -351,10 +351,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений'
   }], [{
     class: 'js-calc-finalPrice',
-    text: 'Предварительная стоимость команды с учетом ваших предпочтений'
+    text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений'
   }], [{
     class: 'js-calc-finalPrice',
-    text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений'
+    text: 'Предварительная стоимость команды с учетом ваших предпочтений'
   }], [{
     class: 'js-calc-finalPrice',
     text: 'Предварительная стоимость запуска сервиса/продукта с учетом ваших предпочтений'
@@ -759,6 +759,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
         break;
       case 1:
+        priceBlock = finalBlocks[service][0]['class'];
+        totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
+        jsonArray['totalPrice'] = totalPrice;
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+        break;
+      case 2:
         var manArray = {};
         priceBlock = finalBlocks[service][0]['class'];
         $('.calc-page__serviceBlock[data-service="' + service + '"] input').each(function () {
@@ -776,12 +782,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         jsonArray['teamTotal'] = count;
         jsonArray['totalPrice'] = totalPrice;
         $('.js-calc-manCount').text(count);
-        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
-        break;
-      case 2:
-        priceBlock = finalBlocks[service][0]['class'];
-        totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
-        jsonArray['totalPrice'] = totalPrice;
         $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
         break;
       case 3:
