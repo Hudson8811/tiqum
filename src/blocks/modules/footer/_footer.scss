@@ -470,6 +470,8 @@
 		margin-top: 60px;
 		display: flex;
 		align-items: center;
+		display: flex;
+		align-items: flex-start;
 		@media (max-width: 1919px){
 			margin-top: 45px;
 		}
@@ -487,10 +489,16 @@
 	}
 
 	&__btn {
-
+		min-height: 88px;
+		max-width: 595px;
+		@media (max-width: 1439px){
+			max-width: 315px;
+		}
 
 		@media (max-width: 767px){
 			flex: 1 1 100%;
+			max-width: 100%;
+			min-height: 12.8vw;
 		}
 
 
@@ -521,6 +529,34 @@
 			font-size: 3.200vw;
 			line-height: 3.733vw;
 		}
+		&--person {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: #F5F5F5;
+			opacity: 0.2;
+			max-width: 330px;
+			text-transform: none;
+			@media (max-width: 1919px){
+				font-size: 18px;
+				line-height: 21px;
+				max-width: 330px; 
+			}
+			@media (max-width: 1439px){
+				font-size: 14px;
+				line-height: 16px;
+				max-width: 248px; 
+			}
+			@media (max-width: 767px){
+				margin-top: 3.733vw;
+				margin-left: 0;
+				font-size: 3.200vw;
+				line-height: 3.733vw;
+				max-width: 57vw; 
+			}
+		}
+
 	}
 
 	&__success{
