@@ -3,7 +3,18 @@
 		position: relative;
 	}
 	.about-page__next-cases.next-cases-portfolio {
-		margin-top: 160px;
+		// position: relative;
+		background: #fff;
+		z-index: 500;
+		// .next-cases-portfolio__projects {
+		// 	margin-top: 294px;
+		// 	@media (max-width: 1439px) { 
+		// 		margin-top: 165px;
+		// 	}
+		// 	// @media (max-width: 1023px) { 
+		// 	// 	margin-top: 113px;
+		// 	// }
+		// }
 	}
 	&-item {
 		position: relative;

@@ -9881,7 +9881,8 @@ summary {
   position: relative;
 }
 .services-page .about-page__next-cases.next-cases-portfolio {
-  margin-top: 160px;
+  background: #fff;
+  z-index: 500;
 }
 .services-page-item {
   position: relative;
