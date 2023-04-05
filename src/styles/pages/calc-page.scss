@@ -1353,12 +1353,15 @@
 			background: transparent;
 			font-family: 'Suisse Intl';
 			font-style: normal;
-			font-weight: 500;
+			font-weight: 400;
 			line-height: 32px;
 			color: #2A2A2A;
 			display: flex;
 			justify-content: flex-start;
 			align-items: flex-start;
+			.b1 {
+				font-weight: 400;				
+			}
 			&__img {
 				position: absolute;
 				top: 0;
@@ -1393,7 +1396,7 @@
 			color: #2A2A2A;
 			font-style: normal;
 			max-width: 594px;
-			font-weight: 500;
+			font-weight: 400;
 			font-size: 18px;
 			line-height: 26px;
 			background: transparent;

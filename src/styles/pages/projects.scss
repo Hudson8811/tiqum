@@ -1,3 +1,11 @@
+.projects-page {
+	.page-header {
+		@media (max-width: 767px){
+			padding-top: vw(10,320);
+			padding-bottom: vw(50,320);
+		}		
+	}
+}
 .page-header {
 	display: flex;
 	.page-header__left {
@@ -44,6 +52,15 @@
 	}
 }
 .projects {
+	.item-projects {
+		.item-projects__content {
+			@media (max-width: 767px){
+				min-height: calc(100vw - 10.7vw);
+				height: calc(100vw - 10.7vw);
+			}		
+		}
+
+	}
 	&__subtitle {
 		font-family: 'Suisse Intl';
 		font-style: normal;

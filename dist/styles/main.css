@@ -3055,14 +3055,30 @@ summary {
 .header__border-bottom .header.header-mobile_active .header__inner {
   border-bottom: none;
 }
+.header__border-bottom .header.header-mobile_active .header__inner .menu-header__item.active::before {
+  bottom: -53px;
+}
+@media (max-width: 1919px) {
+  .header__border-bottom .header.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -41px;
+  }
+}
 @media (max-width: 1439px) {
   .header__border-bottom .header.header-mobile_active .header__inner .menu-header__item.active::before {
-    bottom: -39px;
+    bottom: -38px;
   }
 }
 
 .header__border-bottom .header__inner {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header__border-bottom .header__inner .menu-header__item.active::before {
+  bottom: -53px;
+}
+@media (max-width: 1919px) {
+  .header__border-bottom .header__inner .menu-header__item.active::before {
+    bottom: -42px;
+  }
 }
 @media (max-width: 1439px) {
   .header__border-bottom .header__inner .menu-header__item.active::before {
@@ -3071,6 +3087,14 @@ summary {
 }
 .header__border-bottom .js-header-fixed .header__inner {
   border-bottom: none;
+}
+.header__border-bottom .js-header-fixed .header__inner .menu-header__item.active::before {
+  bottom: -41px;
+}
+@media (max-width: 1919px) {
+  .header__border-bottom .js-header-fixed .header__inner .menu-header__item.active::before {
+    bottom: -28px;
+  }
 }
 @media (max-width: 1439px) {
   .header__border-bottom .js-header-fixed .header__inner .menu-header__item.active::before {
@@ -3081,9 +3105,28 @@ summary {
 .header.js-header-fixed.header-mobile_active .header__inner {
   border-bottom: none;
 }
+@media (max-width: 1919px) {
+  .header.js-header-fixed.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -28px;
+  }
+}
 @media (max-width: 1439px) {
   .header.js-header-fixed.header-mobile_active .header__inner .menu-header__item.active::before {
     bottom: -28px;
+  }
+}
+
+.header.header-mobile_active .header__inner {
+  border-bottom: none;
+}
+@media (max-width: 1919px) {
+  .header.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -42px;
+  }
+}
+@media (max-width: 1439px) {
+  .header.header-mobile_active .header__inner .menu-header__item.active::before {
+    bottom: -39px;
   }
 }
 
@@ -5431,6 +5474,13 @@ summary {
   color: #2A2A2A;
 }
 
+@media (max-width: 767px) {
+  .projects-page .page-header {
+    padding-top: 3.125vw;
+    padding-bottom: 15.625vw;
+  }
+}
+
 .page-header {
   display: flex;
 }
@@ -5481,6 +5531,12 @@ summary {
   opacity: 0.2;
 }
 
+@media (max-width: 767px) {
+  .projects .item-projects .item-projects__content {
+    min-height: 89.3vw;
+    height: 89.3vw;
+  }
+}
 .projects__subtitle {
   font-family: "Suisse Intl";
   font-style: normal;
@@ -5820,6 +5876,30 @@ summary {
     margin-left: 0;
     opacity: 0.4;
     margin-top: 5.333vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-page .page-header {
+    padding-top: 3.125vw;
+    padding-bottom: 3.125vw;
+    min-height: 60.3125vw;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-page .page-header .page-header__btns {
+    max-width: 31.25vw;
+    flex-flow: row wrap;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-page .page-header .page-header__labels {
+    top: 3.125vw;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-page .portfolio .project-portfolio__top .flex-lr__right {
+    margin-top: 21.875vw;
   }
 }
 
@@ -9736,12 +9816,15 @@ summary {
   background: transparent;
   font-family: "Suisse Intl";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 32px;
   color: #2A2A2A;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.calculator .accordion__intro .b1, .calculator .accordion__intro .services-page-item .accordion__content--desc, .services-page-item .calculator .accordion__intro .accordion__content--desc, .calculator .accordion__intro .text-style p, .text-style .calculator .accordion__intro p, .calculator .accordion__intro .text-style ul, .text-style .calculator .accordion__intro ul, .calculator .accordion__intro .text-style ol, .text-style .calculator .accordion__intro ol, .calculator .accordion__intro .portfolio .project-portfolio__item-right p, .portfolio .project-portfolio__item-right .calculator .accordion__intro p, .calculator .accordion__intro .portfolio .project-portfolio__item-right ul, .portfolio .project-portfolio__item-right .calculator .accordion__intro ul, .calculator .accordion__intro .portfolio .project-portfolio__item-right ol, .portfolio .project-portfolio__item-right .calculator .accordion__intro ol, .calculator .accordion__intro .right-content-blog p, .right-content-blog .calculator .accordion__intro p, .calculator .accordion__intro .right-content-blog ul, .right-content-blog .calculator .accordion__intro ul, .calculator .accordion__intro .right-content-blog ol, .right-content-blog .calculator .accordion__intro ol, .calculator .accordion__intro .right-content-blog__coment span, .right-content-blog__coment .calculator .accordion__intro span {
+  font-weight: 400;
 }
 .calculator .accordion__intro__img {
   position: absolute;
@@ -9774,7 +9857,7 @@ summary {
   color: #2A2A2A;
   font-style: normal;
   max-width: 594px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 26px;
   background: transparent;

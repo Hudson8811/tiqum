@@ -1,3 +1,29 @@
+.portfolio-page {
+	.page-header {
+		@media (max-width: 767px){
+			padding-top: vw(10,320);
+			padding-bottom: vw(10,320);
+			min-height: vw(193,320);
+		}		
+		.page-header__btns {
+			@media (max-width: 767px){
+				max-width: vw(100,320);
+				flex-flow: row wrap;
+			}	
+		}
+		.page-header__labels {
+			@media (max-width: 767px){
+				top: vw(10,320);
+			}		
+		}
+	}
+	.portfolio .project-portfolio__top .flex-lr__right  {
+		@media (max-width: 767px){
+			margin-top: vw(70,320);
+		}	
+	}
+}
+
 .page-header {
 	.page-header__flex-lr {
 		position: relative;
