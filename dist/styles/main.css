@@ -759,7 +759,7 @@ body.body-overflow {
 
 .general-title {
   font-family: "Suisse Intl";
-  color: #000000;
+  color: #2a2a2a;
 }
 .general-title span {
   color: #0047ff;
@@ -925,7 +925,7 @@ body.body-overflow {
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  color: #000000;
+  color: #2a2a2a;
   opacity: 0.5;
 }
 @media (max-width: 1439px) {
@@ -1173,7 +1173,7 @@ body.noScroll {
   font-size: 18px;
   line-height: 21px;
   text-align: right;
-  color: #000000;
+  color: #2a2a2a;
   background: #ffffff;
   border-radius: 25px;
   display: flex;
@@ -1224,7 +1224,7 @@ body.noScroll {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #000000;
+  color: #2a2a2a;
   opacity: 0.5;
   flex: 1 1 100%;
   margin-top: 8px;
@@ -2350,7 +2350,7 @@ summary {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: #000000;
+    color: #2A2A2A;
     position: relative;
     display: block;
     transition: all 0.5s ease 0s;
@@ -2546,7 +2546,7 @@ summary {
 }
 .header.js-header-white-dark .header__burger span:first-child::before, .header.js-header-white-dark .header__burger span:first-child::after {
   content: "";
-  background-color: #2A2A2A;
+  background-color: #000000;
 }
 .header.js-header-white-dark .header__right {
   color: #2A2A2A;
@@ -2689,7 +2689,7 @@ summary {
 }
 .header.header-mobile_active .header__inner-dark .header__burger span:first-child::before, .header.header-mobile_active .header__inner-dark .header__burger span:first-child::after {
   content: "";
-  background-color: #2A2A2A;
+  background-color: #000000;
 }
 .header.header-mobile_active .header__inner-dark .header__right {
   color: #2A2A2A;
@@ -2817,7 +2817,7 @@ summary {
   height: 100%;
   max-height: 100vh;
   overflow: auto;
-  background-color: #2A2A2A;
+  background-color: #000000;
   transition: all 0.3s ease 0s;
   padding: 100px 20px 0;
 }
@@ -4470,7 +4470,10 @@ summary {
 }
 .services__item-wrapper--calc:hover .services__item--calc__button {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 5px;
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
 }
 .services__item {
   display: flex;
@@ -4547,7 +4550,7 @@ summary {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #000000;
+  color: #2a2a2a;
   opacity: 0.4;
 }
 .services__item-left > span span {
@@ -4586,7 +4589,7 @@ summary {
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: #2A2A2A;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -4768,7 +4771,7 @@ summary {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #000000;
+  color: #2A2A2A;
   position: relative;
 }
 @media (max-width: 1919px) {
@@ -5098,7 +5101,7 @@ summary {
   font-weight: 400;
   font-size: 32px;
   line-height: 126.8%;
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 1919px) {
   .wehelp__bottom-left {
@@ -5121,7 +5124,7 @@ summary {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #000000;
+  color: #2A2A2A;
   opacity: 0.2;
 }
 @media (max-width: 1919px) {
@@ -5200,7 +5203,7 @@ summary {
   }
 }
 .confirm__title span {
-  color: #000000;
+  color: #2A2A2A;
   opacity: 0.2;
 }
 .confirm__title-wrapper {
@@ -5265,7 +5268,7 @@ summary {
 }
 .confirm__item.js-active-item {
   border-top: 1px solid black;
-  color: #000000;
+  color: #2A2A2A;
 }
 .confirm__item-left {
   font-size: 32px;
@@ -5491,7 +5494,7 @@ summary {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 1439px) {
   .page-header .page-header__left {
@@ -5525,7 +5528,7 @@ summary {
   width: 100%;
 }
 .page-header .page-header__spans .general-title span {
-  color: #000000;
+  color: #2A2A2A;
 }
 .page-header .page-header__spans .general-title span:nth-child(2) {
   opacity: 0.2;
@@ -5544,7 +5547,7 @@ summary {
   font-size: 48px;
   line-height: 108.8%;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: #2A2A2A;
   flex: 0 1 65%;
   margin-top: 30px;
 }
@@ -5678,7 +5681,7 @@ summary {
   opacity: 0.2;
 }
 .archive-projects__item.js-active-item {
-  color: #000000;
+  color: #2A2A2A;
   opacity: 1;
 }
 .archive-projects__left {
@@ -5721,7 +5724,7 @@ summary {
   font-size: 18px;
   line-height: 21px;
   text-align: right;
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 1919px) {
   .archive-projects__btn {
@@ -5960,7 +5963,7 @@ summary {
   font-size: 18px;
   line-height: 21px;
   text-align: right;
-  color: #000000;
+  color: #2A2A2A;
   padding: 11px 16px;
   background: #f5f5f5;
   border-radius: 25px;
@@ -6116,7 +6119,7 @@ summary {
 }
 .portfolio .project-portfolio__link {
   font-family: "Suisse Intl";
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 767px) {
   .portfolio .project-portfolio__link {
@@ -6850,7 +6853,7 @@ summary {
   display: block;
   margin-left: 235px;
   font-family: "Suisse Intl";
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 1024px) {
   .right-content-blog__coment span {
@@ -7476,7 +7479,7 @@ summary {
 }
 @media (max-width: 1024px) {
   .about-page__confirm .confirm__item {
-    color: #000000;
+    color: #2A2A2A;
   }
 }
 @media (max-width: 1024px) {
@@ -7708,7 +7711,7 @@ summary {
   color: #2A2A2A;
 }
 .about-page__next-cases .general-title span:nth-child(2) {
-  color: #000000;
+  color: #2A2A2A;
   opacity: 0.2;
 }
 @media (max-width: 767px) {
@@ -8203,7 +8206,7 @@ summary {
   font-size: 32px;
   line-height: 120%;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: #2A2A2A;
   margin-bottom: 15px;
 }
 @media (max-width: 1919px) {
@@ -8235,7 +8238,7 @@ summary {
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.03em;
-  color: #000000;
+  color: #2A2A2A;
 }
 @media (max-width: 1919px) {
   .team-grid__item-post {
@@ -9953,7 +9956,7 @@ summary {
   color: #2A2A2A;
 }
 .footer.footer--light .wewillfind-footer__title span {
-  color: #000000;
+  color: #2A2A2A;
   opacity: 0.4;
 }
 .footer.footer--light .form-wewillfind-footer__item input, .footer.footer--light .form-wewillfind-footer__item textarea {

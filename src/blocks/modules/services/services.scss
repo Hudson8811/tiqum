@@ -127,7 +127,10 @@
 					}
 					.services__item--calc__button {
 						text-decoration: underline;
+						text-decoration-thickness: 1px;
 						text-underline-offset: 5px;
+						text-decoration-skip: none;
+						text-decoration-skip-ink: none;
 					}
 				}				
 			}
@@ -186,7 +189,7 @@
 					font-weight: 400;
 					font-size: 18px;
 					line-height: 21px;
-					color: #000000;
+					color: #2a2a2a;
 					opacity: 0.4;
 					span{
 						white-space: nowrap;
@@ -222,7 +225,7 @@
 				font-size: 48px;
 				line-height: 108.8%;
 				letter-spacing: -0.03em;
-				color: #000000;
+				color: #2A2A2A;
 				display: flex;
 				justify-content: space-between;
 				align-items: flex-end;

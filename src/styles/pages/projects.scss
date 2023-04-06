@@ -15,7 +15,7 @@
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 21px;
-		color: #000000;
+		color: #2A2A2A;
 		@media (max-width: 1439px){
 			font-size: 14px;
 			line-height: 16px;
@@ -42,7 +42,7 @@
 			align-items: center;
 			width: 100%;
 			span {
-				color: #000000;
+				color: #2A2A2A;
 
 				&:nth-child(2) {
 					opacity: 0.2;
@@ -68,7 +68,7 @@
 		font-size: 48px;
 		line-height: 108.8%;
 		letter-spacing: -0.03em;
-		color: #000000;
+		color: #2A2A2A;
 		flex: 0 1 65%;
 		margin-top: 30px;
 		@media (max-width: 1919px){
@@ -175,7 +175,7 @@
 			opacity: 0.2;
 		}
 		&.js-active-item {
-			color: #000000;
+			color: #2A2A2A;
 			opacity: 1;
 		}
 	}
@@ -217,7 +217,7 @@
 		font-size: 18px;
 		line-height: 21px;
 		text-align: right;
-		color: #000000;
+		color: #2A2A2A;
 		@media (max-width: 1919px){
 			padding: 8px 12px;
 		}
