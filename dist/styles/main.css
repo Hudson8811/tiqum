@@ -5425,6 +5425,29 @@ summary {
     margin-top: 14px;
   }
 }
+.footer.modalFromFooter .blue-btn {
+  min-height: 88px;
+  max-width: 595px;
+}
+@media (max-width: 1439px) {
+  .footer.modalFromFooter .blue-btn {
+    max-width: 315px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer.modalFromFooter .blue-btn {
+    width: 302px;
+    max-width: 302px;
+  }
+}
+@media (max-width: 767px) {
+  .footer.modalFromFooter .blue-btn {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 12.8vw;
+  }
+}
 @media (max-width: 767px) {
   .footer.modalFromFooter .wewillfind-footer {
     flex-flow: column-reverse nowrap;

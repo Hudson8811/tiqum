@@ -30,6 +30,31 @@
 		}
 	}
 
+	.blue-btn {
+		min-height: 88px;
+		max-width: 595px;
+
+
+		@media (max-width: 1439px) {
+			max-width: 315px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 302px;
+			max-width: 302px;
+		}
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			width: 100%;
+			max-width: 100%;
+			min-height: 12.8vw;
+		}
+
+
+	}
+
+
 	.wewillfind-footer {
 		@media (max-width: 767px) {
 			flex-flow: column-reverse nowrap;
