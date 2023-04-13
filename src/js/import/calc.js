@@ -9,7 +9,7 @@
     ];
 
     let formTitles = [
-        'Срок и стоимость <span><br>запуска вашего MVP</span>',
+        'Срок и стоимость <span><br>запуска вашего продукта</span>',
         'Стоимость проектирования <span><br>сервиса</span>',
         'Стоимость продуктовой <span><br>команды</span>',
         'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>'
@@ -530,7 +530,7 @@
                 priceBlock = finalBlocks[service][0]['class'];
                 totalPrice = parseInt($('.calc-page__serviceBlock[data-service="'+service+'"] input[name="fixedPrice"]').val());
                 jsonArray['totalPrice'] = totalPrice;
-                $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+                $('.'+priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
                 break;
             case 2:
                 let manArray = {};

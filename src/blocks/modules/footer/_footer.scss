@@ -287,18 +287,12 @@
 	position: relative;
 	@media (max-width: 1919px){
 		margin: 0 -15px;
-		margin-top: 140px;
-	}
-	@media (max-width: 1439px){
-		margin-top: 110px;
 	}
 	@media (max-width: 1024px){
 		margin: 0 -1.465vw;
-		margin-top: 10.742vw;
 	}
 	@media (max-width: 767px){
 		margin: 0 -4vw;
-		margin-top: 13.333vw;
 	}
 	>* {
 		padding: 0 20px;
@@ -315,6 +309,7 @@
 	}
 
 	.messages {
+		margin-bottom: 20px;
 		padding: 0;
 		.messages__title, .messages__content {
 			margin-left: 0;
@@ -587,6 +582,9 @@
 		.webform-submission-form & {
 			margin-top: 70px;
 		}
+	}
+
+	&.submited, &.submited-form{
 
 		> *:not(.form-wewillfind-footer__success){
 			opacity: 0;
@@ -594,6 +592,9 @@
 			pointer-events: none;
 		}
 		.form-wewillfind-footer__success{
+			font-family: 'Suisse Intl';
+			font-size: 24px;
+			line-height: 32px;
 			display: block;
 			pointer-events: auto;
 		}

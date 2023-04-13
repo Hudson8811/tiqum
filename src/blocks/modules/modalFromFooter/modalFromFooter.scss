@@ -51,7 +51,20 @@
 	@media (max-width: 1439px) {
 		max-width: 570px;
 	}
-} 
+
+	@media (max-width: 1919px){
+		margin-bottom: 140px;
+	}
+	@media (max-width: 1439px){
+		margin-bottom: 110px;
+	}
+	@media (max-width: 1024px){
+		margin-bottom: 10.742vw;
+	}
+	@media (max-width: 767px){
+		margin-bottom: 13.333vw;
+	}
+}
 .modalFromFooter--close  {
 	position: absolute;
 	right: 28px;
