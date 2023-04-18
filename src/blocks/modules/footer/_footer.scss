@@ -729,6 +729,47 @@
 	}
 }
 
+//правки "Наш лучший менеджер"
+.form-wewillfind-footer.submited-form {
+	.form-wewillfind-footer__success {
+
+		@media (max-width: 1919px) {
+			margin-top: 20px;
+			margin-bottom: 315px;
+		}
+
+		@media (max-width: 1439px) {}
+
+		@media (max-width: 1024px) {}
+
+		@media (max-width: 767px) {
+			margin-bottom: vw(238, 320);
+			margin-top: vw(8, 320);
+			font-size: 6.25vw !important;
+			line-height: 110% !important;
+			letter-spacing: -0.02em;
+		}
+
+		br {
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+	}
+}
+
+.wewillfind-footer__title.general-title {
+	br {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+}
+
+//Конец правки "Наш лучший менеджер"
+
 
 .mobile-fixed-bottom {
 	position: fixed;

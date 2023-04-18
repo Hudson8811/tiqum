@@ -3844,6 +3844,33 @@ summary {
   pointer-events: auto;
 }
 
+@media (max-width: 1919px) {
+  .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
+    margin-top: 20px;
+    margin-bottom: 315px;
+  }
+}
+@media (max-width: 767px) {
+  .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
+    margin-bottom: 74.375vw;
+    margin-top: 2.5vw;
+    font-size: 6.25vw !important;
+    line-height: 110% !important;
+    letter-spacing: -0.02em;
+  }
+}
+@media (max-width: 767px) {
+  .form-wewillfind-footer.submited-form .form-wewillfind-footer__success br {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .wewillfind-footer__title.general-title br {
+    display: none;
+  }
+}
+
 .mobile-fixed-bottom {
   position: fixed;
   left: 0;
