@@ -333,7 +333,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -20px;
-	margin-top: 180px;
+	// margin-top: 180px;
 	position: relative;
 
 	@media (max-width: 1919px) {
@@ -732,6 +732,8 @@
 //правки "Наш лучший менеджер"
 .form-wewillfind-footer.submited-form {
 	.form-wewillfind-footer__success {
+		margin-top: 20px;
+		margin-bottom: 315px;
 
 		@media (max-width: 1919px) {
 			margin-top: 20px;
@@ -744,10 +746,11 @@
 
 		@media (max-width: 767px) {
 			margin-bottom: vw(238, 320);
-			margin-top: vw(8, 320);
+			margin-top: vw(32, 320);
 			font-size: 6.25vw !important;
 			line-height: 110% !important;
 			letter-spacing: -0.02em;
+			max-width: vw(300, 320);
 		}
 
 		br {
