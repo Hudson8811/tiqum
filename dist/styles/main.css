@@ -3843,20 +3843,35 @@ summary {
   pointer-events: auto;
 }
 
+.footer.footer--light .wewillfind-footer__title.general-title {
+  color: #0047FF;
+}
+
 .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
-  margin-top: 20px;
-  margin-bottom: 315px;
+  margin-top: -40px;
+  margin-bottom: 305px;
 }
 @media (max-width: 1919px) {
   .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
-    margin-top: 20px;
-    margin-bottom: 315px;
+    margin-top: -45px;
+    margin-bottom: 230px;
+  }
+}
+@media (max-width: 1439px) {
+  .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
+    margin-top: -62px;
+    margin-bottom: 248px;
+  }
+}
+@media (max-width: 1024px) {
+  .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
+    margin-top: -50px;
   }
 }
 @media (max-width: 767px) {
   .form-wewillfind-footer.submited-form .form-wewillfind-footer__success {
-    margin-bottom: 74.375vw;
-    margin-top: 10vw;
+    margin-top: -4.0625vw;
+    margin-bottom: 26.5625vw;
     font-size: 6.25vw !important;
     line-height: 110% !important;
     letter-spacing: -0.02em;
@@ -5499,6 +5514,9 @@ summary {
 
 .wewillfind-footer__title.general-title {
   margin-bottom: 140px;
+}
+.wewillfind-footer__title.general-title br {
+  display: none;
 }
 .wewillfind-footer__title.general-title.mob {
   display: none;
@@ -9859,6 +9877,7 @@ summary {
 .calculator .finalCost__block .wewillfind-footer__title {
   min-width: 80%;
   margin-bottom: 0;
+  color: #2A2A2A;
 }
 .calculator .finalCost__block .wewillfind-footer__subtitle {
   font-family: "Suisse Intl";
@@ -9867,6 +9886,7 @@ summary {
   font-size: 48px;
   line-height: 110%;
   letter-spacing: -0.03em;
+  color: #2A2A2A !important;
 }
 @media (max-width: 1919px) {
   .calculator .finalCost__block .wewillfind-footer__subtitle {

@@ -730,23 +730,36 @@
 }
 
 //правки "Наш лучший менеджер"
+.wewillfind-footer__title.general-title {}
+
+.footer.footer--light {
+	.wewillfind-footer__title.general-title {
+		color: #0047FF
+	}
+}
+
 .form-wewillfind-footer.submited-form {
 	.form-wewillfind-footer__success {
-		margin-top: 20px;
-		margin-bottom: 315px;
+		margin-top: -40px;
+		margin-bottom: 305px;
 
 		@media (max-width: 1919px) {
-			margin-top: 20px;
-			margin-bottom: 315px;
+			margin-top: -45px;
+			margin-bottom: 230px;
 		}
 
-		@media (max-width: 1439px) {}
+		@media (max-width: 1439px) {
+			margin-top: -62px;
+			margin-bottom: 248px;
+		}
 
-		@media (max-width: 1024px) {}
+		@media (max-width: 1024px) {
+			margin-top: -50px;
+		}
 
 		@media (max-width: 767px) {
-			margin-bottom: vw(238, 320);
-			margin-top: vw(32, 320);
+			margin-top: vw(-13, 320);
+			margin-bottom: vw(85, 320);
 			font-size: 6.25vw !important;
 			line-height: 110% !important;
 			letter-spacing: -0.02em;

@@ -146,6 +146,10 @@
 .wewillfind-footer__title.general-title {
 	margin-bottom: 140px;
 
+	br {
+		display: none;
+	}
+
 	&.mob {
 		display: none;
 
