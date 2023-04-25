@@ -1094,11 +1094,6 @@ block content
 										.finalCost__block--cost.h2 6 200 000 ₽
 									.finalCost__block--right
 										.finalCost__block--desc Итоговая сумма запуска сервиса/продукта с учетом ваших предпочтений
-								.finalCost__block.finalCost__block--subtitle
-									.wewillfind-footer__title.wewillfind-footer__subtitle
-										| Заполните форму ниже и мы вышлем коммерческое предложение
-										span
-											!="<br>в течение 30 минут"
 		footer.footer.footer--light.calc-page__footer
 
 			.footer__container.container
@@ -1113,6 +1108,12 @@ block content
 					.wewillfind-footer__right#contact-form
 						form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
 							input.js-calc-formInput(type="hidden" name="calc_info" value="")
+							.wewillfind-footer__title.page-calc
+								.wewillfind-footer__subtitle
+									| Заполните форму ниже и мы вышлем коммерческое предложение
+									span
+										!="<br>в течение 30 минут"
+
 							.form-wewillfind-footer__item.form-wewillfind-footer__item--big
 								input(type="text" placeholder="Имя и фамилия" name="name" required)
 								.form-wewillfind-footer__error Пожалуйста, заполните имя
