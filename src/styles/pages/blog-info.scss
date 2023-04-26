@@ -14,7 +14,7 @@
 	margin-bottom: 100px;
 
 	@media (max-width: 1919px) {
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 	}
 
 	@media (max-width: 1439px) {
@@ -22,7 +22,7 @@
 	}
 
 	@media (max-width: 1024px) {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 
 	@media (max-width: 767px) {
@@ -36,8 +36,16 @@
 		width: 100%;
 		margin-bottom: 50px;
 
+		@media (max-width: 1919px) {
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: 1024px) {
+			margin-bottom: 18px;
+		}
+
 		@media (max-width: 767px) {
-			margin-bottom: vw(20, 320);
+			margin-bottom: vw(11, 320);
 		}
 
 		&:first-child {
@@ -56,7 +64,8 @@
 			display: flex;
 			justify-content: flex-start;
 			width: 50%;
-			margin-right: 38px;
+			margin-right: 40px;
+			max-width: 600px;
 
 			@media (max-width: 1919px) {
 				max-width: 435px;
@@ -84,12 +93,13 @@
 			line-height: 24px;
 			color: #2A2A2A;
 			opacity: 0.4;
-			max-width: 410px;
+			max-width: 425px;
 			font-style: normal;
 
 			@media (max-width: 1919px) {
 				font-size: 18px;
 				line-height: 24px;
+				max-width: 415px;
 			}
 
 			@media (max-width: 1439px) {
@@ -120,15 +130,37 @@
 		input {
 			position: relative;
 			width: 100%;
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 22px;
+			padding-bottom: 22px;
 			border-bottom: 1px solid rgba(42, 42, 42, 0.2);
 			font-style: normal;
+			font-family: 'Suisse Intl';
 			font-weight: 400;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: 18px;
+			line-height: 24px;
 			color: #2A2A2A;
 			opacity: 0.4;
+
+			&.js-error {
+				border-bottom: 1px solid #FD5A5A;
+
+			}
+
+			@media (max-width: 1919px) {
+				font-size: 14px;
+				line-height: 20px;
+				padding-bottom: 17px;
+			}
+
+			@media (max-width: 1439px) {
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			@media (max-width: 1024px) {
+				font-size: 14px;
+				line-height: 20px;
+			}
 
 			@media (max-width: 767px) {
 				font-size: vw(12, 320);
@@ -136,6 +168,36 @@
 				padding-top: vw(10, 320);
 				padding-bottom: vw(10, 320);
 			}
+
+			&::placeholder {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 24px;
+				color: #2A2A2A;
+				font-family: 'Suisse Intl';
+
+				@media (max-width: 1919px) {
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+				@media (max-width: 1439px) {
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+				@media (max-width: 1024px) {
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+				@media (max-width: 767px) {
+					font-size: vw(12, 320);
+					line-height: vw(18, 320);
+				}
+			}
+
+
 		}
 
 		.form-wewillfind-footer__error {
@@ -146,7 +208,7 @@
 		&--button {
 			position: absolute;
 			right: 0;
-			top: 15px;
+			top: 22px;
 			width: 24px;
 			height: 20px;
 			display: block;
@@ -154,10 +216,17 @@
 			@media (max-width: 767px) {
 				width: vw(14, 320);
 				height: vw(12, 320);
+				top: vw(15, 320);
 			}
 
 			&:hover {
-				opacity: 0.2;
+				svg {
+					fill: #0047FF;
+
+					path {
+						fill: #0047FF;
+					}
+				}
 			}
 
 			svg {
@@ -207,6 +276,28 @@
 		font-style: normal;
 		color: #2A2A2A;
 
+		&:hover {
+			a {
+				text-decoration: underline;
+				// text-decoration-thickness: 1px;
+				text-underline-offset: 10px;
+				text-decoration-skip: none;
+				text-decoration-skip-ink: none;
+
+				@media (max-width: 1439px) {
+					text-underline-offset: 7px;
+				}
+
+				@media (max-width: 1024px) {
+					text-underline-offset: 4px;
+				}
+
+				@media (max-width: 767px) {
+					text-underline-offset: vw(4, 320);
+				}
+			}
+		}
+
 		a {
 			font-family: 'Suisse Intl';
 			font-style: normal;
@@ -240,11 +331,11 @@
 	}
 
 	@media (max-width: 1439px) {
-		margin: 130px 0 0;
+		margin: 0px 0 0;
 	}
 
 	@media (max-width: 1024px) {
-		margin-top: 10.742vw;
+		margin-top: 0vw;
 		padding-bottom: 2.93vw;
 	}
 

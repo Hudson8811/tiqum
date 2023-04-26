@@ -6547,7 +6547,7 @@ summary {
 }
 @media (max-width: 1919px) {
   .page__subscription {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 1439px) {
@@ -6557,7 +6557,7 @@ summary {
 }
 @media (max-width: 1024px) {
   .page__subscription {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -6572,9 +6572,19 @@ summary {
   width: 100%;
   margin-bottom: 50px;
 }
+@media (max-width: 1919px) {
+  .page__subscription--row {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .page__subscription--row {
+    margin-bottom: 18px;
+  }
+}
 @media (max-width: 767px) {
   .page__subscription--row {
-    margin-bottom: 6.25vw;
+    margin-bottom: 3.4375vw;
   }
 }
 @media (max-width: 767px) {
@@ -6593,7 +6603,8 @@ summary {
   display: flex;
   justify-content: flex-start;
   width: 50%;
-  margin-right: 38px;
+  margin-right: 40px;
+  max-width: 600px;
 }
 @media (max-width: 1919px) {
   .page__subscription--row .h2, .page__subscription--row .text-style h2, .page__subscription--row .right-content-blog h2, .text-style .page__subscription--row h2, .right-content-blog .page__subscription--row h2, .page__subscription--row .portfolio .project-portfolio__title, .portfolio .page__subscription--row .project-portfolio__title,
@@ -6625,13 +6636,14 @@ summary {
   line-height: 24px;
   color: #2A2A2A;
   opacity: 0.4;
-  max-width: 410px;
+  max-width: 425px;
   font-style: normal;
 }
 @media (max-width: 1919px) {
   .page__subscription--row p {
     font-size: 18px;
     line-height: 24px;
+    max-width: 415px;
   }
 }
 @media (max-width: 1439px) {
@@ -6663,15 +6675,38 @@ summary {
 .page__subscription--input input {
   position: relative;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   border-bottom: 1px solid rgba(42, 42, 42, 0.2);
   font-style: normal;
+  font-family: "Suisse Intl";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 24px;
   color: #2A2A2A;
   opacity: 0.4;
+}
+.page__subscription--input input.js-error {
+  border-bottom: 1px solid #FD5A5A;
+}
+@media (max-width: 1919px) {
+  .page__subscription--input input {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 17px;
+  }
+}
+@media (max-width: 1439px) {
+  .page__subscription--input input {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .page__subscription--input input {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 @media (max-width: 767px) {
   .page__subscription--input input {
@@ -6681,6 +6716,37 @@ summary {
     padding-bottom: 3.125vw;
   }
 }
+.page__subscription--input input::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2A2A2A;
+  font-family: "Suisse Intl";
+}
+@media (max-width: 1919px) {
+  .page__subscription--input input::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1439px) {
+  .page__subscription--input input::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .page__subscription--input input::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .page__subscription--input input::placeholder {
+    font-size: 3.75vw;
+    line-height: 5.625vw;
+  }
+}
 .page__subscription--input .form-wewillfind-footer__error {
   display: block;
   left: 0;
@@ -6688,7 +6754,7 @@ summary {
 .page__subscription--input--button {
   position: absolute;
   right: 0;
-  top: 15px;
+  top: 22px;
   width: 24px;
   height: 20px;
   display: block;
@@ -6697,10 +6763,14 @@ summary {
   .page__subscription--input--button {
     width: 4.375vw;
     height: 3.75vw;
+    top: 4.6875vw;
   }
 }
-.page__subscription--input--button:hover {
-  opacity: 0.2;
+.page__subscription--input--button:hover svg {
+  fill: #0047FF;
+}
+.page__subscription--input--button:hover svg path {
+  fill: #0047FF;
 }
 .page__subscription--input--button svg {
   position: relative;
@@ -6746,6 +6816,27 @@ summary {
   font-style: normal;
   color: #2A2A2A;
 }
+.archive-articles--link:hover a {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+}
+@media (max-width: 1439px) {
+  .archive-articles--link:hover a {
+    text-underline-offset: 7px;
+  }
+}
+@media (max-width: 1024px) {
+  .archive-articles--link:hover a {
+    text-underline-offset: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .archive-articles--link:hover a {
+    text-underline-offset: 1.25vw;
+  }
+}
 .archive-articles--link a {
   font-family: "Suisse Intl";
   font-style: normal;
@@ -6780,12 +6871,12 @@ summary {
 }
 @media (max-width: 1439px) {
   .blog-items {
-    margin: 130px 0 0;
+    margin: 0px 0 0;
   }
 }
 @media (max-width: 1024px) {
   .blog-items {
-    margin-top: 10.742vw;
+    margin-top: 0vw;
     padding-bottom: 2.93vw;
   }
 }
@@ -6948,6 +7039,29 @@ summary {
 
 .blog {
   background: #F5F5F5;
+}
+.blog .page__subscription {
+  margin-bottom: 220px;
+}
+@media (max-width: 1919px) {
+  .blog .page__subscription {
+    margin-bottom: 220px;
+  }
+}
+@media (max-width: 1439px) {
+  .blog .page__subscription {
+    margin-bottom: 157px;
+  }
+}
+@media (max-width: 1024px) {
+  .blog .page__subscription {
+    margin-bottom: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .blog .page__subscription {
+    margin-bottom: 20.3125vw;
+  }
 }
 
 .page-header-big {
@@ -7142,7 +7256,9 @@ summary {
     flex: 1 0 100% !important;
   }
 }
-.right-content-blog > p:first-child, .right-content-blog > div:first-child > p:first-child, .right-content-blog > div:first-child > div:first-child > p:first-child {
+.right-content-blog > p:first-child,
+.right-content-blog > div:first-child > p:first-child,
+.right-content-blog > div:first-child > div:first-child > p:first-child {
   margin-top: 0;
 }
 .right-content-blog__start {
