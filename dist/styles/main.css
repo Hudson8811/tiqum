@@ -6544,6 +6544,7 @@ summary {
 
 .page__subscription {
   margin-bottom: 100px;
+  display: block;
 }
 @media (max-width: 1919px) {
   .page__subscription {
@@ -6778,6 +6779,55 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.page__subscription.page__subscription--answer .h2, .page__subscription.page__subscription--answer .text-style h2, .page__subscription.page__subscription--answer .right-content-blog h2, .text-style .page__subscription.page__subscription--answer h2, .right-content-blog .page__subscription.page__subscription--answer h2, .page__subscription.page__subscription--answer .portfolio .project-portfolio__title, .portfolio .page__subscription.page__subscription--answer .project-portfolio__title,
+.page__subscription.page__subscription--answer .portfolio .project-portfolio .field--name-field-title,
+.portfolio .project-portfolio .page__subscription.page__subscription--answer .field--name-field-title, .page__subscription.page__subscription--answer .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .page__subscription.page__subscription--answer h2 {
+  color: #0047FF;
+}
+@media (max-width: 1439px) {
+  .page__subscription.page__subscription--answer .h2, .page__subscription.page__subscription--answer .text-style h2, .page__subscription.page__subscription--answer .right-content-blog h2, .text-style .page__subscription.page__subscription--answer h2, .right-content-blog .page__subscription.page__subscription--answer h2, .page__subscription.page__subscription--answer .portfolio .project-portfolio__title, .portfolio .page__subscription.page__subscription--answer .project-portfolio__title,
+  .page__subscription.page__subscription--answer .portfolio .project-portfolio .field--name-field-title,
+  .portfolio .project-portfolio .page__subscription.page__subscription--answer .field--name-field-title, .page__subscription.page__subscription--answer .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .page__subscription.page__subscription--answer h2 {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .page__subscription.page__subscription--answer .h2, .page__subscription.page__subscription--answer .text-style h2, .page__subscription.page__subscription--answer .right-content-blog h2, .text-style .page__subscription.page__subscription--answer h2, .right-content-blog .page__subscription.page__subscription--answer h2, .page__subscription.page__subscription--answer .portfolio .project-portfolio__title, .portfolio .page__subscription.page__subscription--answer .project-portfolio__title,
+  .page__subscription.page__subscription--answer .portfolio .project-portfolio .field--name-field-title,
+  .portfolio .project-portfolio .page__subscription.page__subscription--answer .field--name-field-title, .page__subscription.page__subscription--answer .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .page__subscription.page__subscription--answer h2 {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .page__subscription.page__subscription--answer .h2, .page__subscription.page__subscription--answer .text-style h2, .page__subscription.page__subscription--answer .right-content-blog h2, .text-style .page__subscription.page__subscription--answer h2, .right-content-blog .page__subscription.page__subscription--answer h2, .page__subscription.page__subscription--answer .portfolio .project-portfolio__title, .portfolio .page__subscription.page__subscription--answer .project-portfolio__title,
+  .page__subscription.page__subscription--answer .portfolio .project-portfolio .field--name-field-title,
+  .portfolio .project-portfolio .page__subscription.page__subscription--answer .field--name-field-title, .page__subscription.page__subscription--answer .portfolio .project-portfolio__item-right h2, .portfolio .project-portfolio__item-right .page__subscription.page__subscription--answer h2 {
+    max-width: 100%;
+  }
+}
+.page__subscription.page__subscription--answer .page__subscription--row p.b2, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .page__subscription.page__subscription--answer .page__subscription--row p.b2, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.page__subscription.page__subscription--answer .page__subscription--row p.b2 span, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date span, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date span, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link span, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link span {
+  opacity: 0.2;
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .page__subscription.page__subscription--answer .page__subscription--row p.b2 span, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date span, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date span, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link span, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link span {
+    margin-left: 0;
+  }
 }
 
 .archive-articles {

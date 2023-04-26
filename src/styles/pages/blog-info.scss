@@ -12,6 +12,7 @@
 // }
 .page__subscription {
 	margin-bottom: 100px;
+	display: block;
 
 	@media (max-width: 1919px) {
 		margin-bottom: 80px;
@@ -28,6 +29,7 @@
 	@media (max-width: 767px) {
 		margin-bottom: vw(65, 320);
 	}
+
 
 	&--row {
 		display: flex;
@@ -241,6 +243,49 @@
 		}
 
 
+	}
+}
+
+.page__subscription.page__subscription--answer {
+	.h2 {
+		color: #0047FF;
+
+		@media (max-width: 1439px) {
+			width: 100%;
+			max-width: 400px;
+		}
+
+		@media (max-width: 1024px) {
+			max-width: 350px;
+		}
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+
+	}
+
+	.page__subscription--row {
+		p.b2 {
+			opacity: 1;
+
+			@media (max-width: 767px) {
+				max-width: 100%;
+				display: flex;
+				flex-flow: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			span {
+				opacity: 0.2;
+				margin-left: 5px;
+
+				@media (max-width: 767px) {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }
 
