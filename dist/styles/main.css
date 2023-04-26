@@ -6808,6 +6808,9 @@ summary {
     max-width: 100%;
   }
 }
+.page__subscription.page__subscription--answer .page__subscription--row {
+  margin-bottom: 70px;
+}
 .page__subscription.page__subscription--answer .page__subscription--row p.b2, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link {
   opacity: 1;
 }
@@ -6821,7 +6824,7 @@ summary {
   }
 }
 .page__subscription.page__subscription--answer .page__subscription--row p.b2 span, .page__subscription.page__subscription--answer .page__subscription--row .page-header-big p.page-header__date span, .page-header-big .page__subscription.page__subscription--answer .page__subscription--row p.page-header__date span, .page__subscription.page__subscription--answer .page__subscription--row .portfolio p.project-portfolio__link span, .portfolio .page__subscription.page__subscription--answer .page__subscription--row p.project-portfolio__link span {
-  opacity: 0.2;
+  opacity: 0.4;
   margin-left: 5px;
 }
 @media (max-width: 767px) {
@@ -6829,36 +6832,52 @@ summary {
     margin-left: 0;
   }
 }
+@media (max-width: 1919px) {
+  .page__subscription.page__subscription--answer .page__subscription--row {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .page__subscription.page__subscription--answer .page__subscription--row {
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 767px) {
+  .page__subscription.page__subscription--answer .page__subscription--row {
+    margin-bottom: 3.4375vw;
+  }
+}
 
 .archive-articles {
   position: relative;
   display: block;
   width: 100%;
-  min-height: 323px;
+  height: 323px;
   background: #F5F5F5;
   padding-top: 30px;
 }
 @media (max-width: 1919px) {
   .archive-articles {
     padding-top: 30px;
+    height: 245px;
   }
 }
 @media (max-width: 1439px) {
   .archive-articles {
     padding-top: 20px;
-    min-height: 245px;
+    height: 245px;
   }
 }
 @media (max-width: 1024px) {
   .archive-articles {
     padding-top: 20px;
-    min-height: 170px;
+    height: 170px;
   }
 }
 @media (max-width: 767px) {
   .archive-articles {
     padding-top: 3.125vw;
-    min-height: 30.625vw;
+    height: 30.625vw;
   }
 }
 .archive-articles--link {
