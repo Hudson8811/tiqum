@@ -216,6 +216,12 @@
 			height: 100%;
 			object-fit: cover;
 		}
+
+		&.has-mobile-img{
+			@media (max-width: 767px) {
+				padding-top: 100%;
+			}
+		}
 	}
 
 	.project-portfolio {
@@ -495,6 +501,7 @@
 				width: 100%;
 				height: auto;
 			}
+
 		}
 	}
 }

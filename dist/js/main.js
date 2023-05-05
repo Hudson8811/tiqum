@@ -157,6 +157,106 @@
 
 /***/ }),
 
+/***/ "./src/blocks/modules/form/subscription.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/form/subscription.js ***!
+  \*************************************************/
+/***/ (function() {
+
+"use strict";
+
+
+(function ($) {
+  if (typeof Drupal === 'undefined') {
+    return;
+  }
+  (function (Drupal) {
+    Drupal.behaviors.tiqumsubScription = {
+      attach: function attach(context) {
+        if (typeof Drupal === 'undefined') {
+          return;
+        }
+        var $form = $('form.page__subscription');
+        if (!$form.length) {
+          return;
+        }
+        var $mail = $form.find('[name="email"]');
+        $mail.once('focus').focus(function () {
+          $(this).parent().addClass("js-active-area");
+        });
+        $mail.once('blur').blur(function () {
+          if (validInput(this)) {
+            $(this).parent().addClass("js-active-area").removeClass("js-error");
+            $form.find('input[type=submit].webform-button--submit').prop('disabled', false);
+          } else {
+            $(this).parent().addClass("js-error").removeClass("js-active-area");
+          }
+        });
+        $mail.once('paste keyup').on('paste keyup', function () {
+          if ($(this).parent().hasClass('js-error')) {
+            if (validInput(this)) {
+              $form.find('input[type=submit].webform-button--submit').prop('disabled', false);
+              $(this).parent().addClass("js-active-area").removeClass("js-error");
+            }
+          }
+        });
+        $form.find('button[type=submit]').once('click').on('click', function (e) {
+          e.preventDefault();
+          var valid = true;
+          $mail.each(function () {
+            if (validInput(this)) {
+              $(this).parent().addClass("js-active-area").removeClass("js-error");
+            } else {
+              $(this).parent().addClass("js-error").removeClass("js-active-area");
+              valid = false;
+            }
+          });
+          if (valid) {
+            //submit code here
+            var $button = $form.find('input[type=submit].webform-button--submit');
+            if (!$button.hasClass('processed')) {
+              $button.addClass('processed').mousedown().click();
+            }
+          }
+        });
+      }
+    };
+  })(Drupal);
+  function validInput(elem) {
+    var type = $(elem).attr('type');
+    var name = $(elem).attr('name');
+    var value = $(elem).val();
+    var required = $(elem).attr('required');
+    var trimmed, pattern;
+    if (required || value.trim() !== '') {
+      switch (type) {
+        case 'tel':
+          trimmed = value.trim().replace(/[\s().-]+/g, '');
+          pattern = /^\+?[7-8]\d{8,12}$/;
+          return pattern.test(trimmed);
+        case 'email':
+          trimmed = value.trim();
+          pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))+$/;
+          return pattern.test(trimmed);
+          break;
+        case 'text':
+          switch (name) {
+            case 'phone':
+              trimmed = value.trim().replace(/[\s().-]+/g, '');
+              pattern = /^\+?[7-8]\d{8,12}$/;
+              return pattern.test(trimmed);
+          }
+        default:
+          return value.trim() !== '';
+      }
+    } else {
+      return true;
+    }
+  }
+})(jQuery);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/header/header.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
@@ -337,7 +437,7 @@ function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread n
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 (function ($) {
   var serviceSelect = false;
   var selectedService;
@@ -858,6 +958,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_services_services__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/weright/weright */ "./src/blocks/modules/weright/weright.js");
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_form_subscription__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/form/subscription */ "./src/blocks/modules/form/subscription.js");
+/* harmony import */ var _modules_form_subscription__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_form_subscription__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -943,16 +1046,19 @@ __webpack_require__.r(__webpack_exports__);
 
     /* 	var $animation_elements = $('.link1');
     	var $window = $(window);
-    		function check_if_in_view() {
+    
+    	function check_if_in_view() {
     		var window_height = $window.height();
     		var window_top_position = $window.scrollTop();
     		var window_bottom_position = (window_top_position + window_height);
-    			$.each($animation_elements, function() {
+    
+    		$.each($animation_elements, function() {
     			var $element = $(this);
     			var element_height = $element.outerHeight();
     			var element_top_position = $element.offset().top;
     			var element_bottom_position = (element_top_position + element_height);
-    				//check to see if this current container is within viewport
+    
+    			//check to see if this current container is within viewport
     			if ((element_bottom_position >= window_top_position) &&
     				(element_top_position <= window_bottom_position)) {
     				$element.addClass('is-visible');
@@ -961,7 +1067,8 @@ __webpack_require__.r(__webpack_exports__);
     			}
     		});
     	}
-    		$window.on('scroll resize', check_if_in_view);
+    
+    	$window.on('scroll resize', check_if_in_view);
     	$window.trigger('scroll'); */
   });
 
@@ -1461,7 +1568,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return (r = "scroll" + n) && (i = y(e, r)) ? i() - Ea(e)()[o] : Da(e) ? (qe[r] || Ge[r]) - (We["inner" + n] || qe["client" + n] || Ge["client" + n]) : e[r] - e["offset" + n];
   }
   function Ia(e, t) {
-    for (var r = 0; r < p.length; r += 3) t && !~t.indexOf(p[r + 1]) || e(p[r], p[r + 1], p[r + 2]);
+    for (var r = 0; r < p.length; r += 3) {
+      t && !~t.indexOf(p[r + 1]) || e(p[r], p[r + 1], p[r + 2]);
+    }
   }
   function Ja(e) {
     return "string" == typeof e;
@@ -1488,7 +1597,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return We.getComputedStyle(e);
   }
   function fb(e, t) {
-    for (var r in t) r in e || (e[r] = t[r]);
+    for (var r in t) {
+      r in e || (e[r] = t[r]);
+    }
     return e;
   }
   function hb(e, t) {
@@ -1500,7 +1611,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       r = [],
       n = e.labels,
       o = e.duration();
-    for (t in n) r.push(n[t] / o);
+    for (t in n) {
+      r.push(n[t] / o);
+    }
     return r;
   }
   function kb(o) {
@@ -1512,10 +1625,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var n;
       if (void 0 === r && (r = .001), !t) return i(e);
       if (0 < t) {
-        for (e -= r, n = 0; n < a.length; n++) if (a[n] >= e) return a[n];
+        for (e -= r, n = 0; n < a.length; n++) {
+          if (a[n] >= e) return a[n];
+        }
         return a[n - 1];
       }
-      for (n = a.length, e += r; n--;) if (a[n] <= e) return a[n];
+      for (n = a.length, e += r; n--;) {
+        if (a[n] <= e) return a[n];
+      }
       return a[0];
     } : function (e, t, r) {
       void 0 === r && (r = .001);
@@ -1579,11 +1696,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return ob(Z, "scrollEnd", Fb) || zt(!0);
   }
   function Ib(e) {
-    for (var t = 0; t < V.length; t += 5) (!e || V[t + 4] && V[t + 4].query === e) && (V[t].style.cssText = V[t + 1], V[t].getBBox && V[t].setAttribute("transform", V[t + 2] || ""), V[t + 3].uncache = 1);
+    for (var t = 0; t < V.length; t += 5) {
+      (!e || V[t + 4] && V[t + 4].query === e) && (V[t].style.cssText = V[t + 1], V[t].getBBox && V[t].setAttribute("transform", V[t + 2] || ""), V[t + 3].uncache = 1);
+    }
   }
   function Jb(e, t) {
     var r;
-    for (it = 0; it < Ot.length; it++) !(r = Ot[it]) || t && r._ctx !== t || (e ? r.kill(1) : r.revert(!0, !0));
+    for (it = 0; it < Ot.length; it++) {
+      !(r = Ot[it]) || t && r._ctx !== t || (e ? r.kill(1) : r.revert(!0, !0));
+    }
     t && Ib(t), t || H("revert");
   }
   function Kb(e, t) {
@@ -1593,12 +1714,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   }
   function Xb(e, t, r, n) {
     if (!e._gsap.swappedIn) {
-      for (var o, i = U.length, a = t.style, s = e.style; i--;) a[o = U[i]] = r[o];
+      for (var o, i = U.length, a = t.style, s = e.style; i--;) {
+        a[o = U[i]] = r[o];
+      }
       a.position = "absolute" === r.position ? "absolute" : "relative", "inline" === r.display && (a.display = "inline-block"), s[T] = s[_] = "auto", a.flexBasis = r.flexBasis || "auto", a.overflow = "visible", a.boxSizing = "border-box", a[mt] = hb(e, Je) + Et, a[yt] = hb(e, Ne) + Et, a[Tt] = s[kt] = s.top = s.left = "0", Rt(n), s[mt] = s.maxWidth = r[mt], s[yt] = s.maxHeight = r[yt], s[Tt] = r[Tt], e.parentNode !== t && (e.parentNode.insertBefore(t, e), t.appendChild(e)), e._gsap.swappedIn = !0;
     }
   }
   function $b(e) {
-    for (var t = G.length, r = e.style, n = [], o = 0; o < t; o++) n.push(G[o], r[G[o]]);
+    for (var t = G.length, r = e.style, n = [], o = 0; o < t; o++) {
+      n.push(G[o], r[G[o]]);
+    }
     return n.t = e, n;
   }
   function bc(e, t, r, n, o, i, a, s, l, c, u, f, d) {
@@ -1629,7 +1754,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         i,
         a = e.style;
       if (t === Ge) {
-        for (o in e._stOrig = a.cssText, i = db(e)) +o || Q.test(o) || !i[o] || "string" != typeof a[o] || "0" === o || (a[o] = i[o]);
+        for (o in e._stOrig = a.cssText, i = db(e)) {
+          +o || Q.test(o) || !i[o] || "string" != typeof a[o] || "0" === o || (a[o] = i[o]);
+        }
         a.top = r, a.left = n;
       } else a.cssText = e._stOrig;
       Ke.core.getCache(e).uncache = 1, t.appendChild(e);
@@ -1799,9 +1926,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           n = 50 <= r - w,
           o = t && Ot[0].scroll();
         if (Bt = o < W ? -1 : 1, W = o, n && (ht && !ot && 200 < r - ht && (ht = 0, H("scrollEnd")), rt = w, w = r), Bt < 0) {
-          for (it = t; 0 < it--;) Ot[it] && Ot[it].update(0, n);
+          for (it = t; 0 < it--;) {
+            Ot[it] && Ot[it].update(0, n);
+          }
           Bt = 1;
-        } else for (it = 0; it < t; it++) Ot[it] && Ot[it].update(0, n);
+        } else for (it = 0; it < t; it++) {
+          Ot[it] && Ot[it].update(0, n);
+        }
         Z.isUpdating = !1;
       }
       S = 0;
@@ -1816,7 +1947,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           n = e.t.style,
           o = e.length,
           i = 0;
-        for ((e.t._gsap || Ke.core.getCache(e.t)).uncache = 1; i < o; i += 2) r = e[i + 1], t = e[i], r ? n[t] = r : n[t] && n.removeProperty(t.replace($, "-$1").toLowerCase());
+        for ((e.t._gsap || Ke.core.getCache(e.t)).uncache = 1; i < o; i += 2) {
+          r = e[i + 1], t = e[i], r ? n[t] = r : n[t] && n.removeProperty(t.replace($, "-$1").toLowerCase());
+        }
       }
     },
     Xt = {
@@ -2026,8 +2159,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             !ut && _e && _e(we), nt = 1, Ee = gt(), k.tween && (k.tween.kill(), k.tween = 0), W && W.pause(), ae && T && T.revert({
               kill: !1
             }).invalidate(), we.isReverted || we.revert(!0, !0), we._subPinOffset = !1;
-            for (var r, n, o, i, a, s, l, c, u, f, d = Te(), p = ke(), g = fe ? fe.duration() : Ha(ve, ge), h = 0, v = 0, b = _.end, m = _.endTrigger || ne, y = _.start || (0 !== _.start && ne ? oe ? "0 0" : "0 100%" : 0), x = we.pinnedContainer = _.pinnedContainer && I(_.pinnedContainer), S = ne && Math.max(0, Ot.indexOf(we)) || 0, w = S; w--;) (s = Ot[w]).end || s.refresh(0, 1) || (nt = 1), !(l = s.pin) || l !== ne && l !== oe || s.isReverted || ((f = f || []).unshift(s), s.revert(!0, !0)), s !== Ot[w] && (S--, w--);
-            for (Ka(y) && (y = y(we)), M = bc(y, ne, d, ge, Me(), C, D, we, p, Se, me, g, fe) || (oe ? -.001 : 0), Ka(b) && (b = b(we)), Ja(b) && !b.indexOf("+=") && (~b.indexOf(" ") ? b = (Ja(y) ? y.split(" ")[0] : "") + b : (h = tb(b.substr(2), d), b = Ja(y) ? y : M + h, m = ne)), P = Math.max(M, bc(b || (m ? "100% 0" : g), m, d, ge, Me() + h, O, z, we, p, Se, me, g, fe)) || -.001, B = P - M || (M -= .01) && .001, h = 0, w = S; w--;) (l = (s = Ot[w]).pin) && s.start - s._pinPush <= M && !fe && 0 < s.end && (r = s.end - s.start, (l === ne && s.start - s._pinPush < M || l === x) && !La(y) && (h += r * (1 - s.progress)), l === oe && (v += r));
+            for (var r, n, o, i, a, s, l, c, u, f, d = Te(), p = ke(), g = fe ? fe.duration() : Ha(ve, ge), h = 0, v = 0, b = _.end, m = _.endTrigger || ne, y = _.start || (0 !== _.start && ne ? oe ? "0 0" : "0 100%" : 0), x = we.pinnedContainer = _.pinnedContainer && I(_.pinnedContainer), S = ne && Math.max(0, Ot.indexOf(we)) || 0, w = S; w--;) {
+              (s = Ot[w]).end || s.refresh(0, 1) || (nt = 1), !(l = s.pin) || l !== ne && l !== oe || s.isReverted || ((f = f || []).unshift(s), s.revert(!0, !0)), s !== Ot[w] && (S--, w--);
+            }
+            for (Ka(y) && (y = y(we)), M = bc(y, ne, d, ge, Me(), C, D, we, p, Se, me, g, fe) || (oe ? -.001 : 0), Ka(b) && (b = b(we)), Ja(b) && !b.indexOf("+=") && (~b.indexOf(" ") ? b = (Ja(y) ? y.split(" ")[0] : "") + b : (h = tb(b.substr(2), d), b = Ja(y) ? y : M + h, m = ne)), P = Math.max(M, bc(b || (m ? "100% 0" : g), m, d, ge, Me() + h, O, z, we, p, Se, me, g, fe)) || -.001, B = P - M || (M -= .01) && .001, h = 0, w = S; w--;) {
+              (l = (s = Ot[w]).pin) && s.start - s._pinPush <= M && !fe && 0 < s.end && (r = s.end - s.start, (l === ne && s.start - s._pinPush < M || l === x) && !La(y) && (h += r * (1 - s.progress)), l === oe && (v += r));
+            }
             if (M += h, P += h, we._pinPush = v, C && h && ((r = {})[ge.a] = "+=" + h, x && (r[ge.p] = "-=" + Me()), Ke.set([C, O], r)), oe) r = db(oe), i = ge === Ne, o = Me(), H = parseFloat(Y(ge.a)) + v, !g && 1 < P && ((be ? Ge : ve).style["overflow-" + ge.a] = "scroll"), Xb(oe, F, r), L = $b(oe), n = Mt(oe, !0), c = me && J(ve, i ? Je : Ne)(), ie && ((K = [ie + ge.os2, B + v + Et]).t = F, (w = ie === Tt ? hb(oe, ge) + B + v : 0) && K.push(ge.d, w + Et), Rt(K), x && Ot.forEach(function (e) {
               e.pin === x && !1 !== e.vars.pinSpacing && (e._subPinOffset = !0);
             }), me && Me(U)), me && ((a = {
@@ -2036,9 +2173,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
               boxSizing: "border-box",
               position: "fixed"
             })[mt] = a.maxWidth = Math.ceil(n.width) + Et, a[yt] = a.maxHeight = Math.ceil(n.height) + Et, a[kt] = a[kt + wt] = a[kt + xt] = a[kt + _t] = a[kt + St] = "0", a[Tt] = r[Tt], a[Tt + wt] = r[Tt + wt], a[Tt + xt] = r[Tt + xt], a[Tt + _t] = r[Tt + _t], a[Tt + St] = r[Tt + St], X = function _copyState(e, t, r) {
-              for (var n, o = [], i = e.length, a = r ? 8 : 0; a < i; a += 2) n = e[a], o.push(n, n in t ? t[n] : e[a + 1]);
+              for (var n, o = [], i = e.length, a = r ? 8 : 0; a < i; a += 2) {
+                n = e[a], o.push(n, n in t ? t[n] : e[a + 1]);
+              }
               return o.t = e.t, o;
-            }(R, a, ue), ut && Me(0)), T ? (u = T._initted, st(1), T.render(T.duration(), !0, !0), N = Y(ge.a) - H + B + v, B !== N && me && X.splice(X.length - 2, 2), T.render(0, !0, !0), u || T.invalidate(!0), T.parent || T.totalTime(T.totalTime()), st(0)) : N = B;else if (ne && Me() && !fe) for (n = ne.parentNode; n && n !== Ge;) n._pinOffset && (M -= n._pinOffset, P -= n._pinOffset), n = n.parentNode;
+            }(R, a, ue), ut && Me(0)), T ? (u = T._initted, st(1), T.render(T.duration(), !0, !0), N = Y(ge.a) - H + B + v, B !== N && me && X.splice(X.length - 2, 2), T.render(0, !0, !0), u || T.invalidate(!0), T.parent || T.totalTime(T.totalTime()), st(0)) : N = B;else if (ne && Me() && !fe) for (n = ne.parentNode; n && n !== Ge;) {
+              n._pinOffset && (M -= n._pinOffset, P -= n._pinOffset), n = n.parentNode;
+            }
             f && f.forEach(function (e) {
               return e.revert(!1, !0);
             }), we.start = M, we.end = P, A = E = ut ? U : Me(), fe || ut || (A < U && Me(U), we.scroll.rec = 0), we.revert(!1, !0), j && (Ae = -1, we.isActive && Me(M + B * q), j.restart(!0)), nt = 0, T && he && (T._initted || G) && T.progress() !== G && T.progress(G, !0).render(T.time(), !0, !0), q === we.progress && !fe || (T && !he && T.totalProgress(q, !0), we.progress = (A - M) / B === q ? 0 : q), oe && ie && (F._pinOffset = Math.round(we.progress * N)), te && !ut && te(we);
@@ -2106,7 +2247,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           }
         }, we.disable = function (e, t) {
           if (we.enabled && (!1 !== e && we.revert(!0, !0), we.enabled = we.isActive = !1, t || W && W.pause(), U = 0, n && (n.uncache = 1), _e && ob(ScrollTrigger, "refreshInit", _e), j && (j.pause(), k.tween && k.tween.kill() && (k.tween = 0)), !be)) {
-            for (var r = Ot.length; r--;) if (Ot[r].scroller === ve && Ot[r] !== we) return;
+            for (var r = Ot.length; r--;) {
+              if (Ot[r].scroller === ve && Ot[r] !== we) return;
+            }
             ob(ve, "resize", Cb), ob(ve, "scroll", Ab);
           }
         }, we.kill = function (e, t) {
@@ -2135,19 +2278,25 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }, ScrollTrigger.register = function register(e) {
       return a || (Ke = e || Ca(), Ba() && window.document && ScrollTrigger.enable(), a = vt), a;
     }, ScrollTrigger.defaults = function defaults(e) {
-      if (e) for (var t in e) Ct[t] = e[t];
+      if (e) for (var t in e) {
+        Ct[t] = e[t];
+      }
       return Ct;
     }, ScrollTrigger.disable = function disable(t, r) {
       vt = 0, Ot.forEach(function (e) {
         return e[r ? "kill" : "disable"](t);
       }), ob(We, "wheel", Ab), ob(je, "scroll", Ab), clearInterval(c), ob(je, "touchcancel", za), ob(Ge, "touchstart", za), mb(ob, je, "pointerdown,touchstart,mousedown", xa), mb(ob, je, "pointerup,touchend,mouseup", ya), l.kill(), Ia(ob);
-      for (var e = 0; e < Le.length; e += 3) pb(ob, Le[e], Le[e + 1]), pb(ob, Le[e], Le[e + 2]);
+      for (var e = 0; e < Le.length; e += 3) {
+        pb(ob, Le[e], Le[e + 1]), pb(ob, Le[e], Le[e + 2]);
+      }
     }, ScrollTrigger.enable = function enable() {
       if (We = window, je = document, qe = je.documentElement, Ge = je.body, Ke && (et = Ke.utils.toArray, tt = Ke.utils.clamp, lt = Ke.core.context || za, st = Ke.core.suppressOverwrites || za, x = We.history.scrollRestoration || "auto", Ke.core.globals("ScrollTrigger", ScrollTrigger), Ge)) {
         vt = 1, k.register(Ke), ScrollTrigger.isTouch = k.isTouch, P = k.isTouch && /(iPad|iPhone|iPod|Mac)/g.test(navigator.userAgent), nb(We, "wheel", Ab), s = [We, je, qe, Ge], Ke.matchMedia ? (ScrollTrigger.matchMedia = function (e) {
           var t,
             r = Ke.matchMedia();
-          for (t in e) r.add(t, e[t]);
+          for (t in e) {
+            r.add(t, e[t]);
+          }
           return r;
         }, Ke.addEventListener("matchMediaInit", function () {
           return Jb();
@@ -2175,7 +2324,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           je.hidden ? (f = e, d = t) : f === e && d === t || Cb();
         }, je, "DOMContentLoaded", zt, We, "load", zt, We, "resize", Cb], Ia(nb), Ot.forEach(function (e) {
           return e.enable(0, 1);
-        }), t = 0; t < Le.length; t += 3) pb(ob, Le[t], Le[t + 1]), pb(ob, Le[t], Le[t + 2]);
+        }), t = 0; t < Le.length; t += 3) {
+          pb(ob, Le[t], Le[t + 1]), pb(ob, Le[t], Le[t + 2]);
+        }
       }
     }, ScrollTrigger.config = function config(e) {
       "limitCallbacks" in e && (ct = !!e.limitCallbacks);
@@ -2261,12 +2412,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       o = {},
       i = t.interval || .016,
       a = t.batchMax || 1e9;
-    for (r in t) o[r] = "on" === r.substr(0, 2) && Ka(t[r]) && "onRefreshInit" !== r ? Do(0, t[r]) : t[r];
+    for (r in t) {
+      o[r] = "on" === r.substr(0, 2) && Ka(t[r]) && "onRefreshInit" !== r ? Do(0, t[r]) : t[r];
+    }
     return Ka(a) && (a = a(), nb(Z, "refresh", function () {
       return a = t.batchMax();
     })), et(e).forEach(function (e) {
       var t = {};
-      for (r in o) t[r] = o[r];
+      for (r in o) {
+        t[r] = o[r];
+      }
       t.trigger = e, n.push(Z.create(t));
     }), n;
   };
@@ -2285,7 +2440,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       a = i._gsap || Ke.core.getCache(i),
       s = gt();
     if (!a._isScrollT || 2e3 < s - a._isScrollT) {
-      for (; i && i.scrollHeight <= i.clientHeight;) i = i.parentNode;
+      for (; i && i.scrollHeight <= i.clientHeight;) {
+        i = i.parentNode;
+      }
       a._isScroll = i && !Da(i) && i !== n && (te[(t = db(i)).overflowY] || te[t.overflowX]), a._isScrollT = s;
     }
     !a._isScroll && "x" !== o || (r.stopPropagation(), r._gsapAllow = !0);
@@ -2527,10 +2684,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       r,
       i = t[0];
     if (v(i) || s(i) || (t = [t]), !(e = (i._gsap || {}).harness)) {
-      for (r = gt.length; r-- && !gt[r].targetTest(i););
+      for (r = gt.length; r-- && !gt[r].targetTest(i);) {
+        ;
+      }
       e = gt[r];
     }
-    for (r = t.length; r--;) t[r] && (t[r]._gsap || (t[r]._gsap = new jt(t[r], e))) || t.splice(r, 1);
+    for (r = t.length; r--;) {
+      t[r] && (t[r]._gsap || (t[r]._gsap = new jt(t[r], e))) || t.splice(r, 1);
+    }
     return t;
   }
   function fa(t) {
@@ -2554,7 +2715,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return t = parseFloat(t), "+" === r ? t + i : "-" === r ? t - i : "*" === r ? t * i : t / i;
   }
   function la(t, e) {
-    for (var r = e.length, i = 0; t.indexOf(e[i]) < 0 && ++i < r;);
+    for (var r = e.length, i = 0; t.indexOf(e[i]) < 0 && ++i < r;) {
+      ;
+    }
     return i < r;
   }
   function ma() {
@@ -2562,7 +2725,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       e,
       r = ct.length,
       i = ct.slice(0);
-    for (dt = {}, t = ct.length = 0; t < r; t++) (e = i[t]) && e._lazy && (e.render(e._lazy[0], e._lazy[1], !0)._lazy = 0);
+    for (dt = {}, t = ct.length = 0; t < r; t++) {
+      (e = i[t]) && e._lazy && (e.render(e._lazy[0], e._lazy[1], !0)._lazy = 0);
+    }
   }
   function na(t, e, r, i) {
     ct.length && ma(), t.render(e, r, i || B && e < 0 && (t._initted || t._startAt)), ct.length && ma();
@@ -2575,34 +2740,46 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return t;
   }
   function qa(t, e) {
-    for (var r in e) r in t || (t[r] = e[r]);
+    for (var r in e) {
+      r in t || (t[r] = e[r]);
+    }
     return t;
   }
   function ta(t, e) {
-    for (var r in e) "__proto__" !== r && "constructor" !== r && "prototype" !== r && (t[r] = v(e[r]) ? ta(t[r] || (t[r] = {}), e[r]) : e[r]);
+    for (var r in e) {
+      "__proto__" !== r && "constructor" !== r && "prototype" !== r && (t[r] = v(e[r]) ? ta(t[r] || (t[r] = {}), e[r]) : e[r]);
+    }
     return t;
   }
   function ua(t, e) {
     var r,
       i = {};
-    for (r in t) r in e || (i[r] = t[r]);
+    for (r in t) {
+      r in e || (i[r] = t[r]);
+    }
     return i;
   }
   function va(t) {
     var e = t.parent || L,
       r = t.keyframes ? function _setKeyframeDefaults(i) {
         return function (t, e) {
-          for (var r in e) r in t || "duration" === r && i || "ease" === r || (t[r] = e[r]);
+          for (var r in e) {
+            r in t || "duration" === r && i || "ease" === r || (t[r] = e[r]);
+          }
         };
       }($(t.keyframes)) : qa;
-    if (w(t.inherit)) for (; e;) r(t, e.vars.defaults), e = e.parent || e._dp;
+    if (w(t.inherit)) for (; e;) {
+      r(t, e.vars.defaults), e = e.parent || e._dp;
+    }
     return t;
   }
   function xa(t, e, r, i, n) {
     void 0 === r && (r = "_first"), void 0 === i && (i = "_last");
     var a,
       s = t[i];
-    if (n) for (a = e[n]; s && s[n] > a;) s = s._prev;
+    if (n) for (a = e[n]; s && s[n] > a;) {
+      s = s._prev;
+    }
     return s ? (e._next = s._next, s._next = e) : (e._next = t[r], t[r] = e), e._next ? e._next._prev = e : t[i] = e, e._prev = s, e.parent = e._dp = t, e;
   }
   function ya(t, e, r, i) {
@@ -2615,7 +2792,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     !t.parent || e && !t.parent.autoRemoveChildren || t.parent.remove(t), t._act = 0;
   }
   function Aa(t, e) {
-    if (t && (!e || e._end > t._dur || e._start < 0)) for (var r = t; r;) r._dirty = 1, r = r.parent;
+    if (t && (!e || e._end > t._dur || e._start < 0)) for (var r = t; r;) {
+      r._dirty = 1, r = r.parent;
+    }
     return t;
   }
   function Ca(t, e, r, i) {
@@ -2637,7 +2816,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function Ja(t, e) {
     var r;
     if ((e._time || e._initted && !e._dur) && (r = Ga(t.rawTime(), e), (!e._dur || kt(0, e.totalDuration(), r) - e._tTime > V) && e.render(r, !0)), Aa(t, e)._dp && t._initted && t._time >= t._dur && t._ts) {
-      if (t._dur < t.duration()) for (r = t; r._dp;) 0 <= r.rawTime() && r.totalTime(r._tTime), r = r._dp;
+      if (t._dur < t.duration()) for (r = t; r._dp;) {
+        0 <= r.rawTime() && r.totalTime(r._tTime), r = r._dp;
+      }
       t._zTime = -V;
     }
   }
@@ -2666,7 +2847,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       o = (s ? 2 : 1) + (e < 2 ? 0 : 1),
       u = r[o];
     if (s && (u.duration = r[1]), u.parent = i, e) {
-      for (n = u, a = i; a && !("immediateRender" in n);) n = a.vars.defaults || {}, a = w(a.vars.inherit) && a.parent;
+      for (n = u, a = i; a && !("immediateRender" in n);) {
+        n = a.vars.defaults || {}, a = w(a.vars.inherit) && a.parent;
+      }
       u.immediateRender = w(n.immediateRender), e < 2 ? u.runBackwards = 1 : u.startAt = r[o - 1];
     }
     return new Gt(r[0], u, r[1 + o]);
@@ -2723,10 +2906,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         d = y[c];
       if (!d) {
         if (!(f = "auto" === p.grid ? 0 : (p.grid || [1, U])[1])) {
-          for (h = -U; h < (h = r[f++].getBoundingClientRect().left) && f < c;);
+          for (h = -U; h < (h = r[f++].getBoundingClientRect().left) && f < c;) {
+            ;
+          }
           f--;
         }
-        for (d = y[c] = [], i = T ? Math.min(f, c) * w - .5 : m % f, n = f === U ? 0 : T ? c * x / f - .5 : m / f | 0, l = U, u = h = 0; u < c; u++) a = u % f - i, s = n - (u / f | 0), d[u] = o = b ? Math.abs("y" === b ? s : a) : K(a * a + s * s), h < o && (h = o), o < l && (l = o);
+        for (d = y[c] = [], i = T ? Math.min(f, c) * w - .5 : m % f, n = f === U ? 0 : T ? c * x / f - .5 : m / f | 0, l = U, u = h = 0; u < c; u++) {
+          a = u % f - i, s = n - (u / f | 0), d[u] = o = b ? Math.abs("y" === b ? s : a) : K(a * a + s * s), h < o && (h = o), o < l && (l = o);
+        }
         "random" === m && db(d), d.max = h - l, d.min = l, d.v = c = (parseFloat(p.amount) || parseFloat(p.each) * (c < f ? c - 1 : b ? "y" === b ? c / f : f : Math.max(f, c / f)) || 0) * ("edges" === m ? -1 : 1), d.b = c < 0 ? g - c : g, d.u = Ya(p.amount || p.each) || 0, _ = _ && c < 0 ? Lt(_) : _;
       }
       return c = (d[t] - d.min) / d.max || 0, ja(d.b + (_ ? _(c) : c) * d.v) + d.u;
@@ -2746,7 +2933,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return !r && v(h) && (l = r = h.radius || U, h.values ? (h = Ot(h.values), (f = !t(h[0])) && (l *= l)) : h = fb(h.increment)), Wa(e, r ? s(h) ? function (t) {
       return f = h(t), Math.abs(f - t) <= l ? f : t;
     } : function (e) {
-      for (var r, i, n = parseFloat(f ? e.x : e), a = parseFloat(f ? e.y : 0), s = U, o = 0, u = h.length; u--;) (r = f ? (r = h[u].x - n) * r + (i = h[u].y - a) * i : Math.abs(h[u] - n)) < s && (s = r, o = u);
+      for (var r, i, n = parseFloat(f ? e.x : e), a = parseFloat(f ? e.y : 0), s = U, o = 0, u = h.length; u--;) {
+        (r = f ? (r = h[u].x - n) * r + (i = h[u].y - a) * i : Math.abs(h[u] - n)) < s && (s = r, o = u);
+      }
       return o = !l || s <= l ? h[o] : e, f || o === e || t(e) ? o : o + Ya(e);
     } : fb(h));
   }
@@ -2761,7 +2950,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     });
   }
   function ob(t) {
-    for (var e, r, i, n, a = 0, s = ""; ~(e = t.indexOf("random(", a));) i = t.indexOf(")", e), n = "[" === t.charAt(e + 7), r = t.substr(e + 7, i - e - 7).match(n ? at : tt), s += t.substr(a, e - a) + hb(n ? r : +r[0], n ? 0 : +r[1], +r[2] || 1e-5), a = i + 1;
+    for (var e, r, i, n, a = 0, s = ""; ~(e = t.indexOf("random(", a));) {
+      i = t.indexOf(")", e), n = "[" === t.charAt(e + 7), r = t.substr(e + 7, i - e - 7).match(n ? at : tt), s += t.substr(a, e - a) + hb(n ? r : +r[0], n ? 0 : +r[1], +r[2] || 1e-5), a = i + 1;
+    }
     return s + t.substr(a, t.length - a);
   }
   function rb(t, e, r) {
@@ -2770,7 +2961,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       a,
       s = t.labels,
       o = U;
-    for (i in s) (n = s[i] - e) < 0 == !!r && n && o > (n = Math.abs(n)) && (a = i, o = n);
+    for (i in s) {
+      (n = s[i] - e) < 0 == !!r && n && o > (n = Math.abs(n)) && (a = i, o = n);
+    }
     return a;
   }
   function tb(t) {
@@ -2825,8 +3018,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     if (!u) return t;
     if (u = u.map(function (t) {
       return (t = zb(t, e, 1)) && h + (e ? t[0] + "," + t[1] + "%," + t[2] + "%," + t[3] : t.join(",")) + ")";
-    }), r && (a = Ab(t), (i = r.c).join(o) !== a.c.join(o))) for (s = (n = t.replace(Rt, "1").split(rt)).length - 1; l < s; l++) o += n[l] + (~i.indexOf(l) ? u.shift() || h + "0,0,0,0)" : (a.length ? a : u.length ? u : r).shift());
-    if (!n) for (s = (n = t.split(Rt)).length - 1; l < s; l++) o += n[l] + u[l];
+    }), r && (a = Ab(t), (i = r.c).join(o) !== a.c.join(o))) for (s = (n = t.replace(Rt, "1").split(rt)).length - 1; l < s; l++) {
+      o += n[l] + (~i.indexOf(l) ? u.shift() || h + "0,0,0,0)" : (a.length ? a : u.length ? u : r).shift());
+    }
+    if (!n) for (s = (n = t.split(Rt)).length - 1; l < s; l++) {
+      o += n[l] + u[l];
+    }
     return o + n[s];
   }
   function Eb(t) {
@@ -2838,7 +3035,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     var e = (t + "").split("("),
       r = Ft[e[0]];
     return r && 1 < e.length && r.config ? r.config.apply(null, ~t.indexOf("{") ? [function _parseObjectInString(t) {
-      for (var e, r, i, n = {}, a = t.substr(1, t.length - 3).split(":"), s = a[0], o = 1, u = a.length; o < u; o++) r = a[o], e = o !== u - 1 ? r.lastIndexOf(",") : r.length, i = r.substr(0, e), n[s] = isNaN(i) ? i.replace(Bt, "").trim() : +i, s = r.substr(e + 1).trim();
+      for (var e, r, i, n = {}, a = t.substr(1, t.length - 3).split(":"), s = a[0], o = 1, u = a.length; o < u; o++) {
+        r = a[o], e = o !== u - 1 ? r.lastIndexOf(",") : r.length, i = r.substr(0, e), n[s] = isNaN(i) ? i.replace(Bt, "").trim() : +i, s = r.substr(e + 1).trim();
+      }
       return n;
     }(e[1])] : function _valueInParentheses(t) {
       var e = t.indexOf("(") + 1,
@@ -2848,7 +3047,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }(t).split(",").map(oa)) : Ft._CE && It.test(t) ? Ft._CE("", t) : r;
   }
   function Pb(t, e) {
-    for (var r, i = t._first; i;) i instanceof Ut ? Pb(i, e) : !i.vars.yoyoEase || i._yoyo && i._repeat || i._yoyo === e || (i.timeline ? Pb(i.timeline, e) : (r = i._ease, i._ease = i._yEase, i._yEase = r, i._yoyo = e)), i = i._next;
+    for (var r, i = t._first; i;) {
+      i instanceof Ut ? Pb(i, e) : !i.vars.yoyoEase || i._yoyo && i._repeat || i._yoyo === e || (i.timeline ? Pb(i.timeline, e) : (r = i._ease, i._ease = i._yEase, i._yEase = r, i._yoyo = e)), i = i._next;
+    }
   }
   function Rb(t, e, r, i) {
     void 0 === r && (r = function easeOut(t) {
@@ -2863,7 +3064,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         easeInOut: i
       };
     return ha(t, function (t) {
-      for (var e in Ft[t] = ot[t] = a, Ft[n = t.toLowerCase()] = r, a) Ft[n + ("easeIn" === e ? ".in" : "easeOut" === e ? ".out" : ".inOut")] = Ft[t + "." + e] = a[e];
+      for (var e in Ft[t] = ot[t] = a, Ft[n = t.toLowerCase()] = r, a) {
+        Ft[n + ("easeIn" === e ? ".in" : "easeOut" === e ? ".out" : ".inOut")] = Ft[t + "." + e] = a[e];
+      }
     }), a;
   }
   function Sb(e) {
@@ -2977,7 +3180,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     gt = [],
     vt = "",
     yt = function _merge(t, e) {
-      for (var r in e) t[r] = e[r];
+      for (var r in e) {
+        t[r] = e[r];
+      }
       return t;
     },
     Tt = function _animationCycle(t, e) {
@@ -3055,7 +3260,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     Rt = function () {
       var t,
         e = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3,4}){1,2}\\b";
-      for (t in St) e += "|" + t + "\\b";
+      for (t in St) {
+        e += "|" + t + "\\b";
+      }
       return new RegExp(e + ")", "gi");
     }(),
     Dt = /hsl[a]?\(/,
@@ -3114,7 +3321,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       n,
       a = M() - D,
       s = !0 === t;
-    if (O < a && (A += a - C), (0 < (e = (i = (D += a) - A) - z) || s) && (n = ++g.frame, b = i - 1e3 * g.time, g.time = i /= 1e3, z += e + (E <= e ? 4 : E - e), r = 1), s || (p = _(wl)), r) for (k = 0; k < F.length; k++) F[k](i, b, n, t);
+    if (O < a && (A += a - C), (0 < (e = (i = (D += a) - A) - z) || s) && (n = ++g.frame, b = i - 1e3 * g.time, g.time = i /= 1e3, z += e + (E <= e ? 4 : E - e), r = 1), s || (p = _(wl)), r) for (k = 0; k < F.length; k++) {
+      F[k](i, b, n, t);
+    }
   }
   function en(t) {
     return t < N ? Y * t * t : t < .7272727272727273 ? Y * Math.pow(t - 1.5 / 2.75, 2) + .75 : t < .9090909090909092 ? Y * (t -= 2.25 / 2.75) * t + .9375 : Y * Math.pow(t - 2.625 / 2.75, 2) + .984375;
@@ -3165,7 +3374,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       if (zt(), !arguments.length) return this._tTime;
       var r = this._dp;
       if (r && r.smoothChildTiming && this._ts) {
-        for (Ia(this, t), !r._dp || r.parent || Ja(r, this); r && r.parent;) r.parent._time !== r._start + (0 <= r._ts ? r._tTime / r._ts : (r.totalDuration() - r._tTime) / -r._ts) && r.totalTime(r._tTime, !0), r = r.parent;
+        for (Ia(this, t), !r._dp || r.parent || Ja(r, this); r && r.parent;) {
+          r.parent._time !== r._start + (0 <= r._ts ? r._tTime / r._ts : (r.totalDuration() - r._tTime) / -r._ts) && r.totalTime(r._tTime, !0), r = r.parent;
+        }
         !this.parent && this._dp.autoRemoveChildren && (0 < this._ts && t < this._tDur || this._ts < 0 && 0 < t || !this._tDur && !t) && Ka(this._dp, this, this._start - this._delay);
       }
       return (this._tTime !== t || !this._dur && !e || this._initted && Math.abs(this._zTime) === V || !t && !this._initted && (this.add || this._ptLookup)) && (this._ts || (this._pTime = t), na(this, t, e)), this;
@@ -3183,7 +3394,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       if (this._rts === t) return this;
       var e = this.parent && this._ts ? Ga(this.parent._time, this) : this._tTime;
       return this._rts = +t || 0, this._ts = this._ps || t === -V ? 0 : this._rts, this.totalTime(kt(-this._delay, this._tDur, e), !0), Ha(this), function _recacheAncestors(t) {
-        for (var e = t.parent; e && e.parent;) e._dirty = 1, e.totalDuration(), e = e.parent;
+        for (var e = t.parent; e && e.parent;) {
+          e._dirty = 1, e.totalDuration(), e = e.parent;
+        }
         return t;
       }(this);
     }, Nt.paused = function paused(t) {
@@ -3205,7 +3418,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var e = B;
       return B = t, (this._initted || this._startAt) && (this.timeline && this.timeline.revert(t), this.totalTime(-.01, t.suppressEvents)), "nested" !== this.data && !1 !== t.kill && this.kill(), B = e, this;
     }, Nt.globalTime = function globalTime(t) {
-      for (var e = this, r = arguments.length ? t : e.rawTime(); e;) r = e._start + r / (e._ts || 1), e = e._dp;
+      for (var e = this, r = arguments.length ? t : e.rawTime(); e;) {
+        r = e._start + r / (e._ts || 1), e = e._dp;
+      }
       return !this.parent && this.vars.immediateRender ? -1 : r;
     }, Nt.repeat = function repeat(t) {
       return arguments.length ? (this._repeat = t === 1 / 0 ? -2 : t, Sa(this)) : -2 === this._repeat ? 1 / 0 : this._repeat;
@@ -3378,10 +3593,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       return this !== e ? Ka(this, e, i) : this;
     }, e.getChildren = function getChildren(t, e, r, i) {
       void 0 === t && (t = !0), void 0 === e && (e = !0), void 0 === r && (r = !0), void 0 === i && (i = -U);
-      for (var n = [], a = this._first; a;) a._start >= i && (a instanceof Gt ? e && n.push(a) : (r && n.push(a), t && n.push.apply(n, a.getChildren(!0, e, r)))), a = a._next;
+      for (var n = [], a = this._first; a;) {
+        a._start >= i && (a instanceof Gt ? e && n.push(a) : (r && n.push(a), t && n.push.apply(n, a.getChildren(!0, e, r)))), a = a._next;
+      }
       return n;
     }, e.getById = function getById(t) {
-      for (var e = this.getChildren(1, 1, 1), r = e.length; r--;) if (e[r].vars.id === t) return e[r];
+      for (var e = this.getChildren(1, 1, 1), r = e.length; r--;) {
+        if (e[r].vars.id === t) return e[r];
+      }
     }, e.remove = function remove(t) {
       return r(t) ? this.removeLabel(t) : s(t) ? this.killTweensOf(t) : (ya(this, t), t === this._recent && (this._recent = this._last), Aa(this));
     }, e.totalTime = function totalTime(t, e) {
@@ -3395,12 +3614,18 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       return i.data = "isPause", this._hasPause = 1, Ka(this, i, xt(this, t));
     }, e.removePause = function removePause(t) {
       var e = this._first;
-      for (t = xt(this, t); e;) e._start === t && "isPause" === e.data && za(e), e = e._next;
+      for (t = xt(this, t); e;) {
+        e._start === t && "isPause" === e.data && za(e), e = e._next;
+      }
     }, e.killTweensOf = function killTweensOf(t, e, r) {
-      for (var i = this.getTweensOf(t, r), n = i.length; n--;) Vt !== i[n] && i[n].kill(t, e);
+      for (var i = this.getTweensOf(t, r), n = i.length; n--;) {
+        Vt !== i[n] && i[n].kill(t, e);
+      }
       return this;
     }, e.getTweensOf = function getTweensOf(e, r) {
-      for (var i, n = [], a = Ot(e), s = this._first, o = t(r); s;) s instanceof Gt ? la(s._targets, a) && (o ? (!Vt || s._initted && s._ts) && s.globalTime(0) <= r && s.globalTime(s.totalDuration()) > r : !r || s.isActive()) && n.push(s) : (i = s.getTweensOf(a, r)).length && n.push.apply(n, i), s = s._next;
+      for (var i, n = [], a = Ot(e), s = this._first, o = t(r); s;) {
+        s instanceof Gt ? la(s._targets, a) && (o ? (!Vt || s._initted && s._ts) && s.globalTime(0) <= r && s.globalTime(s.totalDuration()) > r : !r || s.isActive()) && n.push(s) : (i = s.getTweensOf(a, r)).length && n.push.apply(n, i), s = s._next;
+      }
       return n;
     }, e.tweenTo = function tweenTo(t, e) {
       e = e || {};
@@ -3443,16 +3668,24 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       return arguments.length ? this.seek(t, !0) : this.previousLabel(this._time + V);
     }, e.shiftChildren = function shiftChildren(t, e, r) {
       void 0 === r && (r = 0);
-      for (var i, n = this._first, a = this.labels; n;) n._start >= r && (n._start += t, n._end += t), n = n._next;
-      if (e) for (i in a) a[i] >= r && (a[i] += t);
+      for (var i, n = this._first, a = this.labels; n;) {
+        n._start >= r && (n._start += t, n._end += t), n = n._next;
+      }
+      if (e) for (i in a) {
+        a[i] >= r && (a[i] += t);
+      }
       return Aa(this);
     }, e.invalidate = function invalidate(t) {
       var e = this._first;
-      for (this._lock = 0; e;) e.invalidate(t), e = e._next;
+      for (this._lock = 0; e;) {
+        e.invalidate(t), e = e._next;
+      }
       return i.prototype.invalidate.call(this, t);
     }, e.clear = function clear(t) {
       void 0 === t && (t = !0);
-      for (var e, r = this._first; r;) e = r._next, this.remove(r), r = e;
+      for (var e, r = this._first; r;) {
+        e = r._next, this.remove(r), r = e;
+      }
       return this._dp && (this._time = this._tTime = this._pTime = 0), t && (this.labels = {}), Aa(this);
     }, e.totalDuration = function totalDuration(t) {
       var e,
@@ -3464,7 +3697,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         o = U;
       if (arguments.length) return a.timeScale((a._repeat < 0 ? a.duration() : a.totalDuration()) / (a.reversed() ? -t : t));
       if (a._dirty) {
-        for (i = a.parent; s;) e = s._prev, s._dirty && s.totalDuration(), o < (r = s._start) && a._sort && s._ts && !a._lock ? (a._lock = 1, Ka(a, s, r - s._delay, 1)._lock = 0) : o = r, r < 0 && s._ts && (n -= r, (!i && !a._dp || i && i.smoothChildTiming) && (a._start += r / a._ts, a._time -= r, a._tTime -= r), a.shiftChildren(-r, !1, -Infinity), o = 0), s._end > n && s._ts && (n = s._end), s = e;
+        for (i = a.parent; s;) {
+          e = s._prev, s._dirty && s.totalDuration(), o < (r = s._start) && a._sort && s._ts && !a._lock ? (a._lock = 1, Ka(a, s, r - s._delay, 1)._lock = 0) : o = r, r < 0 && s._ts && (n -= r, (!i && !a._dp || i && i.smoothChildTiming) && (a._start += r / a._ts, a._time -= r, a._tTime -= r), a.shiftChildren(-r, !1, -Infinity), o = 0), s._end > n && s._ts && (n = s._end), s = e;
+        }
         Ra(a, a === L && a._time > n ? a._time : n, 1, 1), a._dirty = 0;
       }
       return a._tDur;
@@ -3473,7 +3708,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         mt += j.autoSleep || 120;
         var e = L._first;
         if ((!e || !e._ts) && j.autoSleep && Et._listeners.length < 2) {
-          for (; e && !e._ts;) e = e._next;
+          for (; e && !e._ts;) {
+            e = e._next;
+          }
           e || Et.sleep();
         }
       }
@@ -3490,9 +3727,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       if (s(t) && (t = Qt(t, a, e, i, n)), !v(t) || t.style && t.nodeType || $(t) || J(t)) return r(t) ? Qt(t, a, e, i, n) : t;
       var o,
         u = {};
-      for (o in t) u[o] = Qt(t[o], a, e, i, n);
+      for (o in t) {
+        u[o] = Qt(t[o], a, e, i, n);
+      }
       return u;
-    }(e[t], n, a, o, i), i, n, o) && (i._pt = h = new pe(i._pt, a, t, 0, 1, u.render, u, 0, u.priority), i !== c)) for (l = i._ptLookup[i._targets.indexOf(a)], f = u._props.length; f--;) l[u._props[f]] = h;
+    }(e[t], n, a, o, i), i, n, o) && (i._pt = h = new pe(i._pt, a, t, 0, 1, u.render, u, 0, u.priority), i !== c)) for (l = i._ptLookup[i._targets.indexOf(a)], f = u._props.length; f--;) {
+      l[u._props[f]] = h;
+    }
     return u;
   }
   function fc(t, r, e, i) {
@@ -3505,11 +3746,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         v: t,
         e: s
       });
-    });else for (n in r) a = e[n] || (e[n] = []), "ease" === n || a.push({
-      t: parseFloat(t),
-      v: r[n],
-      e: s
-    });
+    });else for (n in r) {
+      a = e[n] || (e[n] = []), "ease" === n || a.push({
+        t: parseFloat(t),
+        v: r[n],
+        e: s
+      });
+    }
   }
   var Vt,
     Wt,
@@ -3531,13 +3774,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           _ = new pe(this._pt, t, e, 0, 1, se, null, n),
           m = 0,
           g = 0;
-        for (_.b = r, _.e = i, r += "", (d = ~(i += "").indexOf("random(")) && (i = ob(i)), a && (a(p = [r, i], t, e), r = p[0], i = p[1]), u = r.match(it) || []; o = it.exec(i);) l = o[0], f = i.substring(m, o.index), h ? h = (h + 1) % 5 : "rgba(" === f.substr(-5) && (h = 1), l !== u[g++] && (c = parseFloat(u[g - 1]) || 0, _._pt = {
-          _next: _._pt,
-          p: f || 1 === g ? f : ",",
-          s: c,
-          c: "=" === l.charAt(1) ? ka(c, l) - c : parseFloat(l) - c,
-          m: h && h < 4 ? Math.round : 0
-        }, m = it.lastIndex);
+        for (_.b = r, _.e = i, r += "", (d = ~(i += "").indexOf("random(")) && (i = ob(i)), a && (a(p = [r, i], t, e), r = p[0], i = p[1]), u = r.match(it) || []; o = it.exec(i);) {
+          l = o[0], f = i.substring(m, o.index), h ? h = (h + 1) % 5 : "rgba(" === f.substr(-5) && (h = 1), l !== u[g++] && (c = parseFloat(u[g - 1]) || 0, _._pt = {
+            _next: _._pt,
+            p: f || 1 === g ? f : ",",
+            s: c,
+            c: "=" === l.charAt(1) ? ka(c, l) - c : parseFloat(l) - c,
+            m: h && h < 4 ? Math.round : 0
+          }, m = it.lastIndex);
+        }
         return _.c = m < i.length ? i.substring(m, i.length) : "", _.fp = s, (nt.test(i) || d) && (_.e = 0), this._pt = _;
       }.call(this, t, e, p, n, _, h || j.stringFilter, l)) : (c = new pe(this._pt, t, e, +p || 0, n - (p || 0), "boolean" == typeof d ? ae : ne, 0, _), l && (c.fp = l), u && c.modifier(u, this, t), this._pt = c);
     },
@@ -3602,7 +3847,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         for (t._pt = t._ptCache = 0, T = A && w(T) || T && !A, n = 0; n < R.length; n++) {
           if (h = (o = R[n])._gsap || ea(R)[n]._gsap, t._ptLookup[n] = c = {}, dt[h.id] && ct.length && ma(), d = E === R ? n : E.indexOf(o), l && !1 !== (f = new l()).init(o, p || i, t, d, E) && (t._pt = s = new pe(t._pt, o, f.name, 0, 1, f.render, f, 0, f.priority), f._props.forEach(function (t) {
             c[t] = s;
-          }), f.priority && (u = 1)), !l || p) for (a in i) pt[a] && (f = _b(a, i, t, d, o, E)) ? f.priority && (u = 1) : c[a] = s = Xt.call(t, o, a, "get", i[a], d, E, 0, m.stringFilter);
+          }), f.priority && (u = 1)), !l || p) for (a in i) {
+            pt[a] && (f = _b(a, i, t, d, o, E)) ? f.priority && (u = 1) : c[a] = s = Xt.call(t, o, a, "get", i[a], d, E, 0, m.stringFilter);
+          }
           t._op && t._op[n] && t.kill(o, t._op[n]), z && t._pt && (Vt = t, L.killTweensOf(o, c, t.globalTime(e)), _ = !t.parent, Vt = 0), t._pt && T && (dt[h.id] = 1);
         }
         u && de(t), t._onInit && t._onInit(t);
@@ -3647,8 +3894,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           defaults: k || {},
           targets: P && "nested" === P.data ? P.vars.targets : C
         })).kill(), s.parent = s._dp = _assertThisInitialized(a), s._start = 0, T || y(_) || y(m)) {
-          if (h = C.length, c = T && eb(T), v(T)) for (l in T) ~Kt.indexOf(l) && ((d = d || {})[l] = T[l]);
-          for (o = 0; o < h; o++) (u = ua(r, Zt)).stagger = 0, O && (u.yoyoEase = O), d && yt(u, d), f = C[o], u.duration = +Qt(_, _assertThisInitialized(a), o, f, C), u.delay = (+Qt(m, _assertThisInitialized(a), o, f, C) || 0) - a._delay, !T && 1 === h && u.delay && (a._delay = m = u.delay, a._start += m, u.delay = 0), s.to(f, u, c ? c(o, f, C) : 0), s._ease = Ft.none;
+          if (h = C.length, c = T && eb(T), v(T)) for (l in T) {
+            ~Kt.indexOf(l) && ((d = d || {})[l] = T[l]);
+          }
+          for (o = 0; o < h; o++) {
+            (u = ua(r, Zt)).stagger = 0, O && (u.yoyoEase = O), d && yt(u, d), f = C[o], u.duration = +Qt(_, _assertThisInitialized(a), o, f, C), u.delay = (+Qt(m, _assertThisInitialized(a), o, f, C) || 0) - a._delay, !T && 1 === h && u.delay && (a._delay = m = u.delay, a._start += m, u.delay = 0), s.to(f, u, c ? c(o, f, C) : 0), s._ease = Ft.none;
+          }
           s.duration() ? _ = m = 0 : a.timeline = 0;
         } else if (x) {
           va(qa(s.vars.defaults, {
@@ -3661,13 +3912,19 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           if ($(x)) x.forEach(function (t) {
             return s.to(C, t, ">");
           }), s.duration();else {
-            for (l in u = {}, x) "ease" === l || "easeEach" === l || fc(l, x[l], u, x.easeEach);
-            for (l in u) for (A = u[l].sort(function (t, e) {
-              return t.t - e.t;
-            }), o = E = 0; o < A.length; o++) (D = {
-              ease: (S = A[o]).e,
-              duration: (S.t - (o ? A[o - 1].t : 0)) / 100 * _
-            })[l] = S.v, s.to(C, D, E), E += D.duration;
+            for (l in u = {}, x) {
+              "ease" === l || "easeEach" === l || fc(l, x[l], u, x.easeEach);
+            }
+            for (l in u) {
+              for (A = u[l].sort(function (t, e) {
+                return t.t - e.t;
+              }), o = E = 0; o < A.length; o++) {
+                (D = {
+                  ease: (S = A[o]).e,
+                  duration: (S.t - (o ? A[o - 1].t : 0)) / 100 * _
+                })[l] = S.v, s.to(C, D, E), E += D.duration;
+              }
+            }
             s.duration() < _ && s.to({}, {
               duration: _ - s.duration()
             });
@@ -3709,7 +3966,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             if (p !== this._dur) return this.render(t, e, r);
           }
           if (this._tTime = m, this._time = i, !this._act && this._ts && (this._act = 1, this._lazy = 0), this.ratio = h = (f || this._ease)(i / p), this._from && (this.ratio = h = 1 - h), i && !c && !e && (Ct(this, "onStart"), this._tTime !== m)) return this;
-          for (n = this._pt; n;) n.r(h, n.d), n = n._next;
+          for (n = this._pt; n;) {
+            n.r(h, n.d), n = n._next;
+          }
           l && l.render(t < 0 ? t : !i && u ? -V : l._dur * l._ease(i / this._dur), e, r) || this._startAt && (this._zTime = t), this._onUpdate && !e && (_ && Ca(this, t, 0, r), Ct(this, "onUpdate")), this._repeat && a !== o && this.vars.onRepeat && !e && this.parent && Ct(this, "onRepeat"), m !== this._tDur && m || this._tTime !== m || (_ && !this._onUpdate && Ca(this, t, 0, !0), !t && p || !(m === this._tDur && 0 < this._ts || !m && this._ts < 0) || za(this, 1), e || _ && !c || !(m || c || u) || (Ct(this, m === d ? "onComplete" : "onReverseComplete", !0), !this._prom || m < d && 0 < this.timeScale() || this._prom()));
         }
       } else !function _renderZeroDurationTween(t, e, r, i) {
@@ -3725,7 +3984,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           l = 0;
         if (h && t._repeat && (l = kt(0, t._tDur, e), a = Tt(l, h), t._yoyo && 1 & a && (u = 1 - u), a !== Tt(t._tTime, h) && (o = 1 - u, t.vars.repeatRefresh && t._initted && t.invalidate())), u !== o || B || i || t._zTime === V || !e && t._zTime) {
           if (!t._initted && Ma(t, e, i, r, l)) return;
-          for (s = t._zTime, t._zTime = e || (r ? V : 0), r = r || e && !s, t.ratio = u, t._from && (u = 1 - u), t._time = 0, t._tTime = l, n = t._pt; n;) n.r(u, n.d), n = n._next;
+          for (s = t._zTime, t._zTime = e || (r ? V : 0), r = r || e && !s, t.ratio = u, t._from && (u = 1 - u), t._time = 0, t._tTime = l, n = t._pt; n;) {
+            n.r(u, n.d), n = n._next;
+          }
           e < 0 && Ca(t, e, 0, !0), t._onUpdate && !r && Ct(t, "onUpdate"), l && t._repeat && !r && t.parent && Ct(t, "onRepeat"), (e >= t._tDur || e < 0) && t.ratio === u && (u && za(t, 1), r || B || (Ct(t, u ? "onComplete" : "onReverseComplete", !0), t._prom && t._prom()));
         } else t._zTime || (t._zTime = e);
       }(this, t, e, r);
@@ -3745,11 +4006,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           l,
           f = (t._pt && t._ptCache || (t._ptCache = {}))[e];
         if (!f) for (f = t._ptCache[e] = [], h = t._ptLookup, l = t._targets.length; l--;) {
-          if ((o = h[l][e]) && o.d && o.d._pt) for (o = o.d._pt; o && o.p !== e && o.fp !== e;) o = o._next;
+          if ((o = h[l][e]) && o.d && o.d._pt) for (o = o.d._pt; o && o.p !== e && o.fp !== e;) {
+            o = o._next;
+          }
           if (!o) return Wt = 1, t.vars[e] = "+=0", Ht(t, s), Wt = 0, 1;
           f.push(o);
         }
-        for (l = f.length; l--;) (o = (u = f[l])._pt || u).s = !i && 0 !== i || n ? o.s + (i || 0) + a * o.c : i, o.c = r - o.s, u.e && (u.e = ia(r) + Ya(u.e)), u.b && (u.b = o.s + Ya(u.b));
+        for (l = f.length; l--;) {
+          (o = (u = f[l])._pt || u).s = !i && 0 !== i || n ? o.s + (i || 0) + a * o.c : i, o.c = r - o.s, u.e && (u.e = ia(r) + Ya(u.e)), u.b && (u.b = o.s + Ya(u.b));
+        }
       }(this, t, e, r, i, n, a) ? this.resetTo(t, e, r, i) : (Ia(this, 0), this.parent || xa(this._dp, this, "_first", "_last", this._dp._sort ? "_start" : 0), this.render(0));
     }, e.kill = function kill(t, e) {
       if (void 0 === e && (e = "all"), !(t || e && "all" !== e)) return this._lazy = this._pt = 0, this.parent ? tb(this) : this;
@@ -3769,7 +4034,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         d = this._ptLookup,
         p = this._pt;
       if ((!e || "all" === e) && function _arraysMatch(t, e) {
-        for (var r = t.length, i = r === e.length; i && r-- && t[r] === e[r];);
+        for (var r = t.length, i = r === e.length; i && r-- && t[r] === e[r];) {
+          ;
+        }
         return r < 0;
       }(f, c)) return "all" === e && (this._pt = 0), tb(this);
       for (n = this._op = this._op || [], "all" !== e && (r(e) && (u = {}, ha(e, function (t) {
@@ -3782,9 +4049,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           s = t[0] ? fa(t[0]).harness : 0,
           o = s && s.aliases;
         if (!o) return e;
-        for (i in r = yt({}, e), o) if ((i in r)) for (n = (a = o[i].split(",")).length; n--;) r[a[n]] = r[i];
+        for (i in r = yt({}, e), o) {
+          if ((i in r)) for (n = (a = o[i].split(",")).length; n--;) {
+            r[a[n]] = r[i];
+          }
+        }
         return r;
-      }(f, e)), l = f.length; l--;) if (~c.indexOf(f[l])) for (u in a = d[l], "all" === e ? (n[l] = e, o = a, s = {}) : (s = n[l] = n[l] || {}, o = e), o) (h = a && a[u]) && ("kill" in h.d && !0 !== h.d.kill(u) || ya(this, h, "_pt"), delete a[u]), "all" !== s && (s[u] = 1);
+      }(f, e)), l = f.length; l--;) {
+        if (~c.indexOf(f[l])) for (u in a = d[l], "all" === e ? (n[l] = e, o = a, s = {}) : (s = n[l] = n[l] || {}, o = e), o) {
+          (h = a && a[u]) && ("kill" in h.d && !0 !== h.d.kill(u) || ya(this, h, "_pt"), delete a[u]), "all" !== s && (s[u] = 1);
+        }
+      }
       return this._initted && !this._pt && p && tb(this), this;
     }, Tween.to = function to(t, e, r) {
       return new Tween(t, e, r);
@@ -3851,24 +4126,34 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var r = e._pt,
         i = "";
       if (!t && e.b) i = e.b;else if (1 === t && e.e) i = e.e;else {
-        for (; r;) i = r.p + (r.m ? r.m(r.s + r.c * t) : Math.round(1e4 * (r.s + r.c * t)) / 1e4) + i, r = r._next;
+        for (; r;) {
+          i = r.p + (r.m ? r.m(r.s + r.c * t) : Math.round(1e4 * (r.s + r.c * t)) / 1e4) + i, r = r._next;
+        }
         i += e.c;
       }
       e.set(e.t, e.p, i, e);
     },
     oe = function _renderPropTweens(t, e) {
-      for (var r = e._pt; r;) r.r(t, r.d), r = r._next;
+      for (var r = e._pt; r;) {
+        r.r(t, r.d), r = r._next;
+      }
     },
     le = function _addPluginModifier(t, e, r, i) {
-      for (var n, a = this._pt; a;) n = a._next, a.p === i && a.modifier(t, e, r), a = n;
+      for (var n, a = this._pt; a;) {
+        n = a._next, a.p === i && a.modifier(t, e, r), a = n;
+      }
     },
     fe = function _killPropTweensOf(t) {
-      for (var e, r, i = this._pt; i;) r = i._next, i.p === t && !i.op || i.op === t ? ya(this, i, "_pt") : i.dep || (e = 1), i = r;
+      for (var e, r, i = this._pt; i;) {
+        r = i._next, i.p === t && !i.op || i.op === t ? ya(this, i, "_pt") : i.dep || (e = 1), i = r;
+      }
       return !e;
     },
     de = function _sortPropTweensByPriority(t) {
       for (var e, r, i, n, a = t._pt; a;) {
-        for (e = a._next, r = i; r && r.pr > a.pr;) r = r._next;
+        for (e = a._next, r = i; r && r.pr > a.pr;) {
+          r = r._next;
+        }
         (a._prev = r ? r._prev : n) ? a._prev._next = a : i = a, (a._next = r) ? r._prev = a : n = a, a = e;
       }
       t._pt = i;
@@ -3903,7 +4188,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         n,
         a = t.queries,
         s = t.conditions;
-      for (r in a) (e = h.matchMedia(a[r]).matches) && (i = 1), e !== s[r] && (s[r] = e, n = 1);
+      for (r in a) {
+        (e = h.matchMedia(a[r]).matches) && (i = 1), e !== s[r] && (s[r] = e, n = 1);
+      }
       n && (t.revert(), i && o.push(t));
     }), Cc("matchMediaRevert"), o.forEach(function (t) {
       return t.onMatch(t);
@@ -3979,7 +4266,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         a,
         s = new ke(0, r || this.scope),
         o = s.conditions = {};
-      for (n in this.contexts.push(s), e = s.add("onMatch", e), s.queries = t) "all" === n ? a = 1 : (i = h.matchMedia(t[n])) && (ye.indexOf(s) < 0 && ye.push(s), (o[n] = i.matches) && (a = 1), i.addListener ? i.addListener(Dc) : i.addEventListener("change", Dc));
+      for (n in this.contexts.push(s), e = s.add("onMatch", e), s.queries = t) {
+        "all" === n ? a = 1 : (i = h.matchMedia(t[n])) && (ye.indexOf(s) < 0 && ye.push(s), (o[n] = i.matches) && (a = 1), i.addListener ? i.addListener(Dc) : i.addEventListener("change", Dc));
+      }
       return a && e(s), this;
     }, Me.revert = function revert(t) {
       this.kill(t || {});
@@ -3993,7 +4282,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   }
   var Pe = {
     registerPlugin: function registerPlugin() {
-      for (var t = arguments.length, e = new Array(t), r = 0; r < t; r++) e[r] = arguments[r];
+      for (var t = arguments.length, e = new Array(t), r = 0; r < t; r++) {
+        e[r] = arguments[r];
+      }
       e.forEach(function (t) {
         return function _createPlugin(t) {
           var e = (t = !t.name && t.default || t).name,
@@ -4045,7 +4336,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           }),
           a = n.length;
         return function (t) {
-          for (var e = a; e--;) n[e](t);
+          for (var e = a; e--;) {
+            n[e](t);
+          }
         };
       }
       r = r[0] || {};
@@ -4105,7 +4398,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var r,
         i,
         n = new Ut(t);
-      for (n.smoothChildTiming = w(t.smoothChildTiming), L.remove(n), n._dp = 0, n._time = n._tTime = L._time, r = L._first; r;) i = r._next, !e && !r._dur && r instanceof Gt && r.vars.onComplete === r._targets[0] || Ka(n, r, r._start - r._delay), r = i;
+      for (n.smoothChildTiming = w(t.smoothChildTiming), L.remove(n), n._dp = 0, n._time = n._tTime = L._time, r = L._first; r;) {
+        i = r._next, !e && !r._dur && r instanceof Gt && r.vars.onComplete === r._targets[0] || Ka(n, r, r._start - r._delay), r = i;
+      }
       return Ka(L, n, 0), n;
     },
     context: function context(t, e) {
@@ -4119,7 +4414,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         var e,
           r,
           i = t.conditions;
-        for (r in i) i[r] && (i[r] = !1, e = 1);
+        for (r in i) {
+          i[r] && (i[r] = !1, e = 1);
+        }
         e && t.revert();
       }) || Dc();
     },
@@ -4163,7 +4460,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       selector: cb,
       mapRange: Pt,
       pipe: function pipe() {
-        for (var t = arguments.length, e = new Array(t), r = 0; r < t; r++) e[r] = arguments[r];
+        for (var t = arguments.length, e = new Array(t), r = 0; r < t; r++) {
+          e[r] = arguments[r];
+        }
         return function (t) {
           return e.reduce(function (t, e) {
             return e(t);
@@ -4192,7 +4491,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           }, i = {
             p: i
           };else if ($(e) && !$(i)) {
-            for (u = [], h = e.length, l = h - 2, o = 1; o < h; o++) u.push(interpolate(e[o - 1], e[o]));
+            for (u = [], h = e.length, l = h - 2, o = 1; o < h; o++) {
+              u.push(interpolate(e[o - 1], e[o]));
+            }
             h--, a = function func(t) {
               t *= h;
               var e = Math.min(l, ~~t);
@@ -4200,7 +4501,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             }, t = i;
           } else n || (e = yt($(e) ? [] : {}, e));
           if (!u) {
-            for (s in i) Xt.call(c, e, s, "get", i[s]);
+            for (s in i) {
+              Xt.call(c, e, s, "get", i[s]);
+            }
             a = function func(t) {
               return oe(t, c) || (f ? e.p : e);
             };
@@ -4241,7 +4544,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     duration: 0
   });
   function Hc(t, e) {
-    for (var r = t._pt; r && r.p !== e && r.op !== e && r.fp !== e;) r = r._next;
+    for (var r = t._pt; r && r.p !== e && r.op !== e && r.fp !== e;) {
+      r = r._next;
+    }
     return r;
   }
   function Jc(t, a) {
@@ -4254,7 +4559,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           if (r(n) && (e = {}, ha(n, function (t) {
             return e[t] = 1;
           }), n = e), a) {
-            for (i in e = {}, n) e[i] = a(n[i]);
+            for (i in e = {}, n) {
+              e[i] = a(n[i]);
+            }
             n = e;
           }
           !function _addModifiers(t, e) {
@@ -4262,7 +4569,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
               i,
               n,
               a = t._targets;
-            for (r in e) for (i = a.length; i--;) (n = (n = t._ptLookup[i][r]) && n.d) && (n._pt && (n = Hc(n, r)), n && n.modifier && n.modifier(e[r], t, a[i], r));
+            for (r in e) {
+              for (i = a.length; i--;) {
+                (n = (n = t._ptLookup[i][r]) && n.d) && (n._pt && (n = Hc(n, r)), n && n.modifier && n.modifier(e[r], t, a[i], r));
+              }
+            }
           }(t, n);
         };
       }
@@ -4272,15 +4583,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     name: "attr",
     init: function init(t, e, r, i, n) {
       var a, s, o;
-      for (a in this.tween = r, e) o = t.getAttribute(a) || "", (s = this.add(t, "setAttribute", (o || 0) + "", e[a], i, n, 0, 0, a)).op = a, s.b = o, this._props.push(a);
+      for (a in this.tween = r, e) {
+        o = t.getAttribute(a) || "", (s = this.add(t, "setAttribute", (o || 0) + "", e[a], i, n, 0, 0, a)).op = a, s.b = o, this._props.push(a);
+      }
     },
     render: function render(t, e) {
-      for (var r = e._pt; r;) B ? r.set(r.t, r.p, r.b, r) : r.r(t, r.d), r = r._next;
+      for (var r = e._pt; r;) {
+        B ? r.set(r.t, r.p, r.b, r) : r.r(t, r.d), r = r._next;
+      }
     }
   }, {
     name: "endArray",
     init: function init(t, e) {
-      for (var r = e.length; r--;) this.add(t, r, t[r] || 0, e[r], 0, 0, 0, 0, 0, 1);
+      for (var r = e.length; r--;) {
+        this.add(t, r, t[r] || 0, e[r], 0, 0, 0, 0, 0, 1);
+      }
     }
   }, Jc("roundProps", fb), Jc("modifiers"), Jc("snap", gb)) || Pe;
   Gt.version = Ut.version = Ce.version = "3.11.4", o = 1, x() && zt();
@@ -4345,9 +4662,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       i = this.target,
       n = i.style,
       a = i._gsap;
-    for (t = 0; t < r.length; t += 3) r[t + 1] ? i[r[t]] = r[t + 2] : r[t + 2] ? n[r[t]] = r[t + 2] : n.removeProperty(r[t].replace(sr, "-$1").toLowerCase());
+    for (t = 0; t < r.length; t += 3) {
+      r[t + 1] ? i[r[t]] = r[t + 2] : r[t + 2] ? n[r[t]] = r[t + 2] : n.removeProperty(r[t].replace(sr, "-$1").toLowerCase());
+    }
     if (this.tfm) {
-      for (e in this.tfm) a[e] = this.tfm[e];
+      for (e in this.tfm) {
+        a[e] = this.tfm[e];
+      }
       a.svg && (a.renderTransform(), i.setAttribute("data-svg-origin", this.svgo || "")), !(t = Fe()) || t.isStart || n[lr] || (Id(n), a.uncache = 1);
     }
   }
@@ -4389,7 +4710,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return i && (n ? i.insertBefore(this, n) : i.appendChild(this)), Re.removeChild(r), this.style.cssText = a, e;
   }
   function Sd(t, e) {
-    for (var r = e.length; r--;) if (t.hasAttribute(e[r])) return t.getAttribute(e[r]);
+    for (var r = e.length; r--;) {
+      if (t.hasAttribute(e[r])) return t.getAttribute(e[r]);
+    }
   }
   function Td(e) {
     var r;
@@ -4454,13 +4777,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       v = 0,
       y = 0;
     if (g.b = r, g.e = i, r += "", "auto" === (i += "") && (t.style[e] = i, i = Nd(t, e) || i, t.style[e] = r), Eb(s = [r, i]), i = s[1], u = (r = s[0]).match(rt) || [], (i.match(rt) || []).length) {
-      for (; o = rt.exec(i);) c = o[0], p = i.substring(v, o.index), l ? l = (l + 1) % 5 : "rgba(" !== p.substr(-5) && "hsla(" !== p.substr(-5) || (l = 1), c !== (f = u[y++] || "") && (h = parseFloat(f) || 0, m = f.substr((h + "").length), "=" === c.charAt(1) && (c = ka(h, c) + m), d = parseFloat(c), _ = c.substr((d + "").length), v = rt.lastIndex - _.length, _ || (_ = _ || j.units[e] || m, v === i.length && (i += _, g.e += _)), m !== _ && (h = Zd(t, e, f, _) || 0), g._pt = {
-        _next: g._pt,
-        p: p || 1 === y ? p : ",",
-        s: h,
-        c: d - h,
-        m: l && l < 4 || "zIndex" === e ? Math.round : 0
-      });
+      for (; o = rt.exec(i);) {
+        c = o[0], p = i.substring(v, o.index), l ? l = (l + 1) % 5 : "rgba(" !== p.substr(-5) && "hsla(" !== p.substr(-5) || (l = 1), c !== (f = u[y++] || "") && (h = parseFloat(f) || 0, m = f.substr((h + "").length), "=" === c.charAt(1) && (c = ka(h, c) + m), d = parseFloat(c), _ = c.substr((d + "").length), v = rt.lastIndex - _.length, _ || (_ = _ || j.units[e] || m, v === i.length && (i += _, g.e += _)), m !== _ && (h = Zd(t, e, f, _) || 0), g._pt = {
+          _next: g._pt,
+          p: p || 1 === y ? p : ",",
+          s: h,
+          c: d - h,
+          m: l && l < 4 || "zIndex" === e ? Math.round : 0
+        });
+      }
       g.c = v < i.length ? i.substring(v, i.length) : "";
     } else g.r = "display" === e && "none" === i ? yd : xd;
     return nt.test(i) && (g.e = 0), this._pt = g;
@@ -4480,7 +4805,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         s = a.style,
         o = e.u,
         u = a._gsap;
-      if ("all" === o || !0 === o) s.cssText = "", i = 1;else for (n = (o = o.split(",")).length; -1 < --n;) r = o[n], rr[r] && (i = 1, r = "transformOrigin" === r ? fr : lr), Vd(a, r);
+      if ("all" === o || !0 === o) s.cssText = "", i = 1;else for (n = (o = o.split(",")).length; -1 < --n;) {
+        r = o[n], rr[r] && (i = 1, r = "transformOrigin" === r ? fr : lr), Vd(a, r);
+      }
       i && (Vd(a, lr), u && (u.svg && a.removeAttribute("transform"), br(a, 1), u.uncache = 1, Id(s)));
     }
   }
@@ -4536,7 +4863,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     return h && ("short" === (s = a.split("_")[1]) && (l %= u) !== l % 180 && (l += l < 0 ? u : -u), "cw" === s && l < 0 ? l = (l + 36e9) % u - ~~(l / u) * u : "ccw" === s && 0 < l && (l = (l - 36e9) % u - ~~(l / u) * u)), t._pt = o = new pe(t._pt, e, i, n, l, ud), o.e = f, o.u = "deg", t._props.push(i), o;
   }
   function ue(t, e) {
-    for (var r in e) t[r] = e[r];
+    for (var r in e) {
+      t[r] = e[r];
+    }
     return t;
   }
   function ve(t, e, r) {
@@ -4549,7 +4878,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       h,
       l = ue({}, r._gsap),
       f = r.style;
-    for (n in l.svg ? (a = r.getAttribute("transform"), r.setAttribute("transform", ""), f[lr] = e, i = br(r, 1), Vd(r, lr), r.setAttribute("transform", a)) : (a = getComputedStyle(r)[lr], f[lr] = e, i = br(r, 1), f[lr] = a), rr) (a = l[n]) !== (s = i[n]) && "perspective,force3D,transformOrigin,svgOrigin".indexOf(n) < 0 && (o = Ya(a) !== (h = Ya(s)) ? Zd(r, n, a, h) : parseFloat(a), u = parseFloat(s), t._pt = new pe(t._pt, i, n, o, u - o, td), t._pt.u = h || 0, t._props.push(n));
+    for (n in l.svg ? (a = r.getAttribute("transform"), r.setAttribute("transform", ""), f[lr] = e, i = br(r, 1), Vd(r, lr), r.setAttribute("transform", a)) : (a = getComputedStyle(r)[lr], f[lr] = e, i = br(r, 1), f[lr] = a), rr) {
+      (a = l[n]) !== (s = i[n]) && "perspective,force3D,transformOrigin,svgOrigin".indexOf(n) < 0 && (o = Ya(a) !== (h = Ya(s)) ? Zd(r, n, a, h) : parseFloat(a), u = parseFloat(s), t._pt = new pe(t._pt, i, n, o, u - o, td), t._pt.u = h || 0, t._props.push(n));
+    }
     ue(i, l);
   }
   var Ae,
@@ -4597,7 +4928,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var i = (e || Ee).style,
         n = 5;
       if (t in i && !r) return t;
-      for (t = t.charAt(0).toUpperCase() + t.substr(1); n-- && !(cr[n] + t in i););
+      for (t = t.charAt(0).toUpperCase() + t.substr(1); n-- && !(cr[n] + t in i);) {
+        ;
+      }
       return n < 0 ? null : (3 === n ? "ms" : 0 <= n ? cr[n] : "") + t;
     },
     pr = {
@@ -4782,48 +5115,52 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           w = this._props,
           x = t.style,
           k = i.vars.startAt;
-        for (c in De || Qd(), this.styles = this.styles || Kd(t), b = this.styles.props, this.tween = i, e) if ("autoRound" !== c && (o = e[c], !pt[c] || !_b(c, e, i, n, t, a))) if (l = _typeof(o), f = vr[c], "function" === l && (l = _typeof(o = o.call(i, n, t, a))), "string" === l && ~o.indexOf("random(") && (o = ob(o)), f) f(this, t, c, o, i) && (T = 1);else if ("--" === c.substr(0, 2)) s = (getComputedStyle(t).getPropertyValue(c) + "").trim(), o += "", Rt.lastIndex = 0, Rt.test(s) || (d = Ya(s), p = Ya(o)), p ? d !== p && (s = Zd(t, c, s, p) + p) : d && (o += d), this.add(x, "setProperty", s, o, n, a, 0, 0, c), w.push(c), b.push(c, 0, x[c]);else if ("undefined" !== l) {
-          if (k && c in k ? (s = "function" == typeof k[c] ? k[c].call(i, n, t, a) : k[c], r(s) && ~s.indexOf("random(") && (s = ob(s)), Ya(s + "") || (s += j.units[c] || Ya(mr(t, c)) || ""), "=" === (s + "").charAt(1) && (s = mr(t, c))) : s = mr(t, c), h = parseFloat(s), (_ = "string" === l && "=" === o.charAt(1) && o.substr(0, 2)) && (o = o.substr(2)), u = parseFloat(o), c in hr && ("autoAlpha" === c && (1 === h && "hidden" === mr(t, "visibility") && u && (h = 0), b.push("visibility", 0, x.visibility), Wd(this, x, "visibility", h ? "inherit" : "hidden", u ? "inherit" : "hidden", !u)), "scale" !== c && "transform" !== c && ~(c = hr[c]).indexOf(",") && (c = c.split(",")[0])), m = c in rr) {
-            if (this.styles.save(c), g || ((v = t._gsap).renderTransform && !e.parseTransform || br(t, e.parseTransform), y = !1 !== e.smoothOrigin && v.smooth, (g = this._pt = new pe(this._pt, x, lr, 0, 1, v.renderTransform, v, 0, -1)).dep = 1), "scale" === c) this._pt = new pe(this._pt, v, "scaleY", v.scaleY, (_ ? ka(v.scaleY, _ + u) : u) - v.scaleY || 0, td), this._pt.u = 0, w.push("scaleY", c), c += "X";else {
-              if ("transformOrigin" === c) {
-                b.push(fr, 0, x[fr]), o = be(o), v.svg ? je(t, o, 0, y, 0, this) : ((p = parseFloat(o.split(" ")[2]) || 0) !== v.zOrigin && Wd(this, v, "zOrigin", v.zOrigin, p), Wd(this, x, c, wr(s), wr(o)));
+        for (c in De || Qd(), this.styles = this.styles || Kd(t), b = this.styles.props, this.tween = i, e) {
+          if ("autoRound" !== c && (o = e[c], !pt[c] || !_b(c, e, i, n, t, a))) if (l = _typeof(o), f = vr[c], "function" === l && (l = _typeof(o = o.call(i, n, t, a))), "string" === l && ~o.indexOf("random(") && (o = ob(o)), f) f(this, t, c, o, i) && (T = 1);else if ("--" === c.substr(0, 2)) s = (getComputedStyle(t).getPropertyValue(c) + "").trim(), o += "", Rt.lastIndex = 0, Rt.test(s) || (d = Ya(s), p = Ya(o)), p ? d !== p && (s = Zd(t, c, s, p) + p) : d && (o += d), this.add(x, "setProperty", s, o, n, a, 0, 0, c), w.push(c), b.push(c, 0, x[c]);else if ("undefined" !== l) {
+            if (k && c in k ? (s = "function" == typeof k[c] ? k[c].call(i, n, t, a) : k[c], r(s) && ~s.indexOf("random(") && (s = ob(s)), Ya(s + "") || (s += j.units[c] || Ya(mr(t, c)) || ""), "=" === (s + "").charAt(1) && (s = mr(t, c))) : s = mr(t, c), h = parseFloat(s), (_ = "string" === l && "=" === o.charAt(1) && o.substr(0, 2)) && (o = o.substr(2)), u = parseFloat(o), c in hr && ("autoAlpha" === c && (1 === h && "hidden" === mr(t, "visibility") && u && (h = 0), b.push("visibility", 0, x.visibility), Wd(this, x, "visibility", h ? "inherit" : "hidden", u ? "inherit" : "hidden", !u)), "scale" !== c && "transform" !== c && ~(c = hr[c]).indexOf(",") && (c = c.split(",")[0])), m = c in rr) {
+              if (this.styles.save(c), g || ((v = t._gsap).renderTransform && !e.parseTransform || br(t, e.parseTransform), y = !1 !== e.smoothOrigin && v.smooth, (g = this._pt = new pe(this._pt, x, lr, 0, 1, v.renderTransform, v, 0, -1)).dep = 1), "scale" === c) this._pt = new pe(this._pt, v, "scaleY", v.scaleY, (_ ? ka(v.scaleY, _ + u) : u) - v.scaleY || 0, td), this._pt.u = 0, w.push("scaleY", c), c += "X";else {
+                if ("transformOrigin" === c) {
+                  b.push(fr, 0, x[fr]), o = be(o), v.svg ? je(t, o, 0, y, 0, this) : ((p = parseFloat(o.split(" ")[2]) || 0) !== v.zOrigin && Wd(this, v, "zOrigin", v.zOrigin, p), Wd(this, x, c, wr(s), wr(o)));
+                  continue;
+                }
+                if ("svgOrigin" === c) {
+                  je(t, o, 1, y, 0, this);
+                  continue;
+                }
+                if (c in Tr) {
+                  te(this, v, c, h, _ ? ka(h, _ + o) : o);
+                  continue;
+                }
+                if ("smoothOrigin" === c) {
+                  Wd(this, v, "smooth", v.smooth, o);
+                  continue;
+                }
+                if ("force3D" === c) {
+                  v[c] = o;
+                  continue;
+                }
+                if ("transform" === c) {
+                  ve(this, o, t);
+                  continue;
+                }
+              }
+            } else c in x || (c = dr(c) || c);
+            if (m || (u || 0 === u) && (h || 0 === h) && !ur.test(o) && c in x) u = u || 0, (d = (s + "").substr((h + "").length)) !== (p = Ya(o) || (c in j.units ? j.units[c] : d)) && (h = Zd(t, c, s, p)), this._pt = new pe(this._pt, m ? v : x, c, h, (_ ? ka(h, _ + u) : u) - h, m || "px" !== p && "zIndex" !== c || !1 === e.autoRound ? td : wd), this._pt.u = p || 0, d !== p && "%" !== p && (this._pt.b = s, this._pt.r = vd);else if (c in x) _d.call(this, t, c, s, _ ? _ + o : o);else {
+              if (!(c in t)) {
+                Q(c, o);
                 continue;
               }
-              if ("svgOrigin" === c) {
-                je(t, o, 1, y, 0, this);
-                continue;
-              }
-              if (c in Tr) {
-                te(this, v, c, h, _ ? ka(h, _ + o) : o);
-                continue;
-              }
-              if ("smoothOrigin" === c) {
-                Wd(this, v, "smooth", v.smooth, o);
-                continue;
-              }
-              if ("force3D" === c) {
-                v[c] = o;
-                continue;
-              }
-              if ("transform" === c) {
-                ve(this, o, t);
-                continue;
-              }
+              this.add(t, c, s || t[c], _ ? _ + o : o, n, a);
             }
-          } else c in x || (c = dr(c) || c);
-          if (m || (u || 0 === u) && (h || 0 === h) && !ur.test(o) && c in x) u = u || 0, (d = (s + "").substr((h + "").length)) !== (p = Ya(o) || (c in j.units ? j.units[c] : d)) && (h = Zd(t, c, s, p)), this._pt = new pe(this._pt, m ? v : x, c, h, (_ ? ka(h, _ + u) : u) - h, m || "px" !== p && "zIndex" !== c || !1 === e.autoRound ? td : wd), this._pt.u = p || 0, d !== p && "%" !== p && (this._pt.b = s, this._pt.r = vd);else if (c in x) _d.call(this, t, c, s, _ ? _ + o : o);else {
-            if (!(c in t)) {
-              Q(c, o);
-              continue;
-            }
-            this.add(t, c, s || t[c], _ ? _ + o : o, n, a);
+            m || (c in x ? b.push(c, 0, x[c]) : b.push(c, 1, s || t[c])), w.push(c);
           }
-          m || (c in x ? b.push(c, 0, x[c]) : b.push(c, 1, s || t[c])), w.push(c);
         }
         T && de(this);
       },
       render: function render(t, e) {
-        if (e.tween._time || !Fe()) for (var r = e._pt; r;) r.r(t, r.d), r = r._next;else e.styles.revert();
+        if (e.tween._time || !Fe()) for (var r = e._pt; r;) {
+          r.r(t, r.d), r = r._next;
+        } else e.styles.revert();
       },
       get: mr,
       aliases: hr,

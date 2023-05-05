@@ -87,7 +87,12 @@
           </div>
         </div>
         <div class="portfolio">
-          <div class="portfolio__img"><img src="img/pages/portfolio/1-1.jpg" alt="alt"></div>
+          <div class="portfolio__img has-mobile-img">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/pages/portfolio/mobile.jpg">
+              <source media="(min-width: 768px)" srcset="img/pages/portfolio/1-1.jpg"><img src="img/pages/portfolio/1-1.jpg" alt="alt">
+            </picture>
+          </div>
           <div class="project-portfolio">
             <div class="container">
               <div class="project-portfolio__top flex-lr">
@@ -133,7 +138,12 @@
                 </div>
               </div>
             </div>
-            <div class="project-portfolio__fullwidth"><img src="img/pages/portfolio/1-6.jpg" alt="alt"></div>
+            <div class="project-portfolio__fullwidth">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/pages/portfolio/mobile.jpg">
+                <source media="(min-width: 768px)" srcset="img/pages/portfolio/1-6.jpg"><img src="img/pages/portfolio/1-16.jpg" alt="alt">
+              </picture>
+            </div>
           </div>
           <div class="portfolio__next-cases next-cases-portfolio">
             <div class="next-cases-portfolio__container container">
