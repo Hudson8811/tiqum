@@ -2,12 +2,10 @@
   position: relative;
   padding: 1rem;
   border: 2px solid transparent;
-  border-radius: var(--ginBorderMedium);
-  transition: opacity var(--ginTransitionFast);
   opacity: 1;
 
   .gin--dark-mode & {
-    box-shadow: 0 6px 16px var(--colorGinLayerBorder);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
   }
 
   &, &-list {
@@ -15,14 +13,14 @@
   }
 
   &-list {
-    margin-bottom: 0;
+    margin: 20px 0;
   }
 
   a {
     &,
     &:hover,
     &:active {
-      color: #fff;
+      color: #257bcb;
     }
   }
 
@@ -47,8 +45,13 @@
       position: absolute;
       top: 2px;
       left: 0;
-      width: 24px;
-      height: 24px;
+      background-color: #c1c1c1;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center left;
+      mask-repeat: no-repeat;
+      mask-position: center left;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
@@ -62,9 +65,7 @@
     width: 29px;
     color: transparent;
     text-indent: -99999px;
-    border-radius: var(--ginBorderDefault);
     border-color: transparent !important;
-    transition: var(--ginTransition);
 
     &:hover:not(:focus) {
       color: transparent;
@@ -75,7 +76,7 @@
     &:focus,
     &:hover:focus {
       .icon-close {
-        background-color: var(--colorGinAppBackground);
+        background-color: #d9dbde;
       }
     }
 
@@ -86,10 +87,15 @@
       top: 0;
       left: 0;
       //mask-image: icon('close');
-      //mask-size: 16px 16px;
-      //mask-repeat: no-repeat;
-      //mask-position: center;
-      background-color: #fff;
+      -webkit-mask-image: url("../img/svg/messages.svg#close-view");
+      mask-image: url("../img/svg/messages.svg#close-view");
+      mask-size: 16px 16px;
+      -webkit-mask-size: 16px 16px;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-position: center;
+      background-color: #c1c1c1;
     }
   }
 
@@ -99,15 +105,15 @@
   }
 
   &.messages--info {
-    color: var(--colorGinInfoLight);
-    background-color: var(--colorGinInfoBackground);
-    border-color: var(--colorGinInfoBackground);
+    color: #589ac5;
+    background-color: #{mix(black, #2d6c96, 60%)};
+    border-color: #{mix(black, #2d6c96, 60%)};
 
     .messages__header {
       background: none;
 
       &:before {
-        background-color: var(--colorGinInfoLight);
+        background-color: #589ac5;
         mask-image: icon('info');
         mask-repeat: no-repeat;
         mask-position: center left;
@@ -116,68 +122,60 @@
 
     .button--dismiss {
       .icon-close:link {
-        background-color: var(--colorGinInfoLight);
+        background-color: #589ac5;
       }
     }
   }
 
   &.messages--status {
-    color: var(--colorGinGreenLight);
-    background-color: var(--colorGinGreenBackground);
+    background-color: #ddffe5;
 
     .messages__header {
       &:before {
-        background-color: var(--colorGinGreenLight);
-        mask-image: icon('status');
-        mask-repeat: no-repeat;
-        mask-position: center left;
+        -webkit-mask-image: url("../img/svg/messages.svg#status-view");
+        mask-image: url("../img/svg/messages.svg#status-view");
       }
     }
 
     .button--dismiss {
       .icon-close:link {
-        background-color: var(--colorGinGreenLight);
+        background-color: #1bce68;
       }
     }
 
   }
 
   &.messages--warning {
-    color: var(--colorGinWarningLight);
-    background-color: var(--colorGinWarningBackground);
+    background-color: #fffed3;
 
     .messages__header {
       &:before {
-        background-color: var(--colorGinWarningLight);
-        mask-image: icon('warning');
-        mask-repeat: no-repeat;
-        mask-position: center left;
+        -webkit-mask-image: url("../img/svg/messages.svg#warning-view");
+        mask-image: url("../img/svg/messages.svg#warning-view");
       }
     }
 
     .button--dismiss {
       .icon-close:link {
-        background-color: var(--colorGinWarningLight);
+        background-color: #efcf64;
       }
     }
   }
 
   &--error {
-    color: var(--colorGinDangerLight);
-    background-color: var(--colorGinDangerBackground);
+    background-color: #ffd3d4;
 
     .messages__header {
       &:before {
-        background-color: var(--colorGinDangerLight);
-        mask-image: icon('error');
-        mask-repeat: no-repeat;
-        mask-position: center left;
+        -webkit-mask-image: url("../img/svg/messages.svg#error-view");
+        mask-image: url("../img/svg/messages.svg#error-view");
+
       }
     }
 
     .button--dismiss {
       .icon-close:link {
-        background-color: var(--colorGinDangerLight);
+        background-color: #f39b9d;
       }
     }
   }

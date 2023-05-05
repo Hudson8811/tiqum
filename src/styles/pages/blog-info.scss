@@ -68,6 +68,7 @@
 			width: 50%;
 			margin-right: 40px;
 			max-width: 600px;
+			color: #2a2a2a;
 
 			@media (max-width: 1919px) {
 				max-width: 435px;
@@ -202,10 +203,16 @@
 
 		}
 
-		.form-wewillfind-footer__error {
-			display: block;
-			left: 0;
+		.js-form-item {
+			.form-wewillfind-footer__error {
+				display: none;
+				left: 0;
+			}
+			&.js-error .form-wewillfind-footer__error {
+				display: block;
+			}
 		}
+
 
 		&--button {
 			position: absolute;
