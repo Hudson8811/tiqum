@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -157,18 +158,30 @@
             </div>
             <div class="wewillfind-footer__right" id="contact-form">
               <form class="wewillfind-footer__form form-wewillfind-footer" action="#" method="post">
-                <div class="wewillfind-footer__title general-title">Найдем<span>решение вашей задачи</span></div>
-                <div class="form-wewillfind-footer__item form-wewillfind-footer__item--big">
+                <div class="wewillfind-footer__title-wrapper">
+                  <div class="wewillfind-footer__title general-title wewillfind-footer__title--mobile">Найдем<span>решение вашей задачи</span></div>
+                </div>
+                <div class="form-wewillfind-footer__item">
                   <input type="text" placeholder="Имя и фамилия" name="name" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните имя</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите имя</div>
+                </div>
+                <div class="form-wewillfind-footer__item">
+                  <select class="buget-select" name="budget" required>
+                    <option value=""></option>
+                    <option value="До 2 млн ₽">До 2 млн ₽</option>
+                    <option value="2 — 10 млн ₽">2 — 10 млн ₽</option>
+                    <option value="10 — 50 млн ₽">10 — 50 млн ₽</option>
+                    <option value="Более 50 млн ₽">Более 50 млн ₽</option>
+                  </select>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, укажите бюджет проекта</div>
                 </div>
                 <div class="form-wewillfind-footer__item"> 
                   <input type="tel" placeholder="Телефон, телеграм" name="phone" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните корректный телефон</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите корректный телефон</div>
                 </div>
                 <div class="form-wewillfind-footer__item"> 
                   <input type="email" placeholder="Рабочий email" name="email" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните корректный email</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите корректный email</div>
                 </div>
                 <div class="form-wewillfind-footer__item form-wewillfind-footer__item-description"> 
                   <textarea name="msg" placeholder="Короткое описание проекта" required></textarea>
@@ -198,13 +211,10 @@
           </div>
         </div>
       </footer>
-      <!--.mobile-fixed-bottom
-      a.mobile-fixed-bottom__btn.blue-btn.js-to-form(href="javascript:;")
-      	span ОСТАВИТЬ ЗАЯВКУ
-      -->
     </div><a class="calc__link calc__link--circle" href="#">Оставить заявку </a>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

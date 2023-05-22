@@ -10,18 +10,27 @@ footer.footer
 					span Питер – opening
 			.wewillfind-footer__right#contact-form
 				form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
-					.wewillfind-footer__title.general-title
-						| Найдем
-						span решение вашей задачи
-					.form-wewillfind-footer__item.form-wewillfind-footer__item--big
+					.wewillfind-footer__title-wrapper
+						.wewillfind-footer__title.general-title.wewillfind-footer__title--mobile
+							| Найдем
+							span решение вашей задачи
+					.form-wewillfind-footer__item
 						input(type="text" placeholder="Имя и фамилия" name="name" required)
-						.form-wewillfind-footer__error Пожалуйста, заполните имя
+						.form-wewillfind-footer__error Пожалуйста, введите имя
+					.form-wewillfind-footer__item
+						select.buget-select(name="budget" required)
+							option(value="")
+							option(value="До 2 млн ₽") До 2 млн ₽
+							option(value="2 — 10 млн ₽") 2 — 10 млн ₽
+							option(value="10 — 50 млн ₽") 10 — 50 млн ₽
+							option(value="Более 50 млн ₽") Более 50 млн ₽
+						.form-wewillfind-footer__error Пожалуйста, укажите бюджет проекта
 					.form-wewillfind-footer__item 
 						input(type="tel" placeholder="Телефон, телеграм" name="phone" required)
-						.form-wewillfind-footer__error Пожалуйста, заполните корректный телефон
+						.form-wewillfind-footer__error Пожалуйста, введите корректный телефон
 					.form-wewillfind-footer__item 
 						input(type="email" placeholder="Рабочий email" name="email" required)
-						.form-wewillfind-footer__error Пожалуйста, заполните корректный email
+						.form-wewillfind-footer__error Пожалуйста, введите корректный email
 					.form-wewillfind-footer__item.form-wewillfind-footer__item-description 
 						textarea(name="msg" placeholder="Короткое описание проекта" required)
 						.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
@@ -62,6 +71,6 @@ footer.footer
 					a(href="#").active-lang Русская версия
 
 
-//.mobile-fixed-bottom
+//-.mobile-fixed-bottom
 	a.mobile-fixed-bottom__btn.blue-btn.js-to-form(href="javascript:;")
 		span ОСТАВИТЬ ЗАЯВКУ
