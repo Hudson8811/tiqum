@@ -439,29 +439,41 @@
       <div class="footer modalFromFooter">
         <div class="modalFromFooter--close"> <img src="img/svg/modalFromFooter--close.svg"></div>
         <div class="footer__container container"> 
-          <div class="wewillfind-footer__title general-title mob">
-             Найдем <span>решение <br> вашей задачи		</span></div>
           <div class="footer__wewillfind wewillfind-footer">
             <div class="wewillfind-footer__left"> 
               <div class="wewillfind-footer__connection"> <a href="#">8 800 775 73 63 </a><a href="#">info@tiqum.ru</a></div>
               <div class="wewillfind-footer__location">
-                 Уфа – Гоголя 53<span>Питер – opening</span></div>
+                 Уфа – Гоголя 53<span> Питер – opening</span></div>
             </div>
             <div class="wewillfind-footer__right">
-              <div class="wewillfind-footer__title general-title desc">
-                 Найдем <span>решение <br> вашей задачи</span></div>
               <form class="wewillfind-footer__form form-wewillfind-footer" action="#" method="post">
-                <div class="form-wewillfind-footer__item form-wewillfind-footer__item--big">
+                <div class="wewillfind-footer__title-wrapper">
+                  <div class="wewillfind-footer__title general-title wewillfind-footer__title--mobile">
+                    Найдем
+                    <span> решение <br> вашей задачи</span>
+                  </div>
+                </div>
+                <div class="form-wewillfind-footer__item">
                   <input type="text" placeholder="Имя и фамилия" name="name" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните имя</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите имя</div>
+                </div>
+                <div class="form-wewillfind-footer__item">
+                  <select class="buget-select" name="budget" required>
+                    <option value=""></option>
+                    <option value="До 2 млн ₽">До 2 млн ₽</option>
+                    <option value="2 — 10 млн ₽">2 — 10 млн ₽</option>
+                    <option value="10 — 50 млн ₽">10 — 50 млн ₽</option>
+                    <option value="Более 50 млн ₽">Более 50 млн ₽</option>
+                  </select>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, укажите бюджет проекта</div>
                 </div>
                 <div class="form-wewillfind-footer__item"> 
                   <input type="tel" placeholder="Телефон, телеграм" name="phone" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните корректный телефон</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите корректный телефон</div>
                 </div>
                 <div class="form-wewillfind-footer__item"> 
                   <input type="email" placeholder="Рабочий email" name="email" required>
-                  <div class="form-wewillfind-footer__error">Пожалуйста, заполните корректный email</div>
+                  <div class="form-wewillfind-footer__error">Пожалуйста, введите корректный email</div>
                 </div>
                 <div class="form-wewillfind-footer__item form-wewillfind-footer__item-description"> 
                   <textarea name="msg" placeholder="Короткое описание проекта" required></textarea>
@@ -475,8 +487,7 @@
                 </div>
                 <div class="form-wewillfind-footer__bottom">
                   <button class="form-wewillfind-footer__btn blue-btn" type="submit"> <span>Отправить</span></button>
-                  <div class="form-wewillfind-footer__text">
-                     Нажимая кнопку вы соглашаетесь на <br>обработку персональных данных и <br>улучшение вашего бизнеса</div>
+                  <div class="form-wewillfind-footer__text form-wewillfind-footer__text--person">Нажимая кнопку вы соглашаетесь на обработку персональных данных и улучшение вашего бизнеса</div>
                 </div>
                 <div class="form-wewillfind-footer__success h2">Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span></div>
               </form>
@@ -497,12 +508,17 @@
             <div class="wewillfind-footer__left"> 
               <div class="wewillfind-footer__connection"> <a href="#">8 800 775 73 63 </a><a href="#">info@tiqum.ru</a></div>
               <div class="wewillfind-footer__location">
-                 Уфа – Гоголя 53<span>Питер – opening</span></div>
+                 Уфа – Гоголя 53
+                <span>Питер – opening</span>
+              </div>
             </div>
             <div class="wewillfind-footer__right" id="contact-form">
               <form class="wewillfind-footer__form form-wewillfind-footer" action="#" method="post">
                 <div class="wewillfind-footer__title-wrapper">
-                  <div class="wewillfind-footer__title general-title wewillfind-footer__title--mobile">Найдем<span>решение вашей задачи</span></div>
+                  <div class="wewillfind-footer__title general-title wewillfind-footer__title--mobile">
+                    Найдем
+                    <span>решение вашей задачи</span>
+                  </div>
                 </div>
                 <div class="form-wewillfind-footer__item">
                   <input type="text" placeholder="Имя и фамилия" name="name" required>
