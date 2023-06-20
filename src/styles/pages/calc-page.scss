@@ -1403,6 +1403,10 @@
           max-width: 63.28125vw;
           letter-spacing: -0.02em;
           font-size: 6.25vw;
+			span::before{
+				content: " ";
+				display: inline;
+			}
         }
       }
     }

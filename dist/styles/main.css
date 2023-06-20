@@ -3665,6 +3665,9 @@ summary {
 .form-wewillfind-footer__item-description input[type=file] + label svg {
   max-width: 100%;
 }
+.form-wewillfind-footer__item-description input[type=file] + label img {
+  max-width: 100%;
+}
 .form-wewillfind-footer__item-description input[type=file] + label.active-file {
   opacity: 1;
 }
@@ -5757,6 +5760,10 @@ summary {
   .footer.modalFromFooter .footer__right .footer__right-soc {
     grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   }
+}
+.footer.modalFromFooter .wewillfind-footer__subtitle {
+  color: white !important;
+  border: 0;
 }
 
 .wewillfind-footer__title.general-title {
@@ -10462,6 +10469,10 @@ summary {
     max-width: 63.28125vw;
     letter-spacing: -0.02em;
     font-size: 6.25vw;
+  }
+  .calculator form .wewillfind-footer__subtitle span::before {
+    content: " ";
+    display: inline;
   }
 }
 .calculator .form-wewillfind-footer__bottom .wewillfind-footer {
