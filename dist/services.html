@@ -421,11 +421,23 @@
                   <input type="email" placeholder="Рабочий email" name="email" required>
                   <div class="form-wewillfind-footer__error">Пожалуйста, введите корректный email</div>
                 </div>
-                <div class="form-wewillfind-footer__item form-wewillfind-footer__item-description"> 
+                <div class="form-wewillfind-footer__item">
                   <textarea name="msg" placeholder="Короткое описание проекта" required></textarea>
                   <div class="form-wewillfind-footer__error">Пожалуйста, опишите ваш проект</div>
-                  <input type="file" name="file" id="form-wewillfind-footer__item-file">
-                  <label for="form-wewillfind-footer__item-file"><img src="/img/icon/file.png" alt="file"></label>
+                </div>
+                <div class="form-wewillfind-footer__item">
+                  <div class="file-wrapper">
+                    <div id="ajax-wrapper--2">
+                      <div class="js-form-item form-item js-form-type-webform-document-file form-item-file js-form-item-file">
+                        <div class="js-webform-document-file webform-document-file js-form-managed-file form-managed-file" id="edit-file--2">
+                          <input class="js-form-file form-file" id="edit-file-upload--2" data-drupal-selector="edit-file-upload-2" type="file" name="files[file]" size="22" data-once="fileValidate auto-file-upload">
+                          <input class="js-hide button js-form-submit form-submit" id="edit-file-upload-button--2" data-drupal-selector="edit-file-upload-button" formnovalidate="formnovalidate" type="submit" name="file_upload_button" value="Закачать" data-once="drupal-ajax">
+                          <input data-drupal-selector="edit-file-fids" type="hidden" name="file[fids]">
+                        </div>
+                        <label class="option" id="edit-file--2--label" for="edit-file-upload--2">&Fcy;&acy;&jcy;&lcy;</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-wewillfind-footer__bottom">
                   <button class="form-wewillfind-footer__btn blue-btn" type="submit"> <span>Отправить</span></button>

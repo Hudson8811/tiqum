@@ -33,12 +33,18 @@ footer.footer
 					.form-wewillfind-footer__item 
 						input(type="email" placeholder="Рабочий email" name="email" required)
 						.form-wewillfind-footer__error Пожалуйста, введите корректный email
-					.form-wewillfind-footer__item.form-wewillfind-footer__item-description 
+					.form-wewillfind-footer__item
 						textarea(name="msg" placeholder="Короткое описание проекта" required)
 						.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
-						input(type="file" name="file" id="form-wewillfind-footer__item-file")
-						label(for="form-wewillfind-footer__item-file")
-							img(src="/img/icon/file.png" alt='file' )
+					.form-wewillfind-footer__item
+						.file-wrapper
+							#ajax-wrapper--2
+								.js-form-item.form-item.js-form-type-webform-document-file.form-item-file.js-form-item-file
+									#edit-file--2.js-webform-document-file.webform-document-file.js-form-managed-file.form-managed-file
+										input#edit-file-upload--2.js-form-file.form-file(data-drupal-selector='edit-file-upload-2', type='file', name='files[file]', size='22', data-once='fileValidate auto-file-upload')
+										input#edit-file-upload-button--2.js-hide.button.js-form-submit.form-submit(data-drupal-selector='edit-file-upload-button', formnovalidate='formnovalidate', type='submit', name='file_upload_button', value='Закачать', data-once='drupal-ajax')
+										input(data-drupal-selector='edit-file-fids', type='hidden', name='file[fids]')
+									label#edit-file--2--label.option(for='edit-file-upload--2') &Fcy;&acy;&jcy;&lcy;
 					.form-wewillfind-footer__bottom
 						button(type='submit').form-wewillfind-footer__btn.blue-btn 
 							span Отправить
