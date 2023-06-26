@@ -565,6 +565,15 @@
 		&--big {
 			flex: 0 1 100%;
 		}
+
+		.path-calculator & {
+			&.form-item-budget {
+				display: none;
+			}
+			&.form-item-name {
+				flex: 1 1 100%;
+			}
+		}
 	}
 
 	&__bottom {
@@ -1143,11 +1152,14 @@
 		border: none;
 	}
 }
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
 	background-color: transparent;
 	color: white;
 }
-.select2-container--default .select2-results__option--selected {
+.select2-container--default .select2-results__option--selected,
+.select2-container--default .select2-results__option[aria-selected=true]
+{
 	background-color: transparent;
 }
 .select2-container--default .select2-results>.select2-results__options {
@@ -1156,4 +1168,9 @@
 
 .select2-container{
 	z-index: 999999;
+}
+
+.select2-search.select2-search--dropdown,
+ul .select2-results__option[role="option"]:first-child {
+	display: none;
 }
