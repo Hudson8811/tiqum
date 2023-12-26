@@ -29,6 +29,84 @@
 /***/ (function() {
 
 (function ($) {
+  if ($.fn.select2 !== undefined) {
+    var Defaults = $.fn.select2.amd.require('select2/defaults');
+
+    $.extend(Defaults.defaults, {
+      dropdownPosition: 'auto'
+    });
+
+    var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
+
+    var _positionDropdown = AttachBody.prototype._positionDropdown;
+
+    AttachBody.prototype._positionDropdown = function () {
+      var $window = $(window);
+      var isCurrentlyAbove = this.$dropdown.hasClass('select2-dropdown--above');
+      var isCurrentlyBelow = this.$dropdown.hasClass('select2-dropdown--below');
+      var newDirection = null;
+      var offset = this.$container.offset();
+      offset.bottom = offset.top + this.$container.outerHeight(false);
+      var container = {
+        height: this.$container.outerHeight(false)
+      };
+      container.top = offset.top;
+      container.bottom = offset.top + container.height;
+      var dropdown = {
+        height: this.$dropdown.outerHeight(false)
+      };
+      var viewport = {
+        top: $window.scrollTop(),
+        bottom: $window.scrollTop() + $window.height()
+      };
+      var enoughRoomAbove = viewport.top < offset.top - dropdown.height;
+      var enoughRoomBelow = viewport.bottom > offset.bottom + dropdown.height;
+      var css = {
+        left: offset.left,
+        top: container.bottom
+      }; // Determine what the parent element is to use for calciulating the offset
+
+      var $offsetParent = this.$dropdownParent; // For statically positoned elements, we need to get the element
+      // that is determining the offset
+
+      if ($offsetParent.css('position') === 'static') {
+        $offsetParent = $offsetParent.offsetParent();
+      }
+
+      var parentOffset = $offsetParent.offset();
+      css.top -= parentOffset.top;
+      css.left -= parentOffset.left;
+      var dropdownPositionOption = this.options.get('dropdownPosition');
+
+      if (dropdownPositionOption === 'above' || dropdownPositionOption === 'below') {
+        newDirection = dropdownPositionOption;
+      } else {
+        if (!isCurrentlyAbove && !isCurrentlyBelow) {
+          newDirection = 'below';
+        }
+
+        if (!enoughRoomBelow && enoughRoomAbove && !isCurrentlyAbove) {
+          newDirection = 'above';
+        } else if (!enoughRoomAbove && enoughRoomBelow && isCurrentlyAbove) {
+          newDirection = 'below';
+        }
+      }
+
+      if (newDirection == 'above' || isCurrentlyAbove && newDirection !== 'below') {
+        css.top = container.top - parentOffset.top - dropdown.height;
+      }
+
+      if (newDirection != null) {
+        this.$dropdown.removeClass('select2-dropdown--below select2-dropdown--above').addClass('select2-dropdown--' + newDirection);
+        this.$container.removeClass('select2-container--below select2-container--above').addClass('select2-container--' + newDirection);
+      }
+
+      this.$dropdownContainer.css(css);
+    };
+  }
+})(window.jQuery);
+
+(function ($) {
   $(".calc__link--circle").click(function () {
     $(".modalFromFooter").addClass("active");
     $("body").addClass("noScroll");
@@ -66,7 +144,7 @@
           $(document).on('click', '.form-wewillfind-footer button[type=submit]', function () {
             event.preventDefault();
             var valid = true;
-            $(this).closest('form').find('input:not([type=file]), textarea').each(function () {
+            $(this).closest('form').find('input:not([type=file]), textarea, select').each(function () {
               if (validInput(this)) {
                 $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
               } else {
@@ -110,7 +188,7 @@
     $(document).on('click', '.form-wewillfind-footer button[type=submit]', function () {
       event.preventDefault();
       var valid = true;
-      $(this).closest('form').find('input:not([type=file]), textarea').each(function () {
+      $(this).closest('form').find('input:not([type=file]), textarea, select').each(function () {
         if (validInput(this)) {
           $(this).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
         } else {
@@ -123,6 +201,22 @@
         //$(this).closest('form').submit();
         //submit code here
         $(this).closest('form').addClass('submited');
+      }
+    });
+  }
+
+  if ($(".buget-select").length > 0 && typeof $(".buget-select").select2 !== 'undefined') {
+    $(".buget-select").select2({
+      placeholder: "Бюджет проекта",
+      allowClear: false,
+      minimumResultsForSearch: Infinity,
+      dropdownPosition: 'below'
+    });
+    $(document).on('change', ".buget-select", function () {
+      var select = this;
+
+      if (validInput(select)) {
+        $(select).closest('.form-wewillfind-footer__item').addClass("js-active-area").removeClass("js-error");
       }
     });
   }
@@ -240,20 +334,6 @@
 
 /***/ }),
 
-/***/ "./src/blocks/modules/media/media.js":
-/*!*******************************************!*\
-  !*** ./src/blocks/modules/media/media.js ***!
-  \*******************************************/
-/***/ (function() {
-
-$('.js-media__item').hover(function () {
-  $(this).siblings('.js-media__item').addClass('opacity');
-}, function () {
-  $('.js-media__item').removeClass('opacity');
-}); // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-
-/***/ }),
-
 /***/ "./src/blocks/modules/realization/realization.js":
 /*!*******************************************************!*\
   !*** ./src/blocks/modules/realization/realization.js ***!
@@ -285,22 +365,21 @@ var swiper = new Swiper(".realization__swiper", {
   \*************************************************/
 /***/ (function() {
 
-(function ($) {
-  var windowInnerWidth = window.innerWidth;
-  console.log(windowInnerWidth);
-
-  if (windowInnerWidth > 1024) {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray(".services__items").forEach(function (panel, i) {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: 'bottom bottom',
-        pin: true,
-        pinSpacing: false
-      });
-    });
-  }
-})(jQuery);
+// (function ($) {
+//     const windowInnerWidth = window.innerWidth
+//     console.log(windowInnerWidth);
+//     if (windowInnerWidth > 1024) {
+//         gsap.registerPlugin(ScrollTrigger);
+//         gsap.utils.toArray(".services__items").forEach((panel, i) => {
+//             ScrollTrigger.create({
+//                 trigger: panel,
+//                 start: 'bottom bottom',
+//                 pin: true,
+//                 pinSpacing: false
+//             });
+//         });
+//     }
+// })(jQuery);
 
 /***/ }),
 
@@ -378,7 +457,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   var serviceSelect = false;
   var selectedService;
   var serviceList = ['Запуск MVP', 'Проектирование сервиса CJM/UX/UI', 'Продуктовая команда', 'Цифровая трансформация. Консалтинг'];
-  var formTitles = ['Срок и стоимость <span><br>запуска вашего MVP</span>', 'Стоимость проектирования <span><br>сервиса</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>'];
+  var formTitles = ['Срок и стоимость <span><br>запуска вашего продукта</span>', 'Стоимость проектирования <span><br>сервиса</span>', 'Стоимость продуктовой <span><br>команды</span>', 'Стоимость консалтинга по <span><br>цифровой трансофрмации</span>'];
   var finalBlocks = [[{
     class: 'js-calc-finalTime',
     text: 'Максимальный срок запуска вашего сервиса/продукта с момента подписания договора'
@@ -861,7 +940,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         priceBlock = finalBlocks[service][0]['class'];
         totalPrice = parseInt($('.calc-page__serviceBlock[data-service="' + service + '"] input[name="fixedPrice"]').val());
         jsonArray['totalPrice'] = totalPrice;
-        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽/мес');
+        $('.' + priceBlock).html(splitNumberIntoGroups(totalPrice) + ' ₽');
         break;
 
       case 2:
@@ -966,9 +1045,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_services_services__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/weright/weright */ "./src/blocks/modules/weright/weright.js");
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/media/media */ "./src/blocks/modules/media/media.js");
-/* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_media_media__WEBPACK_IMPORTED_MODULE_7__);
-
 
 
 

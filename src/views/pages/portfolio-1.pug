@@ -16,8 +16,11 @@ block content
 						h1.general-title Мобильное приложение агента Самолет Плюс
 
 			.portfolio
-				.portfolio__img
-					img(src="img/pages/portfolio/1-1.jpg", alt="alt")
+				.portfolio__img.has-mobile-img
+					picture
+						source(media="(max-width: 767px)" srcset="img/pages/portfolio/mobile.jpg")
+						source(media="(min-width: 768px)" srcset="img/pages/portfolio/1-1.jpg")
+						img(src="img/pages/portfolio/1-1.jpg", alt="alt")
 				.project-portfolio
 					.container
 						.project-portfolio__top.flex-lr
@@ -63,7 +66,10 @@ block content
 										li более 500 студентов
 
 					.project-portfolio__fullwidth
-						img(src="img/pages/portfolio/1-6.jpg", alt="alt")
+						picture
+							source(media="(max-width: 767px)" srcset="img/pages/portfolio/mobile.jpg")
+							source(media="(min-width: 768px)" srcset="img/pages/portfolio/1-6.jpg")
+							img(src="img/pages/portfolio/1-16.jpg", alt="alt")
 
 
 				.portfolio__next-cases.next-cases-portfolio
@@ -115,4 +121,5 @@ block scripts
 	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
+	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
 	script(src="js/main.js")

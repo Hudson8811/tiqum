@@ -9,53 +9,195 @@
 	overflow: auto;
 	opacity: 0;
 	width: 0;
+
 	&.active {
 		display: block;
 		left: 0;
 		width: 100vw;
 		opacity: 1;
 	}
+
+	.form-wewillfind-footer__text {
+		margin-left: 0;
+		margin-top: 30px;
+
+		@media (max-width: 1439px) {
+			margin-top: 20px;
+		}
+
+		@media (max-width: 1024px) {
+			margin-top: 14px;
+		}
+	}
+
+	/* {
+		min-height: 88px;
+		max-width: 595px;
+
+
+		@media (max-width: 1439px) {
+			max-width: 315px;
+		}
+
+		@media (max-width: 1024px) {
+			width: 302px;
+			max-width: 302px;
+		}
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			width: 100%;
+			max-width: 100%;
+			min-height: 12.8vw;
+		}
+
+
+	}*/
+
+
 	.wewillfind-footer {
 		@media (max-width: 767px) {
-			flex-flow: column-reverse nowrap;
+			flex-flow: column nowrap;
 			align-items: flex-start;
 			justify-content: flex-start;
 		}
 	}
-	
+
 	.footer__right {
 		.footer__right-soc {
 			@media (max-width: 1024px) {
 				grid-template: repeat(2, 1fr)/repeat(3, 1fr);
 			}
+
 			@media (max-width: 767px) {
 				grid-template: repeat(3, 1fr)/repeat(2, 1fr);
 			}
-		}		
+		}
 	}
-	
+
+	.wewillfind-footer__subtitle{
+		color: white !important;
+		border: 0;
+	}
+
 }
-.wewillfind-footer__title.general-title{
+
+//Если форма не отправлена на основном сайте работаем через .webform-details-toggle
+// .webform-details-toggle {
+// 	.wewillfind-footer__title.general-title {
+// 		&.mob {
+// 			display: none;
+
+// 			@media (max-width: 767px) {
+// 				display: block;
+// 			}
+// 		}
+
+// 		&.desc {
+// 			display: block;
+
+// 			@media (max-width: 767px) {
+// 				display: none;
+// 			}
+// 		}
+
+// 		@media (max-width: 1439px) {
+// 			max-width: 570px;
+// 		}
+
+// 		@media (max-width: 1919px) {
+// 			margin-bottom: 140px;
+// 		}
+
+// 		@media (max-width: 1439px) {
+// 			margin-bottom: 110px;
+// 		}
+
+// 		@media (max-width: 1024px) {
+// 			margin-bottom: 10.742vw;
+// 		}
+
+// 		@media (max-width: 767px) {
+// 			margin-bottom: 13.333vw;
+// 		}
+// 	}	
+// }
+//Если форма отправлена на основном сайте работаем  без .webform-details-toggle
+// .wewillfind-footer__title.general-title {
+// 	@media (max-width: 1439px) {
+// 		max-width: 570px;
+// 	}
+
+// 	@media (max-width: 1919px) {
+// 		// margin-bottom: 140px;
+// 		margin-bottom: 163px;
+// 	}
+
+// 	@media (max-width: 1439px) {
+// 		margin-bottom: 110px;
+// 	}
+
+// 	@media (max-width: 1024px) {
+// 		margin-bottom: 10.742vw;
+// 	}
+
+// 	@media (max-width: 767px) {
+// 		margin-bottom: 13.333vw;
+// 	}
+// }
+
+
+// Вариант до правок
+.wewillfind-footer__title.general-title {
+	margin-bottom: 140px;
+
+	br {
+		display: none;
+	}
+
 	&.mob {
 		display: none;
+
 		@media (max-width: 767px) {
 			display: block;
 		}
 	}
+
 	&.desc {
 		display: block;
+
 		@media (max-width: 767px) {
 			display: none;
 		}
 	}
+
 	@media (max-width: 1439px) {
 		max-width: 570px;
 	}
-} 
-.modalFromFooter--close  {
+
+	@media (max-width: 1919px) {
+		margin-bottom: 140px;
+	}
+
+	@media (max-width: 1439px) {
+		margin-bottom: 110px;
+	}
+
+	@media (max-width: 1024px) {
+		margin-bottom: 10.742vw;
+	}
+
+	@media (max-width: 767px) {
+		margin-bottom: 13.333vw;
+	}
+}
+
+.modalFromFooter--close {
 	position: absolute;
 	right: 28px;
 	top: 28px;
+	z-index: 100;
+cursor: pointer;
 	@media (max-width: 767px) {
 		right: 10px;
 		top: 10px;

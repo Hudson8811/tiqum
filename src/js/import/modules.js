@@ -6,4 +6,3 @@ import "%modules%/wehelp/wehelp";
 import "%modules%/confirm/confirm";
 import "%modules%/services/services";
 import "%modules%/weright/weright";
-import "%modules%/media/media";
