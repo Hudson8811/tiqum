@@ -240,6 +240,20 @@
 
 /***/ }),
 
+/***/ "./src/blocks/modules/media/media.js":
+/*!*******************************************!*\
+  !*** ./src/blocks/modules/media/media.js ***!
+  \*******************************************/
+/***/ (function() {
+
+$('.js-media__item').hover(function () {
+  $(this).siblings('.js-media__item').addClass('opacity');
+}, function () {
+  $('.js-media__item').removeClass('opacity');
+}); // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+
+/***/ }),
+
 /***/ "./src/blocks/modules/realization/realization.js":
 /*!*******************************************************!*\
   !*** ./src/blocks/modules/realization/realization.js ***!
@@ -952,6 +966,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_services_services__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/weright/weright */ "./src/blocks/modules/weright/weright.js");
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/media/media */ "./src/blocks/modules/media/media.js");
+/* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_media_media__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 

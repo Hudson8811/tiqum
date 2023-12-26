@@ -5446,6 +5446,347 @@ summary {
   }
 }
 
+.media {
+  padding: 45px 0 170px;
+}
+@media (max-width: 1919px) {
+  .media {
+    padding: 30px 0 140px;
+  }
+}
+@media (max-width: 1439px) {
+  .media {
+    padding: 30px 0 120px;
+  }
+}
+@media (max-width: 1024px) {
+  .media {
+    padding: 2.93vw 0 11.719vw;
+  }
+}
+@media (max-width: 767px) {
+  .media {
+    padding: 4vw 0 13.333vw;
+  }
+}
+.media .media__item--wrapCalc .media__item-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+@media (max-width: 767px) {
+  .media .media__item--wrapCalc .media__item-right {
+    flex: 0 1 100%;
+    width: 100%;
+  }
+}
+.media .media__item--wrapCalc .media__item--calc {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 550px;
+}
+@media (max-width: 767px) {
+  .media .media__item--wrapCalc .media__item--calc {
+    max-width: 100%;
+  }
+}
+.media .media__item--wrapCalc .media__item--calc span {
+  opacity: 0.4;
+}
+.media .media__item--wrapCalc .media__item--calc__button {
+  margin-top: 38px;
+  color: #0047FF;
+}
+@media (max-width: 767px) {
+  .media .media__item--wrapCalc .media__item--calc__button {
+    margin-top: 8.4375vw;
+  }
+}
+.media__items {
+  padding-bottom: 110px;
+  min-height: auto;
+}
+@media (max-width: 1919px) {
+  .media__items {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__items {
+    padding-bottom: 0;
+    min-height: 0;
+  }
+}
+@media (max-width: 767px) {
+  .media__items {
+    padding-bottom: 0;
+  }
+}
+.media__item-wrapper {
+  display: block;
+  position: relative;
+}
+.media__item-wrapper:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
+}
+@media (max-width: 1919px) {
+  .media__item-wrapper:not(:last-child) {
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-wrapper:not(:last-child) {
+    padding-bottom: 2.441vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-wrapper:not(:last-child) {
+    border-bottom: 0.267vw solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 4vw;
+  }
+}
+.media__item-wrapper:not(:first-child) {
+  margin-top: 40px;
+}
+@media (max-width: 1919px) {
+  .media__item-wrapper:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-wrapper:not(:first-child) {
+    margin-top: 2.93vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-wrapper:not(:first-child) {
+    margin-top: 6.667vw;
+  }
+}
+.media__item-wrapper.opacity .media__item-right {
+  padding-left: 0px;
+}
+.media__item-wrapper.opacity .media__item-right span {
+  opacity: 0.4;
+  color: #2a2a2a;
+}
+.media__item-wrapper--calc:hover .media__item-right {
+  padding-left: 0px;
+}
+@media (max-width: 1024px) {
+  .media__item-wrapper--calc:hover .media__item-right {
+    padding-left: 0vw;
+  }
+}
+.media__item-wrapper--calc:hover .media__item-right span {
+  opacity: 0.3;
+}
+.media__item-wrapper--calc:hover .media__item--calc__button {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+}
+.media__item {
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 767px) {
+  .media__item {
+    flex-wrap: wrap;
+  }
+}
+.media__item-left {
+  flex: 1 1 auto;
+}
+@media (max-width: 1024px) {
+  .media__item-left {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-left {
+    flex: 1 1 100%;
+    margin-top: 6.667vw;
+  }
+}
+.media__item-left > span {
+  display: block;
+  max-width: 290px;
+  margin-left: -20px;
+  padding-left: 20px;
+}
+@media (max-width: 1919px) {
+  .media__item-left > span {
+    margin-left: -15px;
+    max-width: 240px;
+  }
+}
+@media (max-width: 1439px) {
+  .media__item-left > span {
+    margin-left: -10px;
+    max-width: 220px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-left > span {
+    margin-left: -0.977vw;
+    max-width: 21.484vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-left > span {
+    max-width: 100%;
+    margin-left: -2.667vw;
+    max-width: 58.667vw;
+  }
+}
+@media (max-width: 1919px) {
+  .media__item-left > span {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-left > span {
+    padding-left: 0.977vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-left > span {
+    padding-left: 2.667vw;
+  }
+}
+.media__item-left > span {
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #2a2a2a;
+  opacity: 0.4;
+}
+.media__item-left > span span {
+  white-space: nowrap;
+  margin-right: 20px;
+  display: inline-block;
+}
+.media__item-left > span b {
+  display: inline-block;
+  width: 5px;
+}
+@media (max-width: 1919px) {
+  .media__item-left > span {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-left > span {
+    font-size: 1.367vw;
+    line-height: 1.563vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-left > span {
+    font-size: 3.2vw;
+    line-height: 3.733vw;
+  }
+}
+.media__item-right {
+  position: relative;
+  flex: 0 1 65%;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 108.8%;
+  letter-spacing: -0.03em;
+  color: #2A2A2A;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 1919px) {
+  .media__item-right {
+    flex: 0 0 64%;
+    font-size: 36px;
+    line-height: 108.8%;
+  }
+}
+@media (max-width: 1439px) {
+  .media__item-right {
+    flex: 0 1 65%;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-right {
+    flex: 0 1 65%;
+    font-size: 2.734vw;
+    line-height: 3.125vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-right {
+    order: -1;
+    font-size: 5.333vw;
+    line-height: 6.133vw;
+  }
+}
+.media__item-right span {
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+}
+@media (max-width: 1439px) {
+  .media__item-right span {
+    opacity: 1;
+  }
+}
+.media__item-new {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  background: #0047FF;
+  border-radius: 30px;
+  font-family: "Suisse Intl";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 6px 15px;
+}
+@media (max-width: 1919px) {
+  .media__item-new {
+    font-size: 9.39024px;
+    line-height: 11px;
+    padding: 4px 10px;
+    bottom: 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .media__item-new {
+    font-size: 0.977vw;
+    line-height: 0.977vw;
+    padding: 4px 0.977vw;
+    bottom: 2.441vw;
+    border-radius: 2.93vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item-new {
+    display: none;
+  }
+}
+
 .type-kit {
   font-family: "Suisse Intl";
   max-width: 1772px;
