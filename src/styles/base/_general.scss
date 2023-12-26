@@ -22,6 +22,14 @@
   }
 }
 
+.op {
+  &-60 {
+    opacity: 60%;
+  }
+  &-50 {
+    opacity: 50%;
+  }
+}
 .v-hidden {
   visibility: hidden;
 }
