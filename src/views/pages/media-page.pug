@@ -1,0 +1,31 @@
+extends ../layouts/default
+
+block variables
+	- const title = "TIQUM";
+
+block content 
+	.wrapper.blog-info
+		include ../../blocks/modules/header/header 
+		.page 
+			.container 
+				.page-header 
+					.flex-lr 
+						.flex-lr__left 
+						.flex-lr__right 
+							h1.general-title Публикации в СМИ
+			include ../../blocks/modules/media-page/media-page 
+			.archive-articles
+				.container 
+					.flex-lr 
+						.flex-lr__left 
+						.flex-lr__right 
+							.archive-articles--link.h1
+								a.h1(href="#") Архив статей →
+		include ../../blocks/modules/footer/footer 
+	a.calc__link.calc__link--circle(href="#") Оставить заявку 
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
+	script(src="js/main.js")

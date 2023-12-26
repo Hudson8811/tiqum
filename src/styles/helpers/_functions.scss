@@ -32,3 +32,8 @@
   @return $temp +'vw';
 }
 
+@function vw320($px, $resolutiond: 320) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
+
