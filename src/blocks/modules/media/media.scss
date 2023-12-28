@@ -72,7 +72,44 @@
 			padding-bottom: 0;
 		}
 	}
-	
+	&__counter  {
+		position: relative;
+		display: inline-block;
+		color:  #2A2A2A;
+		opacity: 0.2;
+		text-align: right;
+		font-family: Suisse Intl;
+		font-size: 80px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 90%; /* 72px */
+		letter-spacing: -2.4px;
+		@media (max-width: 1919px){
+			font-size: 60px;
+			font-style: normal;
+			line-height: 95%; /* 57px */
+			letter-spacing: -1.8px;
+		}
+		@media (max-width: 1439px){
+			font-size: 50px;
+			font-style: normal;
+			line-height: 100%; /* 40px */
+			letter-spacing: -1.2px;
+		}
+		@media (max-width: 1024px) {
+			font-size: vw(40);
+			font-style: normal;
+			line-height: 100%; /* 40px */
+			letter-spacing: -1.2px;
+		}
+		@media (max-width: 767px){
+			font-size: vw320(24);
+			font-style: normal;
+			font-weight: 400;
+			line-height: 95%; /* 22.8px */
+			letter-spacing: -0.72px;
+		}		
+	}
 	&__item-wrapper {
 		display: block;
 		position: relative;
@@ -421,7 +458,12 @@
 		}
 	}
 }
-
+.media-page {
+	.flex-lr__right {
+		display: flex;
+		justify-content: space-between;
+	}
+}
 
 .fancybox__backdrop {
 	background-color: rgba(0, 0, 0, 0.5);
