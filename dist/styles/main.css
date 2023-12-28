@@ -4599,7 +4599,6 @@ summary {
   .hero__bottom {
     flex-wrap: wrap;
     border: none;
-    border-top: 0.267vw solid rgba(255, 255, 255, 0.5);
   }
   .hero__bottom .hero__right {
     flex: 1 1 auto;
@@ -4609,6 +4608,7 @@ summary {
   }
 }
 .hero__left {
+  display: flex;
   flex: 1 1 auto;
   font-family: "Suisse Intl";
   font-style: normal;
@@ -4616,6 +4616,7 @@ summary {
   font-size: 18px;
   line-height: 21px;
   color: #FFFFFF;
+  flex-flow: column nowrap;
 }
 @media (max-width: 1919px) {
   .hero__left {
@@ -4640,6 +4641,8 @@ summary {
     flex: 1 1 100%;
     font-size: 3.2vw;
     line-height: 3.733vw;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 }
 .hero__left a {
@@ -4647,6 +4650,13 @@ summary {
 }
 .hero__left a svg path {
   transition: all 0.5s ease 0s;
+}
+.hero__left a.fill:hover {
+  color: #0047FF;
+}
+.hero__left a.fill:hover svg path {
+  stroke: transparent !important;
+  fill: #0047FF !important;
 }
 .hero__left a:hover {
   color: #0047FF;
@@ -4658,6 +4668,7 @@ summary {
   margin-top: 30px;
   display: inline-flex;
   align-items: center;
+  margin-bottom: 33px;
 }
 @media (max-width: 1919px) {
   .hero__left-download-link {
@@ -4667,16 +4678,19 @@ summary {
 @media (max-width: 1439px) {
   .hero__left-download-link {
     margin-top: 15px;
+    margin-bottom: 23px;
   }
 }
 @media (max-width: 1024px) {
   .hero__left-download-link {
     margin-top: 1.465vw;
+    margin-bottom: 2.24609375vw;
   }
 }
 @media (max-width: 767px) {
   .hero__left-download-link {
     margin-top: 4vw;
+    margin-bottom: 0;
   }
   .hero__left-download-link svg {
     width: 4.533vw;
@@ -6022,11 +6036,11 @@ summary {
 }
 
 .media {
-  padding: 30px 0 120px;
+  padding: 30px 0 60px;
 }
 @media (max-width: 1919px) {
   .media {
-    padding: 24px 0 90px;
+    padding: 24px 0 30px;
   }
 }
 @media (max-width: 1439px) {
@@ -6036,7 +6050,7 @@ summary {
 }
 @media (max-width: 1024px) {
   .media {
-    padding: 2.9296875vw 0 7.8125vw 0;
+    padding: 2.9296875vw 0 4.58984375vw 0;
   }
 }
 @media (max-width: 767px) {
@@ -6127,30 +6141,30 @@ summary {
   position: relative;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 30px;
-  margin-bottom: 60px;
+  padding-bottom: 30px;
 }
 @media (max-width: 1919px) {
   .media__item-wrapper {
     padding-top: 22px;
-    margin-bottom: 45px;
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 1439px) {
   .media__item-wrapper {
     padding-top: 20px;
-    margin-bottom: 40px;
+    padding-bottom: 10px;
   }
 }
 @media (max-width: 1024px) {
   .media__item-wrapper {
     padding-top: 1.953125vw;
-    margin-bottom: 1.953125vw;
+    padding-bottom: 1.66015625vw;
   }
 }
 @media (max-width: 767px) {
   .media__item-wrapper {
-    padding-top: 4.6875vw;
-    margin-bottom: 4.6875vw;
+    padding-top: 2.5vw;
+    padding-bottom: 1.5625vw;
   }
 }
 .media__item-wrapper:last-child {
@@ -6306,6 +6320,7 @@ summary {
   justify-content: space-between;
   align-items: flex-start;
   transition: all 0.3s ease 0s;
+  padding-bottom: 30px;
 }
 @media (max-width: 1919px) {
   .media__item-right {
@@ -6324,8 +6339,9 @@ summary {
 @media (max-width: 1024px) {
   .media__item-right {
     flex: 0 1 65%;
-    font-size: 1.7578125vw;
-    line-height: 2.109375vw;
+    font-size: 2.34375vw;
+    line-height: 2.578125vw;
+    padding-bottom: 1.5625vw;
   }
 }
 @media (max-width: 767px) {
@@ -6400,7 +6416,7 @@ summary {
 }
 @media (max-width: 1024px) {
   .media__item__desc {
-    max-width: 45.703125vw;
+    max-width: 43.75vw;
   }
 }
 @media (max-width: 767px) {
@@ -6426,7 +6442,7 @@ summary {
   .media__item__label {
     max-width: 45.703125vw;
     font-size: 1.7578125vw;
-    min-width: 12.20703125vw;
+    min-width: 11.23046875vw;
   }
 }
 @media (max-width: 767px) {
@@ -6477,7 +6493,7 @@ summary {
 }
 @media (max-width: 767px) {
   .media__item__logo {
-    width: 65vw;
+    width: 52.5vw;
     height: 23.4375vw;
   }
 }
@@ -6508,13 +6524,38 @@ summary {
 }
 @media (max-width: 1024px) {
   .media__right {
-    flex: 1 1 100%;
+    flex: 0 1 65%;
+  }
+}
+@media (max-width: 767px) {
+  .media__right {
+    flex: 0 1 100%;
   }
 }
 
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fancybox__slide {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.media.media-page .media__item-wrapper p::after {
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  position: relative;
+  color: #0047FF;
+  content: " →";
+}
 .media.media-page .media__item-wrapper:hover .media__item__label {
   transition: all 0.5s ease 0s;
   color: #0047FF;
+  opacity: 1;
+}
+.media.media-page .media__item-wrapper:hover .media__item__label p::after {
+  transition: all 0.5s ease 0s;
   opacity: 1;
 }
 .media.media-page .media__item-wrapper:hover .media__item__label span {
@@ -6522,7 +6563,7 @@ summary {
   color: #2a2a2a;
 }
 .media.media-page .media__item__label {
-  min-width: 500px;
+  min-width: 423px;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s ease 0s;
@@ -6530,6 +6571,52 @@ summary {
 .media.media-page .media__item__label span {
   display: block;
 }
+@media (max-width: 1919px) {
+  .media.media-page .media__item__label {
+    min-width: 314px;
+  }
+}
+@media (max-width: 1439px) {
+  .media.media-page .media__item__label {
+    min-width: 257px;
+  }
+}
+@media (max-width: 1024px) {
+  .media.media-page .media__item__label {
+    min-width: 25.09765625vw;
+  }
+}
+@media (max-width: 767px) {
+  .media.media-page .media__item__label {
+    min-width: auto;
+  }
+}
+.media.media-page .media__item__desc {
+  max-width: 595px;
+  margin-right: 20px;
+}
+@media (max-width: 1919px) {
+  .media.media-page .media__item__desc {
+    max-width: 440px;
+  }
+}
+@media (max-width: 1439px) {
+  .media.media-page .media__item__desc {
+    max-width: 468px;
+  }
+}
+@media (max-width: 1024px) {
+  .media.media-page .media__item__desc {
+    max-width: 31.8359375vw;
+  }
+}
+@media (max-width: 767px) {
+  .media.media-page .media__item__desc {
+    max-width: 100%;
+    margin-bottom: 4.6875vw;
+  }
+}
+
 .type-kit {
   font-family: "Suisse Intl";
   max-width: 1772px;

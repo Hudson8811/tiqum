@@ -100,11 +100,12 @@
 				border-top: 0.267vw solid rgba($color: #ffffff, $alpha: 0.5);
 				border: none;
 			}
-			border-top: 0.267vw solid rgba($color: #ffffff, $alpha: 0.5);
+			// border-top: 0.267vw solid rgba($color: #ffffff, $alpha: 0.5);
 		}
 	}
 	
 		&__left {
+			display: flex;
 			flex: 1 1 auto;
 			font-family: 'Suisse Intl';
 			font-style: normal;
@@ -112,6 +113,7 @@
 			font-size: 18px;
 			line-height: 21px;
 			color: #FFFFFF;
+			flex-flow: column nowrap;
 			@media (max-width: 1919px){
 				font-size: 14px;
 				line-height: 16px;
@@ -128,6 +130,8 @@
 				flex: 1 1 100%;
 				font-size: 3.200vw;
 				line-height: 3.733vw;
+				flex-flow: row nowrap;
+				justify-content: space-between;
 			}
 			a {
 				transition: all 0.5s ease 0s;
@@ -136,9 +140,22 @@
 						transition: all 0.5s ease 0s;
 					}
 				}
+				&.fill {
+					&:hover{
+						color: #0047FF;
+						svg {
+	
+							path {
+								stroke: transparent!important;
+								fill: #0047FF!important;
+							}
+						}
+					}
+				}
 				&:hover{
 					color: #0047FF;
 					svg {
+
 						path {
 							stroke: #0047FF!important;
 						}
@@ -149,17 +166,21 @@
 				margin-top: 30px;
 				display: inline-flex;
 				align-items: center;
+				margin-bottom: 33px;
 				@media (max-width: 1919px){
 					margin-top: 20px;
 				}
 				@media (max-width: 1439px){
 					margin-top: 15px;
+					margin-bottom: 23px;
 				}
 				@media (max-width: 1024px) {
 					margin-top: 1.465vw;
+					margin-bottom: vw(23);
 				}
 				@media (max-width: 767px){
 					margin-top: 4vw;
+					margin-bottom: 0;
 					svg {
 						width: 4.533vw;
 						height: 4.533vw;
