@@ -26,27 +26,30 @@
 
 	&__right {
 		flex: 0 1 65%;
+		padding-bottom: 220px;
 		@media (max-width: 1919px){
 			flex: 0 1 65%;
+			padding-bottom: 165px;
 		}
 		@media (max-width: 1439px){
 			flex: 0 1 65%;
+			padding-bottom: 109px;
 		}
 		@media (max-width: 1024px){
+			flex: 0 1 65%;
+			padding-bottom: vw(109);
+		}
+		@media (max-width: 767px){
 			flex: 1 1 100%;
-		}
-
-		@media (min-width: 1920px){
-			height: 360px;
-		}
-		@media (min-width: 1440px){
-			height: 320px;
+			padding-bottom: vw320(50);
 		}
 	}
 
-		&__title {}
-
+	&__title {}
+	.blog-items {
+		margin-top: 0 !important;
 	}
+}
 		
 
 		

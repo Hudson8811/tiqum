@@ -163,27 +163,46 @@
 				}
 			}
 			&-download-link {
-				margin-top: 30px;
 				display: inline-flex;
 				align-items: center;
 				margin-bottom: 33px;
 				@media (max-width: 1919px){
-					margin-top: 20px;
+					svg {
+						width: 18px;
+						height: 18px;
+					}
+					margin-bottom: 23px;
 				}
 				@media (max-width: 1439px){
-					margin-top: 15px;
 					margin-bottom: 23px;
 				}
 				@media (max-width: 1024px) {
-					margin-top: 1.465vw;
 					margin-bottom: vw(23);
 				}
 				@media (max-width: 767px){
-					margin-top: 4vw;
 					margin-bottom: 0;
 					svg {
-						width: 4.533vw;
-						height: 4.533vw;
+						width: vw320(17);
+						height: vw320(17);
+					}
+					font-size: vw320(12);
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+				&:first-child {
+					margin-top: 30px;
+					@media (max-width: 1919px){
+						margin-top: 23px;
+					}
+					@media (max-width: 1439px){
+						margin-top: 23px;
+					}
+					@media (max-width: 1024px) {
+						margin-top: vw(23);
+					}
+					@media (max-width: 767px){
+						margin-top: 0;
 					}
 				}
 				span {
