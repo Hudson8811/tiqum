@@ -434,22 +434,22 @@
 				height: auto;
 				margin-bottom: 50px;
 			}
-			@media (max-width: 767px){
-				width: vw320(150);
-				height: auto;
-				margin-bottom: 50px;
-			}
-			@media (max-width: 320px){
-				width: auto;
-			}
+			// @media (max-width: 767px){
+			// 	width: vw320(150);
+			// 	height: auto;
+			// 	margin-bottom: 50px;
+			// }
+			// @media (max-width: 320px){
+			// 	width: auto;
+			// }
 			img, svg, picture {
 				position: relative;
 				display: block;
 				max-width: 100%;
 				max-height: 100%;
-				// @media (max-width: 767px){
-				// 	width: 100%;
-				// }
+				@media (max-width: 767px){
+					max-height: 50px;
+				}
 				// @media (max-width: 320px){
 				// 	width: auto;
 				// }
