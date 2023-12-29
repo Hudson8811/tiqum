@@ -5238,25 +5238,30 @@ summary {
   position: relative;
   background-color: #F5F5F5;
   padding: 30px 0 0;
+  padding-bottom: 30px;
 }
 @media (max-width: 1919px) {
   .realization {
     padding: 20px 0 0;
+    padding-bottom: 24px;
   }
 }
 @media (max-width: 1439px) {
   .realization {
     padding: 30px 0 0 0;
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 1024px) {
   .realization {
     padding: 2.93vw 0 0 0;
+    padding-bottom: 2.9296875vw;
   }
 }
 @media (max-width: 767px) {
   .realization {
     padding: 4vw 0 0 0;
+    padding-bottom: 6.25vw;
   }
 }
 .realization__title {
