@@ -6263,6 +6263,15 @@ summary {
   opacity: 0.4;
   color: #2a2a2a;
 }
+.media__item-wrapper:hover .media__item__read {
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.5s ease 0s;
+}
+.media__item-wrapper:hover .media__item__label {
+  visibility: hidden;
+  opacity: 0;
+}
 .media__item-wrapper--calc:hover .media__item-right {
   padding-left: 0px;
 }
@@ -6542,6 +6551,49 @@ summary {
 }
 @media (max-width: 767px) {
   .media__item__label span {
+    display: none;
+  }
+}
+.media__item__read {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  color: #0047FF;
+  font-family: "Suisse Intl";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  min-width: 125px;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (max-width: 1024px) {
+  .media__item__read {
+    max-width: 45.703125vw;
+    font-size: 1.7578125vw;
+    min-width: 11.23046875vw;
+  }
+}
+@media (max-width: 767px) {
+  .media__item__read {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 4.375vw;
+    max-width: 100%;
+    min-width: auto;
+    top: auto;
+    bottom: 1.5625vw;
+  }
+}
+.media__item__read span {
+  display: none;
+}
+@media (max-width: 767px) {
+  .media__item__read span {
     display: block;
   }
 }
@@ -6647,25 +6699,8 @@ summary {
   padding-right: 0;
 }
 
-.media.media-page--mod .media__item-wrapper p::after {
-  transition: all 0.5s ease 0s;
-  opacity: 0;
-  position: relative;
-  color: #0047FF;
-  content: " →";
-}
-.media.media-page--mod .media__item-wrapper:hover .media__item__label {
-  transition: all 0.5s ease 0s;
-  color: #0047FF;
-  opacity: 1;
-}
-.media.media-page--mod .media__item-wrapper:hover .media__item__label p::after {
-  transition: all 0.5s ease 0s;
-  opacity: 1;
-}
-.media.media-page--mod .media__item-wrapper:hover .media__item__label span {
-  opacity: 0.4;
-  color: #2a2a2a;
+.media.media-page--mod .media__item__read {
+  min-width: auto;
 }
 .media.media-page--mod .media__item__label {
   min-width: 423px;

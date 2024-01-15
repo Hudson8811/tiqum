@@ -151,18 +151,17 @@
 				}
 			}
 		}
-		// &:hover {
-		// 	.media__item-right {
-		// 		padding-left: 10px;
-		// 		@media (max-width: 1024px){
-		// 			padding-left: 0.977vw;
-		// 		}
-		// 		span {
-		// 			opacity: 1;
-		// 			color: #2a2a2a;
-		// 		}
-		// 	}
-		// }
+		&:hover {
+			.media__item__read {
+				opacity: 1;
+				visibility: inherit;
+				transition: all 0.5s ease 0s;
+			}
+			.media__item__label  {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
 		&--calc {
 
 			
@@ -392,6 +391,43 @@
 				font-size: vw320(14);
 				max-width: 100%;
 				min-width: auto;
+			}
+			span {
+				display: none;
+				@media (max-width: 767px){
+					display: none;
+				}
+			}
+		}
+		&__read  {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			color:  #0047FF;
+			font-family: 'Suisse Intl';
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 26px;
+			min-width: 125px;
+			text-align: left;
+			opacity: 0;
+			visibility: hidden;
+			@media (max-width: 1024px) {
+				max-width: vw(468);
+				font-size: vw(18);
+				min-width: vw(115);
+			}
+			@media (max-width: 767px){
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				font-size: vw320(14);
+				max-width: 100%;
+				min-width: auto;
+				top: auto;
+				bottom: vw(16);
 			}
 			span {
 				display: none;
