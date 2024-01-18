@@ -5934,7 +5934,7 @@ summary {
   opacity: 1;
 }
 .confirm .confirm__item:hover .confirm__img-big {
-  bottom: 100px;
+  bottom: 15%;
   opacity: 1;
 }
 
