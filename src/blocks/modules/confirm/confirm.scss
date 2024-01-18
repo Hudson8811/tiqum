@@ -155,7 +155,7 @@
 			pointer-events: none;
 			position: fixed;
 			left: 0;
-			bottom: -100%;
+			bottom: 15%;
 			// position: absolute;
 			// top: calc(50% + 50px);
 			// left: 45%;
@@ -166,6 +166,7 @@
 			justify-content: center;
 			// transform: translate(0, -50%);
 			transition: all 0.3s ease 0s;
+			transform: scale(0.5);
 			@media (max-width: 1439px){
 				display: none;
 			}
@@ -190,6 +191,7 @@
 				.confirm__img-big {
 					bottom: 15%;
 					opacity: 1;
+					transform: scale(1);
 				}
 			}
 		}

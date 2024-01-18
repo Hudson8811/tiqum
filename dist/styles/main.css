@@ -5905,13 +5905,14 @@ summary {
   pointer-events: none;
   position: fixed;
   left: 0;
-  bottom: -100%;
+  bottom: 15%;
   opacity: 0;
   z-index: 100;
   width: 100%;
   display: flex;
   justify-content: center;
   transition: all 0.3s ease 0s;
+  transform: scale(0.5);
 }
 @media (max-width: 1439px) {
   .confirm__img-big {
@@ -5936,6 +5937,7 @@ summary {
 .confirm .confirm__item:hover .confirm__img-big {
   bottom: 15%;
   opacity: 1;
+  transform: scale(1);
 }
 
 .footer.modalFromFooter {
