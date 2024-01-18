@@ -153,10 +153,14 @@
 	
 		&__img-big {
 			pointer-events: none;
-			position: absolute;
-			top: calc(50% + 50px);
+			position: fixed;
 			left: 45%;
+			bottom: 20%;
+			// position: absolute;
+			// top: calc(50% + 50px);
+			// left: 45%;
 			opacity: 0;
+			z-index: 100;
 			transform: translate(0, -50%);
 			transition: all 0.3s ease 0s;
 			@media (max-width: 1439px){
