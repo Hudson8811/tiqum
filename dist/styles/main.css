@@ -5928,13 +5928,13 @@ summary {
   object-fit: contain;
   object-position: center center;
   max-width: 100%;
-  max-height: 600px;
+  max-height: 60vh;
 }
 .confirm .confirm__item:hover .confirm__item-right {
   opacity: 1;
 }
 .confirm .confirm__item:hover .confirm__img-big {
-  bottom: 20%;
+  bottom: 100px;
   opacity: 1;
 }
 
