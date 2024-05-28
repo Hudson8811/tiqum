@@ -885,7 +885,18 @@
 	}
 
 	input.webform-button--submit {
-		display: none;
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (max-width: 1024px) {
+      font-size: 1.367vw;
+      line-height: 1.563vw;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 3.2vw;
+      line-height: 3.733vw;
+    }
 	}
 
 	&.submited {

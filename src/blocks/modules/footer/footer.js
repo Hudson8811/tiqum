@@ -101,12 +101,16 @@
 })(window.jQuery);
 
 (function ($) {
+  var $form = $("form.webform-contact-form--footer").closest('.webform-contact--container');
+  var $footerContainer = $form.parent();
 	$(".calc__link--circle").click(function(){
-		$(".modalFromFooter").addClass("active")
+		$(".modalFromFooter").addClass("active");
+		$form.detach().appendTo('.modalFromFooter .wewillfind-footer__right');
 		$("body").addClass("noScroll")
 	})
 	$(".modalFromFooter--close").click(function(){
 		$(".modalFromFooter").removeClass("active")
+    $form.detach().appendTo($footerContainer);
 		$("body").removeClass("noScroll")
 	})
   if (typeof Drupal !== 'undefined') {

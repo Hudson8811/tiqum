@@ -1,12 +1,12 @@
 .services {
-	padding: 45px 0 170px;
+	padding: 45px 0 167px;
 
 	@media (max-width: 1919px) {
-		padding: 30px 0 140px;
+		padding: 30px 0 167px;
 	}
 
 	@media (max-width: 1439px) {
-		padding: 30px 0 120px;
+		padding: 30px 0 167px;
 	}
 
 	@media (max-width: 1024px) {
@@ -45,7 +45,6 @@
 			}
 
 			&__button {
-				margin-top: 38px;
 				color: #0047FF;
 
 				@media (max-width: 767px) {

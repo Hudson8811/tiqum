@@ -1,3 +1,8 @@
 .toolbar > .toolbar-bar {
   z-index: 10000;
 }
+
+.toolbar-horizontal .header, .toolbar-horizontal .menu-mobile {
+  left: 67px;
+  width: calc(100% - 66px) !important;
+}

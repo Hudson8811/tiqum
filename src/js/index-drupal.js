@@ -27,12 +27,18 @@
    */
   Drupal.behaviors.tiqum = {
     attach(context) {
+      let count = parseInt($('#views-count-result-source').text()) || 0;
 
-      $('#views-count-result-target').once('views-count-result-target').each(function () {
-        if ($('#views-count-result-source').length) {
-          $(this).text('(+' + $('#views-count-result-source').text() + ')')
-        }
-      });
+      if (count) {
+        $('#views-count-result-target').once('views-count-result-target').each(function () {
+          $(this).text('(+' + count + ')')
+        });
+
+        $('#views-count-result-target--no-staples').once('views-count-result-target--no-staples').each(function () {
+            $(this).text('+' + count)
+        });
+      }
+
     },
   };
 

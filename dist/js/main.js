@@ -107,12 +107,16 @@
 })(window.jQuery);
 
 (function ($) {
+  var $form = $("form.webform-contact-form--footer").closest('.webform-contact--container');
+  var $footerContainer = $form.parent();
   $(".calc__link--circle").click(function () {
     $(".modalFromFooter").addClass("active");
+    $form.detach().appendTo('.modalFromFooter .wewillfind-footer__right');
     $("body").addClass("noScroll");
   });
   $(".modalFromFooter--close").click(function () {
     $(".modalFromFooter").removeClass("active");
+    $form.detach().appendTo($footerContainer);
     $("body").removeClass("noScroll");
   });
 
@@ -1148,16 +1152,19 @@ __webpack_require__.r(__webpack_exports__);
     });
     /* 	var $animation_elements = $('.link1');
     	var $window = $(window);
-    		function check_if_in_view() {
+    
+    	function check_if_in_view() {
     		var window_height = $window.height();
     		var window_top_position = $window.scrollTop();
     		var window_bottom_position = (window_top_position + window_height);
-    			$.each($animation_elements, function() {
+    
+    		$.each($animation_elements, function() {
     			var $element = $(this);
     			var element_height = $element.outerHeight();
     			var element_top_position = $element.offset().top;
     			var element_bottom_position = (element_top_position + element_height);
-    				//check to see if this current container is within viewport
+    
+    			//check to see if this current container is within viewport
     			if ((element_bottom_position >= window_top_position) &&
     				(element_top_position <= window_bottom_position)) {
     				$element.addClass('is-visible');
@@ -1166,7 +1173,8 @@ __webpack_require__.r(__webpack_exports__);
     			}
     		});
     	}
-    		$window.on('scroll resize', check_if_in_view);
+    
+    	$window.on('scroll resize', check_if_in_view);
     	$window.trigger('scroll'); */
   });
   var page__image = gsap.timeline({
