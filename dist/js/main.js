@@ -379,6 +379,34 @@ var swiper = new Swiper(".realization__swiper", {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/reviews/reviews.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/modules/reviews/reviews.js ***!
+  \***********************************************/
+/***/ (function() {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var reviewsBlocks = document.querySelectorAll(".js-reviews");
+
+  if (reviewsBlocks.length > 0) {
+    reviewsBlocks.forEach(function (reviewsBlock) {
+      var reviewsSlider = reviewsBlock.querySelector('.js-reviews__slider');
+      var reviewsSliderPrev = reviewsBlock.querySelector('.js-reviews__prev');
+      var reviewsSliderNext = reviewsBlock.querySelector('.js-reviews__next');
+      var reviewsSliderEx = new Swiper(reviewsSlider, {
+        slidesPerView: 1,
+        spaceBetween: 35,
+        navigation: {
+          prevEl: reviewsSliderPrev,
+          nextEl: reviewsSliderNext
+        }
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/services/services.js":
 /*!*************************************************!*\
   !*** ./src/blocks/modules/services/services.js ***!
@@ -1067,6 +1095,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_weright_weright__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_weright_weright__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/media/media */ "./src/blocks/modules/media/media.js");
 /* harmony import */ var _modules_media_media__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_media_media__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/reviews/reviews */ "./src/blocks/modules/reviews/reviews.js");
+/* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 

@@ -15,7 +15,8 @@ block content
 							a.link-hv.js-to-form(href="javascript:;") Бесплатная консультация  →
 							.page-header__video
 								.page-header__video-bg
-									img(src="img/pages/service/page-header-video.jpg" alt="alt")
+									video(poster='img/pages/service/page-header-video.jpg' autoplay muted)
+										source(src="video/service-header-preview.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
 								a.fill.page-header__video-btn.js-video-fancybox(href="https://youtu.be/fG1dhmZcNLw?si=k6uBwOSwPYvibsov" data-fancybox="video")
 									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
 									<path d="M15.7875 8.7339L2.28 0.470781C2.05227 0.33133 1.79144 0.255201 1.52445 0.250257C1.25746 0.245313 0.993989 0.311732 0.76125 0.442655C0.530728 0.571545 0.338696 0.759511 0.204904 0.987222C0.0711107 1.21493 0.000385179 1.47417 0 1.73828V18.2627C0.00173697 18.6588 0.160719 19.0381 0.441997 19.3171C0.723276 19.5961 1.10383 19.752 1.5 19.7505C1.77652 19.7503 2.04767 19.6741 2.28375 19.5302L15.7875 11.267C16.0046 11.1347 16.184 10.9488 16.3084 10.7272C16.4329 10.5055 16.4983 10.2556 16.4983 10.0014C16.4983 9.7472 16.4329 9.49727 16.3084 9.27563C16.184 9.05398 16.0046 8.86808 15.7875 8.73578V8.7339ZM1.5 18.2448V1.75047L14.9841 10.0005L1.5 18.2448Z" fill="white"/>
@@ -25,7 +26,7 @@ block content
 							h1.page-header__title.general-title Веб-разработка: сайты, магазины, кабинеты 
 							div.page-header__text.b1 Разрабатываем веб-сервисы, которые помогут вашему бизнесу сократить расходы, увеличить прибыль и стать лидером индустрии
 
-			.new-page.new-page1.service-services
+			.new-page.new-page1.service-services.white-block
 				.new-page__header
 					.container
 						.flex-lr
@@ -152,14 +153,14 @@ block content
 			.service-result
 				.service-result__bg
 					video(poster='img/pages/service/video-section-poster.jpg' autoplay muted)
-						source(src="video/team-full.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+						source(src="video/service-video-section.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
 				.container 
 					.flex-lr 
 						.flex-lr__left
 						.flex-lr__right
 							h2.general-title.service-result__title Результат нашей работы — <br>веб-сервис, <span>решающий ваши бизнес-задачи</span>
 
-			.service-advantages
+			.service-advantages.white-block
 				.new-page__header
 					.container
 						.flex-lr
@@ -193,8 +194,7 @@ block content
 									h3.advantages-card__title.h2 Полная передача прав
 									.advantages-card__text.b1 Передаем всю техническую и продуктовую документацию: дизайн-макеты, исходный код, инструкции, регламенты
 
-
-			.service-principles
+			.service-principles.white-block
 				.new-page__header
 					.container
 						.flex-lr
@@ -202,26 +202,27 @@ block content
 							.flex-lr__right
 								h2.general-title.service-principles__title <span>Принципы</span> команды Tiqum
 
-				.service-advantages__principles
+				.service-principles__content
 					.container
 						.flex-lr
 							.flex-lr__left
 							.flex-lr__right
 								.service-principles__card.principles-card
 									.principles-card__left
-										h3.advantages-card__title.h2 Прозрачный процесс работы
-										.advantages-card__text.b1 Держим вас в курсе дел и предоставляем доступы к статусам задач, технической и продуктовой документации
+										h3.principles-card__title.h2 Прозрачный процесс работы
+										.principles-card__text.b1 Держим вас в курсе дел и предоставляем доступы к статусам задач, технической и&nbsp;продуктовой документации
 									.principles-card__right
-										a.link-hv(href="#") Про процессы  →
+										a.link-hv.service-page__link(href="#") Про процессы  →
 								.service-principles__card.principles-card
 									.principles-card__left
-										h3.advantages-card__title.h2 Работаем в интересах собственника
-										.advantages-card__text.b1 Используем аналитику и продуктовый подход, а проектный менеджер следит за ресурсами и сроками
+										h3.principles-card__title.h2 Работаем в интересах собственника
+										.principles-card__text.b1 Используем аналитику и продуктовый подход, а&nbsp;проектный менеджер следит за ресурсами и&nbsp;сроками
 									.principles-card__right
-										a.link-hv(href="#") Про финансы →
+										a.link-hv.service-page__link(href="#") Про финансы →
 
 
-			include ../../blocks/modules/cases-porfolio/cases-porfolio
+			include ../../blocks/modules/reviews/reviews
+			include ../../blocks/modules/service-porfolio/service-porfolio
 		include ../../blocks/modules/modalFromFooter/modalFromFooter
 		include ../../blocks/modules/footer/footer
 	a.calc__link.calc__link--circle(href="#") Оставить заявку

@@ -1,4 +1,5 @@
 .service-page {
+    font-family: "Suisse Intl";
 
     .page-header {
         border: none;
@@ -38,6 +39,7 @@
             padding: 11px 18px;
             z-index: 1;
             background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s linear;
             backdrop-filter: blur(10px);
             border-radius: 50px;
             min-height: 40px;
@@ -46,6 +48,9 @@
             svg {
                 width: 18px;
                 height: 18px;
+            }
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
             }
         }
         &__video-bg {
@@ -61,6 +66,20 @@
             }
         }
 	}
+
+    &__link {
+        color: #0047FF;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        border-bottom: 0.0625em solid #0047FF;
+        border-color: transparent;
+        transition: border-color 0.3s linear;
+        &:hover {
+            border-color: #0047FF;
+        }
+    }
 
     .new-page__header {
         padding-top: 30px;
@@ -181,7 +200,6 @@
         gap: 30px;
         border-top: 1px solid rgba(42, 42, 42, 0.2);
         border-left: 1px solid rgba(42, 42, 42, 0.2);
-        font-family: "Suisse Intl";
         color: #2A2A2A;
         &__icon {
             width: 130px;
@@ -204,12 +222,35 @@
         &__title {
             max-width: 760px;
         }
-        &__content {
-            .flex-lr {
-                border: 1px solid rgba(42, 42, 42, 0.2);
-            }
+        &__card:first-child {
+            border-top-width: 0;
+        }
+       &__content .flex-lr {
+            border-top: 1px solid rgba(42, 42, 42, 0.2);
         }
     }
 
-
+    .principles-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        min-height: 362px;
+        padding: 30px;
+        gap: 30px;
+        border-top: 1px solid rgba(42, 42, 42, 0.2);
+        border-left: 1px solid rgba(42, 42, 42, 0.2);
+        color: #2A2A2A;
+        &__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+            flex-basis: 564px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        &__text {
+            opacity: 0.4;
+        }
+    }
 }

@@ -1,0 +1,100 @@
+.reviews {
+    padding: 30px 0 100px;
+    background-color: #F5F5F5;
+    overflow: hidden;
+    &__header {
+        padding-bottom: 220px;
+        .flex-lr__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &__title {
+        max-width: 760px;
+    }
+    &__controls {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 20px;
+        margin-top: 28px;
+    }
+    &__control {
+        width: 36px;
+        height: 36px;
+        color: #2A2A2A;
+        cursor: pointer;
+        transition: color 0.3s linear;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            color: #0047FF;
+        }
+        &.swiper-button-disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }  
+}
+
+.reviews-slide {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__images {
+        position: relative;
+        flex-basis: 580px;
+        height: 320px;
+        flex-shrink: 0;
+    }
+    &__photo, &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 320px;
+        height: 320px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    &__logo {
+        right: auto;
+        left: 0;
+        border: 1px solid #CCCCCC;
+        img {
+            max-width: 50%;
+            max-height: 50%;
+            object-fit: contain;
+        }
+    }
+    &__photo {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__icon {
+        flex-basis: 80px;
+        flex-shrink: 0;
+        margin-left: 55px;
+        margin-right: 77px;
+    }
+    &__content {
+        flex-basis: auto;
+        max-width: 909px;
+    }
+
+    &__info {
+        margin-top: 60px;
+    }
+    &__position {
+        margin-top: 10px;
+    }
+}

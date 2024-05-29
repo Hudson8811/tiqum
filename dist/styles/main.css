@@ -6794,6 +6794,102 @@ summary {
   }
 }
 
+.reviews {
+  padding: 30px 0 100px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+.reviews__header {
+  padding-bottom: 220px;
+}
+.reviews__header .flex-lr__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.reviews__title {
+  max-width: 760px;
+}
+.reviews__controls {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 20px;
+  margin-top: 28px;
+}
+.reviews__control {
+  width: 36px;
+  height: 36px;
+  color: #2A2A2A;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.reviews__control svg {
+  width: 100%;
+  height: 100%;
+}
+.reviews__control:hover {
+  color: #0047FF;
+}
+.reviews__control.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.reviews-slide__container {
+  display: flex;
+  align-items: flex-start;
+}
+.reviews-slide__images {
+  position: relative;
+  flex-basis: 580px;
+  height: 320px;
+  flex-shrink: 0;
+}
+.reviews-slide__photo, .reviews-slide__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.reviews-slide__logo {
+  right: auto;
+  left: 0;
+  border: 1px solid #CCCCCC;
+}
+.reviews-slide__logo img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+}
+.reviews-slide__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews-slide__icon {
+  flex-basis: 80px;
+  flex-shrink: 0;
+  margin-left: 55px;
+  margin-right: 77px;
+}
+.reviews-slide__content {
+  flex-basis: auto;
+  max-width: 909px;
+}
+.reviews-slide__info {
+  margin-top: 60px;
+}
+.reviews-slide__position {
+  margin-top: 10px;
+}
+
 .type-kit {
   font-family: "Suisse Intl";
   max-width: 1772px;
@@ -12041,6 +12137,9 @@ summary {
   opacity: 1;
 }
 
+.service-page {
+  font-family: "Suisse Intl";
+}
 .service-page .page-header {
   border: none;
 }
@@ -12080,6 +12179,7 @@ summary {
   padding: 11px 18px;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s linear;
   backdrop-filter: blur(10px);
   border-radius: 50px;
   min-height: 40px;
@@ -12089,6 +12189,9 @@ summary {
 .service-page .page-header__video-btn svg {
   width: 18px;
   height: 18px;
+}
+.service-page .page-header__video-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .service-page .page-header__video-bg {
   position: absolute;
@@ -12101,6 +12204,19 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.service-page__link {
+  color: #0047FF;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  border-bottom: 0.0625em solid #0047FF;
+  border-color: transparent;
+  transition: border-color 0.3s linear;
+}
+.service-page__link:hover {
+  border-color: #0047FF;
 }
 .service-page .new-page__header {
   padding-top: 30px;
@@ -12202,7 +12318,6 @@ summary {
   gap: 30px;
   border-top: 1px solid rgba(42, 42, 42, 0.2);
   border-left: 1px solid rgba(42, 42, 42, 0.2);
-  font-family: "Suisse Intl";
   color: #2A2A2A;
 }
 .service-page .advantages-card__icon {
@@ -12225,7 +12340,33 @@ summary {
 .service-page .service-principles__title {
   max-width: 760px;
 }
+.service-page .service-principles__card:first-child {
+  border-top-width: 0;
+}
 .service-page .service-principles__content .flex-lr {
-  border: 1px solid rgba(42, 42, 42, 0.2);
+  border-top: 1px solid rgba(42, 42, 42, 0.2);
+}
+.service-page .principles-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 362px;
+  padding: 30px;
+  gap: 30px;
+  border-top: 1px solid rgba(42, 42, 42, 0.2);
+  border-left: 1px solid rgba(42, 42, 42, 0.2);
+  color: #2A2A2A;
+}
+.service-page .principles-card__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  flex-basis: 564px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.service-page .principles-card__text {
+  opacity: 0.4;
 }
 /*# sourceMappingURL=maps/main.css.map */
