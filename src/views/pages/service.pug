@@ -13,24 +13,25 @@ block content
 					.flex-lr 
 						.page-header__left.flex-lr__left
 							a.link-hv.js-to-form(href="javascript:;") Бесплатная консультация  →
+							.page-header__video
+								.page-header__video-bg
+									img(src="img/pages/service/page-header-video.jpg" alt="alt")
+								a.fill.page-header__video-btn.js-video-fancybox(href="https://youtu.be/fG1dhmZcNLw?si=k6uBwOSwPYvibsov" data-fancybox="video")
+									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+									<path d="M15.7875 8.7339L2.28 0.470781C2.05227 0.33133 1.79144 0.255201 1.52445 0.250257C1.25746 0.245313 0.993989 0.311732 0.76125 0.442655C0.530728 0.571545 0.338696 0.759511 0.204904 0.987222C0.0711107 1.21493 0.000385179 1.47417 0 1.73828V18.2627C0.00173697 18.6588 0.160719 19.0381 0.441997 19.3171C0.723276 19.5961 1.10383 19.752 1.5 19.7505C1.77652 19.7503 2.04767 19.6741 2.28375 19.5302L15.7875 11.267C16.0046 11.1347 16.184 10.9488 16.3084 10.7272C16.4329 10.5055 16.4983 10.2556 16.4983 10.0014C16.4983 9.7472 16.4329 9.49727 16.3084 9.27563C16.184 9.05398 16.0046 8.86808 15.7875 8.73578V8.7339ZM1.5 18.2448V1.75047L14.9841 10.0005L1.5 18.2448Z" fill="white"/>
+									</svg>
+									span Про услугу
 						.flex-lr__right
 							h1.page-header__title.general-title Веб-разработка: сайты, магазины, кабинеты 
 							div.page-header__text.b1 Разрабатываем веб-сервисы, которые помогут вашему бизнесу сократить расходы, увеличить прибыль и стать лидером индустрии
-			.new-page.new-page1
-				.new-page__image(data-depth='0.2')
-					img(src="img/pages/new-page/img1.jpg" alt="alt")
+
+			.new-page.new-page1.service-services
 				.new-page__header
 					.container
 						.flex-lr
 							.flex-lr__left
 							.flex-lr__right
-								h1.general-title Услуги
-				.new-page1__serveces-title
-					.container
-						.flex-lr
-							.flex-lr__left
-							.flex-lr__right
-
+								h2.general-title.service-services__title Делаем цифровые продукты <span>любой сложности<span>
 
 				.new-page1__services
 					.container
@@ -43,18 +44,18 @@ block content
 												ul
 													li.item-services-new-page1__number 01
 											.flex-lr__right
-												h4.services-page-item--title Веб-сервисы и мобильные приложения
+												h4.services-page-item--title Корпоративные сайты
 										.accordion__intro__img
 											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g opacity="1">
 											<g clip-path="url(#clip0_3892_44461)">
-											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
 											</g>
 											</g>
 											<defs>
 											<clipPath id="clip0_3892_44461">
-											<rect width="27" height="27" rx="13.5" fill="white"/>
+											<rect width="27" height="27" rx="13.5" fill="currentColor"/>
 											</clipPath>
 											</defs>
 											</svg>
@@ -81,18 +82,18 @@ block content
 												ul
 													li.item-services-new-page1__number 02
 											.flex-lr__right
-												h4.services-page-item--title Корпоративные сайты
+												h4.services-page-item--title Интернет-магазины и маркетплейсы
 										.accordion__intro__img
 											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g opacity="1">
 											<g clip-path="url(#clip0_3892_44461)">
-											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
 											</g>
 											</g>
 											<defs>
 											<clipPath id="clip0_3892_44461">
-											<rect width="27" height="27" rx="13.5" fill="white"/>
+											<rect width="27" height="27" rx="13.5" fill="currentColor"/>
 											</clipPath>
 											</defs>
 											</svg>
@@ -119,18 +120,18 @@ block content
 												ul
 													li.item-services-new-page1__number 03
 											.flex-lr__right
-												h4.services-page-item--title Проектирование сервисов
+												h4.services-page-item--title Личные кабинеты и интранеты
 										.accordion__intro__img
 											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g opacity="1">
 											<g clip-path="url(#clip0_3892_44461)">
-											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
+											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+											<path d="M24.5 14L14 3.5L3.5 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
 											</g>
 											</g>
 											<defs>
 											<clipPath id="clip0_3892_44461">
-											<rect width="27" height="27" rx="13.5" fill="white"/>
+											<rect width="27" height="27" rx="13.5" fill="currentColor"/>
 											</clipPath>
 											</defs>
 											</svg>
@@ -148,89 +149,86 @@ block content
 											.flex-lr__right
 												a.accordion__content--link-detail(href="") Подробнее об услуге
 
+			.service-result
+				.service-result__bg
+					video(poster='img/pages/service/video-section-poster.jpg' autoplay muted)
+						source(src="video/team-full.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+				.container 
+					.flex-lr 
+						.flex-lr__left
+						.flex-lr__right
+							h2.general-title.service-result__title Результат нашей работы — <br>веб-сервис, <span>решающий ваши бизнес-задачи</span>
+
+			.service-advantages
+				.new-page__header
+					.container
 						.flex-lr
-							.services-page-item
-								.accordion
-									.accordion__intro
-										.flex-lr
-											.flex-lr__left
-												ul
-													li.item-services-new-page1__number 04
-											.flex-lr__right
-												h4.services-page-item--title Продуктовая команда
-										.accordion__intro__img
-											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="1">
-											<g clip-path="url(#clip0_3892_44461)">
-											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-											</g>
-											</g>
-											<defs>
-											<clipPath id="clip0_3892_44461">
-											<rect width="27" height="27" rx="13.5" fill="white"/>
-											</clipPath>
-											</defs>
-											</svg>
-									.accordion__content
-										.flex-lr
-											.flex-lr__left
-												.accordion__content--desc Специализируемся на функционально сложных и высоконагруженных проектах
-												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
-											.flex-lr__right
-												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
-												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
-												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
-										.flex-lr
-											.flex-lr__left
-											.flex-lr__right
-												a.accordion__content--link-detail(href="") Подробнее об услуге
+							.flex-lr__left
+							.flex-lr__right
+								h2.general-title.service-advantages__title <span>Преимущества</span> работы с&nbsp;нами
 
+				.service-advantages__content
+					.container
 						.flex-lr
-							.services-page-item
-								.accordion
-									.accordion__intro
-										.flex-lr
-											.flex-lr__left
-												ul
-													li.item-services-new-page1__number 05
-											.flex-lr__right
-												h4.services-page-item--title Цифровая трансформация. Консалтинг
-										.accordion__intro__img
-											<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="1">
-											<g clip-path="url(#clip0_3892_44461)">
-											<path d="M13.9688 23.9043L13.9688 5.9043" stroke="#fff" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
-											<path d="M24.5 14L14 3.5L3.5 14" stroke="#fff" stroke-width="2.5" stroke-linecap="square"/>
-											</g>
-											</g>
-											<defs>
-											<clipPath id="clip0_3892_44461">
-											<rect width="27" height="27" rx="13.5" fill="white"/>
-											</clipPath>
-											</defs>
-											</svg>
-									.accordion__content
-										.flex-lr
-											.flex-lr__left
-												.accordion__content--desc Специализируемся на функционально сложных и высоконагруженных проектах
-												a.accordion__content--link(href="")  Получить коммерческое предложение за 1 минуту →
-											.flex-lr__right
-												p Мы превращаем бизнес-идеи в ценные и прибыльные продукты (веб-сервисы, маркетплейсы, B2B и корпоративные порталы, и т.д.). Независимо от того, предъявляете ли вы строгие технические требования или у вас нет четкого видения продукта, наша компания организует весь путь разработки и внедрения вашего сервиса.
-												p С нашей командой квалифицированных специалистов вы сможете запустить свой проект вовремя, в рамках бюджета. Мы поможем разработать сервис под ключ, или усилить вашу действующую команду разработки. При этом вы сможете сосредоточиться на своих бизнес-целях и стратегии.
-												p Для того, чтобы сервис не прекращал развиваться, команда должна сохранять высокую скорость разработки. Мы реализуем долгосрочные проекты, длительностью более 12 месяцев, выделяя отдельную рабочую группу для постоянного поддержания контекста, что обеспечивает скорость и полный контроль над процессом.
-										.flex-lr
-											.flex-lr__left
-											.flex-lr__right
-												a.accordion__content--link-detail(href="") Подробнее об услуге
+							.flex-lr__left
+							.flex-lr__right
+								.service-advantages__card.advantages-card
+									.advantages-card__icon
+										img(src="img/pages/service/advantages-card-icon-1.svg" alt="alt")
+									h3.advantages-card__title.h2 Старт работ уже завтра
+									.advantages-card__text.b1 Большая команда специалистов в штате позволяет начать работу над проектом через две недели после всех согласований
+								.service-advantages__card.advantages-card
+									.advantages-card__icon
+										img(src="img/pages/service/advantages-card-icon-2.svg" alt="alt")
+									h3.advantages-card__title.h2 Дизайн, который «продает»
+									.advantages-card__text.b1 Высокое качество наших проектов регулярно подтверждается независимыми аудитами качества и наградами в отраслевых конкурсах
+								.service-advantages__card.advantages-card
+									.advantages-card__icon
+										img(src="img/pages/service/advantages-card-icon-3.svg" alt="alt")
+									h3.advantages-card__title.h2 Гарантия сроков и фиксация цены
+									.advantages-card__text.b1 Можем гарантировать ожидаемый результат, так как обладаем большим опытом и используем продуктовый подход
+								.service-advantages__card.advantages-card
+									.advantages-card__icon
+										img(src="img/pages/service/advantages-card-icon-4.svg" alt="alt")
+									h3.advantages-card__title.h2 Полная передача прав
+									.advantages-card__text.b1 Передаем всю техническую и продуктовую документацию: дизайн-макеты, исходный код, инструкции, регламенты
 
 
-		include ../../blocks/modules/cases-porfolio/cases-porfolio
+			.service-principles
+				.new-page__header
+					.container
+						.flex-lr
+							.flex-lr__left
+							.flex-lr__right
+								h2.general-title.service-principles__title <span>Принципы</span> команды Tiqum
+
+				.service-advantages__principles
+					.container
+						.flex-lr
+							.flex-lr__left
+							.flex-lr__right
+								.service-principles__card.principles-card
+									.principles-card__left
+										h3.advantages-card__title.h2 Прозрачный процесс работы
+										.advantages-card__text.b1 Держим вас в курсе дел и предоставляем доступы к статусам задач, технической и продуктовой документации
+									.principles-card__right
+										a.link-hv(href="#") Про процессы  →
+								.service-principles__card.principles-card
+									.principles-card__left
+										h3.advantages-card__title.h2 Работаем в интересах собственника
+										.advantages-card__text.b1 Используем аналитику и продуктовый подход, а проектный менеджер следит за ресурсами и сроками
+									.principles-card__right
+										a.link-hv(href="#") Про финансы →
+
+
+			include ../../blocks/modules/cases-porfolio/cases-porfolio
+		include ../../blocks/modules/modalFromFooter/modalFromFooter
 		include ../../blocks/modules/footer/footer
 	a.calc__link.calc__link--circle(href="#") Оставить заявку
 
 block scripts
 	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
 	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
 	script(src="js/main.js")

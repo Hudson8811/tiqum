@@ -12044,11 +12044,14 @@ summary {
 .service-page .page-header {
   border: none;
 }
-.service-page .page-header .container {
+.service-page .page-header .container .flex-lr {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1;
 }
 .service-page .page-header__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-top: 30px;
   color: #fff;
 }
@@ -12058,5 +12061,171 @@ summary {
 .service-page .page-header__text {
   max-width: 594px;
   color: #fff;
+}
+.service-page .page-header__video {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.service-page .page-header__video-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  min-height: 40px;
+  font-size: 14px;
+  line-height: 1em;
+}
+.service-page .page-header__video-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.service-page .page-header__video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.service-page .page-header__video-bg img, .service-page .page-header__video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-page .new-page__header {
+  padding-top: 30px;
+  padding-bottom: 220px;
+}
+.service-page .service-services {
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+.service-page .service-services .new-page__header .flex-lr {
+  padding-top: 0;
+}
+.service-page .service-services__title span {
+  color: #0047FF !important;
+}
+.service-page .service-services * {
+  color: #2A2A2A !important;
+}
+.service-page .service-services .services-page-item {
+  min-height: 140px;
+}
+.service-page .service-services .accordion__intro .flex-lr {
+  gap: 60px;
+}
+.service-page .service-services .accordion__intro .flex-lr__left,
+.service-page .service-services .accordion__intro .flex-lr__right {
+  border-top: 1px solid rgba(42, 42, 42, 0.2);
+}
+.service-page .service-services .accordion__intro .flex-lr__left {
+  padding-right: 0;
+}
+.service-page .service-services .accordion__content {
+  margin-top: 28px;
+}
+.service-page .service-services .accordion.accordion__active .accordion__content {
+  margin-top: 60px;
+}
+.service-page .service-services .services-page-item--title {
+  max-width: 830px;
+}
+@media (min-width: 1920px) {
+  .service-page .service-services .services-page-item--title {
+    font-size: 48px;
+  }
+}
+.service-page .service-result {
+  position: relative;
+  padding: 30px 0;
+  aspect-ratio: 1/0.5625;
+}
+.service-page .service-result__title {
+  position: relative;
+  max-width: 1068px;
+  color: #fff;
+}
+.service-page .service-result__title span {
+  color: rgba(255, 255, 255, 0.6);
+}
+.service-page .service-result__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+.service-page .service-result__bg img, .service-page .service-result__bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-page .service-advantages {
+  background-color: #F5F5F5;
+  padding-bottom: 60px;
+}
+.service-page .service-advantages__title {
+  max-width: 1068px;
+}
+.service-page .service-advantages__content .flex-lr {
+  border-top: 1px solid rgba(42, 42, 42, 0.2);
+}
+.service-page .service-advantages__content .flex-lr__right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 0;
+}
+.service-page .service-advantages__card {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.service-page .service-advantages__card:nth-child(1), .service-page .service-advantages__card:nth-child(2) {
+  border-top-width: 0;
+}
+.service-page .advantages-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 30px 20px 0 30px;
+  gap: 30px;
+  border-top: 1px solid rgba(42, 42, 42, 0.2);
+  border-left: 1px solid rgba(42, 42, 42, 0.2);
+  font-family: "Suisse Intl";
+  color: #2A2A2A;
+}
+.service-page .advantages-card__icon {
+  width: 130px;
+  height: 50px;
+}
+.service-page .advantages-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.service-page .advantages-card__title {
+  margin-top: auto;
+}
+.service-page .advantages-card__text {
+  opacity: 0.4;
+}
+.service-page .service-principles {
+  padding-bottom: 60px;
+}
+.service-page .service-principles__title {
+  max-width: 760px;
+}
+.service-page .service-principles__content .flex-lr {
+  border: 1px solid rgba(42, 42, 42, 0.2);
 }
 /*# sourceMappingURL=maps/main.css.map */
