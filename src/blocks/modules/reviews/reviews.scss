@@ -5,10 +5,22 @@
     @media (max-width: 1919px) {
         padding: 20px 0 79px;
     }
+    @media (max-width: 1439px) {
+        padding: 15px 0 79px;
+    }
+    @media (max-width: 1024px) {
+        padding: vw(15) 0 vw(79);
+    }
     &__header {
         padding-bottom: 220px;
         @media (max-width: 1919px) {
             padding-bottom: 165px;
+        }
+        @media (max-width: 1439px) {
+            padding-bottom: 110px;
+        }
+        @media (max-width: 1024px) {
+            padding-bottom: vw(110);
         }
         .flex-lr__right {
             display: flex;
@@ -21,6 +33,9 @@
         @media (max-width: 1919px) {
             max-width: 560px;
         }
+        @media (max-width: 1024px) {
+            max-width: vw(560);
+        }
     }
     &__controls {
         display: flex;
@@ -32,6 +47,16 @@
             gap: 16px;
             margin-top: 13px;
         }
+        @media (max-width: 1439px) {
+            gap: 12px;
+            margin-top: 10px;
+            margin-right: -5px;
+        }
+        @media (max-width: 1024px) {
+            gap: vw(12);
+            margin-top: vw(10);
+            margin-right: vw(-5);
+        }
     }
     &__control {
         width: 36px;
@@ -42,6 +67,14 @@
         @media (max-width: 1919px) {
             width: 32px;
             height: 32px;
+        }
+        @media (max-width: 1439px) {
+            width: 28px;
+            height: 28px;
+        }
+        @media (max-width: 1024px) {
+            width: vw(28);
+            height: vw(28);
         }
         svg {
             width: 100%;
@@ -67,6 +100,12 @@
         @media (max-width: 1919px) {
             padding: 0 24px;
         }
+        @media (max-width: 1439px) {
+            padding: 0 30px;
+        }
+        @media (max-width: 1024px) {
+            padding: 0 vw(30);
+        }
     }
     &__images {
         position: relative;
@@ -76,6 +115,14 @@
         @media (max-width: 1919px) {
             flex-basis: 439px;
             height: 242px;
+        }
+        @media (max-width: 1439px) {
+            flex-basis: 301px;
+            height: 173px;
+        }
+        @media (max-width: 1024px) {
+            flex-basis: vw(301);
+            height: vw(173);
         }
     }
     &__photo, &__logo {
@@ -92,6 +139,14 @@
         @media (max-width: 1919px) {
             width: 242px;
             height: 242px;
+        }
+        @media (max-width: 1439px) {
+            width: 173px;
+            height: 173px;
+        }
+        @media (max-width: 1439px) {
+            width: vw(173);
+            height: vw(173);
         }
     }
     &__logo {
@@ -123,6 +178,18 @@
             margin-left: 38px;
             margin-right: 59px;
         }
+        @media (max-width: 1439px) {
+            flex-basis: 40px;
+            height: 27px;
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        @media (max-width: 1024px) {
+            flex-basis: vw(40);
+            height: vw(27);
+            margin-left: vw(30);
+            margin-right: vw(20);
+        }
         svg {
             max-width: 100%;
             max-height: 100%;
@@ -135,6 +202,9 @@
         @media (max-width: 1919px) {
             max-width: 677px;
         }
+        @media (max-width: 1024px) {
+            max-width: vw(677);
+        }
     }
 
     &__info {
@@ -142,9 +212,18 @@
         @media (max-width: 1919px) {
             margin-top: 45px;
         }
+        @media (max-width: 1439px) {
+            margin-top: 40px;
+        }
+        @media (max-width: 1024px) {
+            margin-top: vw(40);
+        }
     }
     &__position {
         margin-top: 10px;
         opacity: 0.4;
+        @media (max-width: 1024px) {
+            margin-top: vw(10);
+        }
     }
 }
