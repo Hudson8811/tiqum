@@ -1054,14 +1054,18 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   accordions.forEach(function (accordion) {
     var intro = accordion.querySelector(".accordion__intro");
     var content = accordion.querySelector(".accordion__content");
+    var isAccordion = accordion.closest(".js-no-accordion") ? false : true;
     intro.addEventListener('click', function (event) {
       if (!event.target.closest('.numberPeople')) {
         if (content.style.maxHeight) {
           closeAccordion(accordion);
         } else {
-          accordions.forEach(function (accordion) {
-            return closeAccordion(accordion);
-          });
+          if (isAccordion) {
+            accordions.forEach(function (accordion) {
+              return closeAccordion(accordion);
+            });
+          }
+
           openAccordion(accordion);
         }
       }

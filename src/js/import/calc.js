@@ -599,13 +599,16 @@
     accordions.forEach((accordion) => {
         const intro = accordion.querySelector(".accordion__intro");
         const content = accordion.querySelector(".accordion__content");
+        const isAccordion = accordion.closest(".js-no-accordion") ? false : true
 
         intro.addEventListener('click', function(event) {
             if (!event.target.closest('.numberPeople')) {
                 if (content.style.maxHeight) {
                     closeAccordion(accordion);
                 } else {
-                    accordions.forEach((accordion) => closeAccordion(accordion));
+                    if(isAccordion) {
+                        accordions.forEach((accordion) => closeAccordion(accordion));
+                    }
                     openAccordion(accordion);
                 }
             }
