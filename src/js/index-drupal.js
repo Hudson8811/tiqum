@@ -28,7 +28,6 @@
   Drupal.behaviors.tiqum = {
     attach(context) {
       let count = parseInt($('#views-count-result-source').text()) || 0;
-
       if (count) {
         $('#views-count-result-target').once('views-count-result-target').each(function () {
           $(this).text('(+' + count + ')')
@@ -38,6 +37,12 @@
             $(this).text('+' + count)
         });
       }
+
+      // Авто-нумерация.
+      $('#auto-number > li').once().each(function(index) {
+        let number = (index + 1).toString().padStart(2, '0');
+        $(this).prepend(number);
+      });
 
     },
   };

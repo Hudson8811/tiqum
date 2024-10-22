@@ -166,11 +166,11 @@
                 height: 18px;
                 @media (max-width: 1024px) {
                     width: vw(18);
-                    height: vw(18);                    
+                    height: vw(18);
                 }
                 @media (max-width: 767px) {
                     width: vw320(12);
-                    height: vw320(12);                    
+                    height: vw320(12);
                 }
             }
             &:hover {
@@ -416,7 +416,7 @@
                 transition: border-color 0.3s linear;
                 &:hover {
                     border-color: #0047FF;
-                }  
+                }
             }
             p:not(:last-child) {
                 margin-bottom: 32px;
@@ -486,7 +486,7 @@
         .item-services-new-page1__number {
             color: #BFBFBF !important;
         }
-        
+
         .services-page-item--title {
             max-width: 830px;
             font-size: 48px;
@@ -928,25 +928,25 @@
             padding: 20px 0 23px;
             .next-cases-portfolio__projects {
                 margin-top: 160px;
-            }   
+            }
         }
         @media (max-width: 1439px) {
             padding: 15px 0 16px;
             .next-cases-portfolio__projects {
                 margin-top: 110px;
-            }   
+            }
         }
         @media (max-width: 1024px) {
             padding: vw(15) 0 vw(16);
             .next-cases-portfolio__projects {
                 margin-top: vw(110);
-            }   
+            }
         }
         @media (max-width: 767px) {
             padding: vw320(18) 0 vw320(17);
             .next-cases-portfolio__projects {
                 margin-top: vw320(45);
-            }   
+            }
         }
         .next-cases-portfolio__flex-title {
             @media (max-width: 1439px) {
@@ -954,19 +954,19 @@
                     font-size: 42.5px;
                     margin-right: -10px;
                     line-height: 0.9em;
-                } 
+                }
             }
             @media (max-width: 1024px) {
                 span + span {
                     font-size: vw(34);
                     margin-right: vw(-10);
-                } 
+                }
             }
             @media (max-width: 767px) {
                 span + span {
                     font-size: vw320(24);
                     margin-right: 0;
-                } 
+                }
             }
         }
         .items-projects {
@@ -1055,7 +1055,7 @@
                 max-width: vw320(140);
                 font-size: vw320(12);
                 margin-top: vw320(5);
-                display: block;
+                display: none;
             }
         }
         .items-projects .item-projects__text br {
