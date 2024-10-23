@@ -10727,7 +10727,8 @@ summary {
   }
 }
 .contact-page .wewillfind-footer__title span {
-  color: rgba(42, 42, 42, 0.5);
+  color: #949494;
+  opacity: 1;
 }
 .contact-page .wewillfind-footer__manager {
   font-family: "Suisse Intl";
@@ -10856,7 +10857,7 @@ summary {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.158em;
-  color: rgba(42, 42, 42, 0.6);
+  color: #BFBFBF;
   text-transform: none;
 }
 @media (max-width: 1919px) {
@@ -10875,7 +10876,7 @@ summary {
   }
 }
 .contact-page .form-wewillfind-footer__item--checkbox span a {
-  color: #2A2A2A;
+  color: #7f7f7f;
 }
 .contact-page .form-wewillfind-footer__item--checkbox label {
   flex: 0 0 24px;
