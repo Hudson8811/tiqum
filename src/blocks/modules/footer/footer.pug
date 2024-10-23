@@ -2,14 +2,12 @@ footer.footer
 	.footer__container.container
 		.footer__wewillfind.wewillfind-footer
 			.wewillfind-footer__left
-				.wewillfind-footer__connection
-					a(href="#") 8 800 775 73 63
-					a(href="#") info@tiqum.ru
-				.wewillfind-footer__location
-					| Уфа – Гоголя 53
-					|
-					span Москва – Сити
-			.wewillfind-footer__right#contact-form
+			.wewillfind-footer__right
+				.wewillfind-footer__title.general-title Успешный проект 
+					span начинается здесь
+
+
+			//-.wewillfind-footer__right#contact-form
 				form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
 					.wewillfind-footer__title-wrapper
 						.wewillfind-footer__title.general-title.wewillfind-footer__title--mobile
@@ -41,9 +39,9 @@ footer.footer
 							#ajax-wrapper--2
 								.js-form-item.form-item.js-form-type-webform-document-file.form-item-file.js-form-item-file
 									#edit-file--2.js-webform-document-file.webform-document-file.js-form-managed-file.form-managed-file
-										input#edit-file-upload--2.js-form-file.form-file(data-drupal-selector='edit-file-upload-2', type='file', name='files[file]', size='22', data-once='fileValidate auto-file-upload')
-										input#edit-file-upload-button--2.js-hide.button.js-form-submit.form-submit(data-drupal-selector='edit-file-upload-button', formnovalidate='formnovalidate', type='submit', name='file_upload_button', value='Закачать', data-once='drupal-ajax')
-										input(data-drupal-selector='edit-file-fids', type='hidden', name='file[fids]')
+										input#edit-file-upload--2.js-form-file.form-file(data-drupal-selector='edit-file-upload-2' type='file' name='files[file]' size='22' data-once='fileValidate auto-file-upload')
+										input#edit-file-upload-button--2.js-hide.button.js-form-submit.form-submit(data-drupal-selector='edit-file-upload-button' formnovalidate='formnovalidate' type='submit' name='file_upload_button' value='Закачать' data-once='drupal-ajax')
+										input(data-drupal-selector='edit-file-fids' type='hidden' name='file[fids]')
 									label#edit-file--2--label.option(for='edit-file-upload--2') &Fcy;&acy;&jcy;&lcy;
 					.form-wewillfind-footer__bottom
 						button(type='submit').form-wewillfind-footer__btn.blue-btn
@@ -54,10 +52,17 @@ footer.footer
 					.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span>
 
 
-		.footer__bottom
+		.footer__bottom.footer__bottom--center
 			.footer__left
-				span Tiqum © 2007—2021
-			.footer__right-soc.footer__right-soc-mob
+				.wewillfind-footer__connection
+					a(href="#") 8 800 775 73 63
+					a(href="#") info@tiqum.ru
+				.wewillfind-footer__location
+					| Уфа – Гоголя 53
+					|
+					span Москва – Сити
+
+			//-.footer__right-soc.footer__right-soc-mob
 				a(href="#") Linkedin
 				a(href="#") Facebook
 				a(href="#") VK
@@ -65,13 +70,48 @@ footer.footer
 				a(href="#") Instagram
 				a(href="#") Youtube
 			.footer__right
-				.footer__right-soc.footer__right-soc-desk
+				.footer__right-links
+					.footer__right-links__title Услуги
+					.footer__right-links__list
+						a(href="#") Веб-разработка 
+						a(href="#") Дизайн интерфейсов 
+						a(href="#") Аудит и консалтинг
+						a(href="#") Разработка мобильных приложений
+						a(href="#") Запуск IT стартапа
+
+				.footer__right-links
+					.footer__right-links__title Tiqum
+					.footer__right-links__list
+						a(href="#") Компания
+						a(href="#") Услуги
+						a(href="#") Проекты
+						a(href="#") Блог
+						a(href="#") Мы в СМИ
+						a(href="#") Карьера
+
+				.footer__right-links
+					.footer__right-links__title Cоц. сети
+					.footer__right-links__list
+						a(href="#") VK video
+						a(href="#") YouTube
+						a(href="#") Telegram
+
+				a(href="#").footer__right-privacy._mob Политика конфиденциальности
+
+				//-.footer__right-soc.footer__right-soc-desk
 					a(href="#") Linkedin
 					a(href="#") Facebook
 					a(href="#") VK
 					a(href="#") Telegram
 					a(href="#") Instagram
 					a(href="#") Youtube
+
+		.footer__bottom
+			.footer__left
+				span._desk Tiqum © 2007—2024
+			.footer__right
+				span._mob Tiqum © 2007—2024
+				a(href="#").footer__right-privacy._desk Политика конфиденциальности
 				.footer__right-lang
 					a(href="#") 中文版网站
 					a(href="#") English version
