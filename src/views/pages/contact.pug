@@ -5,7 +5,7 @@ block variables
 
 block content 
 	.wrapper
-		include ../../blocks/modules/header/header 
+		include ../../blocks/modules/header/header
 		.page.contact-page 
 			.container 
 				.page-header
@@ -24,7 +24,7 @@ block content
 									img(src="img/contact/manager_photo.jpg" alt="")
 								.wewillfind-footer__manager-text Ответит на все ваши вопросы и поможет определиться с выбором наш коммерческий директор <span>Максим Борисов</span>
 						.flex-lr__right#contact-form
-							form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer
+							form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer.footer--light
 								.form-wewillfind-footer__item
 									input(type="text" placeholder="Имя и фамилия" name="name" required)
 									.form-wewillfind-footer__error Пожалуйста, введите имя
@@ -42,14 +42,14 @@ block content
 								.form-wewillfind-footer__item
 									input(type="email" placeholder="Рабочий email" name="email" required)
 									.form-wewillfind-footer__error Пожалуйста, введите корректный email
-								.form-wewillfind-footer__item
+								.form-wewillfind-footer__item.w100
 									textarea(name="msg" placeholder="Короткое описание проекта" required)
 									.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
-								.form-wewillfind-footer__item
+								.form-wewillfind-footer__item.item__file
 									.file-wrapper
 										#ajax-wrapper--2
 											.js-form-item.form-item.js-form-type-webform-document-file.form-item-file.js-form-item-file
-												#edit-file--2.js-webform-document-file.webform-document-file.js-form-managed-file.form-managed-file
+												#edit-file--2.js-webform-document-file.webform-document-file.js-form-managed-file.form-managed-file(style="display:none")
 													input#edit-file-upload--2.js-form-file.form-file(data-drupal-selector='edit-file-upload-2' type='file' name='files[file]' size='22' data-once='fileValidate auto-file-upload')
 													input#edit-file-upload-button--2.js-hide.button.js-form-submit.form-submit(data-drupal-selector='edit-file-upload-button' formnovalidate='formnovalidate' type='submit' name='file_upload_button' value='Закачать' data-once='drupal-ajax')
 													input(data-drupal-selector='edit-file-fids' type='hidden' name='file[fids]')
@@ -63,7 +63,66 @@ block content
 											span
 										span Я согласен на обработку моих персональных данных согласно <a href="/privacy">политике конфиденциальности</a>
 
-								.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span> 
+								.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span>
+
+		.page.contact-page
+			.container
+				.page-header
+					.flex-lr.flex-lr--top
+						.flex-lr__left
+						.flex-lr__right
+							.wewillfind-footer__title-wrapper
+								.wewillfind-footer__title.general-title.wewillfind-footer__title--mobile
+									| Найдем решение
+									|
+									span вашей задачи
+					.flex-lr.flex-lr--bottom
+						.flex-lr__left
+							.wewillfind-footer__manager
+								.wewillfind-footer__manager-photo
+									img(src="img/contact/manager_photo.jpg" alt="")
+								.wewillfind-footer__manager-text Ответит на все ваши вопросы и поможет определиться с выбором наш коммерческий директор <span>Максим Борисов</span>
+						.flex-lr__right#contact-form
+							form(action="#" method="post").wewillfind-footer__form.form-wewillfind-footer.footer--light
+								.form-wewillfind-footer__item
+									input(type="text" placeholder="Имя и фамилия" name="name" required)
+									.form-wewillfind-footer__error Пожалуйста, введите имя
+								.form-wewillfind-footer__item
+									select.buget-select(name="budget" required)
+										option(value="")
+										option(value="До 2 млн ₽") До 2 млн ₽
+										option(value="2 — 10 млн ₽") 2 — 10 млн ₽
+										option(value="10 — 50 млн ₽") 10 — 50 млн ₽
+										option(value="Более 50 млн ₽") Более 50 млн ₽
+									.form-wewillfind-footer__error Пожалуйста, укажите бюджет проекта
+								.form-wewillfind-footer__item
+									input(type="tel" placeholder="Телефон, телеграм" name="phone" required)
+									.form-wewillfind-footer__error Пожалуйста, введите корректный телефон
+								.form-wewillfind-footer__item
+									input(type="email" placeholder="Рабочий email" name="email" required)
+									.form-wewillfind-footer__error Пожалуйста, введите корректный email
+								.form-wewillfind-footer__item.w100
+									textarea(name="msg" placeholder="Короткое описание проекта" required)
+									.form-wewillfind-footer__error Пожалуйста, опишите ваш проект
+								.form-wewillfind-footer__item.item__file
+									.file-wrapper
+										#ajax-wrapper--2
+											.js-form-item.form-item.js-form-type-webform-document-file.form-item-file.js-form-item-file
+												#edit-file--2.js-webform-document-file.webform-document-file.js-form-managed-file.form-managed-file
+													<input data-drupal-selector="edit-file-fids" type="hidden" name="file[fids]" value="1006"><span class="file file--mime-image-jpeg file--image" data-drupal-selector="edit-file-file-1006-filename">Файл 1111111111111ваыававыавыавыавыаы1.pdf</span>
+													<input data-drupal-selector="edit-file-file-1006-fid-token" type="hidden" name="file[file_1006][fid_token]" value="zv-9QRDDcXfhK0qGhl1XIWBrG187hc8reS8jhDxPtas">
+													<input class="button js-form-submit form-submit" id="edit-file-remove-button--oS3-IhnrACk" data-drupal-selector="edit-file-remove-button" formnovalidate="formnovalidate" type="submit" name="file_remove_button" value="Удалить" data-once="drupal-ajax">
+												label#edit-file--2--label.option(for='edit-file-upload--2' style="display:none") &Fcy;&acy;&jcy;&lcy;
+								.form-wewillfind-footer__bottom
+									button(type='submit').form-wewillfind-footer__btn.blue-btn
+										span Отправить
+									.form-wewillfind-footer__item.form-wewillfind-footer__item--checkbox
+										label
+											input(type="checkbox" name="privacy" required)
+											span
+										span Я согласен на обработку моих персональных данных согласно <a href="/privacy">политике конфиденциальности</a>
+
+								.form-wewillfind-footer__success.h2 Наш лучший менеджер <br><span>свяжется с вами в</span> <br><span>ближайшее время</span>
 		include ../../blocks/modules/footer/footer
 
 block scripts

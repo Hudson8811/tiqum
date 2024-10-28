@@ -126,7 +126,7 @@
         }
 
         &__item .file-wrapper {
-            border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+            background: #F5F5F5;
         }
 
         &__item input::placeholder,
@@ -233,19 +233,15 @@
             }
         }
 
-        &__btn {
-            @media (max-width: 1919px) {
-                min-height: 66px;
-            }
-
-            @media (max-width: 767px) {
-                min-height: 48px;
-            }
-        }
 
         &__success {
             color: #2A2A2A;
         }
 
+    }
+    .flex-lr{
+        @media (max-width: 767px) {
+            display: block;
+        }
     }
 }
