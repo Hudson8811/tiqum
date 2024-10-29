@@ -735,3 +735,11 @@ video {
 .grecaptcha-badge {
   display: none !important;
 }
+
+.fancybox__carousel .fancybox__slide.has-inline .fancybox__content{
+  iframe{
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height:auto;
+  }
+}

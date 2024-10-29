@@ -1432,6 +1432,12 @@ video {
   display: none !important;
 }
 
+.fancybox__carousel .fancybox__slide.has-inline .fancybox__content iframe {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
 .mt30, .right-content-blog .right-content-blog__img + .right-content-blog__img, .page-header-big .page-header__date, .text-style p:not(:first-child), .right-content-blog p:not(:first-child), .portfolio .project-portfolio__item-right p:not(:first-child), .text-style ul:not(:first-child), .right-content-blog ul:not(:first-child), .portfolio .project-portfolio__item-right ul:not(:first-child), .text-style ol:not(:first-child), .right-content-blog ol:not(:first-child), .portfolio .project-portfolio__item-right ol:not(:first-child), .paragraph--type--photos + .paragraph--type--videos, .portfolio .project-portfolio__item-img + .paragraph--type--videos, .paragraph--type--photos + .paragraph--type--photos, .portfolio .project-portfolio__item-img + .paragraph--type--photos, .portfolio .project-portfolio__item-img + .project-portfolio__item-img, .paragraph--type--photos + .project-portfolio__item-img, .paragraph--type--videos + .paragraph--type--videos, .paragraph--type--videos + .paragraph--type--photos, .paragraph--type--videos + .project-portfolio__item-img {
   margin-top: 30px;
 }
