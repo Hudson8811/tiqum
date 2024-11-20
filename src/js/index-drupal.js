@@ -38,6 +38,13 @@
         });
       }
 
+      // Яндекс Метрика. Цель MainFormLead.
+      let $ymTarget = $('.wewillfind-footer__title.general-title.success:not(.ym)');
+      if (typeof ym !== "undefined" && $ymTarget.length) {
+        $ymTarget.addClass('ym');
+        ym(7762549,'reachGoal','MainFormLead');
+      }
+
       // Авто-нумерация.
       $('#auto-number > li').once().each(function(index) {
         let number = (index + 1).toString().padStart(2, '0');

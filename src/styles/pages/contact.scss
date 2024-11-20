@@ -1,3 +1,8 @@
+main.contact-page .page-header {
+  min-height: auto;
+  padding-bottom: inherit;
+}
+
 .contact-page {
     .page-header {
         padding-bottom: 170px;
@@ -160,6 +165,14 @@
             gap: 16px;
             width: 100%;
             margin-top: 20px;
+
+            .form-item-terms {
+              width: 20px;
+
+              label, .description {
+                display: none;
+              }
+            }
         }
 
         &__error {
@@ -243,5 +256,9 @@
         @media (max-width: 767px) {
             display: block;
         }
+    }
+
+    .content-page .flex-lr {
+      padding-bottom: 170px;
     }
 }
