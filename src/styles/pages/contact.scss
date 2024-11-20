@@ -1,6 +1,6 @@
 main.contact-page .page-header {
-  min-height: auto;
-  padding-bottom: inherit;
+    min-height: auto;
+    padding-bottom: inherit;
 }
 
 .contact-page {
@@ -167,11 +167,12 @@ main.contact-page .page-header {
             margin-top: 20px;
 
             .form-item-terms {
-              width: 20px;
+                width: 20px;
 
-              label, .description {
-                display: none;
-              }
+                label,
+                .description {
+                    display: none;
+                }
             }
         }
 
@@ -213,52 +214,80 @@ main.contact-page .page-header {
             }
         }
 
-        &__item--checkbox label {
-            flex: 0 0 24px;
-            position: relative;
-            cursor: pointer;
-
-            span {
+        &__item--checkbox {
+            input {
+                position: relative;
+                flex: 0 0 24px;
                 width: 24px;
                 height: 24px;
-                border: 1px solid rgba(42, 42, 42, 0.2);
-                border-color: rgba(42, 42, 42, 0.2);
+                position: relative;
+                cursor: pointer;
                 background-color: transparent;
-                transition: background-color 0.3s, border-color 0.3s;
+                border-radius: 0 !important;
+                outline: none;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: white;
+                    border: 1px solid rgba(42, 42, 42, 0.2);
+                    border-color: rgba(42, 42, 42, 0.2);
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    transition: background-color 0.3s, border-color 0.3s;
+                }
+
+
+                &:hover:after {
+                    background-color: #577BD7;
+                }
+
+                &:checked:after {
+                    background-color: #0047FF;
+                }
             }
 
-            span:hover {
-                background-color: #577BD7;
-                border-color: #577BD7;
-            }
-
-            input:checked+span {
-                background-color: #0047FF;
-                border-color: #0047FF;
-            }
-
-            input {
-                position: absolute;
-                left: 0;
-                top: 0;
-                visibility: hidden;
-                opacity: 0;
-            }
         }
 
 
         &__success {
             color: #2A2A2A;
+            pointer-events: all;
+        }
+
+        &__success-btn {
+            margin-top: 300px;
+            padding-top: 33.5px;
+            padding-bottom: 33.5px;
+            min-height: 88px;
+
+            span {
+                margin-top: 0;
+                opacity: 1;
+            }
         }
 
     }
-    .flex-lr{
+
+    .flex-lr {
         @media (max-width: 767px) {
             display: block;
         }
     }
 
     .content-page .flex-lr {
-      padding-bottom: 170px;
+        padding-bottom: 170px;
     }
 }

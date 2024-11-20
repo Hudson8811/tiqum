@@ -3039,7 +3039,7 @@ summary {
 }
 @media (max-width: 767px) {
   .menu-mobile__loc {
-    margin-left: 15vw;
+    margin-left: 0;
     font-size: 4.8vw;
   }
 }
@@ -3727,19 +3727,15 @@ summary {
   }
 }
 .form-wewillfind-footer__result {
-  color: white;
   flex: 0 1 100%;
 }
 .form-wewillfind-footer .messages {
   margin-bottom: 20px;
   padding: 0;
+  background-color: transparent;
 }
 .form-wewillfind-footer .messages--status {
   background-color: transparent;
-}
-.form-wewillfind-footer .messages .messages__title,
-.form-wewillfind-footer .messages .messages__content {
-  color: #fff;
 }
 .form-wewillfind-footer .messages .button--dismiss {
   display: none;
@@ -3919,6 +3915,9 @@ summary {
     min-height: 15vw;
     height: 15vw;
   }
+}
+.form-wewillfind-footer__item .file-wrapper > div > div > .form-item-file label {
+  display: none;
 }
 .form-wewillfind-footer__item .file-wrapper .form-item-file {
   display: flex;
@@ -4210,6 +4209,14 @@ summary {
   opacity: 0.2;
   max-width: 330px;
   text-transform: none;
+  display: flex;
+  align-items: flex-start;
+}
+.form-wewillfind-footer__text--person .form-checkbox {
+  margin-right: 10px;
+}
+.form-wewillfind-footer__text--person .js-form-type-webform-terms-of-service label {
+  display: none;
 }
 @media (max-width: 1919px) {
   .form-wewillfind-footer__text--person {
@@ -4247,6 +4254,8 @@ summary {
 }
 .form-wewillfind-footer__success span {
   opacity: 0.2;
+  display: block;
+  margin-top: 20px;
 }
 .footer--light .form-wewillfind-footer__success {
   color: inherit;
@@ -10704,6 +10713,11 @@ summary {
   justify-content: flex-start;
 }
 
+main.contact-page .page-header {
+  min-height: auto;
+  padding-bottom: inherit;
+}
+
 .contact-page .page-header {
   padding-bottom: 170px;
   flex-direction: column;
@@ -10852,6 +10866,13 @@ summary {
   width: 100%;
   margin-top: 20px;
 }
+.contact-page .form-wewillfind-footer__item--checkbox .form-item-terms {
+  width: 20px;
+}
+.contact-page .form-wewillfind-footer__item--checkbox .form-item-terms label,
+.contact-page .form-wewillfind-footer__item--checkbox .form-item-terms .description {
+  display: none;
+}
 .contact-page .form-wewillfind-footer__error {
   width: calc(100% - 40px);
 }
@@ -10892,41 +10913,65 @@ summary {
 .contact-page .form-wewillfind-footer__item--checkbox span a {
   color: #7f7f7f;
 }
-.contact-page .form-wewillfind-footer__item--checkbox label {
-  flex: 0 0 24px;
+.contact-page .form-wewillfind-footer__item--checkbox input {
   position: relative;
-  cursor: pointer;
-}
-.contact-page .form-wewillfind-footer__item--checkbox label span {
+  flex: 0 0 24px;
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(42, 42, 42, 0.2);
-  border-color: rgba(42, 42, 42, 0.2);
+  position: relative;
+  cursor: pointer;
   background-color: transparent;
-  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 0 !important;
+  outline: none;
 }
-.contact-page .form-wewillfind-footer__item--checkbox label span:hover {
-  background-color: #577BD7;
-  border-color: #577BD7;
-}
-.contact-page .form-wewillfind-footer__item--checkbox label input:checked + span {
-  background-color: #0047FF;
-  border-color: #0047FF;
-}
-.contact-page .form-wewillfind-footer__item--checkbox label input {
+.contact-page .form-wewillfind-footer__item--checkbox input:before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
-  visibility: hidden;
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgba(42, 42, 42, 0.2);
+  border-color: rgba(42, 42, 42, 0.2);
+}
+.contact-page .form-wewillfind-footer__item--checkbox input:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.contact-page .form-wewillfind-footer__item--checkbox input:hover:after {
+  background-color: #577BD7;
+}
+.contact-page .form-wewillfind-footer__item--checkbox input:checked:after {
+  background-color: #0047FF;
 }
 .contact-page .form-wewillfind-footer__success {
   color: #2A2A2A;
+  pointer-events: all;
+}
+.contact-page .form-wewillfind-footer__success-btn {
+  margin-top: 300px;
+  padding-top: 33.5px;
+  padding-bottom: 33.5px;
+  min-height: 88px;
+}
+.contact-page .form-wewillfind-footer__success-btn span {
+  margin-top: 0;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .contact-page .flex-lr {
     display: block;
   }
+}
+.contact-page .content-page .flex-lr {
+  padding-bottom: 170px;
 }
 
 .calc-page {
@@ -13068,6 +13113,7 @@ summary {
 }
 .service-page .page-header__video-btn:hover {
   background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 .service-page .page-header__video-bg {
   position: absolute;

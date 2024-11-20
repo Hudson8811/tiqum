@@ -567,7 +567,7 @@
 	.messages {
 		margin-bottom: 20px;
 		padding: 0;
-    background-color: transparent;
+		background-color: transparent;
 
 		&--status {
 			background-color: transparent;
@@ -619,11 +619,13 @@
 		transition: all 0.5s ease 0s;
 		position: relative;
 		width: 50%;
-		&.w100{
+
+		&.w100 {
 			width: 100%;
 			flex: 0 1 100%;
 		}
-		&.item__file{
+
+		&.item__file {
 			margin-right: 50%;
 
 
@@ -747,9 +749,9 @@
 				height: 15vw;
 			}
 
-			& > div > div > .form-item-file label {
-        display: none;
-      }
+			&>div>div>.form-item-file label {
+				display: none;
+			}
 
 			.form-item-file {
 				display: flex;
@@ -779,28 +781,33 @@
 					color: #2A2A2A;
 					text-transform: uppercase;
 					font-family: "Suisse Intl";
+
 					@media (max-width: 1919px) {
 						font-size: 14px;
 					}
+
 					@media (max-width: 1024px) {
 						font-size: 1.367vw;
 					}
+
 					@media (max-width: 767px) {
 						font-size: 3.2vw;
 					}
-					&:after{
+
+					&:after {
 						content: '';
 						display: inline-block;
 						vertical-align: middle;
 						width: 16px;
 						height: 17px;
 						background: url("../img/icon/file-dark.png") center center no-repeat;
-						top:-4px;
+						top: -4px;
 						position: relative;
 						background-size: contain;
 						margin-left: 9px;
+
 						@media (max-width: 767px) {
-							top:-2px;
+							top: -2px;
 						}
 					}
 
@@ -845,7 +852,7 @@
 					@media (max-width: 767px) {
 						font-size: vw(14, 320);
 						line-height: vw(14, 320);
-						top:4px;
+						top: 4px;
 					}
 				}
 
@@ -1003,6 +1010,7 @@
 		min-height: 88px;
 		width: 100%;
 		max-width: 100%;
+
 		@media (max-width: 1919px) {
 			min-height: 66px;
 		}
@@ -1060,16 +1068,16 @@
 			max-width: 330px;
 			text-transform: none;
 
-      display: flex;
-      align-items: flex-start;
+			display: flex;
+			align-items: flex-start;
 
-      .form-checkbox {
-        margin-right: 10px;
-      }
+			.form-checkbox {
+				margin-right: 10px;
+			}
 
-      .js-form-type-webform-terms-of-service label {
-        display: none;
-      }
+			.js-form-type-webform-terms-of-service label {
+				display: none;
+			}
 
 			@media (max-width: 1919px) {
 				font-size: 18px;
@@ -1104,11 +1112,12 @@
 		width: 100%;
 		height: 100%;
 		z-index: 2;
+		display: none;
 
 		span {
 			opacity: 0.2;
-      display: block;
-      margin-top: 20px;
+			display: block;
+			margin-top: 20px;
 		}
 
 		.footer--light & {
