@@ -153,6 +153,19 @@ main.contact-page .page-header {
             @media (max-width: 1439px) {
                 flex-basis: 100%;
             }
+
+          button {
+            text-transform: uppercase;
+
+            &:disabled {
+              background: #F5F5F5;
+              cursor: auto;
+
+              span {
+                color: rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
         }
 
         &__bottom .form-wewillfind-footer__text--person {

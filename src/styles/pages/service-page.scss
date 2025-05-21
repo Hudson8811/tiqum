@@ -78,6 +78,7 @@
         &__text {
             max-width: 594px;
             color: #fff;
+            margin-top: auto;
             @media (max-width: 1919px) {
                 max-width: 440px;
             }
@@ -101,26 +102,22 @@
         }
         &__video {
             position: relative;
-            width: 220px;
-            height: 120px;
+            width: 320px;
+            height: 175px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 6px;
             overflow: hidden;
+            margin-top: auto;
+            margin-bottom: 10px;
             @media (max-width: 1919px) {
-                width: 180px;
-                height: 100px;
+                width: 280px;
+                height: 154px;
             }
             @media (max-width: 1439px) {
                 width: 160px;
                 height: 90px;
-                margin-bottom: 10px;
-            }
-            @media (max-width: 1024px) {
-                width: vw(160);
-                height: vw(90);
-                margin-bottom: vw(10);
             }
             @media (max-width: 767px) {
                 margin-top: auto;

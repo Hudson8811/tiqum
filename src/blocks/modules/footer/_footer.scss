@@ -56,6 +56,10 @@
 		color: #FFFFFF;
 		padding-bottom: 35px;
 
+    &.copyright {
+      margin-top: 140px;
+    }
+
 		&--center {
 			align-items: flex-start;
 			padding-bottom: 0 !important;
@@ -749,10 +753,6 @@
 				height: 15vw;
 			}
 
-			&>div>div>.form-item-file label {
-				display: none;
-			}
-
 			.form-item-file {
 				display: flex;
 				justify-content: center;
@@ -1112,7 +1112,6 @@
 		width: 100%;
 		height: 100%;
 		z-index: 2;
-		display: none;
 
 		span {
 			opacity: 0.2;
@@ -1388,6 +1387,10 @@
 
 	&.active {
 		opacity: 1;
+
+    &:hover {
+      background: #3d73ff;
+    }
 	}
 }
 
