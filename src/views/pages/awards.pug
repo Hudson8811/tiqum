@@ -1,0 +1,86 @@
+extends ../layouts/default
+
+block variables
+	- const title = "TIQUM"
+
+block content
+	.wrapper
+		include ../../blocks/modules/header/header
+		.page.awards-page
+			.container 
+				.awards-page__title-wrapper 
+					h1.awards-page__title.general-title 
+						| Все награды и рейтинги
+						span +36
+				.awards-page__list
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучший интранет / Личный кабинет <span>Золото</span>
+						.awards-page__product Kitchen ERP: фудтех платформа для dark kitchen
+						.awards-page__date 2024
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучшая digital-трансформация <span>Золото</span>
+						.awards-page__product Kitchen ERP: фудтех платформа для dark kitchen
+						.awards-page__date 2024
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучшее IT-решение, разработка и интеграция <span>Золото</span>
+						.awards-page__product Kitchen ERP: фудтех платформа для dark kitchen
+						.awards-page__date 2024
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучшая технология или платформа <span>Серебро</span>
+						.awards-page__product Kitchen ERP: фудтех платформа для dark kitchen
+						.awards-page__date 2024
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучшее бизнес-решение <span>Серебро</span>
+						.awards-page__product Kitchen ERP: фудтех платформа для dark kitchen
+						.awards-page__date 2024
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучший личный кабинет <span>Золото</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучший интранет <span>Золото</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Лучший B2B проект <span>Серебро</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+					.awards-page__item
+						.awards-page__name Tagline Awards
+						.awards-page__nomination Digital + оффлайн <span>Серебро</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+					.awards-page__item
+						.awards-page__name Ruward Award
+						.awards-page__nomination Кейс года <span>2 место</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+					.awards-page__item
+						.awards-page__name Ruward Award
+						.awards-page__nomination Кейс года <span>2 место</span>
+						.awards-page__product Самолет Плюс: платформа управления франшизой
+						.awards-page__date 2023
+
+		include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
+	script(src="js/main.js")

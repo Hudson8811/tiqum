@@ -1,0 +1,182 @@
+.awards {
+	position: relative;
+	background-color: #ffffff;
+	padding-top: 30px;
+	padding-bottom: 133px;
+	font-family: "Suisse Intl";
+
+	@media (max-width: 1919px) {
+		padding-top: 20px;
+		padding-bottom: 90px;
+	}
+
+	@media (max-width: 1439px) {
+		padding-top: 20px;
+		padding-bottom: 80px;
+	}
+
+	@media (max-width: 767px) {
+		padding-top: 20px;
+		padding-bottom: 100px;
+	}
+
+	&__title {
+		flex: 0 1 65%;
+
+		@media (max-width: 1919px) {
+			flex: 0 1 65%;
+			font-size: 60px;
+		}
+
+		@media (max-width: 1024px) {
+			flex: 0 1 65%;
+			font-size: 40px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 24px;
+			flex: 1 1 100%;
+		}
+
+		&-wrapper {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+	}
+
+	&__list {
+		margin-top: 176px;
+		border-top: 1px solid rgba(42, 42, 42, 0.2);
+
+		@media (max-width: 1919px) {
+			margin-top: 96px;
+		}
+
+		@media (max-width: 1024px) {
+			margin-top: 80px;
+		}
+
+		@media (max-width: 767px) {
+			margin-top: 50px;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 35% repeat(2, minmax(0, 1fr));
+		gap: 8px;
+		border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+		padding: 30px 0 80px;
+		color: #2A2A2A;
+
+		@media (max-width: 1919px) {
+			padding: 20px 0 50px;
+		}
+
+		@media (max-width: 767px) {
+			gap: 15px;
+			padding: 15px 0;
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+
+	&__icon img {
+		max-width: 200px;
+		max-height: 90px;
+		object-fit: contain;
+
+		@media (max-width: 1919px) {
+			max-width: 160px;
+			max-height: 72px;
+		}
+
+		@media (max-width: 1024px) {
+			max-width: 130px;
+			max-height: 59px;
+		}
+
+		@media (max-width: 767px) {
+			max-width: 80px;
+			max-height: 36px;
+		}
+	}
+
+	&__name {
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 110%;
+		letter-spacing: -0.03em;
+
+		@media (max-width: 1919px) {
+			font-size: 36px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 28px;
+			letter-spacing: -0.02em;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 20px;
+		}
+
+		span {
+			display: block;
+			opacity: 0.3;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.333em;
+
+		@media (max-width: 1919px) {
+			font-size: 18px;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 14px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 12px;
+			margin-top: 25px;
+		}
+	}
+
+	&__more {
+		display: block;
+		width: fit-content;
+		margin: 30px auto 0;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 110%;
+		letter-spacing: -0.03em;
+		color: #2A2A2A;
+		transition: all 0.3s linear;
+
+		@media (max-width: 1919px) {
+			font-size: 36px;
+			margin: 20px auto 0;
+		}
+
+		@media (max-width: 1024px) {
+			font-size: 28px;
+			letter-spacing: -0.02em;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 20px;
+			margin: 15px 0 0;
+		}
+
+		&:hover {
+			color: #0047FF;
+		}
+	}
+
+
+
+}
