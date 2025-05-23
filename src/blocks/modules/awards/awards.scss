@@ -15,9 +15,14 @@
 		padding-bottom: 80px;
 	}
 
+	@media (max-width: 1024px) {
+		padding-top: 1.953vw;
+		padding-bottom: 4.8828em;
+	}
+
 	@media (max-width: 767px) {
-		padding-top: 20px;
-		padding-bottom: 100px;
+		padding-top: 4.6875vw;
+		padding-bottom: 31.25vw;
 	}
 
 	&__title {
@@ -30,11 +35,11 @@
 
 		@media (max-width: 1024px) {
 			flex: 0 1 65%;
-			font-size: 40px;
+			font-size: 3.9vw;
 		}
 
 		@media (max-width: 767px) {
-			font-size: 24px;
+			font-size: 7.5vw;
 			flex: 1 1 100%;
 		}
 
@@ -54,11 +59,11 @@
 		}
 
 		@media (max-width: 1024px) {
-			margin-top: 80px;
+			margin-top: 7.8125vw;
 		}
 
 		@media (max-width: 767px) {
-			margin-top: 50px;
+			margin-top: 15.625vw;
 		}
 	}
 
@@ -74,9 +79,14 @@
 			padding: 20px 0 50px;
 		}
 
+		@media (max-width: 1024px) {
+			padding: 1.953vw 0 4.8828vw;
+			gap: 0.78vw;
+		}
+
 		@media (max-width: 767px) {
-			gap: 15px;
-			padding: 15px 0;
+			gap: 4.6875vw;
+			padding: 4.6875vw 0;
 			grid-template-columns: minmax(0, 1fr);
 		}
 	}
@@ -92,13 +102,13 @@
 		}
 
 		@media (max-width: 1024px) {
-			max-width: 130px;
-			max-height: 59px;
+			max-width: 12.6953vw;
+			max-height: 5.76vw;
 		}
 
 		@media (max-width: 767px) {
-			max-width: 80px;
-			max-height: 36px;
+			max-width: 25vw;
+			max-height: 11.25vw;
 		}
 	}
 
@@ -113,12 +123,12 @@
 		}
 
 		@media (max-width: 1024px) {
-			font-size: 28px;
+			font-size: 2.7344vw;
 			letter-spacing: -0.02em;
 		}
 
 		@media (max-width: 767px) {
-			font-size: 20px;
+			font-size: 6.25vw;
 		}
 
 		span {
@@ -137,12 +147,12 @@
 		}
 
 		@media (max-width: 1024px) {
-			font-size: 14px;
+			font-size: 1.367vw;
 		}
 
 		@media (max-width: 767px) {
-			font-size: 12px;
-			margin-top: 25px;
+			font-size: 3.75vw;
+			margin-top: 7.8125vw;
 		}
 	}
 
@@ -163,20 +173,19 @@
 		}
 
 		@media (max-width: 1024px) {
-			font-size: 28px;
+			font-size: 2.7343vw;
 			letter-spacing: -0.02em;
+			margin: 1.953vw auto 0;
 		}
 
 		@media (max-width: 767px) {
-			font-size: 20px;
-			margin: 15px 0 0;
+			font-size: 6.25vw;
+			margin: 4.6875vw 0 0;
 		}
 
 		&:hover {
 			color: #0047FF;
 		}
 	}
-
-
 
 }
